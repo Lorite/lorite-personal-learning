@@ -1,0 +1,11 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        // C/C++ IntelliSense settings
+        "C_Cpp.intelliSenseEngine": "disabled"
+    },
+}
