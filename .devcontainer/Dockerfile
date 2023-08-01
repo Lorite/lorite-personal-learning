@@ -23,9 +23,15 @@ RUN curl -fSsL -o /usr/local/bin/bazelisk https://github.com/bazelbuild/bazelisk
 RUN sudo mv $(which bazelisk) /usr/local/bin/bazel
 RUN bazel
 
-# [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends btop
+# Install go.
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends golang-go 
+
+# Change username to avoid permission issues
+USER ${USERNAME}
+# Install bazel buildifier (from go)
+RUN go get -u github.com/bazelbuild/buildtools/buildifier
+ENV PATH=$PATH:/home/${USERNAME}/go/bin
 
 COPY lorite-scripts/* /tmp/lorite-scripts/
 RUN /bin/bash /tmp/lorite-scripts/env.bash
