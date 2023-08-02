@@ -16,27 +16,20 @@ EOF
 
 bind -f ~/.inputrc
 
-# Custom aliases
-alias l='ls -a'
-alias ll='ls -l'
-alias la='ls -la' 
-
 # add a list of usual commands
-commands_array=()
-commands_array+=("bazel build ... --config=clang")
-commands_array+=("bazel test ... --config=clang --nocache_test_results --test_output=all")
-commands_array+=("bazel test ... --color=yes --keep_going --config=remote-clang --runs_per_test=100 --runs_per_test_detects_flakes --test_output=errors --nocache_test_results")
-commands_array+=("git checkout develop")
-commands_array+=("git checkout -b develop_REDSW-000_allm_my-task")
-commands_array+=("git log --oneline -n 10")
-commands_array+=("git rebase -i HEAD~2 --autostash")
-commands_array+=("git rebase origin/develop --autostash")
-commands_array+=("bazel coverage ... --config=coverage-lcov --config=clang")
-commands_array+=("ssh user@ip")
-
-# delete the usual commands and write them again so that they are at the end of the file and not dupe
-for i in "${commands_array[@]}"
+history_cmds_array=()
+history_cmds_array+=("bazel build ... --config=clang")
+history_cmds_array+=("bazel test ... --config=clang --nocache_test_results --test_output=all")
+history_cmds_array+=("bazel test ... --color=yes --keep_going --config=remote-clang --runs_per_test=100 --runs_per_test_detects_flakes --test_output=errors --nocache_test_results")
+history_cmds_array+=("git checkout develop")
+history_cmds_array+=("git checkout -b develop_REDSW-000_allm_my-task")
+history_cmds_array+=("git log --oneline -n 10")
+history_cmds_array+=("git rebase -i HEAD~2 --autostash")
+history_cmds_array+=("git rebase origin/develop --autostash")
+history_cmds_array+=("bazel coverage .s.. --config=coverage-lcov --config=clang")
+history_cmds_array+=("ssh user@ip")
+for i in "${history_cmds_array[@]}"
 do
-    # grep -v "$i" ~/.bash_history > tmpfile && mv tmpfile ~/.bash_history # remove command
-    echo "$i" >> ~/.bash_history # add command
+    # grep -v "$i" ~/.zsh_history > tmpfile && mv tmpfile ~/.zsh_history # remove command
+    echo "$i" >> ~/.zsh_history # add command
 done
