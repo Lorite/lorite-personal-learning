@@ -68,6 +68,8 @@
                 "editor.tabCompletion": "on",
 				"terminal.integrated.defaultProfile.linux": "zsh",
 				"terminal.integrated.fontFamily": "MesloLGS NF",
+				"git.autofetch": true,
+				"git.autofetchPeriod": 60,
             }
 		}
 	},
