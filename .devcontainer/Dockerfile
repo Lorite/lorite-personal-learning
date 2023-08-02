@@ -23,6 +23,11 @@ RUN curl -fSsL -o /usr/local/bin/bazelisk https://github.com/bazelbuild/bazelisk
 RUN sudo mv $(which bazelisk) /usr/local/bin/bazel
 RUN bazel
 
+# Install pip
+RUN apt-get update \
+    && apt-get -y install python3-pip
+RUN pip install --upgrade pip
+
 # Install go.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends golang-go 

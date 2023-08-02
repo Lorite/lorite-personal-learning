@@ -2,6 +2,12 @@
 
 ## 
 
+# Resources
+[Experimentations on Bazel by David Bernard](https://dev.to/davidb31/experimentations-on-bazel-intro-5d48)
+[Python rules for pip in Bazel](https://github.com/bazelbuild/rules_python/blob/main/docs/pip.md)
+[Python structuring your project by Kenneth Reitz](https://docs.python-guide.org/writing/structure/)
+[Simple Python flask app using Bazel](https://earthly.dev/blog/build-and-deploy-pyapp-with-bazel/)
+
 # Bazel (Community) dev container (from microsoft vscode dev containers repo)
 
 ## Summary
