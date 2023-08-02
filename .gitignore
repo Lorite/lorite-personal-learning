@@ -1,3 +1,10 @@
+# Custom
+
+/src/courses-licensed/
+
+
+# ----------------------------------------
+
 # Prerequisites
 *.d
 
@@ -31,6 +38,8 @@
 *.out
 *.app
 
+# ----------------------------------------
+
 # BAZEL
 # Ignore backup files.
 *~
@@ -62,6 +71,8 @@
 .bazelversion
 # User-specific .bazelrc
 user.bazelrc
+
+# ----------------------------------------
 
 # Python
 # Byte-compiled / optimized / DLL files
