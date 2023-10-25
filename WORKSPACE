@@ -1,9 +1,46 @@
 workspace(name = "lorite_ws")
 
+# ----------------------------------------
 
+# bazel
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+# ----------------------------------------
+
+# C# - DotNet
+
+http_archive(
+    name = "rules_dotnet",
+    sha256 = "5667f2dffb40890951662ec515bc2d5fca73126fbb69607b2ab451a644cc986d",
+    strip_prefix = "rules_dotnet-0.11.0",
+    url = "https://github.com/bazelbuild/rules_dotnet/releases/download/v0.11.0/rules_dotnet-v0.11.0.tar.gz",
+)
+
+load(
+    "@rules_dotnet//dotnet:repositories.bzl",
+    "dotnet_register_toolchains",
+    "rules_dotnet_dependencies",
+)
+
+rules_dotnet_dependencies()
+
+# Here you can specify the version of the .NET SDK to use.
+dotnet_register_toolchains("dotnet", "7.0.101")
+
+load("@rules_dotnet//dotnet:rules_dotnet_nuget_packages.bzl", "rules_dotnet_nuget_packages")
+
+rules_dotnet_nuget_packages()
+
+load("//src/examples/bazel-test-project-dotnet:example_deps.bzl", "example_deps")
+
+example_deps()
+
+# ----------------------------------------
+
+# Python
 # Load external dependencies
 # Python rules for Bazel, which provide the basis of support for Python in Bazel
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "rules_python",
     sha256 = "8c8fe44ef0a9afc256d1e75ad5f448bb59b81aba149b8958f02f7b3a98f5d9b4",
