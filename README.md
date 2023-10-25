@@ -173,12 +173,23 @@ There is also a [courses-paid](src/courses-paid) folder with paid courses but th
 TODO: explain how the GitHub Actions are used.
 
 ## Resources
-- [Experimentations on Bazel - GitHub actions by David Bernard](https://dev.to/davidb31/experimentations-on-bazel-github-action-5639)
-- [Python rules for pip in Bazel](https://github.com/bazelbuild/rules_python/blob/main/docs/pip.md)
-- [Python structuring your project by Kenneth Reitz](https://docs.python-guide.org/writing/structure/)
-- [Simple Python flask app using Bazel](https://earthly.dev/blog/build-and-deploy-pyapp-with-bazel/)
-- [zsh and powerlevel10k](https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0)
+
+### Documenting
 - [README template](https://github.com/othneildrew/Best-README-Template)
+
+### Bazel
+- [Experimentations on Bazel - GitHub actions by David Bernard](https://dev.to/davidb31/experimentations-on-bazel-github-action-5639)
+
+### Dev container
+- [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
+- [Dev Container Features](https://containers.dev/implementors/features/)
+- [zsh and powerlevel10k (terminal)](https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0)
+
+### Python
+- [Python structuring your project by Kenneth Reitz](https://docs.python-guide.org/writing/structure/)
+- [Python rules for pip in Bazel](https://github.com/bazelbuild/rules_python/blob/main/docs/pip.md)
+- [Simple Python flask app using Bazel](https://earthly.dev/blog/build-and-deploy-pyapp-with-bazel/)
+
 
 ## License
 

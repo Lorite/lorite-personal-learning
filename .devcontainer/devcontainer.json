@@ -1,68 +1,76 @@
 {
-	"name": "Lorite Container (Bazel community + VS Code Addons)",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
-			"BAZELISK_VERSION": "v1.10.1",
-			"BAZELISK_DOWNLOAD_SHA": "4cb534c52cdd47a6223d4596d530e7c9c785438ab3b0a49ff347e991c210b2cd"
-		}
+	"name": "Lorite Container",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+			"plugins": "git zsh-autosuggestions zsh-syntax-highlighting",
+			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting" 
+		},
+		"ghcr.io/balazs23/devcontainers-features/bazel:1": {
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.11"
+		},
+		"ghcr.io/devcontainers/features/go:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
-
-	// Configure tool-specific properties.
 	"customizations": {
-		// Configure properties specific to VS Code.
 		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
+			// TODO: check which vscode extensions we should include in the container
 			"extensions": [
-				"forevolve.git-extensions-for-vs-code",
-				"ms-azuretools.vscode-docker",
+				// "ms-azuretools.vscode-docker", // installed by feature ghcr.io/devcontainers/features/docker-in-docker:2
 				"eamodio.gitlens",
-				"ms-python.python",
-				"ms-python.vscode-pylance",
-				"ms-vscode.cpptools",
-				"twxs.cmake",
-				"DotJoshJohnson.xml",
-				"docsmsft.docs-yaml",
-				"mutantdino.resourcemonitor",
-				"lextudio.restructuredtext",
-				"foxundermoon.shell-format",
-				"timonwong.shellcheck",
-				"dtangren.vs-codeowners",
-				"llvm-vs-code-extensions.vscode-clangd",
-				"docsmsft.docs-markdown",
-				"humao.rest-client",
-				"trond-snekvik.simple-rst",
-				"heptio.jsonnet",
-				"redhat.ansible",
-				"xrc-inc.jsonnet-formatter",
-				"zxh404.vscode-proto3",
+				// "ms-python.python",  # installed by feature ghcr.io/devcontainers/features/python:1
+				// "ms-python.vscode-pylance",  # installed by feature ghcr.io/devcontainers/features/python:1
+				// "ms-vscode.cpptools",
+				// "twxs.cmake",
+				// "DotJoshJohnson.xml",
+				// "docsmsft.docs-yaml",
+				// "mutantdino.resourcemonitor",
+				// "lextudio.restructuredtext",
+				// "foxundermoon.shell-format",
+				// "timonwong.shellcheck",
+				// "dtangren.vs-codeowners",
+				// "llvm-vs-code-extensions.vscode-clangd",
+				// "docsmsft.docs-markdown",
+				// "humao.rest-client",
+				// "trond-snekvik.simple-rst",
+				// "heptio.jsonnet",
+				// "redhat.ansible",
+				// "xrc-inc.jsonnet-formatter",
+				// "zxh404.vscode-proto3",
 				"bazelbuild.vscode-bazel",
-				"ryanluker.vscode-coverage-gutters",
-				"cschlosser.doxdocgen",
-				"sonarsource.sonarlint-vscode",
-				"Huuums.vscode-fast-folder-structure",
-				"vadimcn.vscode-lldb",
+				// "ryanluker.vscode-coverage-gutters",
+				// "cschlosser.doxdocgen",
+				// "sonarsource.sonarlint-vscode",
+				// "Huuums.vscode-fast-folder-structure",
+				// "vadimcn.vscode-lldb",
 				"streetsidesoftware.code-spell-checker",
-				"rust-lang.rust-analyzer",
+				// "rust-lang.rust-analyzer",
 				"huibizhang.codesnap-plus",
 				"wmaurer.change-case",
-				"Guyutongxue.cpp-reference",
+				// "Guyutongxue.cpp-reference",
 				"GitHub.copilot",
+				"GitHub.copilot-chat",
 				"GitHub.vscode-pull-request-github",
-				"golang.go",
-				"ms-vsliveshare.vsliveshare",
-				"shd101wyy.markdown-preview-enhanced",
-				"analytic-signal.preview-mp4",
+				// "golang.go", // installed by feature ghcr.io/devcontainers/features/go:1
+				// "ms-vsliveshare.vsliveshare",
+				// "shd101wyy.markdown-preview-enhanced",
+				// "analytic-signal.preview-mp4",
 				"avaly.restore-git-branch-tabs-improved",
-				"yy0931.save-as-root",
 				"valsorym.smart-tabs",
+				// "yy0931.save-as-root",
 				"awtnb.spotline",
 				"shyykoserhiy.vscode-spotify",
 				"patricklee.vsnotes",
 				"WakaTime.vscode-wakatime",
-				"redhat.vscode-yaml",
-				"tomoki1207.pdf",
-				"GitHub.copilot-chat"
+				// "redhat.vscode-yaml",
+				// "tomoki1207.pdf",
 			],
             "settings": {
                 "editor.tabCompletion": "on",
@@ -74,13 +82,9 @@
 		}
 	},
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
-	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
 	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
-	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "lorite",
-    "containerUser": "lorite"
+	"remoteUser": "vscode",
+    "containerUser": "vscode"
 }
