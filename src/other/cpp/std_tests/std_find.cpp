@@ -1,7 +1,6 @@
 #include <gtest/gtest.h>
 
-// Demonstrate some basic assertions.
-TEST(STDFindTest, BasicAssertions) {
+TEST(STDFindTest, TestFindIf) {
     // Arrange
     std::vector<std::string> args = {"--flag1=flag1_value --flag2=flag2_value", "--flag3=flag3_value"};
 

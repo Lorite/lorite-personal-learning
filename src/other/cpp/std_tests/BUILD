@@ -6,3 +6,9 @@ cc_test(
   srcs = ["std_find.cpp"],
   deps = ["@com_google_googletest//:gtest_main"],
 )
+cc_test(
+  name = "test_pointers",
+  size = "small",
+  srcs = ["pointers.cpp"],
+  deps = ["@com_google_googletest//:gtest_main"],
+)
