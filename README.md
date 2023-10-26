@@ -174,11 +174,14 @@ TODO: explain how the GitHub Actions are used.
 
 ## Resources
 
+Check individual courses for their sources.
+
 ### Documenting
 - [README template](https://github.com/othneildrew/Best-README-Template)
 
 ### Bazel
 - [Experimentations on Bazel - GitHub actions by David Bernard](https://dev.to/davidb31/experimentations-on-bazel-github-action-5639)
+- [Bazel zsh terminal completion](https://bazel.build/install/completion)
 
 ### Dev container
 - [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
