@@ -39,6 +39,7 @@ example_deps()
 # ----------------------------------------
 
 # Python
+
 # Load external dependencies
 # Python rules for Bazel, which provide the basis of support for Python in Bazel
 http_archive(
@@ -59,3 +60,15 @@ pip_parse(
 )
 load("@pip_bazel_test_deps//:requirements.bzl", install_deps_bazel_test = "install_deps")
 install_deps_bazel_test()
+
+# ----------------------------------------
+
+# C++ - Cpp
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+  name = "com_google_googletest",
+  urls = ["https://github.com/google/googletest/archive/5ab508a01f9eb089207ee87fd547d290da39d015.zip"],
+  strip_prefix = "googletest-5ab508a01f9eb089207ee87fd547d290da39d015",
+)

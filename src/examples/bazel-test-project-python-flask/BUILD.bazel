@@ -1,6 +1,8 @@
 load("@rules_python//python/pip_install:requirements.bzl", "compile_pip_requirements")
 load("@pip_bazel_test_deps//:requirements.bzl", "requirement")
 
+package(default_visibility = ["//visibility:private"])
+
 py_library(
     name = "calculator_lib",
     srcs = ["src/calculator_lib.py"],

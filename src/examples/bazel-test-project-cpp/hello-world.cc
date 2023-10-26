@@ -1,4 +1,4 @@
-#include "./hello-lib.h"
+#include "hello-lib.h"
 
 #include <string>
 

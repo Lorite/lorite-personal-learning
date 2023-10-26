@@ -1,0 +1,8 @@
+build --action_env=BAZEL_CXXOPTS="-std=c++20:-Werror"
+
+test --test_output=errors
+test --test_tag_filters=-images
+test --build_tests_only
+test --incompatible_exclusive_test_sandboxed
+
+try-import %workspace%/.bazelrc.user
