@@ -71,6 +71,8 @@
 				"WakaTime.vscode-wakatime",
 				// "redhat.vscode-yaml",
 				// "tomoki1207.pdf",
+				"bierner.markdown-emoji",
+				"bierner.emojisense",
 			],
             "settings": {
                 "editor.tabCompletion": "on",
