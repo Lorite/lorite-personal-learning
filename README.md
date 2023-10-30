@@ -23,10 +23,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Lorite personal learning</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A monorepo for learning about different tools, workflows, programming languages, and anything related to software development.
     <br />
     <a href="https://github.com/Lorite/lorite-personal-learning"><strong>Explore the docs »</strong></a>
     <br />
@@ -46,10 +46,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#summary">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
+      <a href="#about-the-project">About The Project</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -59,6 +56,11 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <ul>
+        <li><a href="#container">Container</a></li>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#github-actions">GitHub actions</a></li>
+      </ul>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -67,43 +69,26 @@
   </ol>
 </details>
 
-
-
-## Table of contents
-
-3. [Usage](#usage)
-    1. [Container](#container)
-        1. [Tools](#tools)
-        2. [Languages](#languages)
-    2. [Code](#code)
-        1. [Courses](#courses)
-        2. [Examples](#examples)
-    3. [GitHub Actions](#github-actions)
-4. [Resources](#resources)
-5. [License](#license)
-
 ## About The Project
 
-This repo can be directly used as a container for development. It is based on the [Bazel (Community) dev container from the microsoft vscode dev containers repo](https://github.com/microsoft/vscode-dev-containers/blob/main/containers/bazel/README.md). The container includes a lot of tools to make developing much easier for beginners and forget about ci/cd.
+Welcome to my personal learning repository :bowtie:. I use it to learn about different tools, workflows, programming languages, and anything related to software development, really. Personally, I like to have an overview of the different tools and languages and how they work together. I am getting started with DevOps and CI/CD, so I am using this repository to learn about it, mainly using [dev containers](https://containers.dev/), [Bazel](https://bazel.build/), and [GitHub actions](https://github.com/features/actions) to build monorepo. I also code in my everyday job, so I also follow specific language courses and try out examples on this repository. I believe that programmers should be able to do everything, from designing the architecture to deploying the software; and this repository can help me (and maybe you) to achieve that. I have high hopes for this repository :crossed_fingers:.
 
-| Metadata                    | Value                                                |
-| --------------------------- | ---------------------------------------------------- |
-| *Contributors*              | William Phetsinorath <deva.shikanime@protonmail.com> |
-| *Categories*                | Community, Other                                     |
-| *Definition type*           | Dockerfile                                           |
-| *Supported architecture(s)* | x86-64                                               |
-| *Works in Codespaces*       | Yes                                                  |
-| *Container host OS support* | Linux, macOS, Windows                                |
-| *Container OS*              | Debian                                               |
-| *Languages, platforms*      | Any                                                  |
+![Dev-ops-meme](https://imgb.ifunny.co/images/0d9aaaf8feb3e07013fe7d8f701924ff3ac02fa425a90b52176144c601338b09_1.jpg)
 
-The project also includes a lot of examples and courses to learn about different languages and tools.
+This repo can be directly used as a container for development. It is based on the [Ubuntu base container from the GitHub devcontainers images repo](https://github.com/devcontainers/images/tree/main/src/base-ubuntu). The container includes a lot of tools to make developing much easier for beginners and forget about ci/cd. It uses a collection of Dev Container Features from the [devcontainers features repo](https://github.com/devcontainers/features).
 
-The project is also configured to use GitHub Actions to build and test the code.
+This repository could not have been possible without the help of the open source community. I have used a lot of open source tools and courses to learn about different topics. I have tried to include all the resources I have used in the [Resources](#resources) section. If you find any missing, please let me know.
 
-Check the Usage section for more information.
+> If I have seen further, it is by standing on the shoulders of giants.
+>  
+> _- Isaac Newton_
 
-### Built with
+You can read the commit messages to see what I have been doing. I try to keep them as descriptive as possible. I also try to keep the code as clean as possible. I am not perfect :sweat_smile: so sometimes I have to fix my own commits!
+
+![welcome-to-my-git-commit-history-meme](https://programmerhumor.io/wp-content/uploads/2021/10/programmerhumor-io-linux-memes-backend-memes-b020a6cb90606ee.jpg)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Getting started
 
@@ -117,7 +102,7 @@ Check the Usage section for more information.
 
 ### Installation
 
-1. If this is your first time using a development container, please see getting started information on [setting up](https://aka.ms/vscode-remote/containers/getting-started) Remote-Containers or [creating a codespace](https://aka.ms/ghcs-open-codespace) using GitHub Codespaces.
+1. If this is your first time using a development container, please check the getting started information on [VS Code remote - setting up](https://aka.ms/vscode-remote/containers/getting-started) Remote-Containers or [GitHub Docs - Creating a codespace](https://aka.ms/ghcs-open-codespace) using GitHub Codespaces.
  
 2. Clone this repository.
 
@@ -134,20 +119,21 @@ Check the Usage section for more information.
 
 4. Press <kbd>F1</kbd> and select **Remote-Containers: Reopen in Container** to build and start the container. This step may take a while the first time.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 ## Usage
 
 ### Container
 
-#### Tools
+Some of the tools and languages included in the container are:
 
 - [Bazel](https://bazel.build/) for building and testing software of any size, quickly and reliably.
 - [zsh + powerlevel10k + plugins](https://www.zsh.org/) for a better terminal experience.
 - [Many VS Code extensions](https://code.visualstudio.com/docs/editor/extension-gallery). See [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) for the full list.
 - [pip](https://pypi.org/project/pip/) for installing Python packages.
-
-#### Languages
-
 - [C++](https://www.cplusplus.com/)
+- [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 - [Python](https://www.python.org/)
 - [Go](https://golang.org/)
 
@@ -158,21 +144,41 @@ Find a collection of small projects to learn about different languages and tools
 #### Courses
 
 The open source courses can be found in the [courses-free](src/courses-free) folder. The courses are:
-- C++:
-    - TODO.
+  - **Microsoft Learning: Getting started with C#**: TODO: description. [src/courses-free/csharp-getting-started](src/courses-free/csharp-getting-started)
 
-There is also a [courses-paid](src/courses-paid) folder with paid courses but the code is not included.
+    [![Bazel][Bazel-build]][Bazel-url]
+    [![C#][C#]][C#-url]
+    [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
+
+There is also a [courses-licensed](src/courses-licensed) folder with licensed courses but the code is not included.
 
 #### Examples
 
 - [C++ Bazel](src/examples/bazel-test-project-cpp): A simple C++ project using Bazel.
+- [C# Bazel](src/examples/bazel-test-project-csharp): A simple C# project using Bazel.
 - [Python flask Bazel](src/examples/bazel-test-project-python-flask/): A simple Python flask project using Bazel.
 
 ### GitHub Actions
 
 TODO: explain how the GitHub Actions are used.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Roadmap
+
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated** :pray:.
+
 ## Resources
+
+This section contains the resources for DevOps and CI/CD. The resources specific to the different languages can be found in the [courses](#courses) section.
 
 Check individual courses for their sources.
 
@@ -193,12 +199,16 @@ Check individual courses for their sources.
 - [Python rules for pip in Bazel](https://github.com/bazelbuild/rules_python/blob/main/docs/pip.md)
 - [Simple Python flask app using Bazel](https://earthly.dev/blog/build-and-deploy-pyapp-with-bazel/)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## License
 
 Copyright (c) Alejandro Lorite Mora (a.lorite.mora@gmail.com). All rights reserved.
 
 Licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. See [LICENSE](https://creativecommons.org/licenses/by-nc/4.0/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -232,3 +242,15 @@ Licensed under the Creative Commons Attribution-NonCommercial 4.0 International 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[Bazel-build]: https://img.shields.io/badge/Bazel-9be583?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+DQogIDxzdHlsZT4NCiAgICAucmVndWxhcntmaWxsOiM0M0EwNDc7fSAuZGFyay1sZWZ0e2ZpbGw6IzAwNzAxQTt9IC5kYXJrLXJpZ2h0e2ZpbGw6IzAwNDMwMDt9IC5saWdodHtmaWxsOiM3NkQyNzU7fQ0KICA8L3N0eWxlPg0KDQogIDxwYXRoIGNsYXNzPSJsaWdodCIgICAgICBkPSJNMTQ0IDMyIGwxMTIgMTEyIC0xMTIgMTEyIGwtMTEyIC0xMTJ6Ii8+DQogIDxwYXRoIGNsYXNzPSJyZWd1bGFyIiAgICBkPSJNMzIgMTQ0IHYxMTIgbDExMiAxMTIgdi0xMTJ6Ii8+DQoNCiAgPHBhdGggY2xhc3M9ImxpZ2h0IiAgICAgIGQ9Ik0zNjggMzIgIGwxMTIgMTEyIC0xMTIgMTEyIC0xMTIgLTExMnoiLz4NCiAgPHBhdGggY2xhc3M9InJlZ3VsYXIiICAgIGQ9Ik00ODAgMTQ0IHYxMTIgbC0xMTIgMTEyIHYtMTEyeiIvPg0KDQogIDxwYXRoIGNsYXNzPSJyZWd1bGFyIiAgICBkPSJNMjU2IDE0NCBsMTEyIDExMiAtMTEyIDExMiAtMTEyIC0xMTJ6Ii8+DQogIDxwYXRoIGNsYXNzPSJkYXJrLWxlZnQiICBkPSJNMjU2IDM2OCB2MTEyIGwtMTEyIC0xMTIgIHYtMTEyeiIvPg0KICA8cGF0aCBjbGFzcz0iZGFyay1yaWdodCIgZD0iTTI1NiAzNjggbDExMiAtMTEyIHYxMTIgbC0xMTIgMTEyeiIvPg0KPC9zdmc+DQoNCg==&logoColor=green
+[Bazel-url]: https://bazel.build/
+[GitHub-actions]: https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=github-actions&logoColor=white
+[GitHub-actions-url]: https://github.com/features/actions
+[C++]: https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white
+[C++-url]: https://www.cplusplus.com/
+[C#]: https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white
+[C#-url]: https://docs.microsoft.com/en-us/dotnet/csharp/
+[Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+[Python-url]: https://www.python.org/
+[Go]: https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white
+[Go-url]: https://golang.org/
