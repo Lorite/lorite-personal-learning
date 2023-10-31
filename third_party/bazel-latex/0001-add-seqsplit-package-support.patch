@@ -1,0 +1,29 @@
+diff --git a/packages/BUILD.bazel b/packages/BUILD.bazel
+index c798707..0ef268c 100644
+--- a/packages/BUILD.bazel
++++ b/packages/BUILD.bazel
+@@ -1013,6 +1013,12 @@ latex_package(
+     tests = ["relsize_test.tex"],
+ )
+ 
++latex_package(
++    name = "seqsplit",
++    srcs = ["@texlive_texmf__texmf-dist__tex__latex__seqsplit"],
++    tests = ["seqsplit_test.tex"],
++)
++
+ latex_package(
+     name = "silence",
+     srcs = ["@texlive_texmf__texmf-dist__tex__latex__silence"],
+diff --git a/packages/seqsplit_test.tex b/packages/seqsplit_test.tex
+new file mode 100644
+index 0000000..d63a17c
+--- /dev/null
++++ b/packages/seqsplit_test.tex
+@@ -0,0 +1,5 @@
++\documentclass{article}
++\usepackage{seqsplit}
++\begin{document}
++\seqsplit{"aaaaaaa"}  % produces `a.txt`
++\end{document}
+\ No newline at end of file

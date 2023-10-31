@@ -131,10 +131,11 @@ Some of the tools and languages included in the container are:
 - [Bazel](https://bazel.build/) for building and testing software of any size, quickly and reliably.
 - [zsh + powerlevel10k + plugins](https://www.zsh.org/) for a better terminal experience.
 - [Many VS Code extensions](https://code.visualstudio.com/docs/editor/extension-gallery). See [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) for the full list.
-- [pip](https://pypi.org/project/pip/) for installing Python packages.
+- [LaTeX](https://www.latex-project.org/) for writing documents.
 - [C++](https://www.cplusplus.com/)
 - [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 - [Python](https://www.python.org/)
+- [pip](https://pypi.org/project/pip/) for installing Python packages.
 - [Go](https://golang.org/)
 
 ### Code
@@ -198,6 +199,9 @@ Check individual courses for their sources.
 - [Python structuring your project by Kenneth Reitz](https://docs.python-guide.org/writing/structure/)
 - [Python rules for pip in Bazel](https://github.com/bazelbuild/rules_python/blob/main/docs/pip.md)
 - [Simple Python flask app using Bazel](https://earthly.dev/blog/build-and-deploy-pyapp-with-bazel/)
+
+### LaTeX
+- [Bazel rules for LaTeX](https://github.com/ProdriveTechnologies/bazel-latex)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

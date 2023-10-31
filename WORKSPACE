@@ -72,3 +72,22 @@ http_archive(
   urls = ["https://github.com/google/googletest/archive/5ab508a01f9eb089207ee87fd547d290da39d015.zip"],
   strip_prefix = "googletest-5ab508a01f9eb089207ee87fd547d290da39d015",
 )
+
+# ----------------------------------------
+
+# LaTeX
+
+http_archive(
+    name = "bazel_latex",
+    sha256 = "82c99edaca50f938cb4881650737174eefedac844350b530942b874540400610",
+    strip_prefix = "bazel-latex-1.2.1",
+    url = "https://github.com/ProdriveTechnologies/bazel-latex/archive/v1.2.1.tar.gz",
+    patches = [
+        "@//third_party/bazel-latex:0001-add-seqsplit-package-support.patch",
+    ],
+    patch_args = ["-p1"],
+)
+
+load("@bazel_latex//:repositories.bzl", "latex_repositories")
+
+latex_repositories()
