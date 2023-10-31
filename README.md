@@ -1,4 +1,4 @@
-
+<a name="readme-top"></a>
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -11,7 +11,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![CC BY-NC 4.0 License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -206,7 +206,7 @@ Check individual courses for their sources.
 
 Copyright (c) Alejandro Lorite Mora (a.lorite.mora@gmail.com). All rights reserved.
 
-Licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. See [LICENSE](https://creativecommons.org/licenses/by-nc/4.0/).
+Licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. See [LICENSE](LICENSE.txt).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
