@@ -32,7 +32,7 @@ load("@rules_dotnet//dotnet:rules_dotnet_nuget_packages.bzl", "rules_dotnet_nuge
 
 rules_dotnet_nuget_packages()
 
-load("//src/examples/bazel-test-project-dotnet:example_deps.bzl", "example_deps")
+load("//src/examples/bazel-test-project-csharp:example_deps.bzl", "example_deps")
 
 example_deps()
 
