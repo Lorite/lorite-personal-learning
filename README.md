@@ -197,6 +197,7 @@ Check individual courses for their sources.
 
 ### Python
 - [Python structuring your project by Kenneth Reitz](https://docs.python-guide.org/writing/structure/)
+- [Python Rules for Bazel](https://rules-python.readthedocs.io)
 - [Python rules for pip in Bazel](https://github.com/bazelbuild/rules_python/blob/main/docs/pip.md)
 - [Simple Python flask app using Bazel](https://earthly.dev/blog/build-and-deploy-pyapp-with-bazel/)
 
