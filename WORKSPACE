@@ -42,21 +42,35 @@ example_deps()
 
 # Load external dependencies
 # Python rules for Bazel, which provide the basis of support for Python in Bazel
+RULES_PYTHON_VERSION="0.26.0"
+RULES_PYTHON_SHA="9d04041ac92a0985e344235f5d946f71ac543f1b1565f2cdbc9a2aaee8adf55b"
 http_archive(
     name = "rules_python",
-    sha256 = "8c8fe44ef0a9afc256d1e75ad5f448bb59b81aba149b8958f02f7b3a98f5d9b4",
-    strip_prefix = "rules_python-0.13.0",
-    url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.13.0.tar.gz",
+    sha256 = RULES_PYTHON_SHA,
+    strip_prefix = "rules_python-{}".format(RULES_PYTHON_VERSION),
+    url = "https://github.com/bazelbuild/rules_python/releases/download/{}/rules_python-{}.tar.gz".format(RULES_PYTHON_VERSION,RULES_PYTHON_VERSION),
 )
+load("@rules_python//python:repositories.bzl", "py_repositories")
+py_repositories()
 
+# Select the Python toolchain
+load("@rules_python//python:repositories.bzl", "python_register_toolchains")
+python_register_toolchains(
+    name = "python_3_10",
+    # Available versions are listed in @rules_python//python:versions.bzl.
+    # We recommend using the same version your team is already standardized on.
+    python_version = "3.10",
+    register_coverage_tool = True,
+)
+load("@python_3_10//:defs.bzl", "interpreter")
 
 # Python pip dependencies from requirements.txt 
 load("@rules_python//python:pip.bzl", "pip_parse")
-
 # src/examples/bazel-test-project-python-flask
 pip_parse(
     name = "pip_bazel_test_deps",
-    requirements_lock = "//src/examples/bazel-test-project-python-flask:requirements.in",
+    requirements_lock = "//src/examples/bazel-test-project-python-flask:requirements.txt",
+    # python_interpreter_target = interpreter,
 )
 load("@pip_bazel_test_deps//:requirements.bzl", install_deps_bazel_test = "install_deps")
 install_deps_bazel_test()
