@@ -23,6 +23,7 @@
 		"vscode": {
 			// TODO: check which vscode extensions we should include in the container
 			"extensions": [
+				"github.vscode-github-actions",
 				// "ms-azuretools.vscode-docker", // installed by feature ghcr.io/devcontainers/features/docker-in-docker:2
 				"eamodio.gitlens",
 				// "ms-python.python",  # installed by feature ghcr.io/devcontainers/features/python:1
