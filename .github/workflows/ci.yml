@@ -8,6 +8,17 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+      # Caches and restores the bazelisk download directory, the bazel build directory.
+      - name: Cache bazel
+        uses: actions/cache@v2.1.4
+        env:
+          cache-name: bazel-cache
+        with:
+          path: |
+            ~/.cache/bazelisk
+            ~/.cache/bazel
+          key: ${{ runner.os }}-${{ env.cache-name }}
+
       # Checks-out your repository under $GITHUB_WORKSPACE, which is the CWD for
       # the rest of the steps
       - uses: actions/checkout@v2
@@ -15,3 +26,7 @@ jobs:
       # build
       - name: Build the code
         run: bazel build //...
+
+      # test
+      - name: Test the code
+        run: bazel test //...
