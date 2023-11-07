@@ -8,12 +8,6 @@
 		},
 		"ghcr.io/balazs23/devcontainers-features/bazel:1": {
 		},
-		"ghcr.io/devcontainers/features/python:1": {
-			"version": "3.11"
-		},
-		"ghcr.io/devcontainers/features/go:1": {
-			"version": "latest"
-		},
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
 			"version": "latest"
 		},
