@@ -71,7 +71,7 @@
 
 ## About The Project
 
-Welcome to my personal learning repository :bowtie:. I use it to learn about different tools, workflows, programming languages, and anything related to software development, really. Personally, I like to have an overview of the different tools and languages and how they work together. I am getting started with DevOps and CI/CD, so I am using this repository to learn about it, mainly using [dev containers](https://containers.dev/), [Bazel](https://bazel.build/), and [GitHub actions](https://github.com/features/actions) to build monorepo. I also code in my everyday job, so I also follow specific language courses and try out examples on this repository. I believe that programmers should be able to do everything, from designing the architecture to deploying the software; and this repository can help me (and maybe you) to achieve that. I have high hopes for this repository :crossed_fingers:.
+Welcome to my personal learning repository :bowtie:. I use it to learn about different tools, workflows, programming languages, and anything related to software development, really. Personally, I like to have an overview of the different tools and languages and how they work together. I am getting started with DevOps and CI/CD, so I am using this repository to learn about it, mainly using [dev containers](https://containers.dev/), [Bazel](https://bazel.build/), and [GitHub actions](https://github.com/features/actions) to build the monorepo. I also code in my everyday job, so I also follow specific language courses and try out examples on this repository. I believe that programmers should be able to do everything, from designing the architecture to deploying the software; and this repository can help me (and maybe you) to achieve that. I have high hopes for this repository :crossed_fingers:.
 
 ![Dev-ops-meme](https://imgb.ifunny.co/images/0d9aaaf8feb3e07013fe7d8f701924ff3ac02fa425a90b52176144c601338b09_1.jpg)
 
@@ -145,6 +145,7 @@ Find a collection of small projects to learn about different languages and tools
 #### Courses
 
 The open source courses can be found in the [courses-free](src/courses-free) folder. The courses are:
+
   - **Microsoft Learning: Getting started with C#**: TODO: description. [src/courses-free/csharp-getting-started](src/courses-free/csharp-getting-started)
 
     [![Bazel][Bazel-build]][Bazel-url]
@@ -155,9 +156,12 @@ There is also a [courses-licensed](src/courses-licensed) folder with licensed co
 
 #### Examples
 
+The examples can be found in the [examples](src/examples) folder. Most of the examples in my repo are really simple. For more elaborated examples, check the [bazelbuild/examples repository](https://github.com/bazelbuild/examples) and the [depracated bazelbuild/bazel/examples folder](https://github.com/bazelbuild/bazel/tree/master/examples). The examples are:
+
 - [C++ Bazel](src/examples/bazel-test-project-cpp): A simple C++ project using Bazel.
 - [C# Bazel](src/examples/bazel-test-project-csharp): A simple C# project using Bazel.
 - [Python flask Bazel](src/examples/bazel-test-project-python-flask/): A simple Python flask project using Bazel.
+- [Shell](src/examples/bazel-test-project-shell): A simple Shell project using Bazel.
 
 ### GitHub Actions
 
@@ -187,6 +191,8 @@ Check individual courses for their sources.
 - [README template](https://github.com/othneildrew/Best-README-Template)
 
 ### Bazel
+- [Bazel build](https://bazel.build/)
+- [Bazel GitHub repository](https://github.com/bazelbuild/bazel/)
 - [Experimentations on Bazel - GitHub actions by David Bernard](https://dev.to/davidb31/experimentations-on-bazel-github-action-5639)
 - [Bazel zsh terminal completion](https://bazel.build/install/completion)
 
