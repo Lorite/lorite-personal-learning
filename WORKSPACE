@@ -105,3 +105,126 @@ http_archive(
 load("@bazel_latex//:repositories.bzl", "latex_repositories")
 
 latex_repositories()
+
+# ----------------------------------------
+
+# Javascript
+
+http_archive(
+    name = "aspect_rules_js",
+    sha256 = "7ab9776bcca823af361577a1a2ebb9a30d2eb5b94ecc964b8be360f443f714b2",
+    strip_prefix = "rules_js-1.32.6",
+    url = "https://github.com/aspect-build/rules_js/releases/download/v1.32.6/rules_js-v1.32.6.tar.gz",
+)
+
+load("@aspect_rules_js//js:repositories.bzl", "rules_js_dependencies")
+
+rules_js_dependencies()
+
+load("@rules_nodejs//nodejs:repositories.bzl", "DEFAULT_NODE_VERSION", "nodejs_register_toolchains")
+
+nodejs_register_toolchains(
+    name = "nodejs",
+    node_version = DEFAULT_NODE_VERSION,
+)
+
+load("@aspect_rules_js//npm:repositories.bzl", "npm_translate_lock")
+
+npm_translate_lock(
+    name = "npm",
+    npmrc = "//tools/formatter:.npmrc",
+    pnpm_lock = "//tools/formatter:pnpm-lock.yaml",
+    verify_node_modules_ignored = "//tools/formatter:.bazelignore",
+)
+
+load("@npm//:repositories.bzl", "npm_repositories")
+
+npm_repositories()
+
+# ----------------------------------------
+
+# TypeScript - Required for formatting and linting with prettier
+
+http_archive(
+    name = "aspect_rules_ts",
+    sha256 = "8eb25d1fdafc0836f5778d33fb8eaac37c64176481d67872b54b0a05de5be5c0",
+    strip_prefix = "rules_ts-1.3.3",
+    url = "https://github.com/aspect-build/rules_ts/releases/download/v1.3.3/rules_ts-v1.3.3.tar.gz",
+)
+
+load("@aspect_rules_ts//ts:repositories.bzl", "rules_ts_dependencies")
+
+rules_ts_dependencies(
+    ts_version_from = "//tools/formatter:package.json",
+)
+
+# ----------------------------------------
+
+# Buldifier - Required for formatting and linting Bazel
+
+http_archive(
+    name = "buildifier_prebuilt",
+    sha256 = "72b5bb0853aac597cce6482ee6c62513318e7f2c0050bc7c319d75d03d8a3875",
+    strip_prefix = "buildifier-prebuilt-6.3.3",
+    urls = [
+        "http://github.com/keith/buildifier-prebuilt/archive/6.3.3.tar.gz",
+    ],
+)
+
+load("@buildifier_prebuilt//:deps.bzl", "buildifier_prebuilt_deps")
+
+buildifier_prebuilt_deps()
+
+load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
+
+bazel_skylib_workspace()
+
+load("@buildifier_prebuilt//:defs.bzl", "buildifier_prebuilt_register_toolchains")
+
+buildifier_prebuilt_register_toolchains()
+
+# ----------------------------------------
+
+# Formatting and linting
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+http_archive(
+    name = "aspect_rules_lint",
+    sha256 = "ddc21b1399c03708f82e5a46d6c747bf23d55484bad1efdaa92a22d5fee20ea1",
+    strip_prefix = "rules_lint-0.5.0",
+    url = "https://github.com/aspect-build/rules_lint/releases/download/v0.5.0/rules_lint-v0.5.0.tar.gz",
+)
+
+# Use whichever formatter binaries you need:
+load(
+    "@aspect_rules_lint//format:repositories.bzl",
+    # "fetch_java_format",
+    "fetch_jsonnet",
+    # "fetch_ktfmt",
+    "fetch_pmd",
+    "fetch_shfmt",
+    "fetch_swiftformat",
+    # "fetch_terraform",
+)
+
+fetch_pmd()
+
+fetch_jsonnet()
+
+# fetch_terraform()
+
+# fetch_java_format()
+
+# fetch_ktfmt()
+
+fetch_shfmt()
+
+fetch_swiftformat()
+
+load("@aspect_rules_lint//lint:ruff.bzl", "fetch_ruff")
+
+fetch_ruff()
+
+load("@aspect_rules_lint//lint:shellcheck.bzl", "fetch_shellcheck")
+
+fetch_shellcheck()
