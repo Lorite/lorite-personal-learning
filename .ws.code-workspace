@@ -5,7 +5,17 @@
         }
     ],
     "settings": {
-        // C/C++ IntelliSense settings
-        "C_Cpp.intelliSenseEngine": "disabled"
+        "C_Cpp.intelliSenseEngine": "disabled",
+        "editor.tabCompletion": "on",
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.fontFamily": "MesloLGS NF",
+        "git.autofetch": true,
+        "git.autofetchPeriod": 60,
+        "bazel.buildifierFixOnFormat": true,
+        "bazel.enableCodeLens": true,
+        "bazel.commandLine.queryExpression": "src/...:*",
+        "search.exclude": {
+            "external/**": true
+        }
     },
 }

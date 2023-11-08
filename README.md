@@ -110,7 +110,7 @@ You can read the commit messages to see what I have been doing. I try to keep th
     git clone git@github.com:Lorite/lorite-personal-learning.git
     ```
 
-3. Open VS Code using the VS Code workspace file in the root of the repository.
+3. Open VS Code using the VS Code workspace file (.ws.code-workspace) in the root of the repository.
 
     ```bash
     cd lorite-personal-learning
@@ -121,6 +121,12 @@ You can read the commit messages to see what I have been doing. I try to keep th
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+5. Build something using bazel:
+  
+      ```bash
+      bazel build //src/examples/bazel-test-project-cpp:hello-world
+      ```
+
 
 ## Usage
 
@@ -130,7 +136,7 @@ Some of the tools and languages included in the container are:
 
 - [Bazel](https://bazel.build/) for building and testing software of any size, quickly and reliably.
 - [zsh + powerlevel10k + plugins](https://www.zsh.org/) for a better terminal experience.
-- [Many VS Code extensions](https://code.visualstudio.com/docs/editor/extension-gallery). See [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) for the full list.
+- [Many VS Code extensions](https://code.visualstudio.com/docs/editor/extension-gallery). See [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) for the full list. You can also check the section [VS Code extensions](#vs-code-extensions) for more information.
 - [LaTeX](https://www.latex-project.org/) for writing documents.
 - [C++](https://www.cplusplus.com/)
 - [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
@@ -162,6 +168,19 @@ The examples can be found in the [examples](src/examples) folder. Most of the ex
 - [C# Bazel](src/examples/bazel-test-project-csharp): A simple C# project using Bazel.
 - [Python flask Bazel](src/examples/bazel-test-project-python-flask/): A simple Python flask project using Bazel.
 - [Shell](src/examples/bazel-test-project-shell): A simple Shell project using Bazel.
+
+### VS Code extensions
+
+As stated earlier, you can check the [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) file to see al the extensions installed on the dev container by default. You can also check the [workspace settings](.ws.code-workspace) file for configuration. Remember that the workspace file must be opened in VS Code. The extensions are:
+
+- [bazelbuild.vscode-bazel](https://marketplace.visualstudio.com/items?itemName=bazelbuild.vscode-bazel): Bazel support for VS Code. Features:
+  - Syntax highlighting
+  - Bazel Build Targets tree displays the build packages/targets in your workspace.
+  - CodeLens links in BUILD files to directly launch a build or test by simply clicking on the targets
+  - Buildifier integration to lint and format your Bazel files (requires that Buildifier be installed)
+  - Debug Starlark code in your .bzl files during a build (set breakpoints, step through code, inspect variables, etc.)
+
+- TODO: add missing extensions from the [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) file.
 
 ### GitHub Actions
 
