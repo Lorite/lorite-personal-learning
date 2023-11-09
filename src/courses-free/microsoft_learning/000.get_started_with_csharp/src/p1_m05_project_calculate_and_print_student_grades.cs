@@ -59,7 +59,18 @@ namespace Lorite.GetStartedWithCSharp.P1M05ProjectCalculateAndPrintStudentGrades
             int jeong4 = 100;
             int jeong5 = 97;
 
+            // Calculate the final grade for each student
+            double sophiaFinalGrade = (sophia1 + sophia2 + sophia3 + sophia4 + sophia5) / (double)currentAssignments;
+            double nicolasFinalGrade = (nicolas1 + nicolas2 + nicolas3 + nicolas4 + nicolas5) / (double)currentAssignments;
+            double zahirahFinalGrade = (zahirah1 + zahirah2 + zahirah3 + zahirah4 + zahirah5) / (double)currentAssignments;
+            double jeongFinalGrade = (jeong1 + jeong2 + jeong3 + jeong4 + jeong5) / (double)currentAssignments;
 
+            // Print the results (of course we could use if statements for the letter grades, but the course does not cover that yet)
+            Console.WriteLine("Student\t\tGrade");
+            Console.WriteLine("Sophia\t\t" + sophiaFinalGrade + "\tA");
+            Console.WriteLine("Nicolas\t\t" + nicolasFinalGrade + "\tB");
+            Console.WriteLine("Zahirah\t\t" + zahirahFinalGrade + "\tB");
+            Console.WriteLine("Jeong\t\t" + jeongFinalGrade + "\tA");
         }
 
     }
