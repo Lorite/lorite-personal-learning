@@ -1,0 +1,39 @@
+package(default_visibility = ["//visibility:private"])
+
+load(
+    "@rules_dotnet//dotnet:defs.bzl",
+    "csharp_binary",
+    "csharp_library",
+    "csharp_nunit_test",
+)
+
+# csharp_library(
+#     name = "lib_000_literal_data_types",
+#     srcs = ["src/000_literal_data_types.cs"],
+#     target_frameworks = ["net6.0"],
+#     runtime_identifier = "linux-x64",
+#     targeting_packs = [
+#         "@example_deps//microsoft.netcore.app.ref",
+#     ],
+#     deps = [],
+# )
+
+csharp_binary(
+    name = "000_literal_data_types_bin",
+    srcs = ["src/000_literal_data_types.cs"],
+    target_frameworks = ["net6.0"],
+    targeting_packs = [
+        "@example_deps//microsoft.netcore.app.ref",
+    ],
+    deps = [],
+)
+
+csharp_binary(
+    name = "001_basic_string_formatting_bin",
+    srcs = ["src/001_basic_string_formatting.cs"],
+    target_frameworks = ["net6.0"],
+    targeting_packs = [
+        "@example_deps//microsoft.netcore.app.ref",
+    ],
+    deps = [],
+)
