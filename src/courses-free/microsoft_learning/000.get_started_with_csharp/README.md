@@ -1,6 +1,6 @@
-Although it would be better to use slightly more advanced aspects of C#, especially in the first few lessons, I try to follow the course as closely as possible and not to use anything that has not been introduced yet.
+Although it would be better to use slightly more advanced aspects of C#, especially in the first few lessons, I follow the course as closely as possible and do not use anything not yet introduced.
 In the first part, for instance, things like classes, methods, loops, etc are not introduced, so I decide not to use them at all.
-For the projects at the end of the parts it would be much better to create tests and run functions against them.
+For the projects at the end of the parts, it would be much better to create tests and run functions against them.
 
 Sadly I had still not configured my VS Code to lint and format my code, so the code is not as clean as it should be. I am building the code using bazel instead of dotnet or msbuild, and I couldn't find a way to configure the linter to work with bazel.
 
