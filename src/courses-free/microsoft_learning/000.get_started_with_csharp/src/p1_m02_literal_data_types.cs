@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Lorite.GetStartedWithCSharp.Lib000LiteralDataTypes {
+namespace Lorite.GetStartedWithCSharp.P1M02LiteralDataTypes {
 
     public static class Program {
 

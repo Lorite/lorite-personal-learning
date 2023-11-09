@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Lorite.GetStartedWithCSharp.Lib001BasicStringFormatting {
+namespace Lorite.GetStartedWithCSharp.P1M03BasicStringFormatting {
 
     public static class Program {
 

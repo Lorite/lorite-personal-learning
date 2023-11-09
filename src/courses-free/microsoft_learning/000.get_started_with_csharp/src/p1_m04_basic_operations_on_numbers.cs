@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Lorite.GetStartedWithCSharp.Lib002BasicOperationsOnNumbers {
+namespace Lorite.GetStartedWithCSharp.P1M02BasicOperationsOnNumbers {
 
     public static class Program {
 
