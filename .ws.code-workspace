@@ -16,6 +16,20 @@
         "bazel.commandLine.queryExpression": "src/...:*",
         "search.exclude": {
             "external/**": true
-        }
+        },
+        "cSpell.customDictionaries": {
+            "business_dictionary": {
+                "name": "business_dictionary",
+                "path": "${workspaceRoot}/.vscode/cSpell/business_dictionary.txt",
+                "description": "Business related dictionary.",
+                "addWords": true
+            },
+            "technical_dictionary": {
+                "name": "technical_dictionary",
+                "path": "${workspaceRoot}/.vscode/cSpell/technical_dictionary.txt",
+                "description": "Technical related dictionary.",
+                "addWords": true
+            },
+        },
     },
 }

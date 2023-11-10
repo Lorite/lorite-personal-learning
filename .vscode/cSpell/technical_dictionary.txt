@@ -1,0 +1,6 @@
+bazel
+buildifier
+devcontainer
+sonarlint
+sonarsource
+vsnotes
