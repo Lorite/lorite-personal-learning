@@ -47,6 +47,10 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#about-the-project-fun">Fun explanation</a></li>
+        <li><a href="#about-the-project-boring">Boring explanation</a></li>
+      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -70,6 +74,19 @@
 </details>
 
 ## About The Project
+
+### Fun explanation
+
+Imagine a vibrant digital landscape where code languages bloom like a garden of diverse flowers. At the center of this repository, a mighty Bazel tree stands tall, its branches extending to support Python vines, C++ oaks, C# cherry blossoms, Go bamboo shoots, Javascript willow branches, and dozens of undiscovered species. The air is filled with the harmonious hum of CI/CD bees buzzing around, ensuring a seamless flow of updates.
+
+In the background, the VS Code devcontainer rises like a futuristic tower, with its windows opening to reveal a panoramic view of the coding ecosystem within. GitHub action satellites orbit overhead, keeping a watchful eye on the repository, ready to launch into action at any moment.
+
+The colors are bold and dynamic, reflecting the energy and versatility of your monorepo. And in the foreground, the README.md serves as a welcoming path, inviting developers to step into this lush garden of code, explore its wonders, and contribute to the ever-growing landscape.
+
+![lorite-personal-learning-monorepo](media/img/lorite-monorepo.png)
+
+
+### Boring explanation
 
 Welcome to my personal learning repository :bowtie:. I use it to learn about different tools, workflows, programming languages, and anything related to software development, really. Personally, I like to have an overview of the different tools and languages and how they work together. I am getting started with DevOps and CI/CD, so I am using this repository to learn about it, mainly using [dev containers](https://containers.dev/), [Bazel](https://bazel.build/), and [GitHub actions](https://github.com/features/actions) to build the monorepo. I also code in my everyday job, so I also follow specific language courses and try out examples on this repository. I believe that programmers should be able to do everything, from designing the architecture to deploying the software; and this repository can help me (and maybe you) to achieve that. I have high hopes for this repository :crossed_fingers:.
 
