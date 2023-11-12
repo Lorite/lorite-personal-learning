@@ -1,3 +1,6 @@
 [submodule "src/courses-free/github_skills/000.introduction_to_github"]
 	path = src/courses-free/github_skills/000.introduction_to_github
 	url = https://github.com/Lorite/skills-introduction-to-github
+[submodule "src/courses-free/github_skills/001.skills_communicate_using_markdown"]
+	path = src/courses-free/github_skills/001.skills_communicate_using_markdown
+	url = https://github.com/Lorite/skills-communicate-using-markdown

@@ -11,6 +11,7 @@ Although I already know how to use GitHub (and git), I am going through these co
 ## Courses
 
 1. [GitHub Skills | First day on GitHub | Introduction to GitHub](https://github.com/skills/introduction-to-github/)
+2. [GitHub Skills | First day on GitHub | Communicating using Markdown](https://github.com/skills/communicate-using-markdown)
 
 ## Extra resources
 
