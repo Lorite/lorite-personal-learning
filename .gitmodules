@@ -1,0 +1,3 @@
+[submodule "src/courses-free/github_skills/000.introduction_to_github"]
+	path = src/courses-free/github_skills/000.introduction_to_github
+	url = https://github.com/Lorite/skills-introduction-to-github

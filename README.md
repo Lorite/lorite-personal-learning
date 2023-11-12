@@ -169,6 +169,10 @@ Find a collection of small projects to learn about different languages and tools
 
 The open source courses can be found in the [courses-free](src/courses-free) folder. The courses are:
 
+  - **GitHub Skills**: Learn how to use GitHub with interactive courses designed for beginners and experts. [src/courses-free/github_skills](src/courses-free/github_skills)
+
+    [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
+
   - **Microsoft Learning: Getting started with C#**: TODO: description. [src/courses-free/csharp-getting-started](src/courses-free/csharp-getting-started)
 
     [![Bazel][Bazel-build]][Bazel-url]
