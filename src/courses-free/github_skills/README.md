@@ -10,8 +10,11 @@ Although I already know how to use GitHub (and git), I am going through these co
 
 ## Courses
 
-1. [GitHub Skills | First day on GitHub | Introduction to GitHub](https://github.com/skills/introduction-to-github/)
-2. [GitHub Skills | First day on GitHub | Communicating using Markdown](https://github.com/skills/communicate-using-markdown)
+[General GitHub Skills website](https://github.com/skills)
+1. [First day on GitHub](https://skills.github.com/#first-day-on-github)
+    1. [Introduction to GitHub](https://github.com/skills/introduction-to-github/)
+    2. [Communicating using Markdown](https://github.com/skills/communicate-using-markdown)
+    3. [GitHub Pages](https://github.com/skills/github-pages)
 
 ## Extra resources
 
