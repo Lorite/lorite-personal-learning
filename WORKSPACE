@@ -68,12 +68,31 @@ load("@python_3_10//:defs.bzl", "interpreter")
 load("@rules_python//python:pip.bzl", "pip_parse")
 # src/examples/bazel-test-project-python-flask
 pip_parse(
-    name = "pip_bazel_test_deps",
+    name = "pip_examples_bazel_test_project_python_flask",
     requirements_lock = "//src/examples/bazel-test-project-python-flask:requirements.txt",
-    # python_interpreter_target = interpreter,
+    python_interpreter_target = interpreter,
 )
-load("@pip_bazel_test_deps//:requirements.bzl", install_deps_bazel_test = "install_deps")
-install_deps_bazel_test()
+load("@pip_examples_bazel_test_project_python_flask//:requirements.bzl", install_pip_deps_bazel_test_project_python_flask = "install_deps")
+install_pip_deps_bazel_test_project_python_flask()
+
+# ----------------------------------------
+
+# Sphinx
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "rules_sphinx",
+    sha256 = "daa3f1f9b9f3ecb7d4125c5edbd0576e2efbe3a4ceac278e7d191a120acd40a8",
+    strip_prefix = "rules_sphinx-0.2.0",
+    url = "https://github.com/agoessling/rules_sphinx/archive/refs/tags/v0.2.0.tar.gz",
+)
+
+load("@rules_sphinx//sphinx:direct_repositories.bzl", "rules_sphinx_direct_deps")
+rules_sphinx_direct_deps()
+
+load("@rules_sphinx//sphinx:indirect_repositories.bzl", "rules_sphinx_indirect_deps")
+rules_sphinx_indirect_deps()
 
 # ----------------------------------------
 
