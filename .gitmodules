@@ -1,0 +1,9 @@
+[submodule "src/courses-free/github_skills/000.introduction_to_github"]
+	path = src/courses-free/github_skills/000.introduction_to_github
+	url = https://github.com/Lorite/skills-introduction-to-github
+[submodule "src/courses-free/github_skills/001.skills_communicate_using_markdown"]
+	path = src/courses-free/github_skills/001.skills_communicate_using_markdown
+	url = https://github.com/Lorite/skills-communicate-using-markdown
+[submodule "src/courses-free/github_skills/002.skills_github_pages"]
+	path = src/courses-free/github_skills/002.skills_github_pages
+	url = https://github.com/Lorite/skills-github-pages
