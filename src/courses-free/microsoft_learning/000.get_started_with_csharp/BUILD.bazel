@@ -68,4 +68,62 @@ csharp_binary(
     deps = [],
 )
 
+csharp_binary(
+    name = "p2_m01_call_methods_from_dotnet_class_library_bin",
+    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m01_call_methods_from_dotnet_class_library.cs"],
+    target_frameworks = ["net6.0"],
+    targeting_packs = [
+        "@example_deps//microsoft.netcore.app.ref",
+    ],
+    deps = [],
+)
 
+csharp_binary(
+    name = "p2_m02_add_decision_logic_bin",
+    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m02_add_decision_logic.cs"],
+    target_frameworks = ["net6.0"],
+    targeting_packs = [
+        "@example_deps//microsoft.netcore.app.ref",
+    ],
+    deps = [],
+)
+
+csharp_binary(
+    name = "p2_m03_store_and_iterate_through_sequences_of_data_using_arrays_and_foreach_bin",
+    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m03_store_and_iterate_through_sequences_of_data_using_arrays_and_foreach.cs"],
+    target_frameworks = ["net6.0"],
+    targeting_packs = [
+        "@example_deps//microsoft.netcore.app.ref",
+    ],
+    deps = [],
+)
+
+csharp_binary(
+    name = "p2_m04_create_readable_code_with_conventions_whitespace_and_comments_bin",
+    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m04_create_readable_code_with_conventions_whitespace_and_comments.cs"],
+    target_frameworks = ["net6.0"],
+    targeting_packs = [
+        "@example_deps//microsoft.netcore.app.ref",
+    ],
+    deps = [],
+)
+
+csharp_binary(
+    name = "p2_m05_project_foreach_and_if_elseif_else_bin",
+    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m05_project_foreach_and_if_elseif_else.cs"],
+    target_frameworks = ["net6.0"],
+    targeting_packs = [
+        "@example_deps//microsoft.netcore.app.ref",
+    ],
+    deps = [],
+)
+
+csharp_binary(
+    name = "p2_m06_project_foreach_and_if_elseif_else_2_bin",
+    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m06_project_foreach_and_if_elseif_else_2.cs"],
+    target_frameworks = ["net6.0"],
+    targeting_packs = [
+        "@example_deps//microsoft.netcore.app.ref",
+    ],
+    deps = [],
+)
