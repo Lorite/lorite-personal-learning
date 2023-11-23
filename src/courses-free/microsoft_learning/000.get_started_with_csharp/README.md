@@ -1,6 +1,6 @@
 Although it would be better to use slightly more advanced aspects of C#, especially in the first few lessons, I follow the course as closely as possible and do not use anything not yet introduced.
-In the first part, for instance, things like classes, methods, loops, etc are not introduced, so I decide not to use them at all.
-For the projects at the end of the parts, it would be much better to create tests and run functions against them.
+In the first part, for instance, things like classes, methods, loops, etc are not introduced, so I decide not to use them at all. For example, for the projects at the end of the parts, it would be much better to create tests and run functions against them.
+Most of the files are compiled as binaries that then print stuff on the console. Read the comments in the code for explanations.
 
 Sadly I had still not configured my VS Code to lint and format my code, so the code is not as clean as it should be. I am building the code using bazel instead of dotnet or msbuild, and I couldn't find a way to configure the linter to work with bazel.
 

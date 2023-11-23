@@ -20,7 +20,7 @@ load(
 
 csharp_binary(
     name = "p1_m02_literal_data_types_bin",
-    srcs = ["src/p1_m02_literal_data_types.cs"],
+    srcs = ["src/p1_write_your_first_code_using_csharp/p1_m02_literal_data_types.cs"],
     target_frameworks = ["net6.0"],
     targeting_packs = [
         "@example_deps//microsoft.netcore.app.ref",
@@ -30,7 +30,7 @@ csharp_binary(
 
 csharp_binary(
     name = "p1_m03_basic_string_formatting_bin",
-    srcs = ["src/p1_m03_basic_string_formatting.cs"],
+    srcs = ["src/p1_write_your_first_code_using_csharp/p1_m03_basic_string_formatting.cs"],
     target_frameworks = ["net6.0"],
     targeting_packs = [
         "@example_deps//microsoft.netcore.app.ref",
@@ -40,7 +40,7 @@ csharp_binary(
 
 csharp_binary(
     name = "p1_m04_basic_operations_on_numbers_bin",
-    srcs = ["src/p1_m04_basic_operations_on_numbers.cs"],
+    srcs = ["src/p1_write_your_first_code_using_csharp/p1_m04_basic_operations_on_numbers.cs"],
     target_frameworks = ["net6.0"],
     targeting_packs = [
         "@example_deps//microsoft.netcore.app.ref",
@@ -50,19 +50,22 @@ csharp_binary(
 
 csharp_binary(
     name = "p1_m05_project_calculate_and_print_student_grades_bin",
-    srcs = ["src/p1_m05_project_calculate_and_print_student_grades.cs"],
+    srcs = ["src/p1_write_your_first_code_using_csharp/p1_m05_project_calculate_and_print_student_grades.cs"],
     target_frameworks = ["net6.0"],
     targeting_packs = [
         "@example_deps//microsoft.netcore.app.ref",
     ],
     deps = [],
 )
+
 csharp_binary(
     name = "p1_m06_project_calculate_final_gpa_bin",
-    srcs = ["src/p1_m06_project_calculate_final_gpa.cs"],
+    srcs = ["src/p1_write_your_first_code_using_csharp/p1_m06_project_calculate_final_gpa.cs"],
     target_frameworks = ["net6.0"],
     targeting_packs = [
         "@example_deps//microsoft.netcore.app.ref",
     ],
     deps = [],
 )
+
+
