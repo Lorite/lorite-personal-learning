@@ -11,6 +11,25 @@
         "terminal.integrated.fontFamily": "MesloLGS NF",
         "git.autofetch": true,
         "git.autofetchPeriod": 60,
+        "githubIssues.queries": [
+            {
+                "label": "My Issues",
+                "query": "default"
+            },
+            {
+                "label": "Created Issues",
+                "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+            },
+            {
+                "label": "Recent Issues",
+                "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+            },
+            {
+                "label": "Closed Issues",
+                "query": "state:closed repo:${owner}/${repository} sort:updated-desc"
+            }
+        ],
+        "githubIssues.issueBranchTitle": "${user}/issue${issueNumber}-${sanitizedIssueTitle}",
         "bazel.buildifierFixOnFormat": true,
         "bazel.enableCodeLens": true,
         "bazel.commandLine.queryExpression": "src/...:*",
@@ -31,23 +50,5 @@
                 "addWords": true
             },
         },
-        "githubIssues.queries": [
-            {
-                "label": "My Issues",
-                "query": "default"
-            },
-            {
-                "label": "Created Issues",
-                "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
-            },
-            {
-                "label": "Recent Issues",
-                "query": "state:open repo:${owner}/${repository} sort:updated-desc"
-            },
-            {
-                "label": "Closed Issues",
-                "query": "state:closed repo:${owner}/${repository} sort:updated-desc"
-            }
-        ],
     },
 }
