@@ -7,123 +7,21 @@ load(
     "csharp_nunit_test",
 )
 
-# csharp_library(
-#     name = "lib_000_literal_data_types",
-#     srcs = ["src/000_literal_data_types.cs"],
-#     target_frameworks = ["net6.0"],
-#     runtime_identifier = "linux-x64",
-#     targeting_packs = [
-#         "@example_deps//microsoft.netcore.app.ref",
-#     ],
-#     deps = [],
-# )
+SRC_FOLDER_NAMES = glob(
+    ["src"],
+    exclude_directories = 0,
+)
 
-csharp_binary(
-    name = "p1_m02_literal_data_types_bin",
-    srcs = ["src/p1_write_your_first_code_using_csharp/p1_m02_literal_data_types.cs"],
+EXCLUDED_FILES = []
+
+[csharp_binary(
+    name = csharp_file.split("/")[-1].split(".")[0],
+    srcs = [
+        csharp_file,
+    ],
     target_frameworks = ["net6.0"],
     targeting_packs = [
         "@example_deps//microsoft.netcore.app.ref",
     ],
     deps = [],
-)
-
-csharp_binary(
-    name = "p1_m03_basic_string_formatting_bin",
-    srcs = ["src/p1_write_your_first_code_using_csharp/p1_m03_basic_string_formatting.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
-
-csharp_binary(
-    name = "p1_m04_basic_operations_on_numbers_bin",
-    srcs = ["src/p1_write_your_first_code_using_csharp/p1_m04_basic_operations_on_numbers.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
-
-csharp_binary(
-    name = "p1_m05_project_calculate_and_print_student_grades_bin",
-    srcs = ["src/p1_write_your_first_code_using_csharp/p1_m05_project_calculate_and_print_student_grades.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
-
-csharp_binary(
-    name = "p1_m06_project_calculate_final_gpa_bin",
-    srcs = ["src/p1_write_your_first_code_using_csharp/p1_m06_project_calculate_final_gpa.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
-
-csharp_binary(
-    name = "p2_m01_call_methods_from_dotnet_class_library_bin",
-    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m01_call_methods_from_dotnet_class_library.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
-
-csharp_binary(
-    name = "p2_m02_add_decision_logic_bin",
-    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m02_add_decision_logic.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
-
-csharp_binary(
-    name = "p2_m03_store_and_iterate_through_sequences_of_data_using_arrays_and_foreach_bin",
-    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m03_store_and_iterate_through_sequences_of_data_using_arrays_and_foreach.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
-
-csharp_binary(
-    name = "p2_m04_create_readable_code_with_conventions_whitespace_and_comments_bin",
-    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m04_create_readable_code_with_conventions_whitespace_and_comments.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
-
-csharp_binary(
-    name = "p2_m05_project_foreach_and_if_elseif_else_bin",
-    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m05_project_foreach_and_if_elseif_else.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
-
-csharp_binary(
-    name = "p2_m06_project_foreach_and_if_elseif_else_2_bin",
-    srcs = ["src/p2_create_and_run_simple_csharp_console_applications/p2_m06_project_foreach_and_if_elseif_else_2.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
+) for csharp_file in glob([src_folder + "/**/*.cs" for src_folder in SRC_FOLDER_NAMES]) if csharp_file.split("/")[-1].split(".")[0] not in EXCLUDED_FILES]
