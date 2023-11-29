@@ -30,6 +30,9 @@
             }
         ],
         "githubIssues.issueBranchTitle": "${user}/issue${issueNumber}-${sanitizedIssueTitle}",
+        "githubPullRequests.notifications": "pullRequests",
+        "githubPullRequests.defaultMergeMethod": "squash",
+        "githubPullRequests.showPullRequestNumberInTree": true,
         "bazel.buildifierFixOnFormat": true,
         "bazel.enableCodeLens": true,
         "bazel.commandLine.queryExpression": "src/...:*",
