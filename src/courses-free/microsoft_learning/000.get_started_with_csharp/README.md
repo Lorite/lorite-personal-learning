@@ -22,6 +22,9 @@ You can find all available targets in the BUILD file in the root directory of th
 bazel query //:*
 ```
 
+# Outcomes of the course
+The course provides a good introduction to programming and C# in particular. It is way too long and simple for someone who already knows how to program, but it is a good introduction for someone who has never programmed before. For learning new languages, next time, I will probably use the official documentation of the language instead of a course like this one. Cheatsheets would also be good and I'll start populating them at [/cheatsheets](/cheatsheets/README.md) I will probably use a course like this one for learning new complex frameworks or libraries.
+
 # Sources:
 - [Microsoft Learn Training | Get started with C# Part 1 | Write Your First Code Using C#](https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-1/)
 - [Microsoft Learn Training | Get started with C# Part 2 | Create and run simple C# console applications](https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-2/)
