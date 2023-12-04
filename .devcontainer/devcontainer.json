@@ -22,6 +22,7 @@
 				"eamodio.gitlens",
 				// "ms-python.python",  # installed by feature ghcr.io/devcontainers/features/python:1
 				// "ms-python.vscode-pylance",  # installed by feature ghcr.io/devcontainers/features/python:1
+				"vadimcn.vscode-lldb",
 				// "ms-vscode.cpptools",
 				// "twxs.cmake",
 				// "DotJoshJohnson.xml",

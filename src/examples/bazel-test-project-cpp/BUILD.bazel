@@ -19,7 +19,7 @@ filegroup(
 )
 
 cc_test(
-  name = "test_hello-lib",
+  name = "hello-test",
   size = "small",
   srcs = ["hello-test.cc"],
   deps = ["@com_google_googletest//:gtest_main"],

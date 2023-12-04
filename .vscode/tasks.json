@@ -4,14 +4,46 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build",
-      "command": "cd test-project && bazel build",
+      "label": "Bazel Build (debug)",
       "type": "shell",
-      "group": "build",
-      "presentation": {
-        "reveal": "silent"
+      "command": "tools/bazel/scripts/bazel_x_this_file.sh build ${relativeFile} -c dbg",
+      "windows": {
+        "command": "tools/bazel/scripts/bazel_x_this_file.sh build ${relativeFile} --experimental_enable_runfiles -c dbg"
       },
-      "problemMatcher": "$msCompile"
+      "osx": {
+        "command": "tools/bazel/scripts/bazel_x_this_file.sh build ${relativeFile} -c dbg --spawn_strategy=local",
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+    },
+    {
+      "label": "Bazel Build (no-debug)",
+      "type": "shell",
+      "command": "tools/bazel/scripts/bazel_x_this_file.sh build ${relativeFile}",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+    },
+    {
+      "label": "Bazel Test (no-debug)",
+      "type": "shell",
+      "command": "tools/bazel/scripts/bazel_x_this_file.sh test ${relativeFile}",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+    },
+    {
+      "label": "Bazel Run (no-debug)",
+      "type": "shell",
+      "command": "tools/bazel/scripts/bazel_x_this_file.sh run ${relativeFile}",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
     }
   ]
 }

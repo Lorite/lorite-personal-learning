@@ -140,10 +140,11 @@ You can read the commit messages to see what I have been doing. I try to keep th
 
 5. Build something using bazel:
   
-      ```bash
-      bazel build //src/examples/bazel-test-project-cpp:hello-world
-      ```
+    ```bash
+    bazel build //src/examples/bazel-test-project-cpp:hello-world
+    ```
 
+    > **_NOTE:_** You can also use the `Bazel: build target` command from the VS Code extension, or the `BAZEL BUILD TARGETS` from the `Explorer` panel (after opening any `BUILD.bazel` file).
 
 ## Usage
 
@@ -152,6 +153,7 @@ You can read the commit messages to see what I have been doing. I try to keep th
 Some of the tools and languages included in the container are:
 
 - [Bazel](https://bazel.build/) for building and testing software of any size, quickly and reliably.
+- [LLDB](https://lldb.llvm.org/) for debugging. This extension is used along with VS Code [launch profiles](.vscode/launch.json) and [tasks](.vscode/tasks.json) that are already set up in this repo. You can try pressing <kbd>F5</kbd> on any editor-opened code file. You may need to modify the location of the output file in the [launch profiles](.vscode/launch.json) manually for now.
 - [zsh + powerlevel10k + plugins](https://www.zsh.org/) for a better terminal experience.
 - [Many VS Code extensions](https://code.visualstudio.com/docs/editor/extension-gallery). See [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) for the full list. You can also check the section [VS Code extensions](#vs-code-extensions) for more information.
 - [LaTeX](https://www.latex-project.org/) for writing documents.
@@ -201,6 +203,8 @@ As stated earlier, you can check the [.devcontainer/devcontainer.json](.devconta
   - Buildifier integration to lint and format your Bazel files (requires that Buildifier be installed)
   - Debug Starlark code in your .bzl files during a build (set breakpoints, step through code, inspect variables, etc.)
 
+- [vadimcn.vscode-lldb](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb): LLDB Debugger support for Visual Studio Code mainly for C++ and Rust. It is also usable with most compiled languages whose compiler generates compatible debugging information.
+
 - TODO: add missing extensions from the [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) file.
 
 ### GitHub Actions
@@ -212,7 +216,9 @@ TODO: explain how the GitHub Actions are used.
 
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Lorite/lorite-personal-learning/issues) for a full list of proposed features (and known issues).
+
+See the [GitHub project](https://github.com/users/Lorite/projects/1) for the tasks and project roadmap. The tasks are linked to the issues.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -228,7 +234,7 @@ This section contains the resources for DevOps and CI/CD. The resources specific
 Check individual courses for their sources.
 
 ### Documenting
-- [README template](https://github.com/othneildrew/Best-README-Template)
+- [README template](https://github.com/Lorite/lorite-personal-learning)
 
 ### Bazel
 - [Bazel build](https://bazel.build/)
