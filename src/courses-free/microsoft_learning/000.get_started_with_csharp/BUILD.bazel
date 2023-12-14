@@ -7,62 +7,21 @@ load(
     "csharp_nunit_test",
 )
 
-# csharp_library(
-#     name = "lib_000_literal_data_types",
-#     srcs = ["src/000_literal_data_types.cs"],
-#     target_frameworks = ["net6.0"],
-#     runtime_identifier = "linux-x64",
-#     targeting_packs = [
-#         "@example_deps//microsoft.netcore.app.ref",
-#     ],
-#     deps = [],
-# )
-
-csharp_binary(
-    name = "p1_m02_literal_data_types_bin",
-    srcs = ["src/p1_m02_literal_data_types.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
+SRC_FOLDER_NAMES = glob(
+    ["src"],
+    exclude_directories = 0,
 )
 
-csharp_binary(
-    name = "p1_m03_basic_string_formatting_bin",
-    srcs = ["src/p1_m03_basic_string_formatting.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
+EXCLUDED_FILES = []
 
-csharp_binary(
-    name = "p1_m04_basic_operations_on_numbers_bin",
-    srcs = ["src/p1_m04_basic_operations_on_numbers.cs"],
+[csharp_binary(
+    name = csharp_file.split("/")[-1].split(".")[0],
+    srcs = [
+        csharp_file,
+    ],
     target_frameworks = ["net6.0"],
     targeting_packs = [
         "@example_deps//microsoft.netcore.app.ref",
     ],
     deps = [],
-)
-
-csharp_binary(
-    name = "p1_m05_project_calculate_and_print_student_grades_bin",
-    srcs = ["src/p1_m05_project_calculate_and_print_student_grades.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
-csharp_binary(
-    name = "p1_m06_project_calculate_final_gpa_bin",
-    srcs = ["src/p1_m06_project_calculate_final_gpa.cs"],
-    target_frameworks = ["net6.0"],
-    targeting_packs = [
-        "@example_deps//microsoft.netcore.app.ref",
-    ],
-    deps = [],
-)
+) for csharp_file in glob([src_folder + "/**/*.cs" for src_folder in SRC_FOLDER_NAMES]) if csharp_file.split("/")[-1].split(".")[0] not in EXCLUDED_FILES]
