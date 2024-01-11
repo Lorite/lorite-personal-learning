@@ -80,13 +80,13 @@ install_deps_bazel_test()
 # C++ - Cpp
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-
 http_archive(
   name = "com_google_googletest",
   urls = ["https://github.com/google/googletest/archive/5ab508a01f9eb089207ee87fd547d290da39d015.zip"],
   strip_prefix = "googletest-5ab508a01f9eb089207ee87fd547d290da39d015",
 )
 
+# linting - clangd
 # Hedron's Compile Commands Extractor for Bazel
 # https://github.com/hedronvision/bazel-compile-commands-extractor
 http_archive(
@@ -97,8 +97,25 @@ http_archive(
     strip_prefix = "bazel-compile-commands-extractor-6d58fa6bf39f612304e55566fa628fd160b38177",
     # When you first run this tool, it'll recommend a sha256 hash to put here with a message like: "DEBUG: Rule 'hedron_compile_commands' indicated that a canonical reproducible form can be obtained by modifying arguments sha256 = ..."
 )
-load("@hedron_compile_commands//:workspace_setup.bzl", "hedron_compile_commands_setup")
-hedron_compile_commands_setup()
+
+# llvm tools
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+http_archive(
+    name = "toolchains_llvm",
+    sha256 = "b7cd301ef7b0ece28d20d3e778697a5e3b81828393150bed04838c0c52963a01",
+    strip_prefix = "toolchains_llvm-0.10.3",
+    canonical_id = "0.10.3",
+    url = "https://github.com/grailbio/bazel-toolchain/releases/download/0.10.3/toolchains_llvm-0.10.3.tar.gz",
+)
+load("@toolchains_llvm//toolchain:deps.bzl", "bazel_toolchain_dependencies")
+bazel_toolchain_dependencies()
+load("@toolchains_llvm//toolchain:rules.bzl", "llvm_toolchain")
+llvm_toolchain(
+    name = "llvm_toolchain",
+    llvm_version = "16.0.0",
+)
+load("@llvm_toolchain//:toolchains.bzl", "llvm_register_toolchains")
+llvm_register_toolchains()
 
 # ----------------------------------------
 
