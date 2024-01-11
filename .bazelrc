@@ -1,5 +1,6 @@
-build --action_env=BAZEL_CXXOPTS="-std=c++20:-Werror"
 build --verbose_failures
+build --cxxopt=-Werror           # C++ - Every warning is treated as an error
+build --cxxopt=-std=c++20        # C++ - Use C++20
 
 test --test_output=errors
 test --test_tag_filters=-images
@@ -8,5 +9,16 @@ test --incompatible_exclusive_test_sandboxed
 test --verbose_failures
 
 run --verbose_failures
+
+# C++ llvm
+# Not needed after https://github.com/bazelbuild/bazel/issues/7260 is closed
+build --incompatible_enable_cc_toolchain_resolution
+# For macOS only:
+# Needed for Bazel versions before 7.
+# Without this, one can use `--linkopt='-undefined dynamic_lookup'`.
+# This feature is intentionally not supported on macOS.
+build --features=-supports_dynamic_linker
+# Not needed after https://github.com/grailbio/bazel-toolchain/pull/229.
+build --features=-libtool
 
 try-import %workspace%/.bazelrc.user

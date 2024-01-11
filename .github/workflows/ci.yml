@@ -8,6 +8,11 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+      # Installs missing package for the default C++ clangd toolchain for Bazel
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: libtinfo5
+          version: 1.0
       # Caches and restores the bazelisk download directory, the bazel build directory.
       - name: Cache bazel
         uses: actions/cache@v3.3.2

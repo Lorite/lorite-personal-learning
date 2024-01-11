@@ -157,7 +157,7 @@ Some of the tools and languages included in the container are:
 - [zsh + powerlevel10k + plugins](https://www.zsh.org/) for a better terminal experience.
 - [Many VS Code extensions](https://code.visualstudio.com/docs/editor/extension-gallery). See [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) for the full list. You can also check the section [VS Code extensions](#vs-code-extensions) for more information.
 - [LaTeX](https://www.latex-project.org/) for writing documents.
-- [C++](https://www.cplusplus.com/)
+- [C++](https://www.cplusplus.com/) with [LLVM](https://llvm.org/) tools: [clangd](https://clangd.llvm.org/) with clang-format and clang-tidy when saving files.
 - [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 - [Python](https://www.python.org/)
 - [pip](https://pypi.org/project/pip/) for installing Python packages.

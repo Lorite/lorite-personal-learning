@@ -15,12 +15,10 @@ using std::string;
  * based on exit code (which is always 0 here, so the test "passes"). See
  * hello-fail.cc for an example of making a test fail.
  */
-int main(int argc, char **argv)
-{
+int main(int argc, char** argv) {
   HelloLib lib("Hello");
   string thing = "world";
-  if (argc > 1)
-  {
+  if (argc > 1) {
     thing = argv[1];
   }
   lib.greet(thing);

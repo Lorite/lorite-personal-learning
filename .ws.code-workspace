@@ -39,6 +39,66 @@
         "search.exclude": {
             "external/**": true
         },
+
+        // Editor settings
+        "editor.formatOnSave": false,
+        "[python]": {
+            "editor.formatOnSave": true,
+            "editor.insertSpaces": true,
+            "editor.tabSize": 4
+        },
+        "[cpp]": {
+            "editor.formatOnSave": true,
+            "editor.insertSpaces": false,
+            "editor.trimAutoWhitespace": false
+        },
+        "[c]": {
+            "editor.formatOnSave": true,
+            "editor.insertSpaces": false,
+            "editor.trimAutoWhitespace": false
+        },
+        "[rust]": {
+            "editor.formatOnSave": true,
+            "editor.insertSpaces": true,
+            "editor.trimAutoWhitespace": true,
+        },
+        "[restructuredtext]": {
+            "editor.wordWrap": "wordWrapColumn",
+            "editor.rulers": [80, 120],
+            "editor.renderWhitespace": "all",
+            "editor.tabSize": 4,
+            "editor.insertSpaces": true,
+            "editor.formatOnSave": true,
+            "editor.trimAutoWhitespace": true
+        },
+        "[starlark]": {
+            "editor.formatOnSave": true,
+        },
+
+        // Files settings
+        "files.trimTrailingWhitespace": false,
+        "files.exclude": {
+        },
+        "files.watcherExclude": {
+            "/workspaces/lorite-personal-learning/.cache/**": true,
+            "/workspaces/lorite-personal-learning/.ccache/**": true,
+            "/workspaces/lorite-personal-learning/.git/objects/**": true,
+            "/workspaces/lorite-personal-learning/.git/subtree-cache/**": true,
+            "/workspaces/lorite-personal-learning/bazel-bin/**": true,
+            "/workspaces/lorite-personal-learning/bazel-lorite-personal-learning/**": true,
+            "/workspaces/lorite-personal-learning/bazel-out/**": true,
+            "/workspaces/lorite-personal-learning/bazel-testlogs/**": true,
+            "/workspaces/lorite-personal-learning/external/**": true,
+        },
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+
+        // C++ settings
+        "clangd.path": "/workspaces/lorite-personal-learning/external/llvm_toolchain_llvm/bin/clangd",
+        "clangd.arguments": [
+            "--compile-commands-dir=${workspaceFolder}/",
+            "--query-driver=**"
+        ],
         "cSpell.customDictionaries": {
             "business_dictionary": {
                 "name": "business_dictionary",
@@ -53,5 +113,8 @@
                 "addWords": true
             },
         },
+        "lldb.displayFormat": "auto",
+        "lldb.dereferencePointers": true,
+        "lldb.showDisassembly": "auto",
     },
 }
