@@ -1,5 +1,6 @@
-build --action_env=BAZEL_CXXOPTS="-std=c++20:-Werror"
 build --verbose_failures
+build --cxxopt=-Werror           # C++ - Every warning is treated as an error
+build --cxxopt=-std=c++20        # C++ - Use C++20
 
 test --test_output=errors
 test --test_tag_filters=-images
