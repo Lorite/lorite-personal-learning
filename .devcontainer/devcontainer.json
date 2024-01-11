@@ -32,7 +32,7 @@
 				// "foxundermoon.shell-format",
 				// "timonwong.shellcheck",
 				// "dtangren.vs-codeowners",
-				// "llvm-vs-code-extensions.vscode-clangd",
+				"llvm-vs-code-extensions.vscode-clangd",
 				// "docsmsft.docs-markdown",
 				// "humao.rest-client",
 				// "trond-snekvik.simple-rst",

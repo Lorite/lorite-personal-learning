@@ -39,6 +39,10 @@
         "search.exclude": {
             "external/**": true
         },
+        "clangd.arguments": [
+            "--compile-commands-dir=${workspaceFolder}/",
+            "--query-driver=**"
+        ],
         "cSpell.customDictionaries": {
             "business_dictionary": {
                 "name": "business_dictionary",
