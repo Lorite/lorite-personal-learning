@@ -6,17 +6,12 @@ using std::cout;
 using std::endl;
 using std::string;
 
-namespace hello
-{
+namespace hello {
 
-HelloLib::HelloLib(const string &greeting)
-  : greeting_(new string(greeting))
-{
-}
+HelloLib::HelloLib(const string& greeting) : greeting_(new string(greeting)) {}
 
-void HelloLib::greet(const string &thing)
-{
+void HelloLib::greet(const string& thing) {
   cout << *greeting_ << " " << thing << endl;
 }
 
-} // namespace hello
+}  // namespace hello
