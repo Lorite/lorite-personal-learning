@@ -241,6 +241,7 @@ Check individual courses for their sources.
 - [Bazel GitHub repository](https://github.com/bazelbuild/bazel/)
 - [Experimentations on Bazel - GitHub actions by David Bernard](https://dev.to/davidb31/experimentations-on-bazel-github-action-5639)
 - [Bazel zsh terminal completion](https://bazel.build/install/completion)
+- [Alex Eagle - .bazelrc flags you should enable](https://blog.aspect.dev/bazelrc-flags)
 
 ### Dev container
 - [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)

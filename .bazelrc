@@ -1,17 +1,32 @@
-build --verbose_failures
-build --cxxopt=-std=c++20        # C++ - Use C++20
-build --cxxopt=-Wall             # C++ - Enable all warnings
-build --cxxopt=-Werror           # C++ - Every warning is treated as an error
-build --cxxopt=-Wpedantic        # C++ - Be pedantic
-build --cxxopt=-Wextra           # C++ - Enable extra warnings
+common --incompatible_allow_tags_propagation
 
-test --test_output=errors
-test --test_tag_filters=-images
-test --build_tests_only
-test --incompatible_exclusive_test_sandboxed
-test --verbose_failures
+build --experimental_remote_merkle_tree_cache
+build --experimental_reuse_sandbox_directories
+build --heap_dump_on_oom 
+build --incompatible_default_to_explicit_init_py
+build --incompatible_remote_results_ignore_disk
+build --incompatible_strict_action_env
+build --modify_execution_info=PackageTar=+no-remote
+build --noexperimental_check_output_files
+build --noexperimental_check_external_repository_files
+build --nolegacy_external_runfiles
+build --remote_local_fallback
+build --sandbox_default_allow_network=false
+build --verbose_failures
+build --cxxopt=-Werror           # C++ - Every warning is treated as an error
+build --cxxopt=-std=c++20        # C++ - Use C++20
 
 run --verbose_failures
+
+startup --host_jvm_args=-DBAZEL_TRACK_SOURCE_DIRECTORIES=1
+
+test --build_tests_only
+test --incompatible_exclusive_test_sandboxed
+test --test_output=errors
+test --test_tag_filters=-images
+test --test_verbose_timeout_warnings
+test --verbose_failures
+
 
 # C++ llvm
 # Not needed after https://github.com/bazelbuild/bazel/issues/7260 is closed
