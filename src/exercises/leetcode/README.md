@@ -8,7 +8,7 @@ Leetcode problems are a great way to practice coding and problem solving skills.
 4. Write tests for the solution in this repository in the `<problem>/test_<language_file_extension>.<language_test_file_extension>` file.
 5. Write the logic on this repository in the `<problem>/solution_<language_file_extension>.<language_file_extension>`. Leetcode autocomplete is only available for premium users.
 6. Copy the solution to Leetcode and submit it. This is to check if the solution and tests are correct.
-7. Copy the result from Leetcode to this repository in the `<problem>/solution_<language_file_extension>.md` file.
+7. Copy the result from Leetcode to this repository in the `<problem>/results.md` file.
 8. Optimize the solution regarding time and space complexity and edge cases, and repeat steps 4-7.
 9. Commit the changes to this repository.
 
