@@ -58,8 +58,10 @@ MaxEmptyLinesToKeep: 1
 NamespaceIndentation: None
 ObjCSpaceAfterProperty: false
 ObjCSpaceBeforeProtocolList: true
+PenaltyBreakComment: 0  # Lorite - custom setting
+PenaltyBreakOpenParenthesis: 0  # Lorite - custom setting
 PointerAlignment: Left
-ReflowComments: false
+ReflowComments: true  # Lorite - custom setting
 # SeparateDefinitionBlocks: Always   # Only support since clang-format 14
 SpaceAfterCStyleCast: false
 SpaceAfterLogicalNot: false
