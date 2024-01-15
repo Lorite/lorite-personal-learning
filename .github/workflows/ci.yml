@@ -15,7 +15,7 @@ jobs:
           version: 1.0
       # Caches and restores the bazelisk download directory, the bazel build directory.
       - name: Cache bazel
-        uses: actions/cache@v3.3.2
+        uses: actions/cache@v3.3.3
         env:
           cache-name: bazel-cache
         with:
