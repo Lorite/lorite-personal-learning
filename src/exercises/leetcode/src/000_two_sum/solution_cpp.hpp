@@ -8,29 +8,49 @@ namespace two_sum {
 class SolutionCpp {
  public:
   /*
-   * Time complexity: O(n^2)
-   * Space complexity: O(1)
-   *
    * @param nums: vector of integers
    * @param target: target sum
    * @return vector of indices of the two numbers such that they add up to
    * target
    */
-  static std::vector<int> two_sum_v1(std::vector<int>& nums, int target) {
-    int nums_size = nums.size();                 // IMPR1
-    for (int i = 0; i < nums_size - 1; ++i) {    // it's preferred to use
-                                                 // std::vector<int>::size_type
-                                                 // but we have to return int
-      for (int j = i + 1; j < nums_size; ++j) {  // same as above
-        if (nums[i] + nums[j] == target) {  // IMPR2 (change at to [] for less
-                                            // safety but more speed)
-          return {i, j};
-        }
-      }
-    }
-    return {};
-  }
+  virtual std::vector<int> two_sum(std::vector<int>& nums, int target) = 0;
+
+  /*
+   * @brief virtual destructor
+   */
+  virtual ~SolutionCpp() = default;
 };
+
+class SolutionCppV1 : public SolutionCpp {
+
+ public:
+  /*
+  * time complexity: O(n^2)
+  * space complexity: O(1)
+  */
+  std::vector<int> two_sum(std::vector<int>& nums, int target) override;
+};
+
+class SolutionCppV2 : public SolutionCpp {
+ public:
+  /*
+  * @brief Two-Pass Hash Table
+  * time complexity: O(n) + O(n) = O(n)
+  * space complexity: O(n)
+  */
+  std::vector<int> two_sum(std::vector<int>& nums, int target) override;
+};
+
+class SolutionCppV3 : public SolutionCpp {
+ public:
+  /*
+  * @brief One-Pass Hash Table
+  * time complexity: O(n)
+  * space complexity: O(n)
+  */
+  std::vector<int> two_sum(std::vector<int>& nums, int target) override;
+};
+
 }  // namespace two_sum
 
 #endif  // TWO_SUM_SOLUTION_CPP_HPP
