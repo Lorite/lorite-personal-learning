@@ -11,6 +11,7 @@ EXCLUDED_PROBLEMS = []
     name = hpp_file.split("/")[-2].split(".")[0] + "_cpp",
     srcs = [
         hpp_file,
+        hpp_file.replace(".hpp", ".cpp"),
     ],
     deps = [],
     copts = [""], # We can specify compiler options here like -std=c++11
