@@ -8,6 +8,7 @@ codespace
 Codespaces
 devcontainer
 devcontainers
+Leetcode
 LLDB
 Meslo
 powerlevel

@@ -1,0 +1,30 @@
+package(default_visibility = ["//visibility:private"])
+
+SRC_FOLDER_NAMES = glob(
+    ["src"],
+    exclude_directories = 0,
+)
+
+EXCLUDED_PROBLEMS = []
+
+[cc_library(
+    name = hpp_file.split("/")[-2].split(".")[0] + "_cpp",
+    srcs = [
+        hpp_file,
+    ],
+    deps = [],
+    copts = [""], # We can specify compiler options here like -std=c++11
+) for hpp_file in glob([src_folder + "/**/solution_cpp.hpp" for src_folder in SRC_FOLDER_NAMES]) if hpp_file.split("/")[-2].split(".")[0] not in EXCLUDED_PROBLEMS]
+
+[cc_test(
+    name = test_file.split("/")[-2].split(".")[0] + "_cpp_test",
+    srcs = [
+        test_file,
+    ],
+    deps = [
+        ":" + test_file.split("/")[-2].split(".")[0] + "_cpp",
+        "@com_google_googletest//:gtest_main"
+    ],
+    timeout = "short",
+    copts = [""], # We can specify compiler options here like -std=c++11
+) for test_file in glob([src_folder + "/**/test_cpp.cpp" for src_folder in SRC_FOLDER_NAMES]) if test_file.split("/")[-2].split(".")[0] not in EXCLUDED_PROBLEMS]
