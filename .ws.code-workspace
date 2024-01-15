@@ -30,6 +30,7 @@
             }
         ],
         "githubIssues.issueBranchTitle": "${user}/issue${issueNumber}-${sanitizedIssueTitle}",
+        "githubIssues.workingIssueFormatScm": "${issueTitle} \nPart of ${issueNumberLabel}",
         "githubPullRequests.notifications": "pullRequests",
         "githubPullRequests.defaultMergeMethod": "squash",
         "githubPullRequests.showPullRequestNumberInTree": true,
