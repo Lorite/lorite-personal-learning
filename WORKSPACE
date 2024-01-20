@@ -69,7 +69,7 @@ load("@rules_python//python:pip.bzl", "pip_parse")
 # src/examples/bazel-test-project-python-flask
 pip_parse(
     name = "pip_bazel_test_deps",
-    requirements_lock = "//src/examples/bazel-test-project-python-flask:requirements.txt",
+    requirements_lock = "//src/examples/bazel-test-project-python-flask:requirements.txt", # TODO: change how this works
     # python_interpreter_target = interpreter,
 )
 load("@pip_bazel_test_deps//:requirements.bzl", install_deps_bazel_test = "install_deps")

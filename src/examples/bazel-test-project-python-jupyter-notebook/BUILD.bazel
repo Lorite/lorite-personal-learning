@@ -1,0 +1,36 @@
+load("@rules_python//python/pip_install:requirements.bzl", "compile_pip_requirements")
+load("@pip_bazel_test_deps//:requirements.bzl", "requirement")
+
+package(default_visibility = ["//visibility:private"])
+
+py_library(
+    name = "calculator_lib",
+    srcs = ["src/calculator_lib.py"],
+    imports = ["src"],
+    visibility = ["//visibility:public"]
+)
+
+py_test(
+    name = "calculator_test",
+    srcs = glob(["tests/*.py"]),
+    deps = [
+        ":calculator_lib"
+    ],
+)
+
+py_binary(
+    name = "notebook",
+    srcs = ["src/notebook.py"],
+    deps = [
+        ":calculator_lib",
+        requirement("notebook")
+    ]
+)
+
+# TODO check if this is necessary and why
+compile_pip_requirements(
+    name = "requirements",
+    timeout = "moderate",
+    requirements_in = "requirements.in",
+    visibility = ["//visibility:public"],
+)
