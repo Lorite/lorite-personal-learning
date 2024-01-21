@@ -10,7 +10,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 cd $HOME && curl -fsSLO https://raw.githubusercontent.com/romkatv/dotfiles-public/master/.purepower
 
 # bazel-toolchain (llvm) for clangd (C/C++ language server) dependencies
-sudo apt-get -qq -y install libtinfo5 >/dev/null
+sudo apt-get update >/dev/null && sudo apt-get -qq -y install libtinfo5 >/dev/null
 
 # Source custom environment
 if [ -f .devcontainer/lorite-scripts/custom_env.sh ]; then
