@@ -1,4 +1,5 @@
 #include "solution_cpp.hpp"
+#include <cstddef>
 #include <unordered_map>
 
 namespace two_sum {
@@ -35,10 +36,10 @@ std::vector<int> SolutionCppV2::two_sum(std::vector<int>& nums, int target) {
 
 std::vector<int> SolutionCppV3::two_sum(std::vector<int>& nums, int target) {
   std::unordered_map<int, int> nums_map;
-  for (int i = 0; i < nums.size(); ++i) {
+  for (std::size_t i = 0; i < nums.size(); ++i) {
     int complement = target - nums[i];
     if (nums_map.find(complement) != nums_map.end()) {
-      return {nums_map[complement], i};
+      return {nums_map[complement], static_cast<int>(i)};
     }
     nums_map[nums[i]] = i;
   }
