@@ -61,9 +61,10 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <ul>
-        <li><a href="#container">Container</a></li>
+        <li><a href="#dev-container">Dev Container</a></li>
         <li><a href="#code">Code</a></li>
-        <li><a href="#github-actions">GitHub actions</a></li>
+        <li><a href="#continuous-integration-continuous-deployment">Continuous Integration/Continuous Deployment</a></li>
+        <li><a href="#vs-code-extensions">VS Code extensions</a></li>
       </ul>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -136,8 +137,6 @@ You can read the commit messages to see what I have been doing. I try to keep th
 
 4. Press <kbd>F1</kbd> and select **Remote-Containers: Reopen in Container** to build and start the container. This step may take a while the first time.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 5. Build something using bazel:
   
     ```bash
@@ -146,13 +145,21 @@ You can read the commit messages to see what I have been doing. I try to keep th
 
     > **_NOTE:_** You can also use the `Bazel: build target` command from the VS Code extension, or the `BAZEL BUILD TARGETS` from the `Explorer` panel (after opening any `BUILD.bazel` file).
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Usage
 
-### Container
+### Dev Container
 
-Some of the tools and languages included in the container are:
+Some of the tools and languages included in the dev container are:
 
-- [Bazel](https://bazel.build/) for building and testing software of any size, quickly and reliably.
+- [Bazel](https://bazel.build/) for building and testing software of any size, quickly and reliably. This is the main and most important tool used in this repository. Some of the reasons to use bazel over other build tools are:
+  - **Reproducibility**: Bazel ensures that builds are hermetic, meaning they are isolated and deterministic.
+  - **Speed and Efficiency**: Bazel uses aggressive caching and parallel execution to speed up both incremental and clean builds. It only rebuilds what is necessary by tracking dependencies between different parts of your codebase.
+  - **Scalability**: Bazel is designed to handle large codebases across multiple repositories.
+  - **Multi-language support**: Bazel supports a wide range of programming languages out of the box.
+  - **Community**: Bazel is used and supported by many Google projects, as well as a growing number of projects in the open source community.
+  - **Open source**: Bazel is open source and maintained by a growing community of contributors.
 - [LLDB](https://lldb.llvm.org/) for debugging. This extension is used along with VS Code [launch profiles](.vscode/launch.json) and [tasks](.vscode/tasks.json) that are already set up in this repo. You can try pressing <kbd>F5</kbd> on any editor-opened code file. You may need to modify the location of the output file in the [launch profiles](.vscode/launch.json) manually for now.
 - [zsh + powerlevel10k + plugins](https://www.zsh.org/) for a better terminal experience.
 - [Many VS Code extensions](https://code.visualstudio.com/docs/editor/extension-gallery). See [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) for the full list. You can also check the section [VS Code extensions](#vs-code-extensions) for more information.
@@ -175,10 +182,10 @@ The open source courses can be found in the [courses-free](src/courses-free) fol
 
     [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
 
-  - **Microsoft Learning: Getting started with C#**: TODO: description. [src/courses-free/csharp-getting-started](src/courses-free/csharp-getting-started)
+  - **Microsoft Learning: Getting started with C#**: Learn the basic syntax and thought processes required to build simple applications using C#. [src/courses-free/csharp-getting-started](src/courses-free/csharp-getting-started)
 
-    [![Bazel][Bazel-build]][Bazel-url]
     [![C#][C#]][C#-url]
+    [![Bazel][Bazel-build]][Bazel-url]
     [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
 
 There is also a [courses-licensed](src/courses-licensed) folder with licensed courses but the code is not included.
@@ -191,6 +198,20 @@ The examples can be found in the [examples](src/examples) folder. Most of the ex
 - [C# Bazel](src/examples/bazel-test-project-csharp): A simple C# project using Bazel.
 - [Python flask Bazel](src/examples/bazel-test-project-python-flask/): A simple Python flask project using Bazel.
 - [Shell](src/examples/bazel-test-project-shell): A simple Shell project using Bazel.
+
+#### Exercises
+
+The exercises can be found in the [exercises](src/exercises) folder. The exercises are:
+
+  - **Leetcode**: LeetCode is the a platform to help you enhance your skills, expand your knowledge and prepare for technical interviews. The challenges cover a wide range of programming topics and come with a discussion forum for each problem, where users can discuss various solutions. Check the [src/exercises/leetcode](src/exercises/leetcode) directory for more info on how I organize the exercises and run them in an optimal way.
+
+    [![C++][C++]][C++-url]
+    [![Bazel][Bazel-build]][Bazel-url]
+    [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
+
+### Continuous Integration/Continuous Deployment
+
+GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) service provided by GitHub. In this repository, it is used for running bazel build and bazel test on all the targets under [src/](/src). The actions are defined in the [.github/workflows](.github/workflows) folder. Bazel's cache is used to speed up the builds. 
 
 ### VS Code extensions
 
@@ -207,12 +228,7 @@ As stated earlier, you can check the [.devcontainer/devcontainer.json](.devconta
 
 - TODO: add missing extensions from the [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) file.
 
-### GitHub Actions
-
-TODO: explain how the GitHub Actions are used.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## Roadmap
 
@@ -229,9 +245,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Resources
 
-This section contains the resources for DevOps and CI/CD. The resources specific to the different languages can be found in the [courses](#courses) section.
-
-Check individual courses for their sources.
+This section contains the resources for DevOps, CI/CD, and programming languages. There are hundreds of other resources that I have used to learn about these topics, but I can't include them all here. I have tried to include the most important ones. Apart from the list below, there are more links and resources scattered around this repository in subfolders. Needless to say, there are very nice repositories with a lot of resources, like [awesome-bazel](https://github.com/jin/awesome-bazel) on GitHub, so search for them if you are looking for a deeper dive into a specific topic.
 
 ### Documenting
 - [README template](https://github.com/Lorite/lorite-personal-learning)
@@ -248,11 +262,22 @@ Check individual courses for their sources.
 - [Dev Container Features](https://containers.dev/implementors/features/)
 - [zsh and powerlevel10k (terminal)](https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0)
 
+### Multi-language
+- [Refactoring.Guru - Design Patterns & Refactoring](https://refactoring.guru/)
+
 ### Python
 - [Python structuring your project by Kenneth Reitz](https://docs.python-guide.org/writing/structure/)
 - [Python Rules for Bazel](https://rules-python.readthedocs.io)
 - [Python rules for pip in Bazel](https://github.com/bazelbuild/rules_python/blob/main/docs/pip.md)
 - [Simple Python flask app using Bazel](https://earthly.dev/blog/build-and-deploy-pyapp-with-bazel/)
+
+### C++
+- [C++ reference](https://en.cppreference.com/w/), [hacking C++](https://hackingcpp.com/), [W3 schools - C++ Tutorial](https://www.w3schools.com/cpp/), ...
+- [C++ Rules for Bazel](https://bazel.build/reference/be/c-cpp)
+- [LLVM toolchain for bazel](https://github.com/grailbio/bazel-toolchain)
+- [Clang: a C language family frontend for LLVM](https://clang.llvm.org/)
+- [Hedron's Compile Commands Extractor for Bazel](https://github.com/hedronvision/bazel-compile-commands-extractor)
+- [GoogleTest](http://google.github.io/googletest/)
 
 ### LaTeX
 - [Bazel rules for LaTeX](https://github.com/ProdriveTechnologies/bazel-latex)
