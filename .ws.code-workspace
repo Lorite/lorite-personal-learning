@@ -29,7 +29,7 @@
                 "query": "state:closed repo:${owner}/${repository} sort:updated-desc"
             }
         ],
-        "githubIssues.issueBranchTitle": "${user}/issue${issueNumber}-${sanitizedIssueTitle}",
+        "githubIssues.issueBranchTitle": "${user}/issue${issueNumber}/${sanitizedIssueTitle}",
         "githubPullRequests.notifications": "pullRequests",
         "githubPullRequests.defaultMergeMethod": "squash",
         "githubPullRequests.showPullRequestNumberInTree": true,
