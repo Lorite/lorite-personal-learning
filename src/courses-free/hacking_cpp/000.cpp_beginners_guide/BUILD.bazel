@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:private"])
+
+SRC_FOLDER_NAMES = glob(
+    ["src"],
+    exclude_directories = 0,
+)
+
+EXCLUDED_FILES = []
+
+[cc_binary(
+    name = cpp_file.split("/")[-1].split(".")[0],
+    srcs = [
+        cpp_file,
+    ],
+    deps = [],
+    copts = [""], # We cam specify compiler options here like -std=c++11
+) for cpp_file in glob([src_folder + "/**/*.cpp" for src_folder in SRC_FOLDER_NAMES]) if cpp_file.split("/")[-1].split(".")[0] not in EXCLUDED_FILES]
