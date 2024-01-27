@@ -1,38 +1,29 @@
 #include <iostream>
+#include <lorite_utils/easy_printing.hpp>
 #include <vector>
 
-std::string vector_to_string(std::vector<int> v) {
-  std::string s = "[";
-  for (size_t i = 0; i < v.size(); i++) {
-    s += std::to_string(v[i]);
-    if (i < v.size() - 1) {
-      s += ", ";
-    }
-  }
-  s += "]";
-  return s;
-}
+using EP = lorite_utils::EasyPrinting;
 
 int main() {
   // Initialization
   std::vector<int> v1{};  // Empty vector
-  std::cout << "v1: " << vector_to_string(v1) << std::endl;
+  std::cout << "v1: " << EP::vector_to_string(v1) << std::endl;
   std::vector<int> v2{1, 2, 3, 4, 5};  // Vector with 5 elements
-  std::cout << "v2: " << vector_to_string(v2) << std::endl;
+  std::cout << "v2: " << EP::vector_to_string(v2) << std::endl;
   std::vector<int> v3(5);  // Vector with 5 elements, all initialized to 0
-  std::cout << "v3: " << vector_to_string(v3) << std::endl;
+  std::cout << "v3: " << EP::vector_to_string(v3) << std::endl;
   std::vector<int> v4(5, 1);  // Vector with 5 elements, all initialized to 1
-  std::cout << "v4: " << vector_to_string(v4) << std::endl;
+  std::cout << "v4: " << EP::vector_to_string(v4) << std::endl;
   std::vector<int> v5(v2);  // Copy of v2
-  std::cout << "v5: " << vector_to_string(v5) << std::endl;
+  std::cout << "v5: " << EP::vector_to_string(v5) << std::endl;
   std::vector<int> v6(v2.begin(), v2.begin() + 3);  // Copy of the first 3
                                                     // elements of v2
-  std::cout << "v6: " << vector_to_string(v6) << std::endl;
+  std::cout << "v6: " << EP::vector_to_string(v6) << std::endl;
   std::vector<int> v7(v2.end() - 3, v2.end());  // Copy of the last 3 elements
                                                 // of v2
-  std::cout << "v7: " << vector_to_string(v7) << std::endl;
+  std::cout << "v7: " << EP::vector_to_string(v7) << std::endl;
   std::vector<int> v8(v2.rbegin(), v2.rend());  // Copy of v2 in reverse order
-  std::cout << "v8: " << vector_to_string(v8) << std::endl;
+  std::cout << "v8: " << EP::vector_to_string(v8) << std::endl;
 
   // Accessing elements
   std::cout << "v8[0]: " << v8[0] << std::endl;  // Accessing elements. This is
@@ -49,27 +40,27 @@ int main() {
   v8[1] = 10;
   v8.at(2) = 20;
   v8.front() = 30;
-  std::cout << "v8: " << vector_to_string(v8) << std::endl;
+  std::cout << "v8: " << EP::vector_to_string(v8) << std::endl;
 
   // Append elements
   v8.push_back(40);
-  std::cout << "v8: " << vector_to_string(v8) << std::endl;
+  std::cout << "v8: " << EP::vector_to_string(v8) << std::endl;
 
   // Resizing the vector
   v8.resize(10);
-  std::cout << "v8: " << vector_to_string(v8) << std::endl;
+  std::cout << "v8: " << EP::vector_to_string(v8) << std::endl;
   v8.resize(15, 50);
-  std::cout << "v8: " << vector_to_string(v8) << std::endl;
+  std::cout << "v8: " << EP::vector_to_string(v8) << std::endl;
 
   // Erasing elements
   v8.erase(v8.begin() + 1);
-  std::cout << "v8: " << vector_to_string(v8) << std::endl;
+  std::cout << "v8: " << EP::vector_to_string(v8) << std::endl;
   v8.erase(v8.begin() + 1, v8.begin() + 3);
-  std::cout << "v8: " << vector_to_string(v8) << std::endl;
+  std::cout << "v8: " << EP::vector_to_string(v8) << std::endl;
   v8.pop_back();
-  std::cout << "v8: " << vector_to_string(v8) << std::endl;
+  std::cout << "v8: " << EP::vector_to_string(v8) << std::endl;
   v8.clear();
-  std::cout << "v8: " << vector_to_string(v8) << std::endl;
+  std::cout << "v8: " << EP::vector_to_string(v8) << std::endl;
 }
 
 /* Notes:
