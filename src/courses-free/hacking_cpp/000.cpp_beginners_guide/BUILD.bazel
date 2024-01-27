@@ -12,6 +12,6 @@ EXCLUDED_FILES = []
     srcs = [
         cpp_file,
     ],
-    deps = [],
-    copts = [""], # We cam specify compiler options here like -std=c++11
+    deps = ["//src/other/cpp/lorite_utils:easy_printing_lib"],
+    copts = [""], # We can specify compiler options here like -std=c++11
 ) for cpp_file in glob([src_folder + "/**/*.cpp" for src_folder in SRC_FOLDER_NAMES]) if cpp_file.split("/")[-1].split(".")[0] not in EXCLUDED_FILES]
