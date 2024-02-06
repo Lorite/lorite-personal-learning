@@ -40,6 +40,16 @@ class SolutionCppV1 : public SolutionCpp {
   bool is_valid(std::string s) override;
 };
 
+class SolutionCppV2 : public SolutionCpp {
+
+ public:
+  /*
+   * time complexity:
+   * space complexity:
+   */
+  bool is_valid(std::string s) override;
+};
+
 }  // namespace valid_parentheses
 
 #endif  // VALID_PARENTHESES_SOLUTION_CPP_HPP

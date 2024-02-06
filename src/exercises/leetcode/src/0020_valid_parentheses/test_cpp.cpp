@@ -63,11 +63,16 @@ INSTANTIATE_TEST_SUITE_P(
     testing::Combine(
         testing::ValuesIn(
             std::vector<std::shared_ptr<valid_parentheses::SolutionCpp>>{
-                std::make_shared<valid_parentheses::SolutionCppV1>()}),
+                std::make_shared<valid_parentheses::SolutionCppV1>(),
+                std::make_shared<valid_parentheses::SolutionCppV2>()}),
         testing::ValuesIn(std::vector<std::tuple<InputValues, OutputValues>>{
             std::tuple<InputValues, OutputValues>(InputValues{"()"},
                                                   OutputValues{true}),
             std::tuple<InputValues, OutputValues>(InputValues{"()[]{}"},
                                                   OutputValues{true}),
             std::tuple<InputValues, OutputValues>(InputValues{"(]"},
+                                                  OutputValues{false}),
+            std::tuple<InputValues, OutputValues>(InputValues{"([)]"},
+                                                  OutputValues{false}),
+            std::tuple<InputValues, OutputValues>(InputValues{"]"},
                                                   OutputValues{false})})));
