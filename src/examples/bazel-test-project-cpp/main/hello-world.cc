@@ -2,9 +2,6 @@
 
 #include <string>
 
-using hello::HelloLib;
-using std::string;
-
 /**
  * This prints "Hello world". If it is run with arguments, it will use the first
  * argument instead of "world". Build and run //examples/cpp:hello-world to see
@@ -16,8 +13,9 @@ using std::string;
  * hello-fail.cc for an example of making a test fail.
  */
 int main(int argc, char** argv) {
-  HelloLib lib("Hello");
-  string thing = "world";
+  google::InitGoogleLogging(argv[0]);
+  hello::HelloLib lib("Hello");
+  std::string thing = "world";
   if (argc > 1) {
     thing = argv[1];
   }

@@ -2,25 +2,43 @@ package(default_visibility = ["//visibility:private"])
 
 cc_library(
     name = "hello-lib",
-    srcs = ["hello-lib.cc"],
-    hdrs = ["hello-lib.h"],
-    includes = [""],
+    srcs = ["src/hello-lib.cc"],
+    hdrs = ["include/bazel-test-project-cpp/hello-lib.h"],
+    includes = ["include/bazel-test-project-cpp"],
+    deps = [
+        "@com_github_google_glog//:glog",
+    ],
 )
 
 cc_binary(
     name = "hello-world",
-    srcs = ["hello-world.cc"],
-    deps = [":hello-lib"],
+    srcs = ["main/hello-world.cc"],
+    deps = [
+        ":hello-lib",
+        "@com_github_gflags_gflags//:gflags",
+    ],
+    args = ["world!!!!!!!!", "--minloglevel=0", "--v=0", "--vmodule=INFO", "--stderrthreshold=0", "--logtostderr=1"], # glog: gflags don't seem to work
 )
 
 filegroup(
-    name = "srcs",
-    srcs = glob(["**"]),
+    name = "src",
+    srcs = glob(["src/**"]),
 )
 
 cc_test(
-  name = "hello-test",
-  size = "small",
-  srcs = ["hello-test.cc"],
-  deps = ["@com_google_googletest//:gtest_main"],
+    name = "hello-test",
+    size = "small",
+    srcs = ["test/hello-test.cc"],
+    deps = [
+        "@com_google_googletest//:gtest_main",
+        ":hello-lib",
+        "@com_github_google_glog//:glog",
+    ],
+    env = { # glog: env variables work fine. Run the test with `bazel test --test_output=all //:hello-test`. The logs can also be found in `bazel-testlogs/src/.../hello-test/test.log`
+        "GLOG_log_dir": "logs",
+        "GLOG_logtostderr": "1", # print log to stderr instead of a log file
+        "GLOG_v": "0", # define the log files severity
+        "GLOG_vmodule": "INFO", # define the log files severity
+        "GLOG_stderrthreshold": "0", # define the stderr severity
+    },
 )

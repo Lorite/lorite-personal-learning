@@ -1,6 +1,7 @@
 #ifndef EXAMPLES_CPP_HELLO_LIB_H_
 #define EXAMPLES_CPP_HELLO_LIB_H_
 
+#include <glog/logging.h>
 #include <memory>
 #include <string>
 
