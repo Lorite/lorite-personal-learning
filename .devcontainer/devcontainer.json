@@ -42,7 +42,7 @@
 				// "zxh404.vscode-proto3",
 				"bazelbuild.vscode-bazel",
 				// "ryanluker.vscode-coverage-gutters",
-				// "cschlosser.doxdocgen",
+				"cschlosser.doxdocgen", // doxygen documentation generator for C++
 				// "sonarsource.sonarlint-vscode",
 				// "Huuums.vscode-fast-folder-structure",
 				// "vadimcn.vscode-lldb",
@@ -69,6 +69,7 @@
 				// "tomoki1207.pdf",
 				"bierner.markdown-emoji",
 				"bierner.emojisense",
+				"rioj7.command-variable", // Command Variable for running bazel debug configurations
 			],
             "settings": {
                 "editor.tabCompletion": "on",
