@@ -277,7 +277,8 @@ This section contains the resources for DevOps, CI/CD, and programming languages
 - [LLVM toolchain for bazel](https://github.com/grailbio/bazel-toolchain)
 - [Clang: a C language family frontend for LLVM](https://clang.llvm.org/)
 - [Hedron's Compile Commands Extractor for Bazel](https://github.com/hedronvision/bazel-compile-commands-extractor)
-- [GoogleTest](http://google.github.io/googletest/)
+- [GoogleTest - gtest](http://google.github.io/googletest/)
+- [Google benchmark](https://github.com/google/benchmark/tree/main)
 - [Google logging library (glog)](https://github.com/google/glog)
 
 ### LaTeX

@@ -2,8 +2,8 @@ package(default_visibility = ["//visibility:private"])
 
 cc_library(
     name = "hello-lib",
-    srcs = ["src/hello-lib.cc"],
-    hdrs = ["include/bazel-test-project-cpp/hello-lib.h"],
+    srcs = ["src/hello-lib.cpp"],
+    hdrs = ["include/bazel-test-project-cpp/hello-lib.hpp"],
     includes = ["include/bazel-test-project-cpp"],
     deps = [
         "@com_github_google_glog//:glog",
@@ -12,7 +12,7 @@ cc_library(
 
 cc_binary(
     name = "hello-world",
-    srcs = ["main/hello-world.cc"],
+    srcs = ["main/hello-world.cpp"],
     deps = [
         ":hello-lib",
         "@com_github_gflags_gflags//:gflags",
@@ -28,7 +28,7 @@ filegroup(
 cc_test(
     name = "hello-test",
     size = "small",
-    srcs = ["test/hello-test.cc"],
+    srcs = ["test/hello-test.cpp"],
     deps = [
         "@com_google_googletest//:gtest_main",
         ":hello-lib",
@@ -41,4 +41,13 @@ cc_test(
         "GLOG_vmodule": "INFO", # define the log files severity
         "GLOG_stderrthreshold": "0", # define the stderr severity
     },
+)
+
+cc_binary(
+    name = "hello-benchmark",
+    srcs = ["benchmark/hello-benchmark.cpp"],
+    deps = [
+        ":hello-lib",
+        "@com_google_benchmark//:benchmark",
+    ]
 )

@@ -1,6 +1,6 @@
 #include <glog/logging.h>
 #include <gtest/gtest.h>
-#include "hello-lib.h"
+#include "hello-lib.hpp"
 
 // Demonstrate some basic assertions.
 TEST(STDFindTest, BasicAssertions) {
