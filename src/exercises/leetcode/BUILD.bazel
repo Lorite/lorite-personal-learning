@@ -29,3 +29,15 @@ EXCLUDED_PROBLEMS = []
     timeout = "short",
     copts = [""], # We can specify compiler options here like -std=c++11
 ) for test_file in glob([src_folder + "/**/test_cpp.cpp" for src_folder in SRC_FOLDER_NAMES]) if test_file.split("/")[-2].split(".")[0] not in EXCLUDED_PROBLEMS]
+
+[cc_binary(
+    name = benchmark_file.split("/")[-2].split(".")[0] + "_cpp_benchmark",
+    srcs = [
+        benchmark_file,
+    ],
+    deps = [
+        ":" + benchmark_file.split("/")[-2].split(".")[0] + "_cpp",
+        "@com_google_benchmark//:benchmark",
+    ],
+    copts = [""], # We can specify compiler options here like -std=c++11
+) for benchmark_file in glob([src_folder + "/**/benchmark_cpp.cpp" for src_folder in SRC_FOLDER_NAMES]) if benchmark_file.split("/")[-2].split(".")[0] not in EXCLUDED_PROBLEMS]
