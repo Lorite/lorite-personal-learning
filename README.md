@@ -209,6 +209,12 @@ The exercises can be found in the [exercises](src/exercises) folder. The exercis
     [![Bazel][Bazel-build]][Bazel-url]
     [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
 
+  - **Job interviews**: A collection of exercises to prepare and asked at job interviews. Check the [src/exercises/job-interviews](src/exercises/job_interviews) directory and the subfolders for more info.
+
+    [![C++][C++]][C++-url]
+    [![Bazel][Bazel-build]][Bazel-url]
+    [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
+
 ### Continuous Integration/Continuous Deployment
 
 GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) service provided by GitHub. In this repository, it is used for running bazel build and bazel test on all the targets under [src/](/src). The actions are defined in the [.github/workflows](.github/workflows) folder. Bazel's cache is used to speed up the builds. 
