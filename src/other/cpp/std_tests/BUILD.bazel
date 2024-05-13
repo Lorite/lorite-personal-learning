@@ -1,14 +1,14 @@
 package(default_visibility = ["//visibility:private"])
 
 cc_test(
-  name = "test_std_find",
+  name = "std_find_test",
   size = "small",
-  srcs = ["std_find.cpp"],
+  srcs = ["test/std_find_test.cpp"],
   deps = ["@com_google_googletest//:gtest_main"],
 )
 cc_test(
-  name = "test_pointers",
+  name = "pointers_test",
   size = "small",
-  srcs = ["pointers.cpp"],
+  srcs = ["test/pointers_test.cpp"],
   deps = ["@com_google_googletest//:gtest_main"],
 )
