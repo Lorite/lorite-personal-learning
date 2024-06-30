@@ -1,0 +1,25 @@
+load("@rules_java//java:defs.bzl", "java_library", "java_binary")
+
+java_library(
+    name = "helloJava",
+    srcs = ["src/main/java/HelloJava.java"],
+)
+
+java_binary(
+    name = "main",
+    srcs = ["src/main/java/Main.java"],
+    main_class = "examples.bazel_test_project_java.Main",
+    deps = [":helloJava"],
+)
+
+java_test(
+    name = "testHelloJava",
+    srcs = glob(["src/test/java/TestHelloJava.java"]),
+    test_class = "examples.bazel_test_project_java.TestHelloJava",
+    deps = [
+        "@maven//:com_google_guava_guava",
+        "@maven//:org_junit_jupiter_junit_jupiter_engine",
+        "@maven//:org_junit_jupiter_junit_jupiter_api",
+        ":helloJava"
+    ],
+)
