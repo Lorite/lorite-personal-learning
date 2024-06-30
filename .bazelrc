@@ -7,11 +7,11 @@ build --modify_execution_info=PackageTar=+no-remote
 build --remote_local_fallback
 build --sandbox_default_allow_network=false
 build --verbose_failures
-build --cxxopt=-std=c++20        # C++ - Use C++20
+build --cxxopt=-std=c++2c        # C++ - Use C++2c (between 23 and 26)
 build --cxxopt=-Wall             # C++ - Enable all warnings
 build --cxxopt=-Wpedantic        # C++ - Be pedantic
 build --cxxopt=-Wextra           # C++ - Enable extra warnings
-# build --cxxopt=-Werror           # C++ - Every warning is treated as an error
+build --cxxopt=-Werror           # C++ - Every warning is treated as an error
 build --per_file_copt=-third_party/.*,-external/.*@-Werror # Enable -Werror for all our code, but exclude for third-party.
 build --per_file_copt=third_party/.*,external/.*@-Wno-error # NOTE: Explicitly disable -Werror because the `-external/.*` filter does not work.
 run --verbose_failures
