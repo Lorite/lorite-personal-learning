@@ -169,6 +169,7 @@ Some of the tools and languages included in the dev container are:
 - [Python](https://www.python.org/)
 - [pip](https://pypi.org/project/pip/) for installing Python packages.
 - [Go](https://golang.org/)
+- [JAVA](https://www.java.com/)
 
 ### Code
 
@@ -197,6 +198,7 @@ The examples can be found in the [examples](src/examples) folder. Most of the ex
 - [C++ Bazel](src/examples/bazel-test-project-cpp): A simple C++ project using Bazel.
 - [C# Bazel](src/examples/bazel-test-project-csharp): A simple C# project using Bazel.
 - [Python flask Bazel](src/examples/bazel-test-project-python-flask/): A simple Python flask project using Bazel.
+- [Java Bazel](src/examples/bazel_test_project_java): A simple Java project using Bazel with Maven dependencies.
 - [Shell](src/examples/bazel-test-project-shell): A simple Shell project using Bazel.
 
 #### Exercises
@@ -287,6 +289,10 @@ This section contains the resources for DevOps, CI/CD, and programming languages
 - [Google benchmark](https://github.com/google/benchmark/tree/main)
 - [Google logging library (glog)](https://github.com/google/glog)
 
+### JAVA
+- [bazelbuild/rules_jvm_external](https://github.com/bazelbuild/rules_jvm_external)
+- [MAVEN - Introduction to the Standard Directory Layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+
 ### LaTeX
 - [Bazel rules for LaTeX](https://github.com/ProdriveTechnologies/bazel-latex)
 
@@ -345,3 +351,5 @@ Licensed under the Creative Commons Attribution-NonCommercial 4.0 International 
 [Python-url]: https://www.python.org/
 [Go]: https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white
 [Go-url]: https://golang.org/
+[JAVA]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
+[JAVA-url]: https://www.java.com/

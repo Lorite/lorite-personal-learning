@@ -11,6 +11,14 @@
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
 			"version": "latest"
 		},
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "23",
+			"jdkDistro": "mandrel",
+			"installGradle": false,
+			"installMaven": false,
+			"installAnt": false,
+			"installGroovy": false
+		},
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
 	"customizations": {
