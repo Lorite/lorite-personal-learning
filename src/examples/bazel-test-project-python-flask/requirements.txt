@@ -8,23 +8,23 @@ click==8.0.3 \
     --hash=sha256:353f466495adaeb40b6b5f592f9f91cb22372351c84caeb068132442a4518ef3 \
     --hash=sha256:410e932b050f5eed773c4cda94de75971c89cdb3155a72a0831139a79e5ecb5b
     # via
-    #   -r src/examples/bazel-test-project-python-flask/requirements.in
+    #   -r requirements.in
     #   flask
 flask==2.0.2 \
     --hash=sha256:7b2fb8e934ddd50731893bdcdb00fc8c0315916f9fcd50d22c7cc1a95ab634e2 \
     --hash=sha256:cb90f62f1d8e4dc4621f52106613488b5ba826b2e1e10a33eac92f723093ab6a
-    # via -r src/examples/bazel-test-project-python-flask/requirements.in
+    # via -r requirements.in
 itsdangerous==2.0.1 \
     --hash=sha256:5174094b9637652bdb841a3029700391451bd092ba3db90600dea710ba28e97c \
     --hash=sha256:9e724d68fc22902a1435351f84c3fb8623f303fffcc566a4cb952df8c572cff0
     # via
-    #   -r src/examples/bazel-test-project-python-flask/requirements.in
+    #   -r requirements.in
     #   flask
-jinja2==3.0.3 \
-    --hash=sha256:077ce6014f7b40d03b47d1f1ca4b0fc8328a692bd284016f806ed0eaca390ad8 \
-    --hash=sha256:611bb273cd68f3b993fabdc4064fc858c5b47a973cb5aa7999ec1ba405c87cd7
+jinja2==3.1.4 \
+    --hash=sha256:4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369 \
+    --hash=sha256:bc5dd2abb727a5319567b7a813e6a2e7318c39f4f487cfe6c89c6f9c7d25197d
     # via
-    #   -r src/examples/bazel-test-project-python-flask/requirements.in
+    #   -r requirements.in
     #   flask
 markupsafe==2.0.1 \
     --hash=sha256:01a9b8ea66f1658938f65b93a85ebe8bc016e6769611be228d797c9d998dd298 \
@@ -97,11 +97,11 @@ markupsafe==2.0.1 \
     --hash=sha256:f9081981fe268bd86831e5c75f7de206ef275defcb82bc70740ae6dc507aee51 \
     --hash=sha256:fa130dd50c57d53368c9d59395cb5526eda596d3ffe36666cd81a44d56e48872
     # via
-    #   -r src/examples/bazel-test-project-python-flask/requirements.in
+    #   -r requirements.in
     #   jinja2
 werkzeug==2.0.2 \
     --hash=sha256:63d3dc1cf60e7b7e35e97fa9861f7397283b75d765afcaefd993d6046899de8f \
     --hash=sha256:aa2bb6fc8dee8d6c504c0ac1e7f5f7dc5810a9903e793b6f715a9f015bdadb9a
     # via
-    #   -r src/examples/bazel-test-project-python-flask/requirements.in
+    #   -r requirements.in
     #   flask
