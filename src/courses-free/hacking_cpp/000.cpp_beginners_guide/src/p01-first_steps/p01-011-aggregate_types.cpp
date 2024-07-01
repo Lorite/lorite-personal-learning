@@ -1,8 +1,5 @@
 #include <iostream>
-#include <lorite_utils/easy_printing.hpp>
 #include <vector>
-
-using EP = lorite_utils::EasyPrinting;
 
 struct Point {  // Simple aggregate type
   int x;
