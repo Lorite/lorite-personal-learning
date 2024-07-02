@@ -8,14 +8,15 @@
 
 namespace valid_parentheses {
 
-bool SolutionCppV1::is_valid(std::string s) {
+leetcode::OutputValues SolutionCppV1::do_something(
+    leetcode::InputValues input_values) {
   std::vector<char> remaining_chars{};
-  for (auto c : s) {
+  for (auto c : input_values.s) {
     if (c == '(' || c == '{' || c == '[') {
       remaining_chars.push_back(c);
     } else {
       if (remaining_chars.empty()) {
-        return false;
+        return OutputValues{false};
       } else if (c == ')' &&
                  remaining_chars.at(remaining_chars.size() - 1) == '(') {
         remaining_chars.pop_back();
@@ -26,11 +27,11 @@ bool SolutionCppV1::is_valid(std::string s) {
                  remaining_chars.at(remaining_chars.size() - 1) == '[') {
         remaining_chars.pop_back();
       } else {
-        return false;
+        return OutputValues{false};
       }
     }
   }
-  return remaining_chars.empty();
+  return OutputValues{remaining_chars.empty()};
 }
 
 bool SolutionCppV2::is_valid(std::string s) {

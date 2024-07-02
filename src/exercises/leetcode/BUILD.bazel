@@ -1,5 +1,16 @@
 package(default_visibility = ["//visibility:private"])
 
+cc_library(
+    name ="_template_cpp_lib",
+    hdrs = [
+        "include/leetcode/cpp_template/template_cpp.hpp",
+    ],
+    srcs = [],
+    includes = ["include"],
+    deps = ["@com_google_googletest//:gtest_main"],
+    copts = [""], # We can specify compiler options here like -std=c++11
+)
+
 SRC_FOLDER_NAMES = glob(
     ["src"],
     exclude_directories = 0,
@@ -13,7 +24,7 @@ EXCLUDED_PROBLEMS = []
         hpp_file,
         hpp_file.replace(".hpp", ".cpp"),
     ],
-    deps = [],
+    deps = [":_template_cpp_lib"],
     copts = [""], # We can specify compiler options here like -std=c++11
 ) for hpp_file in glob([src_folder + "/**/solution_cpp.hpp" for src_folder in SRC_FOLDER_NAMES]) if hpp_file.split("/")[-2].split(".")[0] not in EXCLUDED_PROBLEMS]
 
