@@ -179,15 +179,15 @@ Find a collection of small projects to learn about different languages and tools
 
 The open source courses can be found in the [courses-free](src/courses-free) folder. The courses are:
 
-  - **GitHub Skills**: Learn how to use GitHub with interactive courses designed for beginners and experts. [src/courses-free/github_skills](src/courses-free/github_skills)
+- **GitHub Skills**: Learn how to use GitHub with interactive courses designed for beginners and experts. [src/courses-free/github_skills](src/courses-free/github_skills)
 
-    [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
+  [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
 
-  - **Microsoft Learning: Getting started with C#**: Learn the basic syntax and thought processes required to build simple applications using C#. [src/courses-free/csharp-getting-started](src/courses-free/csharp-getting-started)
+- **Microsoft Learning: Getting started with C#**: Learn the basic syntax and thought processes required to build simple applications using C#. [src/courses-free/csharp-getting-started](src/courses-free/csharp-getting-started)
 
-    [![C#][C#]][C#-url]
-    [![Bazel][Bazel-build]][Bazel-url]
-    [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
+  [![C#][C#]][C#-url]
+  [![Bazel][Bazel-build]][Bazel-url]
+  [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
 
 There is also a [courses-licensed](src/courses-licensed) folder with licensed courses but the code is not included.
 
@@ -205,17 +205,29 @@ The examples can be found in the [examples](src/examples) folder. Most of the ex
 
 The exercises can be found in the [exercises](src/exercises) folder. The exercises are:
 
-  - **Leetcode**: LeetCode is the a platform to help you enhance your skills, expand your knowledge and prepare for technical interviews. The challenges cover a wide range of programming topics and come with a discussion forum for each problem, where users can discuss various solutions. Check the [src/exercises/leetcode](src/exercises/leetcode) directory for more info on how I organize the exercises and run them in an optimal way.
+- **Leetcode**: LeetCode is the a platform to help you enhance your skills, expand your knowledge and prepare for technical interviews. The challenges cover a wide range of programming topics and come with a discussion forum for each problem, where users can discuss various solutions. Check the [src/exercises/leetcode](src/exercises/leetcode) directory for more info on how I organize the exercises and run them in an optimal way.
 
-    [![C++][C++]][C++-url]
-    [![Bazel][Bazel-build]][Bazel-url]
-    [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
+  [![C++][C++]][C++-url]
+  [![Bazel][Bazel-build]][Bazel-url]
+  [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
 
-  - **Job interviews**: A collection of exercises to prepare and asked at job interviews. Check the [src/exercises/job-interviews](src/exercises/job_interviews) directory and the subfolders for more info.
+- **Job interviews**: A collection of exercises to prepare and asked at job interviews. Check the [src/exercises/job-interviews](src/exercises/job_interviews) directory and the subfolders for more info.
 
-    [![C++][C++]][C++-url]
-    [![Bazel][Bazel-build]][Bazel-url]
-    [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
+  [![C++][C++]][C++-url]
+  [![Bazel][Bazel-build]][Bazel-url]
+  [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
+
+#### Subrepos
+
+Bazel is used to pull most dependent repositories and build them. However, the files stay in a cache folder and are not included in the repository source code. For the sub repositories that we want to keep the files in the repository, we use the tool [git-subrepo](tools/git/git-subrepo) by [ingydotnet](https://github.com/ingydotnet/git-subrepo). This allows us to modify the files in the subrepos and still pull from the original repository.
+
+The folder [subrepos](src/subrepos) is then used to store these repositories. The subrepos are:
+
+- **ultimate-python**: The Ultimate Python study guide for newcomers and professionals alike. [src/subrepos/ultimate-python](src/subrepos/ultimate-python). Original repository: [huangsam/ultimate-python](https://github.com/huangsam/ultimate-python).
+
+  [![Python][Python]][Python-url]
+  [![Bazel][Bazel-build]][Bazel-url]
+  [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
 
 ### Continuous Integration/Continuous Deployment
 
