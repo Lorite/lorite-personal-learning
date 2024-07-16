@@ -74,6 +74,14 @@ pip_parse(
 )
 load("@pip_bazel_test_deps//:requirements.bzl", install_deps_bazel_test = "install_deps")
 install_deps_bazel_test()
+# src/subrepos/ultimate-python
+pip_parse(
+    name = "pip_ultimate_python_deps",
+    requirements_lock = "//src/subrepos/ultimate-python:requirements.txt",
+    # python_interpreter_target = interpreter,
+)
+load("@pip_ultimate_python_deps//:requirements.bzl", install_deps_ultimate_python = "install_deps")
+install_deps_ultimate_python()
 
 # ----------------------------------------
 

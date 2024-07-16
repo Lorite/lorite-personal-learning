@@ -1,0 +1,37 @@
+load("@rules_python//python/pip_install:requirements.bzl", "compile_pip_requirements")
+load("@pip_ultimate_python_deps//:requirements.bzl", "requirement")
+
+package(default_visibility = ["//visibility:private"])
+
+SRC_FOLDER_NAMES = glob(
+    ["ultimatepython"],
+    exclude_directories = 0,
+)
+
+EXCLUDED_FILES = glob(
+    ["ultimatepython/**/__init__.py"], 
+    exclude_directories=1,
+)
+
+[py_test(
+    name = py_file.split("/")[-1].split(".")[0],
+    srcs = [
+        py_file,
+    ],
+    deps = [
+        requirement("coverage"),
+        requirement("flake8"),
+        requirement("isort"),
+    ],
+    main = py_file,
+    size = "small",
+) for py_file in glob([src_folder + "/**/*.py" for src_folder in SRC_FOLDER_NAMES]) if py_file not in EXCLUDED_FILES]
+
+
+compile_pip_requirements(
+    name = "requirements",
+    timeout = "moderate",
+    requirements_in = "requirements.in",
+    size = "small",
+    visibility = ["//visibility:public"],
+)
