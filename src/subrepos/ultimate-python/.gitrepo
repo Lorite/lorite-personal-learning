@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/huangsam/ultimate-python
+	branch = master
+	commit = a427691ac7954df8d51694d1a65db153c32873af
+	parent = 2797e6def0e33caf858f146a5f8ac662027ff093
+	method = merge
+	cmdver = 0.4.7
