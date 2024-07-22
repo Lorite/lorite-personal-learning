@@ -6,7 +6,7 @@ cc_library(
     hdrs = ["include/bazel-test-project-cpp/hello-lib.hpp"],
     includes = ["include/bazel-test-project-cpp"],
     deps = [
-        "@com_github_google_glog//:glog",
+        "@glog//:glog",
     ],
 )
 
@@ -15,7 +15,7 @@ cc_binary(
     srcs = ["main/hello-world.cpp"],
     deps = [
         ":hello-lib",
-        "@com_github_gflags_gflags//:gflags",
+        "@gflags//:gflags",
     ],
     args = ["world!!!!!!!!", "--minloglevel=0", "--v=0", "--vmodule=INFO", "--stderrthreshold=0", "--logtostderr=1"], # glog: gflags don't seem to work
 )
@@ -30,9 +30,9 @@ cc_test(
     size = "small",
     srcs = ["test/hello-test.cpp"],
     deps = [
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
         ":hello-lib",
-        "@com_github_google_glog//:glog",
+        "@glog//:glog",
     ],
     env = { # glog: env variables work fine. Run the test with `bazel test --test_output=all //:hello-test`. The logs can also be found in `bazel-testlogs/src/.../hello-test/test.log`
         "GLOG_log_dir": "logs",
@@ -48,6 +48,6 @@ cc_binary(
     srcs = ["benchmark/hello-benchmark.cpp"],
     deps = [
         ":hello-lib",
-        "@com_google_benchmark//:benchmark",
+        "@google_benchmark//:benchmark",
     ]
 )

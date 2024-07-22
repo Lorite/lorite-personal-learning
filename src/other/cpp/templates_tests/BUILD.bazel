@@ -12,7 +12,7 @@ cc_test(
   name = "simple_templates_function_example_test",
   size = "small",
   srcs = ["test/simple_templates_function_example_test.cpp"],
-  deps = ["@com_google_googletest//:gtest_main",
+  deps = ["@googletest//:gtest_main",
           ":simple_templates_function_example"
           ],
 )

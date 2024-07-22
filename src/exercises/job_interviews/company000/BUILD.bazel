@@ -5,7 +5,7 @@ cc_library(
     srcs = ["src/node.cpp"],
     hdrs = ["include/company000/node.hpp"],
     includes = ["include/company000"],
-    deps = ["@com_github_google_glog//:glog"],
+    deps = ["@glog//:glog"],
 )
 
 cc_library(
@@ -15,7 +15,7 @@ cc_library(
     includes = ["include/company000"],
     deps = [
         ":node_lib",
-        "@com_github_google_glog//:glog"
+        "@glog//:glog"
     ],
 )
 
@@ -27,7 +27,7 @@ cc_library(
     deps = [
         ":node_lib",
         ":path_lib",
-        "@com_github_google_glog//:glog"
+        "@glog//:glog"
     ],
 )
 
@@ -36,7 +36,7 @@ cc_test(
     size = "small",
     srcs = ["test/node_test.cpp"],
     deps = [
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
         ":node_lib"
     ],
 )
@@ -46,7 +46,7 @@ cc_test(
     size = "small",
     srcs = ["test/path_test.cpp"],
     deps = [
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
         ":path_lib"
     ],
 )
@@ -56,7 +56,7 @@ cc_test(
     size = "small",
     srcs = ["test/triangle_directed_graph_test.cpp"],
     deps = [
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
         ":triangle_directed_graph_lib"
     ],
     data = ["data/simple_graph.txt"],

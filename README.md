@@ -273,6 +273,7 @@ This section contains the resources for DevOps, CI/CD, and programming languages
 ### Bazel
 - [Bazel build](https://bazel.build/)
 - [Bazel GitHub repository](https://github.com/bazelbuild/bazel/)
+- [Bazel bzlmod migration](https://bazel.build/external/migration) and [Bazel Central Registry](https://registry.bazel.build/) from 2024-07-22 onwards.
 - [Experimentations on Bazel - GitHub actions by David Bernard](https://dev.to/davidb31/experimentations-on-bazel-github-action-5639)
 - [Bazel zsh terminal completion](https://bazel.build/install/completion)
 - [Alex Eagle - .bazelrc flags you should enable](https://blog.aspect.dev/bazelrc-flags)

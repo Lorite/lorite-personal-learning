@@ -1,4 +1,5 @@
 common --incompatible_allow_tags_propagation
+common --enable_bzlmod
 
 build --experimental_remote_merkle_tree_cache
 build --experimental_reuse_sandbox_directories

@@ -4,11 +4,11 @@ cc_test(
   name = "std_find_test",
   size = "small",
   srcs = ["test/std_find_test.cpp"],
-  deps = ["@com_google_googletest//:gtest_main"],
+  deps = ["@googletest//:gtest_main"],
 )
 cc_test(
   name = "pointers_test",
   size = "small",
   srcs = ["test/pointers_test.cpp"],
-  deps = ["@com_google_googletest//:gtest_main"],
+  deps = ["@googletest//:gtest_main"],
 )
