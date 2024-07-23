@@ -14,6 +14,12 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+      - name: Remove unnecessary files
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+          sudo rm -rf "/usr/local/share/boost"
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
       # Installs missing package for the default C++ clangd toolchain for Bazel
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:

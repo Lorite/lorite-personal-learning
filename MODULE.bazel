@@ -1,0 +1,114 @@
+###############################################################################
+# Bazel now uses Bzlmod by default to manage external dependencies.
+# Please consider migrating your external dependencies from WORKSPACE to MODULE.bazel.
+#
+# For more details, please check https://github.com/bazelbuild/bazel/issues/18958
+###############################################################################
+
+module(
+    name = "lorite_ws",
+)
+
+# ----------------------------------------
+
+# bazel
+
+# http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+# ----------------------------------------
+
+# C# - DotNet
+
+bazel_dep(name = "rules_dotnet", version = "0.15.1")
+dotnet = use_extension("@rules_dotnet//dotnet:extensions.bzl", "dotnet")
+dotnet.toolchain(dotnet_version = "8.0.200")
+use_repo(dotnet, "dotnet_toolchains")
+register_toolchains("@dotnet_toolchains//:all")
+
+# src/examples/bazel-test-project-csharp
+bazel_test_project_csharp_example_deps = use_extension("//src/examples/bazel-test-project-csharp:example_deps.bzl", "bazel-test-project-csharp-example_deps")
+use_repo(bazel_test_project_csharp_example_deps, "paket.bazel_test_project_csharp_example_deps")
+
+# ----------------------------------------
+
+# Python
+
+bazel_dep(name = "rules_python", version = "0.34.0")
+pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+
+# src/examples/bazel-test-project-python-flask
+pip.parse(
+    hub_name = "pip_bazel_test_deps",
+    python_version = "3.11",
+    requirements_lock = "//src/examples/bazel-test-project-python-flask:requirements.txt",
+)
+use_repo(pip, "pip_bazel_test_deps")
+
+# src/subrepos/ultimate-python
+pip.parse(
+    hub_name = "pip_ultimate_python_deps",
+    python_version = "3.11",
+    requirements_lock = "//src/subrepos/ultimate-python:requirements.txt",
+)
+use_repo(pip, "pip_ultimate_python_deps")
+
+# src/other/python/scripts
+pip.parse(
+    hub_name = "pip_other_python_scripts_deps",
+    python_version = "3.11",
+    requirements_lock = "//src/other/python/scripts:requirements.txt",
+)
+use_repo(pip, "pip_other_python_scripts_deps")
+
+# ----------------------------------------
+
+# C++ - Cpp
+
+bazel_dep(name = "googletest", version = "1.15.0") # testing
+
+bazel_dep(name = "google_benchmark", version = "1.8.5") # benchmark
+
+bazel_dep(name = "gflags", version = "2.2.2") # command line flags
+
+bazel_dep(name = "glog", version = "0.7.1") # logging
+
+bazel_dep(name = "hedron_compile_commands", dev_dependency = True) # linting - clangd
+git_override(
+    module_name = "hedron_compile_commands",
+    remote = "https://github.com/hedronvision/bazel-compile-commands-extractor.git",
+    commit = "0e990032f3c5a866e72615cf67e5ce22186dcb97",
+    # Replace the commit hash (above) with the latest (https://github.com/hedronvision/bazel-compile-commands-extractor/commits/main).
+    # Even better, set up Renovate and let it do the work for you (see "Suggestion: Updates" in the README).
+)
+
+bazel_dep(name = "toolchains_llvm", version = "1.0.0") # LLVM
+# To directly use a commit from GitHub, replace commit with the commit you want.
+# Otherwise, omit this block.
+git_override(
+  module_name = "toolchains_llvm",
+  commit = "1d685a99db5f1e6523c392e7dfaced583062cbc4",
+  remote = "https://github.com/bazel-contrib/toolchains_llvm",
+)
+# Configure and register the toolchain.
+llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
+llvm.toolchain(
+   llvm_version = "17.0.6",
+)
+use_repo(llvm, "llvm_toolchain")
+# use_repo(llvm, "llvm_toolchain_llvm") # if you depend on specific tools in scripts
+register_toolchains("@llvm_toolchain//:all")
+
+# ----------------------------------------
+
+# JAVA
+
+bazel_dep(name = "rules_jvm_external", version = "6.2")
+maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
+maven.install(
+    artifacts = [
+        "org.junit.jupiter:junit-jupiter-engine:5.10.3",
+        "com.google.guava:guava:33.2.1-jre",
+    ],
+    fetch_sources = True,
+)
+use_repo(maven, "maven")
