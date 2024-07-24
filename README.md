@@ -183,9 +183,15 @@ The open source courses can be found in the [courses-free](src/courses-free) fol
 
   [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
 
-- **Microsoft Learning: Getting started with C#**: Learn the basic syntax and thought processes required to build simple applications using C#. [src/courses-free/csharp-getting-started](src/courses-free/csharp-getting-started)
+- **Microsoft Learning: Getting started with C#**: Learn the basic syntax and thought processes required to build simple applications using C#. [src/courses-free/microsoft_learning/000.get_started_with_csharp](src/courses-free/microsoft_learning/000.get_started_with_csharp)
 
   [![C#][C#]][C#-url]
+  [![Bazel][Bazel-build]][Bazel-url]
+  [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
+
+- **hacking C++ - C++ Beginner's Guide**: Learn modern, idiomatic C++. It is (roughly) ordered by increasing level of C++ proficiency. [src/courses-free/hacking_cpp](src/courses-free/hacking_cpp)
+
+  [![C++][C++]][C++-url]
   [![Bazel][Bazel-build]][Bazel-url]
   [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
 
