@@ -118,6 +118,12 @@ You can read the commit messages to see what I have been doing. I try to keep th
 
 3. Install [git](https://git-scm.com/downloads) on your machine and configure it with your GitHub account.
 
+### Try out the repository using GitHub Codespaces
+
+1. Click on the green `Code` button on the top right of the repository and select `Open with Codespaces`.
+
+Learn more about [GitHub Codespaces](https://github.com/features/codespaces).
+
 ### Installation
 
 1. If this is your first time using a development container, please check the getting started information on [VS Code remote - setting up](https://aka.ms/vscode-remote/containers/getting-started) Remote-Containers or [GitHub Docs - Creating a codespace](https://aka.ms/ghcs-open-codespace) using GitHub Codespaces.
