@@ -9,26 +9,30 @@ namespace composition {
 class Walker {  // interface
  public:
   virtual void walk() = 0;
+  virtual ~Walker() = default;
 };
 
 class Legs : public Walker {
  public:
-  void walk() { std::cout << "Walking with my legs" << std::endl; }
+  void walk() override { std::cout << "Walking with my legs" << std::endl; }
 };
 
 class Wheels : public Walker {
  public:
-  void walk() { std::cout << "Rolling with my wheels" << std::endl; }
+  void walk() override { std::cout << "Rolling with my wheels" << std::endl; }
 };
 
 class Grabber {  // Interface
  public:
   virtual void grab() = 0;
+  virtual ~Grabber() = default;
 };
 
 class Arms : public Grabber {
  public:
-  void grab() { std::cout << "Grabbing things with my arms" << std::endl; }
+  void grab() override {
+    std::cout << "Grabbing things with my arms" << std::endl;
+  }
 };
 
 class InheritanceRobot : public Legs, public Arms {
