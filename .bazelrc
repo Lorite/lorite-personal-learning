@@ -1,6 +1,5 @@
 common --incompatible_allow_tags_propagation
 common --enable_bzlmod
-
 build --experimental_remote_merkle_tree_cache
 build --experimental_reuse_sandbox_directories
 build --heap_dump_on_oom 
@@ -38,4 +37,12 @@ build --features=-supports_dynamic_linker
 # Not needed after https://github.com/grailbio/bazel-toolchain/pull/229.
 build --features=-libtool
 
+# Typescript
+common --@aspect_rules_ts//ts:skipLibCheck=honor_tsconfig # Use more correct type checking for typescript libraries
+# Use "tsc" as the transpiler when ts_project has no `transpiler` set.
+build --@aspect_rules_ts//ts:default_to_tsc_transpiler
+fetch --@aspect_rules_ts//ts:default_to_tsc_transpiler
+query --@aspect_rules_ts//ts:default_to_tsc_transpiler
+
+# Import user-specific settings
 try-import %workspace%/.bazelrc.user

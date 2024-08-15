@@ -112,3 +112,43 @@ maven.install(
     fetch_sources = True,
 )
 use_repo(maven, "maven")
+
+# ----------------------------------------
+
+# Javascript
+
+bazel_dep(name = "aspect_rules_js", version = "2.0.0-rc9")
+####### Node.js version #########
+# By default you get the node version from DEFAULT_NODE_VERSION in @rules_nodejs//nodejs:repositories.bzl
+# Optionally you can pin a different node version:
+bazel_dep(name = "rules_nodejs", version = "6.2.0")
+node = use_extension("@rules_nodejs//nodejs:extensions.bzl", "node", dev_dependency = True)
+node.toolchain(node_version = "16.14.2")
+#################################
+npm = use_extension("@aspect_rules_js//npm:extensions.bzl", "npm", dev_dependency = True)
+npm.npm_translate_lock(
+    name = "npm",
+    npmrc = "//:.npmrc",
+    pnpm_lock = "//:pnpm-lock.yaml", # run `bazel run -- @pnpm//:pnpm --dir $PWD install --lockfile-only` to generate this file
+    verify_node_modules_ignored = "//:.bazelignore",
+)
+use_repo(npm, "npm")
+
+pnpm = use_extension("@aspect_rules_js//npm:extensions.bzl", "pnpm")
+# Allows developers to use the matching pnpm version, for example:
+# bazel run -- @pnpm --dir /home/runner/work/rules_js/rules_js install
+use_repo(pnpm, "pnpm")
+
+# ----------------------------------------
+
+# Typescript
+
+bazel_dep(name = "aspect_rules_ts", version = "3.0.0-rc1")
+rules_ts_ext = use_extension("@aspect_rules_ts//ts:extensions.bzl", "ext", dev_dependency = True)
+rules_ts_ext.deps(
+    ts_version = "5.5.2",
+    ts_integrity = "sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==", # use "curl --silent https://registry.npmjs.org/typescript/5.5.2 | jq -r '.dist.integrity'"
+)
+use_repo(rules_ts_ext, "npm_typescript")
+bazel_dep(name = "aspect_bazel_lib", version = "2.7.9")
+bazel_dep(name = "aspect_rules_jest", version = "0.22.0-rc0")

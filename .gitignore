@@ -339,3 +339,6 @@ _NCrunch*
 # VS Code launch and tasks
 !/.vscode/launch.json
 !/.vscode/tasks.json
+
+# JavaScript
+.pnpm-store/

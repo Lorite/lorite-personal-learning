@@ -1,0 +1,12 @@
+{
+  "include": [
+    "src/"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "inlineSources": true
+  }
+}

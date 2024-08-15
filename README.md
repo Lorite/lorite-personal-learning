@@ -176,6 +176,8 @@ Some of the tools and languages included in the dev container are:
 - [pip](https://pypi.org/project/pip/) for installing Python packages.
 - [Go](https://golang.org/)
 - [JAVA](https://www.java.com/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ### Code
 
@@ -211,6 +213,8 @@ The examples can be found in the [examples](src/examples) folder. Most of the ex
 - [C# Bazel](src/examples/bazel-test-project-csharp): A simple C# project using Bazel.
 - [Python flask Bazel](src/examples/bazel-test-project-python-flask/): A simple Python flask project using Bazel.
 - [Java Bazel](src/examples/bazel_test_project_java): A simple Java project using Bazel with Maven dependencies.
+- [JavaScript Bazel](src/examples/bazel-test-project-javascript): A simple JavaScript project using Bazel.
+- [TypeScript Bazel](src/examples/bazel-test-project-typescript): A simple TypeScript project using Bazel.
 - [Shell](src/examples/bazel-test-project-shell): A simple Shell project using Bazel.
 
 #### Exercises
@@ -318,6 +322,17 @@ This section contains the resources for DevOps, CI/CD, and programming languages
 - [bazelbuild/rules_jvm_external](https://github.com/bazelbuild/rules_jvm_external)
 - [MAVEN - Introduction to the Standard Directory Layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
 
+### JavaScript
+- [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+- [Aspect Rules JavaScript Rules for Bazel](https://docs.aspect.build/rulesets/aspect_rules_js/docs/)
+- Jest - Delightful JavaScript Testing (check below)
+
+### TypeScript
+- [TypeScript reference](https://www.typescriptlang.org/docs/)
+- [Aspect Rules TypeScript Rules for Bazel](https://docs.aspect.build/rulesets/aspect_rules_ts)
+- [Aspect Rules Jest](https://github.com/aspect-build/rules_jest)
+- [Jest - Delightful JavaScript Testing](https://jestjs.io/)
+
 ### LaTeX
 - [Bazel rules for LaTeX](https://github.com/ProdriveTechnologies/bazel-latex)
 
@@ -378,3 +393,7 @@ Licensed under the Creative Commons Attribution-NonCommercial 4.0 International 
 [Go-url]: https://golang.org/
 [JAVA]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
 [JAVA-url]: https://www.java.com/
+[JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[TypeScript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/
