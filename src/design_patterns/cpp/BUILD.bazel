@@ -1,0 +1,18 @@
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+  name = "composition_lib",
+  hdrs = ["include/design_patterns/composition.hpp"],
+  includes = ["include"],
+  visibility = ["//visibility:public"],
+)
+
+cc_test(
+  name = "composition_test",
+  size = "small",
+  srcs = ["test/composition_test.cpp"],
+  deps = [
+    "@googletest//:gtest_main",
+    ":composition_lib"
+  ],
+)
