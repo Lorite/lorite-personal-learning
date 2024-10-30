@@ -116,5 +116,6 @@
         "lldb.displayFormat": "auto",
         "lldb.dereferencePointers": true,
         "lldb.showDisassembly": "auto",
+        "bazel.buildifierExecutable": "@buildifier_prebuilt//:buildifier",
     },
 }
