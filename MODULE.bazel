@@ -5,6 +5,8 @@
 # For more details, please check https://github.com/bazelbuild/bazel/issues/18958
 ###############################################################################
 
+# check https://registry.bazel.build/ for the latest versions
+
 module(
     name = "lorite_ws",
 )
@@ -14,6 +16,46 @@ module(
 # bazel
 
 # http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+# ----------------------------------------
+
+# Linting and Formatting
+
+bazel_dep(name = "aspect_bazel_lib", version = "2.7.7") # Bazel library for common tasks required for linting and formatting
+bazel_dep(name = "aspect_rules_lint", version = "1.0.3") # linting and formatting
+bazel_dep(name = "bazel_skylib", version = "1.7.1") # Bazel Skylib required for linting and formatting
+bazel_dep(name = "buildifier_prebuilt", version = "6.3.3")
+
+# ----------------------------------------
+
+# TypeScript
+
+bazel_dep(name = "aspect_rules_ts", version = "3.0.0")
+rules_ts_ext = use_extension("@aspect_rules_ts//ts:extensions.bzl", "ext")
+rules_ts_ext.deps()
+use_repo(rules_ts_ext, "npm_typescript")
+
+# ----------------------------------------
+
+# JavaScript
+
+bazel_dep(name = "aspect_rules_js", version = "2.0.0") # JavaScript rules required for linting and formatting
+npm = use_extension("@aspect_rules_js//npm:extensions.bzl", "npm")
+npm.npm_translate_lock(
+    name = "npm",
+    npmrc = "//:.npmrc",
+    pnpm_lock = "//:pnpm-lock.yaml",
+    public_hoist_packages = {
+        "typescript-eslint": [""],
+    },
+)
+use_repo(npm, "npm")
+
+pnpm = use_extension("@aspect_rules_js//npm:extensions.bzl", "pnpm")
+
+# Allows developers to use the matching pnpm version, for example:
+# bazel run -- @pnpm --dir /home/runner/work/rules_js/rules_js install
+use_repo(pnpm, "pnpm")
 
 # ----------------------------------------
 
@@ -34,12 +76,21 @@ use_repo(bazel_test_project_csharp_example_deps, "paket.bazel_test_project_cshar
 # Python
 
 bazel_dep(name = "rules_python", version = "0.34.0")
+python_version = "3.11"
 pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+
+# root
+pip.parse(
+    hub_name = "pip",
+    python_version = python_version,
+    requirements_lock = "//:requirements.txt",
+)
+use_repo(pip, "pip")
 
 # src/examples/bazel-test-project-python-flask
 pip.parse(
     hub_name = "pip_bazel_test_deps",
-    python_version = "3.11",
+    python_version = python_version,
     requirements_lock = "//src/examples/bazel-test-project-python-flask:requirements.txt",
 )
 use_repo(pip, "pip_bazel_test_deps")
@@ -47,7 +98,7 @@ use_repo(pip, "pip_bazel_test_deps")
 # src/subrepos/ultimate-python
 pip.parse(
     hub_name = "pip_ultimate_python_deps",
-    python_version = "3.11",
+    python_version = python_version,
     requirements_lock = "//src/subrepos/ultimate-python:requirements.txt",
 )
 use_repo(pip, "pip_ultimate_python_deps")
@@ -55,7 +106,7 @@ use_repo(pip, "pip_ultimate_python_deps")
 # src/other/python/scripts
 pip.parse(
     hub_name = "pip_other_python_scripts_deps",
-    python_version = "3.11",
+    python_version = python_version,
     requirements_lock = "//src/other/python/scripts:requirements.txt",
 )
 use_repo(pip, "pip_other_python_scripts_deps")
@@ -72,15 +123,6 @@ bazel_dep(name = "gflags", version = "2.2.2") # command line flags
 
 bazel_dep(name = "glog", version = "0.7.1") # logging
 
-bazel_dep(name = "hedron_compile_commands", dev_dependency = True) # linting - clangd
-git_override(
-    module_name = "hedron_compile_commands",
-    remote = "https://github.com/hedronvision/bazel-compile-commands-extractor.git",
-    commit = "0e990032f3c5a866e72615cf67e5ce22186dcb97",
-    # Replace the commit hash (above) with the latest (https://github.com/hedronvision/bazel-compile-commands-extractor/commits/main).
-    # Even better, set up Renovate and let it do the work for you (see "Suggestion: Updates" in the README).
-)
-
 bazel_dep(name = "toolchains_llvm", version = "1.0.0") # LLVM
 # To directly use a commit from GitHub, replace commit with the commit you want.
 # Otherwise, omit this block.
@@ -95,12 +137,14 @@ llvm.toolchain(
    llvm_version = "17.0.6",
 )
 use_repo(llvm, "llvm_toolchain")
-# use_repo(llvm, "llvm_toolchain_llvm") # if you depend on specific tools in scripts
+use_repo(llvm, "llvm_toolchain_llvm")
 register_toolchains("@llvm_toolchain//:all")
 
 # ----------------------------------------
 
 # JAVA
+
+bazel_dep(name = "rules_java", version = "5.5.0")
 
 bazel_dep(name = "rules_jvm_external", version = "6.2")
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
@@ -108,7 +152,34 @@ maven.install(
     artifacts = [
         "org.junit.jupiter:junit-jupiter-engine:5.10.3",
         "com.google.guava:guava:33.2.1-jre",
+        "org.scalameta:scalafmt-cli_2.13:3.7.14",
+    ],
+    lock_file = "//:maven_install.json", # update using `bazel run @maven//:pin`
+    repositories = [
+        "https://maven.google.com",
+        "https://repo1.maven.org/maven2",
     ],
     fetch_sources = True,
 )
 use_repo(maven, "maven")
+
+# ----------------------------------------
+
+# Rust
+
+bazel_dep(name = "rules_rust", version = "0.50.1")
+rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
+rust.toolchain(
+    edition = "2021",
+    versions = ["1.75.0"],
+)
+
+# ----------------------------------------
+
+# Protobuf
+
+bazel_dep(name = "rules_buf", version = "0.3.0")
+buf = use_extension("@rules_buf//buf:extensions.bzl", "buf")
+# see https://github.com/bufbuild/buf/releases
+buf.toolchains(version = "v1.34.0")
+use_repo(buf, "rules_buf_toolchains")

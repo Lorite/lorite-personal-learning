@@ -1,14 +1,77 @@
-load("@hedron_compile_commands//:refresh_compile_commands.bzl", "refresh_compile_commands") # C++ 
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+load("@npm//:defs.bzl", "npm_link_all_packages")
+load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+load("@aspect_rules_ts//ts:defs.bzl", "ts_config")
+
+package(default_visibility = ["//visibility:public"])
+
+compile_pip_requirements(
+    name = "requirements",
+    requirements_in = "requirements.in",
+)
+
+npm_link_all_packages(name = "node_modules")
 
 exports_files([
     ".clang-tidy",
     ".clang-format",
-])
+    ".editorconfig",
+    ".flake8",
+    ".npmrc",
+    ".ruff.toml",
+    ".vale.ini",
+    "buf.yaml",
+    "eslint.config.js",
+    "ktlint-baseline.xml",
+    "maven_install.json",
+    "package.json",
+    "pmd.xml",
+    "pnpm-lock.yaml",
+    "prettier.config.cjs",
+    ".scalafmt.conf",
+    ".shellcheckrc",
+    "stylelint.config.js",
+],
+    visibility = ["//visibility:public"])
 
-# C++ 
-refresh_compile_commands(
-    name = "refresh_cpp_compile_commands",
-    targets = {
-      "//src/...": "",
-    },
+js_library(
+    name = "eslintrc",
+    srcs = ["eslint.config.mjs"],
+    deps = [
+        ":node_modules/@eslint/js",
+        ":node_modules/typescript-eslint",
+    ],
+)
+
+js_library(
+    name = "stylelintrc",
+    srcs = ["stylelint.config.mjs"],
+    deps = [":node_modules/stylelint-config-standard"],
+)
+
+js_library(
+    name = "prettierrc",
+    srcs = ["prettier.config.cjs"],
+    deps = [":node_modules/prettier-plugin-sql"],
+)
+
+ts_config(
+    name = "tsconfig",
+    src = "tsconfig.json",
+)
+
+# NB: this alias does NOT cause Bazel's Loading phase to load the tools/BUILD file.
+# That's important as we don't want users to wait for "Eager fetching" for ~EVERY language which
+# that build file loads from.
+# Demonstration: we'll build the js_library above, then build this format alias, and see that many
+# more repositories were fetched for the latter:
+#  % export T=$(mktemp -d)
+#  % bazel --output_base=$T build :eslintrc; ls $T/external > one
+#  % bazel --output_base=$T build :format; ls $T/external > two
+#  % wc -l one two
+#    738 one
+#    936 two
+alias(
+    name = "format",
+    actual = "//tools/format",
 )

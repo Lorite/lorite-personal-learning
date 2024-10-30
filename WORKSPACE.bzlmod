@@ -1,5 +1,28 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+# Support repos that aren't on bazel central registry
+# Needed until Bazel 7 allows MODULE.bazel to directly call repository rules
+
+# Linting and formatting
+
+load(
+    "@aspect_rules_lint//format:repositories.bzl",
+    "fetch_java_format",
+    "fetch_ktfmt",
+    "fetch_swiftformat",
+)
+fetch_java_format()
+fetch_ktfmt()
+fetch_swiftformat()
+load("@aspect_rules_lint//lint:pmd.bzl", "fetch_pmd")
+fetch_pmd()
+load("@aspect_rules_lint//lint:checkstyle.bzl", "fetch_checkstyle")
+fetch_checkstyle()
+load("@aspect_rules_lint//lint:vale.bzl", "fetch_vale")
+fetch_vale()
+load("@aspect_rules_lint//lint:ktlint.bzl", "fetch_ktlint")
+fetch_ktlint()
+
 # LaTeX
 
 http_archive(
@@ -12,7 +35,5 @@ http_archive(
     ],
     patch_args = ["-p1"],
 )
-
 load("@bazel_latex//:repositories.bzl", "latex_repositories")
-
 latex_repositories()

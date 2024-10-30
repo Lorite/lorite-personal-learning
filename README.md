@@ -176,6 +176,7 @@ Some of the tools and languages included in the dev container are:
 - [pip](https://pypi.org/project/pip/) for installing Python packages.
 - [Go](https://golang.org/)
 - [JAVA](https://www.java.com/)
+- [Aspect Docs - Run linters and formatters under Bazel](https://docs.aspect.build/rulesets/aspect_rules_lint/). Run `tools/lint/scripts/aspect_lint.sh //path/to:target` to run linters under Bazel. These linters and formatters are also run in the CI/CD pipeline.
 
 ### Code
 
