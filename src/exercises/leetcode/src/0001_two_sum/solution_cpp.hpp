@@ -25,29 +25,29 @@ class SolutionCppV1 : public SolutionCpp {
 
  public:
   /*
-  * time complexity: O(n^2)
-  * space complexity: O(1)
-  */
+   * time complexity: O(n^2)
+   * space complexity: O(1)
+   */
   std::vector<int> two_sum(std::vector<int>& nums, int target) override;
 };
 
 class SolutionCppV2 : public SolutionCpp {
  public:
   /*
-  * @brief Two-Pass Hash Table
-  * time complexity: O(n) + O(n) = O(n)
-  * space complexity: O(n)
-  */
+   * @brief Two-Pass Hash Table
+   * time complexity: O(n) + O(n) = O(n)
+   * space complexity: O(n)
+   */
   std::vector<int> two_sum(std::vector<int>& nums, int target) override;
 };
 
 class SolutionCppV3 : public SolutionCpp {
  public:
   /*
-  * @brief One-Pass Hash Table
-  * time complexity: O(n)
-  * space complexity: O(n)
-  */
+   * @brief One-Pass Hash Table
+   * time complexity: O(n)
+   * space complexity: O(n)
+   */
   std::vector<int> two_sum(std::vector<int>& nums, int target) override;
 };
 

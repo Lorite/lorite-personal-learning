@@ -6,6 +6,7 @@ within a class. This prevents users from directly accessing and modifying such
 attributes from outside the class. Instead, users must use methods to access and
 modify attributes.
 """
+
 import secrets
 
 # Module-level constant
@@ -29,7 +30,9 @@ class BankAccount:
         the random module when a new instance of the class is created.
         The balance is set to 0 by default.
         """
-        self.__account_number = secrets.randbelow(10**10)  # generate a random account number of 10 digits.
+        self.__account_number = secrets.randbelow(
+            10**10
+        )  # generate a random account number of 10 digits.
         self.__balance = 0
 
     def deposit(self, balance):

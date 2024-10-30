@@ -9,29 +9,28 @@ SRC_FOLDER_NAMES = glob(
 )
 
 EXCLUDED_FILES = glob(
-    ["ultimatepython/**/__init__.py"], 
-    exclude_directories=1,
+    ["ultimatepython/**/__init__.py"],
+    exclude_directories = 1,
 )
 
 [py_test(
     name = py_file.split("/")[-1].split(".")[0],
+    size = "small",
     srcs = [
         py_file,
     ],
+    main = py_file,
     deps = [
         requirement("coverage"),
         requirement("flake8"),
         requirement("isort"),
     ],
-    main = py_file,
-    size = "small",
 ) for py_file in glob([src_folder + "/**/*.py" for src_folder in SRC_FOLDER_NAMES]) if py_file not in EXCLUDED_FILES]
-
 
 compile_pip_requirements(
     name = "requirements",
+    size = "small",
     timeout = "moderate",
     requirements_in = "requirements.in",
-    size = "small",
     visibility = ["//visibility:public"],
 )

@@ -10,7 +10,7 @@ py_binary(
         requirement("requests"),
         requirement("bs4"),
         requirement("pillow"),
-    ]
+    ],
 )
 
 compile_pip_requirements(

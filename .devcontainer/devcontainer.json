@@ -1,98 +1,97 @@
 {
-	"name": "Lorite Container",
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
-	"features": {
-		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
-			"plugins": "git zsh-autosuggestions zsh-syntax-highlighting",
-			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting" 
-		},
-		"ghcr.io/balazs23/devcontainers-features/bazel:1": {
-		},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {
-			"version": "latest"
-		},
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "23",
-			"jdkDistro": "mandrel",
-			"installGradle": false,
-			"installMaven": false,
-			"installAnt": false,
-			"installGroovy": false
-		},
-		"ghcr.io/devcontainers/features/github-cli:1": {}
-	},
-	"customizations": {
-		"vscode": {
-			// TODO: check which vscode extensions we should include in the container
-			"extensions": [
-				"github.vscode-github-actions",
-				// "ms-azuretools.vscode-docker", // installed by feature ghcr.io/devcontainers/features/docker-in-docker:2
-				"eamodio.gitlens",
-				// "ms-python.python",  # installed by feature ghcr.io/devcontainers/features/python:1
-				// "ms-python.vscode-pylance",  # installed by feature ghcr.io/devcontainers/features/python:1
-				"vadimcn.vscode-lldb",
-				"usernamehw.errorlens", // show errors inline
-				// "ms-vscode.cpptools",
-				// "twxs.cmake",
-				// "DotJoshJohnson.xml",
-				// "docsmsft.docs-yaml",
-				// "mutantdino.resourcemonitor",
-				// "lextudio.restructuredtext",
-				// "foxundermoon.shell-format",
-				// "timonwong.shellcheck",
-				// "dtangren.vs-codeowners",
-				"llvm-vs-code-extensions.vscode-clangd",
-				// "docsmsft.docs-markdown",
-				// "humao.rest-client",
-				// "trond-snekvik.simple-rst",
-				// "heptio.jsonnet",
-				// "redhat.ansible",
-				// "xrc-inc.jsonnet-formatter",
-				// "zxh404.vscode-proto3",
-				"bazelbuild.vscode-bazel",
-				// "ryanluker.vscode-coverage-gutters",
-				"cschlosser.doxdocgen", // doxygen documentation generator for C++
-				// "sonarsource.sonarlint-vscode",
-				// "Huuums.vscode-fast-folder-structure",
-				// "vadimcn.vscode-lldb",
-				"streetsidesoftware.code-spell-checker",
-				// "rust-lang.rust-analyzer",
-				"huibizhang.codesnap-plus",
-				"wmaurer.change-case",
-				// "Guyutongxue.cpp-reference",
-				"GitHub.copilot",
-				"GitHub.copilot-chat",
-				"GitHub.vscode-pull-request-github",
-				// "golang.go", // installed by feature ghcr.io/devcontainers/features/go:1
-				// "ms-vsliveshare.vsliveshare",
-				// "shd101wyy.markdown-preview-enhanced",
-				// "analytic-signal.preview-mp4",
-				"avaly.restore-git-branch-tabs-improved",
-				"valsorym.smart-tabs",
-				// "yy0931.save-as-root",
-				"awtnb.spotline",
-				"shyykoserhiy.vscode-spotify",
-				"patricklee.vsnotes",
-				"WakaTime.vscode-wakatime",
-				// "redhat.vscode-yaml",
-				// "tomoki1207.pdf",
-				"bierner.markdown-emoji",
-				"bierner.emojisense",
-				"rioj7.command-variable", // Command Variable for running bazel debug configurations
-			],
-            "settings": {
-                "editor.tabCompletion": "on",
-				"terminal.integrated.defaultProfile.linux": "zsh",
-				"terminal.integrated.fontFamily": "MesloLGS NF",
-				"git.autofetch": true,
-				"git.autofetchPeriod": 60,
-            }
-		}
-	},
+  "name": "Lorite Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu", // Any generic, debian-based image.
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+      "plugins": "git zsh-autosuggestions zsh-syntax-highlighting",
+      "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting"
+    },
+    "ghcr.io/balazs23/devcontainers-features/bazel:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "23",
+      "jdkDistro": "mandrel",
+      "installGradle": false,
+      "installMaven": false,
+      "installAnt": false,
+      "installGroovy": false
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      // TODO: check which vscode extensions we should include in the container
+      "extensions": [
+        "github.vscode-github-actions",
+        // "ms-azuretools.vscode-docker", // installed by feature ghcr.io/devcontainers/features/docker-in-docker:2
+        "eamodio.gitlens",
+        // "ms-python.python",  # installed by feature ghcr.io/devcontainers/features/python:1
+        // "ms-python.vscode-pylance",  # installed by feature ghcr.io/devcontainers/features/python:1
+        "vadimcn.vscode-lldb",
+        "usernamehw.errorlens", // show errors inline
+        // "ms-vscode.cpptools",
+        // "twxs.cmake",
+        // "DotJoshJohnson.xml",
+        // "docsmsft.docs-yaml",
+        // "mutantdino.resourcemonitor",
+        // "lextudio.restructuredtext",
+        // "foxundermoon.shell-format",
+        // "timonwong.shellcheck",
+        // "dtangren.vs-codeowners",
+        "llvm-vs-code-extensions.vscode-clangd",
+        // "docsmsft.docs-markdown",
+        // "humao.rest-client",
+        // "trond-snekvik.simple-rst",
+        // "heptio.jsonnet",
+        // "redhat.ansible",
+        // "xrc-inc.jsonnet-formatter",
+        // "zxh404.vscode-proto3",
+        "bazelbuild.vscode-bazel",
+        // "ryanluker.vscode-coverage-gutters",
+        "cschlosser.doxdocgen", // doxygen documentation generator for C++
+        // "sonarsource.sonarlint-vscode",
+        // "Huuums.vscode-fast-folder-structure",
+        // "vadimcn.vscode-lldb",
+        "streetsidesoftware.code-spell-checker",
+        // "rust-lang.rust-analyzer",
+        "huibizhang.codesnap-plus",
+        "wmaurer.change-case",
+        // "Guyutongxue.cpp-reference",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "GitHub.vscode-pull-request-github",
+        // "golang.go", // installed by feature ghcr.io/devcontainers/features/go:1
+        // "ms-vsliveshare.vsliveshare",
+        // "shd101wyy.markdown-preview-enhanced",
+        // "analytic-signal.preview-mp4",
+        "avaly.restore-git-branch-tabs-improved",
+        "valsorym.smart-tabs",
+        // "yy0931.save-as-root",
+        "awtnb.spotline",
+        "shyykoserhiy.vscode-spotify",
+        "patricklee.vsnotes",
+        "WakaTime.vscode-wakatime",
+        // "redhat.vscode-yaml",
+        // "tomoki1207.pdf",
+        "bierner.markdown-emoji",
+        "bierner.emojisense",
+        "rioj7.command-variable" // Command Variable for running bazel debug configurations
+      ],
+      "settings": {
+        "editor.tabCompletion": "on",
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.fontFamily": "MesloLGS NF",
+        "git.autofetch": true,
+        "git.autofetchPeriod": 60
+      }
+    }
+  },
 
-	"forwardPorts": [],
-	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
-	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
-	"remoteUser": "vscode",
-    "containerUser": "vscode"
+  "forwardPorts": [],
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
+  "remoteUser": "vscode",
+  "containerUser": "vscode"
 }

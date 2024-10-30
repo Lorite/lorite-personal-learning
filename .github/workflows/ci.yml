@@ -1,5 +1,4 @@
 name: CI
-
 on:
   push:
     branches:
@@ -7,12 +6,10 @@ on:
   pull_request:
     branches:
       - main
-
 jobs:
   test:
     # virtual environments: https://github.com/actions/virtual-environments
     runs-on: ubuntu-22.04
-
     steps:
       - name: Remove unnecessary files
         run: |
@@ -35,15 +32,12 @@ jobs:
             ~/.cache/bazelisk
             ~/.cache/bazel
           key: ${{ runner.os }}-${{ env.cache-name }}
-
       # Checks-out your repository under $GITHUB_WORKSPACE, which is the CWD for
       # the rest of the steps
       - uses: actions/checkout@v4
-
       # build
       - name: Build the code
         run: bazel build //...
-
       # test
       - name: Test the code
         run: bazel test //...

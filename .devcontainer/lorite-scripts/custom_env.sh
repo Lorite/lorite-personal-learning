@@ -1,5 +1,5 @@
 # setup input
-cat << 'EOF' > ~/.inputrc
+cat <<'EOF' >~/.inputrc
 "\e[A":history-search-backward
 "\e[B":history-search-forward
 "\e[1;5C":forward-word
@@ -28,8 +28,7 @@ history_cmds_array+=("git rebase -i HEAD~2 --autostash")
 history_cmds_array+=("git rebase origin/develop --autostash")
 history_cmds_array+=("bazel coverage .s.. --config=coverage-lcov --config=clang")
 history_cmds_array+=("ssh user@ip")
-for i in "${history_cmds_array[@]}"
-do
-    # grep -v "$i" ~/.zsh_history > tmpfile && mv tmpfile ~/.zsh_history # remove command
-    echo "$i" >> ~/.zsh_history # add command
+for i in "${history_cmds_array[@]}"; do
+	# grep -v "$i" ~/.zsh_history > tmpfile && mv tmpfile ~/.zsh_history # remove command
+	echo "$i" >>~/.zsh_history # add command
 done

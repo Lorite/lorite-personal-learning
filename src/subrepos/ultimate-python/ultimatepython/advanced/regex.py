@@ -4,6 +4,7 @@ them is difficult but Python provides a package for us to use them easily.
 This module shows a few examples of how to use the `re` package to search
 predefined text snippets stored in module-level constants.
 """
+
 import re
 
 # Module-level constants
@@ -28,7 +29,10 @@ def main():
     assert re.findall(r"\w+", _TEXT_NAMES) == ["John", "Jane"]
 
     # Running `findall` with "[a-z]+@[a-z]+\.[a-z]+" has a list of email strings
-    assert re.findall(r"[a-z]+@[a-z]+\.[a-z]+", _TEXT_EMAILS) == ["kayode@dodo.ng", "nerdthejohn@yahoo.com"]
+    assert re.findall(r"[a-z]+@[a-z]+\.[a-z]+", _TEXT_EMAILS) == [
+        "kayode@dodo.ng",
+        "nerdthejohn@yahoo.com",
+    ]
 
     # Running `match` with "[123]+" has nothing
     assert re.match(r"[123]+", _TEXT_ABC123) is None

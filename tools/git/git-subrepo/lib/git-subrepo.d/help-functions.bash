@@ -5,7 +5,7 @@
 set -e
 
 help:all() {
-    cat <<'...'
+	cat <<'...'
 branch               branch <subdir>|--all [-f] [-F]
 clean                clean <subdir>|--all|--ALL [-f]
 clone                clone <repository> [<subdir>] [-b <branch>] [-f] [-m <msg>] [--file=<msg file>] [-e] [--method <merge|rebase>]
@@ -23,7 +23,7 @@ version              version [-q|-v]
 }
 
 help:branch() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo branch <subdir>|--all [-f] [-F]
 
@@ -42,7 +42,7 @@ help:branch() {
 }
 
 help:clean() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo clean <subdir>|--all|--ALL [-f]
 
@@ -69,7 +69,7 @@ help:clean() {
 }
 
 help:clone() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo clone <repository> [<subdir>] [-b <branch>] [-f] [-m <msg>] [--file=<msg file>] [-e] [--method <merge|rebase>]
 
@@ -100,7 +100,7 @@ help:clone() {
 }
 
 help:commit() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo commit <subdir> [<subrepo-ref>] [-m <msg>] [--file=<msg file>] [-e] [-f] [-F]
 
@@ -122,7 +122,7 @@ help:commit() {
 }
 
 help:config() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo config <subdir> <option> [<value>] [-f]
 
@@ -140,7 +140,7 @@ help:config() {
 }
 
 help:fetch() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo fetch <subdir>|--all [-r <remote>] [-b <branch>]
 
@@ -157,7 +157,7 @@ help:fetch() {
 }
 
 help:help() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo help [<command>|--all]
 
@@ -173,7 +173,7 @@ help:help() {
 }
 
 help:init() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo init <subdir> [-r <remote>] [-b <branch>] [--method <merge|rebase>]
 
@@ -204,7 +204,7 @@ help:init() {
 }
 
 help:pull() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo pull <subdir>|--all [-M|-R|-f] [-m <msg>] [--file=<msg file>] [-e] [-b <branch>] [-r <remote>] [-u]
 
@@ -258,7 +258,7 @@ help:pull() {
 }
 
 help:push() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo push <subdir>|--all [<branch>] [-m msg] [--file=<msg file>] [-r <remote>] [-b <branch>] [-M|-R] [-u] [-f] [-s] [-N]
 
@@ -292,7 +292,7 @@ help:push() {
 }
 
 help:status() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo status [<subdir>|--all|--ALL] [-F] [-q|-v]
 
@@ -311,7 +311,7 @@ help:status() {
 }
 
 help:upgrade() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo upgrade
 
@@ -324,7 +324,7 @@ help:upgrade() {
 }
 
 help:version() {
-    cat <<'...'
+	cat <<'...'
 
   Usage: git subrepo version [-q|-v]
 

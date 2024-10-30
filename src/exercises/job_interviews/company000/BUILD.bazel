@@ -5,7 +5,7 @@ cc_library(
     srcs = ["src/node.cpp"],
     hdrs = ["include/company000/node.hpp"],
     includes = ["include/company000"],
-    deps = ["@glog//:glog"],
+    deps = ["@glog"],
 )
 
 cc_library(
@@ -15,7 +15,7 @@ cc_library(
     includes = ["include/company000"],
     deps = [
         ":node_lib",
-        "@glog//:glog"
+        "@glog",
     ],
 )
 
@@ -27,7 +27,7 @@ cc_library(
     deps = [
         ":node_lib",
         ":path_lib",
-        "@glog//:glog"
+        "@glog",
     ],
 )
 
@@ -36,8 +36,8 @@ cc_test(
     size = "small",
     srcs = ["test/node_test.cpp"],
     deps = [
+        ":node_lib",
         "@googletest//:gtest_main",
-        ":node_lib"
     ],
 )
 
@@ -46,8 +46,8 @@ cc_test(
     size = "small",
     srcs = ["test/path_test.cpp"],
     deps = [
+        ":path_lib",
         "@googletest//:gtest_main",
-        ":path_lib"
     ],
 )
 
@@ -55,19 +55,19 @@ cc_test(
     name = "triangle_directed_graph_test",
     size = "small",
     srcs = ["test/triangle_directed_graph_test.cpp"],
-    deps = [
-        "@googletest//:gtest_main",
-        ":triangle_directed_graph_lib"
-    ],
     data = ["data/simple_graph.txt"],
+    deps = [
+        ":triangle_directed_graph_lib",
+        "@googletest//:gtest_main",
+    ],
 )
 
 cc_binary(
     name = "exercise_1",
     srcs = ["main/exercise_1.cpp"],
+    data = ["data/exercise_1_graph.txt"],
     deps = [
         ":node_lib",
-        ":triangle_directed_graph_lib"
+        ":triangle_directed_graph_lib",
     ],
-    data = ["data/exercise_1_graph.txt"],
 )

@@ -1,11 +1,10 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ''
+title: ""
 labels: type:enhancement
 projects: ["Lorite/lorite-personal-learning"]
-assignees: ''
-
+assignees: ""
 ---
 
 **Is your feature request related to a problem? Please describe.**

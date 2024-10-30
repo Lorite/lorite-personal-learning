@@ -1,8 +1,8 @@
 {
-    "compilerOptions": {
-      "declaration": true,
-      "esModuleInterop": true,
-      "strictNullChecks": true
-    },
-    "exclude": []
-  }
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true
+  },
+  "exclude": []
+}

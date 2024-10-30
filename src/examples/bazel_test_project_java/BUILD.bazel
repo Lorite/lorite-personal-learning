@@ -1,4 +1,3 @@
-
 java_library(
     name = "helloJava",
     srcs = ["src/main/java/HelloJava.java"],
@@ -16,9 +15,9 @@ java_test(
     srcs = glob(["src/test/java/TestHelloJava.java"]),
     test_class = "examples.bazel_test_project_java.TestHelloJava",
     deps = [
+        ":helloJava",
         "@maven//:com_google_guava_guava",
-        "@maven//:org_junit_jupiter_junit_jupiter_engine",
         "@maven//:org_junit_jupiter_junit_jupiter_api",
-        ":helloJava"
+        "@maven//:org_junit_jupiter_junit_jupiter_engine",
     ],
 )
