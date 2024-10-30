@@ -1,6 +1,8 @@
 common --incompatible_allow_tags_propagation
 common --enable_bzlmod
 
+build --@aspect_rules_lint//lint:fail_on_violation # fail if linting fails
+build --keep_going # continue building after a failure. It goes well with linting errors and CI
 build --experimental_remote_merkle_tree_cache
 build --experimental_reuse_sandbox_directories
 build --heap_dump_on_oom 
@@ -25,7 +27,6 @@ test --test_output=errors
 test --test_tag_filters=-images
 test --test_verbose_timeout_warnings
 test --verbose_failures
-
 
 # C++ llvm
 # Not needed after https://github.com/bazelbuild/bazel/issues/7260 is closed
