@@ -31,6 +31,7 @@ exports_files([
     ".scalafmt.conf",
     ".shellcheckrc",
     "stylelint.config.js",
+    "tsconfig.json",
 ],
     visibility = ["//visibility:public"])
 
