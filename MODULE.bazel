@@ -44,7 +44,7 @@ npm = use_extension("@aspect_rules_js//npm:extensions.bzl", "npm")
 npm.npm_translate_lock(
     name = "npm",
     npmrc = "//:.npmrc",
-    pnpm_lock = "//:pnpm-lock.yaml",
+    pnpm_lock = "//:pnpm-lock.yaml", # update using `bazel run -- @pnpm//:pnpm --dir $PWD install --lockfile-only`
     public_hoist_packages = {
         "typescript-eslint": [""],
     },
