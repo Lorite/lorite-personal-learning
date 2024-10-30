@@ -10,4 +10,4 @@ bazel "$BAZEL_TYPE" --target_pattern_file="$TARGETS" ${@:3}
 
 # returns the file that is built
 # FIRST_TARGET=$(head -n 1 "$TARGETS")
-# bazel cquery "$FIRST_TARGET" --output files 2>/dev/null 
+# bazel cquery "$FIRST_TARGET" --output files 2>/dev/null

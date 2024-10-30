@@ -21,9 +21,9 @@ module(
 
 # Linting and Formatting
 
-bazel_dep(name = "aspect_bazel_lib", version = "2.7.7") # Bazel library for common tasks required for linting and formatting
-bazel_dep(name = "aspect_rules_lint", version = "1.0.3") # linting and formatting
-bazel_dep(name = "bazel_skylib", version = "1.7.1") # Bazel Skylib required for linting and formatting
+bazel_dep(name = "aspect_bazel_lib", version = "2.7.7")  # Bazel library for common tasks required for linting and formatting
+bazel_dep(name = "aspect_rules_lint", version = "1.0.3")  # linting and formatting
+bazel_dep(name = "bazel_skylib", version = "1.7.1")  # Bazel Skylib required for linting and formatting
 bazel_dep(name = "buildifier_prebuilt", version = "6.3.3")
 
 # ----------------------------------------
@@ -31,6 +31,7 @@ bazel_dep(name = "buildifier_prebuilt", version = "6.3.3")
 # TypeScript
 
 bazel_dep(name = "aspect_rules_ts", version = "3.0.0")
+
 rules_ts_ext = use_extension("@aspect_rules_ts//ts:extensions.bzl", "ext")
 rules_ts_ext.deps()
 use_repo(rules_ts_ext, "npm_typescript")
@@ -39,12 +40,13 @@ use_repo(rules_ts_ext, "npm_typescript")
 
 # JavaScript
 
-bazel_dep(name = "aspect_rules_js", version = "2.0.0") # JavaScript rules required for linting and formatting
+bazel_dep(name = "aspect_rules_js", version = "2.0.0")  # JavaScript rules required for linting and formatting
+
 npm = use_extension("@aspect_rules_js//npm:extensions.bzl", "npm")
 npm.npm_translate_lock(
     name = "npm",
     npmrc = "//:.npmrc",
-    pnpm_lock = "//:pnpm-lock.yaml", # update using `bazel run -- @pnpm//:pnpm --dir $PWD install --lockfile-only`
+    pnpm_lock = "//:pnpm-lock.yaml",  # update using `bazel run -- @pnpm//:pnpm --dir $PWD install --lockfile-only`
     public_hoist_packages = {
         "typescript-eslint": [""],
     },
@@ -62,9 +64,11 @@ use_repo(pnpm, "pnpm")
 # C# - DotNet
 
 bazel_dep(name = "rules_dotnet", version = "0.15.1")
+
 dotnet = use_extension("@rules_dotnet//dotnet:extensions.bzl", "dotnet")
 dotnet.toolchain(dotnet_version = "8.0.200")
 use_repo(dotnet, "dotnet_toolchains")
+
 register_toolchains("@dotnet_toolchains//:all")
 
 # src/examples/bazel-test-project-csharp
@@ -76,7 +80,9 @@ use_repo(bazel_test_project_csharp_example_deps, "paket.bazel_test_project_cshar
 # Python
 
 bazel_dep(name = "rules_python", version = "0.34.0")
+
 python_version = "3.11"
+
 pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
 
 # root
@@ -115,29 +121,28 @@ use_repo(pip, "pip_other_python_scripts_deps")
 
 # C++ - Cpp
 
-bazel_dep(name = "googletest", version = "1.15.0") # testing
+bazel_dep(name = "googletest", version = "1.15.0")  # testing
+bazel_dep(name = "google_benchmark", version = "1.8.5")  # benchmark
+bazel_dep(name = "gflags", version = "2.2.2")  # command line flags
+bazel_dep(name = "glog", version = "0.7.1")  # logging
+bazel_dep(name = "toolchains_llvm", version = "1.0.0")  # LLVM
 
-bazel_dep(name = "google_benchmark", version = "1.8.5") # benchmark
-
-bazel_dep(name = "gflags", version = "2.2.2") # command line flags
-
-bazel_dep(name = "glog", version = "0.7.1") # logging
-
-bazel_dep(name = "toolchains_llvm", version = "1.0.0") # LLVM
 # To directly use a commit from GitHub, replace commit with the commit you want.
 # Otherwise, omit this block.
 git_override(
-  module_name = "toolchains_llvm",
-  commit = "1d685a99db5f1e6523c392e7dfaced583062cbc4",
-  remote = "https://github.com/bazel-contrib/toolchains_llvm",
+    module_name = "toolchains_llvm",
+    commit = "1d685a99db5f1e6523c392e7dfaced583062cbc4",
+    remote = "https://github.com/bazel-contrib/toolchains_llvm",
 )
+
 # Configure and register the toolchain.
 llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
 llvm.toolchain(
-   llvm_version = "17.0.6",
+    llvm_version = "17.0.6",
 )
 use_repo(llvm, "llvm_toolchain")
 use_repo(llvm, "llvm_toolchain_llvm")
+
 register_toolchains("@llvm_toolchain//:all")
 
 # ----------------------------------------
@@ -145,8 +150,8 @@ register_toolchains("@llvm_toolchain//:all")
 # JAVA
 
 bazel_dep(name = "rules_java", version = "5.5.0")
-
 bazel_dep(name = "rules_jvm_external", version = "6.2")
+
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
@@ -154,12 +159,12 @@ maven.install(
         "com.google.guava:guava:33.2.1-jre",
         "org.scalameta:scalafmt-cli_2.13:3.7.14",
     ],
-    lock_file = "//:maven_install.json", # update using `bazel run @maven//:pin`
+    fetch_sources = True,
+    lock_file = "//:maven_install.json",  # update using `bazel run @maven//:pin`
     repositories = [
         "https://maven.google.com",
         "https://repo1.maven.org/maven2",
     ],
-    fetch_sources = True,
 )
 use_repo(maven, "maven")
 
@@ -168,6 +173,7 @@ use_repo(maven, "maven")
 # Rust
 
 bazel_dep(name = "rules_rust", version = "0.50.1")
+
 rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
 rust.toolchain(
     edition = "2021",
@@ -179,7 +185,9 @@ rust.toolchain(
 # Protobuf
 
 bazel_dep(name = "rules_buf", version = "0.3.0")
+
 buf = use_extension("@rules_buf//buf:extensions.bzl", "buf")
+
 # see https://github.com/bufbuild/buf/releases
 buf.toolchains(version = "v1.34.0")
 use_repo(buf, "rules_buf_toolchains")

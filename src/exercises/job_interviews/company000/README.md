@@ -60,6 +60,7 @@ The code is built using [bazel](https://bazel.build/) and [clang](https://clang.
 ## File structure
 
 The package is organized as follows:
+
 - [`include/company000/`](include/company000/): contains the header files.
 - [`main/`](main/): contains the main files.
 - [`src/`](src/): contains the source files.
@@ -71,22 +72,21 @@ The package is organized as follows:
 
 As mentioned, the solution is built, tested, and run using bazel. If you don't have bazel installed, you can install it following the instructions [here](https://docs.bazel.build/versions/main/install.html), or use [Development Containers](https://containers.dev/) and the following [feature](https://containers.dev/features): `ghcr.io/balazs23/devcontainers-features/bazel:1`.
 
- The following commands are available:
+The following commands are available:
 
 ```bash
 bazel build //src/exercises/job_interviews/company000/...
 bazel test //src/exercises/job_interviews/company000/...
-bazel run //src/exercises/job_interviews/company000:exercise_1 --src/exercises/job_interviews/company000/data/exercise_1_graph.txt 
+bazel run //src/exercises/job_interviews/company000:exercise_1 --src/exercises/job_interviews/company000/data/exercise_1_graph.txt
 ```
 
 ## How to debug the solution
 
 Use the VS Code debugger with the provided launch configuration from the .cpp file to be debugged. The file has to be a test file or the main file (`main/exercise_1.cpp`). The bazel target and the file name have to match for the VS Code launch configuration to work.
 
-
 # Output from running the solution
 
 - Maximum path:
-Path:
-        Total value: 8186
-        Nodes: 215 -> 192 -> 269 -> 836 -> 805 -> 728 -> 433 -> 528 -> 863 -> 632 -> 931 -> 778 -> 413 -> 310 -> 253
+  Path:
+  Total value: 8186
+  Nodes: 215 -> 192 -> 269 -> 836 -> 805 -> 728 -> 433 -> 528 -> 863 -> 632 -> 931 -> 778 -> 413 -> 310 -> 253

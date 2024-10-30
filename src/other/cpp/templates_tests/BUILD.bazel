@@ -1,18 +1,19 @@
 package(default_visibility = ["//visibility:private"])
 
 cc_library(
-  name = "simple_templates_function_example",
-  srcs = ["src/simple_templates_function_example.cpp"],
-  hdrs = ["include/templates_tests/simple_templates_function_example.hpp"],
-  includes = ["include/templates_tests"],
-  visibility = ["//visibility:public"],
+    name = "simple_templates_function_example",
+    srcs = ["src/simple_templates_function_example.cpp"],
+    hdrs = ["include/templates_tests/simple_templates_function_example.hpp"],
+    includes = ["include/templates_tests"],
+    visibility = ["//visibility:public"],
 )
 
 cc_test(
-  name = "simple_templates_function_example_test",
-  size = "small",
-  srcs = ["test/simple_templates_function_example_test.cpp"],
-  deps = ["@googletest//:gtest_main",
-          ":simple_templates_function_example"
-          ],
+    name = "simple_templates_function_example_test",
+    size = "small",
+    srcs = ["test/simple_templates_function_example_test.cpp"],
+    deps = [
+        ":simple_templates_function_example",
+        "@googletest//:gtest_main",
+    ],
 )

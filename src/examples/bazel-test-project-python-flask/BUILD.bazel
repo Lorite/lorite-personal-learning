@@ -7,14 +7,14 @@ py_library(
     name = "calculator_lib",
     srcs = ["src/calculator_lib.py"],
     imports = ["src"],
-    visibility = ["//visibility:public"]
+    visibility = ["//visibility:public"],
 )
 
 py_test(
     name = "calculator_test",
     srcs = glob(["tests/*.py"]),
     deps = [
-        ":calculator_lib"
+        ":calculator_lib",
     ],
 )
 
@@ -23,8 +23,8 @@ py_binary(
     srcs = ["src/flask_main.py"],
     deps = [
         ":calculator_lib",
-        requirement("Flask")
-    ]
+        requirement("Flask"),
+    ],
 )
 
 # TODO check if this is necessary and why
@@ -34,4 +34,3 @@ compile_pip_requirements(
     requirements_in = "requirements.in",
     visibility = ["//visibility:public"],
 )
-

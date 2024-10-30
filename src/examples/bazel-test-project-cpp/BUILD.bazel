@@ -6,18 +6,25 @@ cc_library(
     hdrs = ["include/bazel-test-project-cpp/hello-lib.hpp"],
     includes = ["include/bazel-test-project-cpp"],
     deps = [
-        "@glog//:glog",
+        "@glog",
     ],
 )
 
 cc_binary(
     name = "hello-world",
     srcs = ["main/hello-world.cpp"],
+    args = [
+        "world!!!!!!!!",
+        "--minloglevel=0",
+        "--v=0",
+        "--vmodule=INFO",
+        "--stderrthreshold=0",
+        "--logtostderr=1",
+    ],  # glog: gflags don't seem to work
     deps = [
         ":hello-lib",
-        "@gflags//:gflags",
+        "@gflags",
     ],
-    args = ["world!!!!!!!!", "--minloglevel=0", "--v=0", "--vmodule=INFO", "--stderrthreshold=0", "--logtostderr=1"], # glog: gflags don't seem to work
 )
 
 filegroup(
@@ -29,18 +36,19 @@ cc_test(
     name = "hello-test",
     size = "small",
     srcs = ["test/hello-test.cpp"],
-    deps = [
-        "@googletest//:gtest_main",
-        ":hello-lib",
-        "@glog//:glog",
-    ],
-    env = { # glog: env variables work fine. Run the test with `bazel test --test_output=all //:hello-test`. The logs can also be found in `bazel-testlogs/src/.../hello-test/test.log`
+    env = {
+        # glog: env variables work fine. Run the test with `bazel test --test_output=all //:hello-test`. The logs can also be found in `bazel-testlogs/src/.../hello-test/test.log`
         "GLOG_log_dir": "logs",
-        "GLOG_logtostderr": "1", # print log to stderr instead of a log file
-        "GLOG_v": "0", # define the log files severity
-        "GLOG_vmodule": "INFO", # define the log files severity
-        "GLOG_stderrthreshold": "0", # define the stderr severity
+        "GLOG_logtostderr": "1",  # print log to stderr instead of a log file
+        "GLOG_v": "0",  # define the log files severity
+        "GLOG_vmodule": "INFO",  # define the log files severity
+        "GLOG_stderrthreshold": "0",  # define the stderr severity
     },
+    deps = [
+        ":hello-lib",
+        "@glog",
+        "@googletest//:gtest_main",
+    ],
 )
 
 cc_binary(
@@ -49,5 +57,5 @@ cc_binary(
     deps = [
         ":hello-lib",
         "@google_benchmark//:benchmark",
-    ]
+    ],
 )

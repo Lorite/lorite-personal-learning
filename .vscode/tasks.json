@@ -11,12 +11,12 @@
         "command": "tools/bazel/scripts/bazel_x_this_file.sh build ${relativeFile} --experimental_enable_runfiles -c dbg"
       },
       "osx": {
-        "command": "tools/bazel/scripts/bazel_x_this_file.sh build ${relativeFile} -c dbg --spawn_strategy=local",
+        "command": "tools/bazel/scripts/bazel_x_this_file.sh build ${relativeFile} -c dbg --spawn_strategy=local"
       },
       "group": {
         "kind": "build",
         "isDefault": true
-      },
+      }
     },
     {
       "label": "Bazel Build (no-debug)",
@@ -25,7 +25,7 @@
       "group": {
         "kind": "build",
         "isDefault": true
-      },
+      }
     },
     {
       "label": "Bazel Test (no-debug)",
@@ -34,7 +34,7 @@
       "group": {
         "kind": "test",
         "isDefault": true
-      },
+      }
     },
     {
       "label": "Bazel Run (no-debug)",
@@ -43,7 +43,7 @@
       "group": {
         "kind": "test",
         "isDefault": true
-      },
+      }
     }
   ]
 }

@@ -1,29 +1,21 @@
 name: Test
-
 on:
   push:
-    branches: [ '*' ]
+    branches: ['*']
   pull_request:
-    branches: [ '*' ]
-
+    branches: ['*']
 jobs:
   test:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-
     steps:
-    - uses: actions/checkout@v2
-    - if: startsWith(matrix.os, 'macos')
-      run: brew install bash
-    - run:
-        git config --global user.email "you@example.com";
-        git config --global user.name "Your Name";
-        git config --global init.defaultBranch "master";
-        git config --global --add safe.directory "$PWD";
-        git config --global --add safe.directory "$PWD.git";
-    - if: startsWith(matrix.os, 'macos')
-      run: make test
-    - if: startsWith(matrix.os, 'ubuntu')
-      run: make docker-tests
+      - uses: actions/checkout@v2
+      - if: startsWith(matrix.os, 'macos')
+        run: brew install bash
+      - run: git config --global user.email "you@example.com"; git config --global user.name "Your Name"; git config --global init.defaultBranch "master"; git config --global --add safe.directory "$PWD"; git config --global --add safe.directory "$PWD.git";
+      - if: startsWith(matrix.os, 'macos')
+        run: make test
+      - if: startsWith(matrix.os, 'ubuntu')
+        run: make docker-tests

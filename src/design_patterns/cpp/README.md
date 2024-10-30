@@ -2,7 +2,6 @@
 
 Design patterns are general reusable solutions to common problems in software design. They are not finished designs that can be transformed directly into code. They are descriptions or templates for how to solve a problem that can be used in many different situations.
 
-
 ## Composition
 
 Composition is a design pattern that allows you to compose objects into tree structures to represent part-whole hierarchies. It lets clients treat individual objects and compositions of objects uniformly. Like the GRASP patterns suggest it with the high cohesion pattern, a class shouldn't have many responsibilities. Composition is a way to achieve this by delegating the responsibilities to other classes.

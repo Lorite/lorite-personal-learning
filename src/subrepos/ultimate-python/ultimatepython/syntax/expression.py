@@ -29,7 +29,7 @@ def main():
     # Powers of an integer can be leveraged too. If more features are
     # needed, then leverage the builtin `math` library or a third-party
     # library. Otherwise, we have to build our own math library
-    assert x * 2 ** 3 == 8
+    assert x * 2**3 == 8
 
 
 if __name__ == "__main__":

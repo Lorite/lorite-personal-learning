@@ -12,28 +12,30 @@ compile_pip_requirements(
 
 npm_link_all_packages(name = "node_modules")
 
-exports_files([
-    ".clang-tidy",
-    ".clang-format",
-    ".editorconfig",
-    ".flake8",
-    ".npmrc",
-    ".ruff.toml",
-    ".vale.ini",
-    "buf.yaml",
-    "eslint.config.js",
-    "ktlint-baseline.xml",
-    "maven_install.json",
-    "package.json",
-    "pmd.xml",
-    "pnpm-lock.yaml",
-    "prettier.config.cjs",
-    ".scalafmt.conf",
-    ".shellcheckrc",
-    "stylelint.config.js",
-    "tsconfig.json",
-],
-    visibility = ["//visibility:public"])
+exports_files(
+    [
+        ".clang-tidy",
+        ".clang-format",
+        ".editorconfig",
+        ".flake8",
+        ".npmrc",
+        ".ruff.toml",
+        ".vale.ini",
+        "buf.yaml",
+        "eslint.config.js",
+        "ktlint-baseline.xml",
+        "maven_install.json",
+        "package.json",
+        "pmd.xml",
+        "pnpm-lock.yaml",
+        "prettier.config.cjs",
+        ".scalafmt.conf",
+        ".shellcheckrc",
+        "stylelint.config.js",
+        "tsconfig.json",
+    ],
+    visibility = ["//visibility:public"],
+)
 
 js_library(
     name = "eslintrc",

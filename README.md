@@ -1,4 +1,5 @@
 <a name="readme-top"></a>
+
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -7,14 +8,13 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![CC BY-NC 4.0 License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -38,8 +38,6 @@
     <a href="https://github.com/Lorite/lorite-personal-learning/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -86,7 +84,6 @@ The colors are bold and dynamic, reflecting the energy and versatility of your m
 
 ![lorite-personal-learning-monorepo](media/img/lorite-monorepo.png)
 
-
 ### Boring explanation
 
 Welcome to my personal learning repository :bowtie:. I use it to learn about different tools, workflows, programming languages, and anything related to software development, really. Personally, I like to have an overview of the different tools and languages and how they work together. I am getting started with DevOps and CI/CD, so I am using this repository to learn about it, mainly using [dev containers](https://containers.dev/), [Bazel](https://bazel.build/), and [GitHub actions](https://github.com/features/actions) to build the monorepo. I also code in my everyday job, so I also follow specific language courses and try out examples on this repository. I believe that programmers should be able to do everything, from designing the architecture to deploying the software; and this repository can help me (and maybe you) to achieve that. I have high hopes for this repository :crossed_fingers:.
@@ -98,7 +95,7 @@ This repo can be directly used as a container for development. It is based on th
 This repository could not have been possible without the help of the open source community. I have used a lot of open source tools and courses to learn about different topics. I have tried to include all the resources I have used in the [Resources](#resources) section. If you find any missing, please let me know.
 
 > If I have seen further, it is by standing on the shoulders of giants.
->  
+>
 > _- Isaac Newton_
 
 You can read the commit messages to see what I have been doing. I try to keep them as descriptive as possible. I also try to keep the code as clean as possible. I am not perfect :sweat_smile: so sometimes I have to fix my own commits!
@@ -106,7 +103,6 @@ You can read the commit messages to see what I have been doing. I try to keep th
 ![welcome-to-my-git-commit-history-meme](https://programmerhumor.io/wp-content/uploads/2021/10/programmerhumor-io-linux-memes-backend-memes-b020a6cb90606ee.jpg)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## Getting started
 
@@ -127,29 +123,29 @@ Learn more about [GitHub Codespaces](https://github.com/features/codespaces).
 ### Installation
 
 1. If this is your first time using a development container, please check the getting started information on [VS Code remote - setting up](https://aka.ms/vscode-remote/containers/getting-started) Remote-Containers or [GitHub Docs - Creating a codespace](https://aka.ms/ghcs-open-codespace) using GitHub Codespaces.
- 
+
 2. Clone this repository.
 
-    ```bash
-    git clone git@github.com:Lorite/lorite-personal-learning.git
-    ```
+   ```bash
+   git clone git@github.com:Lorite/lorite-personal-learning.git
+   ```
 
 3. Open VS Code using the VS Code workspace file (.ws.code-workspace) in the root of the repository.
 
-    ```bash
-    cd lorite-personal-learning
-    code .ws.code-workspace
-    ```
+   ```bash
+   cd lorite-personal-learning
+   code .ws.code-workspace
+   ```
 
 4. Press <kbd>F1</kbd> and select **Remote-Containers: Reopen in Container** to build and start the container. This step may take a while the first time.
 
 5. Build something using bazel:
-  
-    ```bash
-    bazel build //src/examples/bazel-test-project-cpp:hello-world
-    ```
 
-    > **_NOTE:_** You can also use the `Bazel: build target` command from the VS Code extension, or the `BAZEL BUILD TARGETS` from the `Explorer` panel (after opening any `BUILD.bazel` file).
+   ```bash
+   bazel build //src/examples/bazel-test-project-cpp:hello-world
+   ```
+
+   > **_NOTE:_** You can also use the `Bazel: build target` command from the VS Code extension, or the `BAZEL BUILD TARGETS` from the `Explorer` panel (after opening any `BUILD.bazel` file).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -176,7 +172,7 @@ Some of the tools and languages included in the dev container are:
 - [pip](https://pypi.org/project/pip/) for installing Python packages.
 - [Go](https://golang.org/)
 - [JAVA](https://www.java.com/)
-- [Aspect Docs - Run linters and formatters under Bazel](https://docs.aspect.build/rulesets/aspect_rules_lint/). Run `tools/lint/scripts/aspect_lint.sh //path/to:target` to run linters under Bazel. These linters and formatters are also run in the CI/CD pipeline.
+- [Aspect Docs - Run linters and formatters under Bazel](https://docs.aspect.build/rulesets/aspect_rules_lint/). Run `tools/lint/scripts/aspect_lint.sh //path/to:target` to run linters under Bazel. These linters and formatters are also run in the CI/CD pipeline. Run `bazel run //:format` to format all the code in the repository. These steps will also be triggered by the GitHub actions when a PR is opened.
 
 ### Code
 
@@ -244,13 +240,14 @@ The folder [subrepos](src/subrepos) is then used to store these repositories. Th
 
 ### Continuous Integration/Continuous Deployment
 
-GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) service provided by GitHub. In this repository, it is used for running bazel build and bazel test on all the targets under [src/](/src). The actions are defined in the [.github/workflows](.github/workflows) folder. Bazel's cache is used to speed up the builds. 
+GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) service provided by GitHub. In this repository, it is used for running bazel build and bazel test on all the targets under [src/](/src). The actions are defined in the [.github/workflows](.github/workflows) folder. Bazel's cache is used to speed up the builds.
 
 ### VS Code extensions
 
 As stated earlier, you can check the [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) file to see al the extensions installed on the dev container by default. You can also check the [workspace settings](.ws.code-workspace) file for configuration. Remember that the workspace file must be opened in VS Code. The extensions are:
 
 - [bazelbuild.vscode-bazel](https://marketplace.visualstudio.com/items?itemName=bazelbuild.vscode-bazel): Bazel support for VS Code. Features:
+
   - Syntax highlighting
   - Bazel Build Targets tree displays the build packages/targets in your workspace.
   - CodeLens links in BUILD files to directly launch a build or test by simply clicking on the targets
@@ -271,7 +268,6 @@ See the [GitHub project](https://github.com/users/Lorite/projects/1) for the tas
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated** :pray:.
@@ -281,9 +277,11 @@ Contributions are what make the open source community such an amazing place to b
 This section contains the resources for DevOps, CI/CD, and programming languages. There are hundreds of other resources that I have used to learn about these topics, but I can't include them all here. I have tried to include the most important ones. Apart from the list below, there are more links and resources scattered around this repository in subfolders. Needless to say, there are very nice repositories with a lot of resources, like [awesome-bazel](https://github.com/jin/awesome-bazel) on GitHub, so search for them if you are looking for a deeper dive into a specific topic.
 
 ### Documenting
+
 - [README template](https://github.com/Lorite/lorite-personal-learning)
 
 ### Bazel
+
 - [Bazel build](https://bazel.build/)
 - [Bazel GitHub repository](https://github.com/bazelbuild/bazel/)
 - [Bazel bzlmod migration](https://bazel.build/external/migration) and [Bazel Central Registry](https://registry.bazel.build/) from 2024-07-22 onwards.
@@ -292,20 +290,24 @@ This section contains the resources for DevOps, CI/CD, and programming languages
 - [Alex Eagle - .bazelrc flags you should enable](https://blog.aspect.dev/bazelrc-flags)
 
 ### Dev container
+
 - [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
 - [Dev Container Features](https://containers.dev/implementors/features/)
 - [zsh and powerlevel10k (terminal)](https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0)
 
 ### Multi-language
+
 - [Refactoring.Guru - Design Patterns & Refactoring](https://refactoring.guru/)
 
 ### Python
+
 - [Python structuring your project by Kenneth Reitz](https://docs.python-guide.org/writing/structure/)
 - [Python Rules for Bazel](https://rules-python.readthedocs.io)
 - [Python rules for pip in Bazel](https://github.com/bazelbuild/rules_python/blob/main/docs/pip.md)
 - [Simple Python flask app using Bazel](https://earthly.dev/blog/build-and-deploy-pyapp-with-bazel/)
 
 ### C++
+
 - [C++ reference](https://en.cppreference.com/w/), [hacking C++](https://hackingcpp.com/), [W3 schools - C++ Tutorial](https://www.w3schools.com/cpp/), ...
 - [C++ Rules for Bazel](https://bazel.build/reference/be/c-cpp)
 - [LLVM toolchain for bazel](https://github.com/grailbio/bazel-toolchain)
@@ -316,14 +318,15 @@ This section contains the resources for DevOps, CI/CD, and programming languages
 - [Google logging library (glog)](https://github.com/google/glog)
 
 ### JAVA
+
 - [bazelbuild/rules_jvm_external](https://github.com/bazelbuild/rules_jvm_external)
 - [MAVEN - Introduction to the Standard Directory Layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
 
 ### LaTeX
+
 - [Bazel rules for LaTeX](https://github.com/ProdriveTechnologies/bazel-latex)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## License
 
@@ -333,9 +336,9 @@ Licensed under the Creative Commons Attribution-NonCommercial 4.0 International 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/Lorite/lorite-personal-learning.svg?style=for-the-badge
 [contributors-url]: https://github.com/Lorite/lorite-personal-learning/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Lorite/lorite-personal-learning.svg?style=for-the-badge
@@ -364,7 +367,7 @@ Licensed under the Creative Commons Attribution-NonCommercial 4.0 International 
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com
 [Bazel-build]: https://img.shields.io/badge/Bazel-9be583?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+DQogIDxzdHlsZT4NCiAgICAucmVndWxhcntmaWxsOiM0M0EwNDc7fSAuZGFyay1sZWZ0e2ZpbGw6IzAwNzAxQTt9IC5kYXJrLXJpZ2h0e2ZpbGw6IzAwNDMwMDt9IC5saWdodHtmaWxsOiM3NkQyNzU7fQ0KICA8L3N0eWxlPg0KDQogIDxwYXRoIGNsYXNzPSJsaWdodCIgICAgICBkPSJNMTQ0IDMyIGwxMTIgMTEyIC0xMTIgMTEyIGwtMTEyIC0xMTJ6Ii8+DQogIDxwYXRoIGNsYXNzPSJyZWd1bGFyIiAgICBkPSJNMzIgMTQ0IHYxMTIgbDExMiAxMTIgdi0xMTJ6Ii8+DQoNCiAgPHBhdGggY2xhc3M9ImxpZ2h0IiAgICAgIGQ9Ik0zNjggMzIgIGwxMTIgMTEyIC0xMTIgMTEyIC0xMTIgLTExMnoiLz4NCiAgPHBhdGggY2xhc3M9InJlZ3VsYXIiICAgIGQ9Ik00ODAgMTQ0IHYxMTIgbC0xMTIgMTEyIHYtMTEyeiIvPg0KDQogIDxwYXRoIGNsYXNzPSJyZWd1bGFyIiAgICBkPSJNMjU2IDE0NCBsMTEyIDExMiAtMTEyIDExMiAtMTEyIC0xMTJ6Ii8+DQogIDxwYXRoIGNsYXNzPSJkYXJrLWxlZnQiICBkPSJNMjU2IDM2OCB2MTEyIGwtMTEyIC0xMTIgIHYtMTEyeiIvPg0KICA8cGF0aCBjbGFzcz0iZGFyay1yaWdodCIgZD0iTTI1NiAzNjggbDExMiAtMTEyIHYxMTIgbC0xMTIgMTEyeiIvPg0KPC9zdmc+DQoNCg==&logoColor=green
 [Bazel-url]: https://bazel.build/
 [GitHub-actions]: https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=github-actions&logoColor=white

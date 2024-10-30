@@ -21,8 +21,8 @@ print("Guía de estudio 'Python Definitivo'")
 ## Motivación
 
 Creé este repositorio de GitHub para compartir lo que he aprendido sobre [Python](https://www.python.org/)
-durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor 
-de código abierto en repositorios como [Celery](https://github.com/celery/celery) y 
+durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor
+de código abierto en repositorios como [Celery](https://github.com/celery/celery) y
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 Espero ver a más personas aprendiendo Python y persiguiendo su pasión a través de él. :mortar_board:
 
@@ -42,7 +42,7 @@ se eliminen y se [ejecuten con éxito](runner.py) tras cada cambio.
 :trophy: **Servir como una guía pura** para aquellos que quieren reforzar los conceptos base de
 Python. Se utilizan sólo las [librerías integradas](https://docs.python.org/3/library/) para que
 estos conceptos puedan adquirirse sin el esfuerzo de aprender conocimientos de dominios específicos.
-Por ello no se han instalado librerías y entornos de código abierto populares (como `sqlalchemy`, 
+Por ello no se han instalado librerías y entornos de código abierto populares (como `sqlalchemy`,
 `requests`, `pandas`). No obstante, leer el código fuente de estos frameworks es inspirador y altamente
 recomendado si tu objetivo es convertirte en un verdadero
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
@@ -69,52 +69,52 @@ Hay dos maneras de ejecutar los módulos:
 :exploding_head: = Tema avanzado
 
 1. **Sobre Python**
-    - Resumen: [¿Qué es Python?](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) ( :books:, :cake: )
-    - Filosofía de diseño: [El Zen de Python](https://www.python.org/dev/peps/pep-0020/) ( :books: )
-    - Guía de estilos: [Guía de estilos para código de Python](https://www.python.org/dev/peps/pep-0008/) ( :books:, :exploding_head: )
-    - Modelo de datos: [Modelo de datos](https://docs.python.org/3/reference/datamodel.html) ( :books:, :exploding_head: )
-    - Librería estándar: [La librería estándar de Python](https://docs.python.org/3/library/) ( :books:, :exploding_head: )
-    - Funciones integradas: [Funciones integradas](https://docs.python.org/3/library/functions.html) ( :books: )
+   - Resumen: [¿Qué es Python?](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) ( :books:, :cake: )
+   - Filosofía de diseño: [El Zen de Python](https://www.python.org/dev/peps/pep-0020/) ( :books: )
+   - Guía de estilos: [Guía de estilos para código de Python](https://www.python.org/dev/peps/pep-0008/) ( :books:, :exploding_head: )
+   - Modelo de datos: [Modelo de datos](https://docs.python.org/3/reference/datamodel.html) ( :books:, :exploding_head: )
+   - Librería estándar: [La librería estándar de Python](https://docs.python.org/3/library/) ( :books:, :exploding_head: )
+   - Funciones integradas: [Funciones integradas](https://docs.python.org/3/library/functions.html) ( :books: )
 2. **Sintaxis**
-    - Variables: [Literales integrados](ultimatepython/syntax/variable.py) ( :cake: )
-    - Expresiones: [Operaciones numéricas](ultimatepython/syntax/expression.py) ( :cake: )
-    - Bit a bit: [Operadores bit a bit](ultimatepython/syntax/bitwise.py) ( :cake: ), [Complemento a uno/dos](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( :books: )
-    - Condicionales: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( :cake: )
-    - Iteraciones: [for-loop | while-loop](ultimatepython/syntax/loop.py) ( :cake: )
-    - Funciones: [def | lambda](ultimatepython/syntax/function.py) ( :cake: )
+   - Variables: [Literales integrados](ultimatepython/syntax/variable.py) ( :cake: )
+   - Expresiones: [Operaciones numéricas](ultimatepython/syntax/expression.py) ( :cake: )
+   - Bit a bit: [Operadores bit a bit](ultimatepython/syntax/bitwise.py) ( :cake: ), [Complemento a uno/dos](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( :books: )
+   - Condicionales: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( :cake: )
+   - Iteraciones: [for-loop | while-loop](ultimatepython/syntax/loop.py) ( :cake: )
+   - Funciones: [def | lambda](ultimatepython/syntax/function.py) ( :cake: )
 3. **Estructura de datos**
-    - Lista: [Operaciones con listas](ultimatepython/data_structures/list.py) ( :cake: )
-    - Tupla: [Operaciones con tuplas](ultimatepython/data_structures/tuple.py)
-    - Set: [Operaciones con sets](ultimatepython/data_structures/set.py)
-    - Diccionario: [Operaciones con dicts](ultimatepython/data_structures/dict.py) ( :cake: )
-    - Comprensión: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
-    - Cadena: [Operaciones con strings](ultimatepython/data_structures/string.py) ( :cake: )
-    - Deque: [deque](ultimatepython/data_structures/deque.py) ( :exploding_head: )
-    - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( :exploding_head: )
-    - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( :exploding_head: )
-    - Complejidad de tiempo: [Operaciones de cPython](https://wiki.python.org/moin/TimeComplexity) ( :books:, :exploding_head: )
+   - Lista: [Operaciones con listas](ultimatepython/data_structures/list.py) ( :cake: )
+   - Tupla: [Operaciones con tuplas](ultimatepython/data_structures/tuple.py)
+   - Set: [Operaciones con sets](ultimatepython/data_structures/set.py)
+   - Diccionario: [Operaciones con dicts](ultimatepython/data_structures/dict.py) ( :cake: )
+   - Comprensión: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
+   - Cadena: [Operaciones con strings](ultimatepython/data_structures/string.py) ( :cake: )
+   - Deque: [deque](ultimatepython/data_structures/deque.py) ( :exploding_head: )
+   - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( :exploding_head: )
+   - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( :exploding_head: )
+   - Complejidad de tiempo: [Operaciones de cPython](https://wiki.python.org/moin/TimeComplexity) ( :books:, :exploding_head: )
 4. **Clases**
-    - Clase básica: [Definición de básica](ultimatepython/classes/basic_class.py) ( :cake: )
-    - Herencia: [Herencia](ultimatepython/classes/inheritance.py) ( :cake: )
-    - Clase abstracta: [Definición de abstracta](ultimatepython/classes/abstract_class.py)
-    - Clase de excepción: [Definición de excepción](ultimatepython/classes/exception_class.py)
-    - Clase iteradora: [Definición de iteradora | yield](ultimatepython/classes/iterator_class.py) ( :exploding_head: )
-    - Encapsulación: [Definición de encapsulación](ultimatepython/classes/encapsulation.py)
+   - Clase básica: [Definición de básica](ultimatepython/classes/basic_class.py) ( :cake: )
+   - Herencia: [Herencia](ultimatepython/classes/inheritance.py) ( :cake: )
+   - Clase abstracta: [Definición de abstracta](ultimatepython/classes/abstract_class.py)
+   - Clase de excepción: [Definición de excepción](ultimatepython/classes/exception_class.py)
+   - Clase iteradora: [Definición de iteradora | yield](ultimatepython/classes/iterator_class.py) ( :exploding_head: )
+   - Encapsulación: [Definición de encapsulación](ultimatepython/classes/encapsulation.py)
 5. **Avanzado**
-    - Decorador: [Definición de decorador | wraps](ultimatepython/advanced/decorator.py) ( :exploding_head: )
-    - Manejo de archivos: [Manejo de archivos](ultimatepython/advanced/file_handling.py) ( :exploding_head: )
-    - Gestor de contexto: [Gestores de contexto](ultimatepython/advanced/context_manager.py) ( :exploding_head: )
-    - Orden de resolución de método (MRO por sus siglas en inglés): [mro](ultimatepython/advanced/mro.py) ( :exploding_head: )
-    - Mixin: [Definición de Mixin](ultimatepython/advanced/mixin.py) ( :exploding_head: )
-    - Metaclase: [Definición de metaclase](ultimatepython/advanced/meta_class.py) ( :exploding_head: )
-    - Hilos: [ThreadPoolExecutor](ultimatepython/advanced/thread.py) ( :exploding_head: )
-    - Asyncio: [async | await](ultimatepython/advanced/async.py) ( :exploding_head: )
-    - Referencias débiles: [weakref](ultimatepython/advanced/weak_ref.py) ( :exploding_head: )
-    - Referencia: [cProfile | pstats](ultimatepython/advanced/benchmark.py) ( :exploding_head: )
-    - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) ( :exploding_head: )
-    - Expresiones regulares: [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( :exploding_head: )
-    - Formatos de datos: [json | xml | csv](ultimatepython/advanced/data_format.py) ( :exploding_head: )
-    - Fecha y hora: [datetime | timezone](ultimatepython/advanced/date_time.py) ( :exploding_head: )
+   - Decorador: [Definición de decorador | wraps](ultimatepython/advanced/decorator.py) ( :exploding_head: )
+   - Manejo de archivos: [Manejo de archivos](ultimatepython/advanced/file_handling.py) ( :exploding_head: )
+   - Gestor de contexto: [Gestores de contexto](ultimatepython/advanced/context_manager.py) ( :exploding_head: )
+   - Orden de resolución de método (MRO por sus siglas en inglés): [mro](ultimatepython/advanced/mro.py) ( :exploding_head: )
+   - Mixin: [Definición de Mixin](ultimatepython/advanced/mixin.py) ( :exploding_head: )
+   - Metaclase: [Definición de metaclase](ultimatepython/advanced/meta_class.py) ( :exploding_head: )
+   - Hilos: [ThreadPoolExecutor](ultimatepython/advanced/thread.py) ( :exploding_head: )
+   - Asyncio: [async | await](ultimatepython/advanced/async.py) ( :exploding_head: )
+   - Referencias débiles: [weakref](ultimatepython/advanced/weak_ref.py) ( :exploding_head: )
+   - Referencia: [cProfile | pstats](ultimatepython/advanced/benchmark.py) ( :exploding_head: )
+   - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) ( :exploding_head: )
+   - Expresiones regulares: [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( :exploding_head: )
+   - Formatos de datos: [json | xml | csv](ultimatepython/advanced/data_format.py) ( :exploding_head: )
+   - Fecha y hora: [datetime | timezone](ultimatepython/advanced/date_time.py) ( :exploding_head: )
 
 ## Recursos adicionales
 
@@ -140,7 +140,7 @@ Sigue aprendiendo leyendo otros buenos recursos.
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 - [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( :necktie: )
-  
+
 ### Práctica interactiva
 
 Continua practicando para que no se oxiden tus habilidades de programación.

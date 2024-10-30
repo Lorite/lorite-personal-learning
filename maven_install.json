@@ -413,9 +413,7 @@
       "com.typesafe:config",
       "org.scala-lang:scala-library"
     ],
-    "com.github.scopt:scopt_2.13": [
-      "org.scala-lang:scala-library"
-    ],
+    "com.github.scopt:scopt_2.13": ["org.scala-lang:scala-library"],
     "com.google.guava:guava": [
       "com.google.code.findbugs:jsr305",
       "com.google.errorprone:error_prone_annotations",
@@ -440,15 +438,9 @@
       "org.checkerframework:checker-qual",
       "org.ow2.asm:asm"
     ],
-    "com.lihaoyi:fansi_2.13": [
-      "com.lihaoyi:sourcecode_2.13"
-    ],
-    "com.lihaoyi:sourcecode_2.13": [
-      "org.scala-lang:scala-library"
-    ],
-    "junit:junit": [
-      "org.hamcrest:hamcrest-core"
-    ],
+    "com.lihaoyi:fansi_2.13": ["com.lihaoyi:sourcecode_2.13"],
+    "com.lihaoyi:sourcecode_2.13": ["org.scala-lang:scala-library"],
+    "junit:junit": ["org.hamcrest:hamcrest-core"],
     "org.junit.jupiter:junit-jupiter-api": [
       "org.apiguardian:apiguardian-api",
       "org.junit.platform:junit-platform-commons",
@@ -485,12 +477,8 @@
       "org.scala-lang:scala-library",
       "org.scala-lang:scala-reflect"
     ],
-    "org.scala-lang:scala-reflect": [
-      "org.scala-lang:scala-library"
-    ],
-    "org.scala-lang:scalap": [
-      "org.scala-lang:scala-compiler"
-    ],
+    "org.scala-lang:scala-reflect": ["org.scala-lang:scala-library"],
+    "org.scala-lang:scalap": ["org.scala-lang:scala-compiler"],
     "org.scalameta:common_2.13": [
       "com.lihaoyi:sourcecode_2.13",
       "org.scala-lang:scala-library"
@@ -535,16 +523,12 @@
       "org.scala-lang:scalap",
       "org.scalameta:parsers_2.13"
     ],
-    "org.scalameta:svm-subs": [
-      "org.scala-lang:scala-library"
-    ],
+    "org.scalameta:svm-subs": ["org.scala-lang:scala-library"],
     "org.scalameta:trees_2.13": [
       "org.scala-lang:scala-library",
       "org.scalameta:common_2.13"
     ],
-    "org.typelevel:paiges-core_2.13": [
-      "org.scala-lang:scala-library"
-    ]
+    "org.typelevel:paiges-core_2.13": ["org.scala-lang:scala-library"]
   },
   "packages": {
     "com.geirsson:metaconfig-core_2.13": [
@@ -555,16 +539,12 @@
       "metaconfig.generic",
       "metaconfig.internal"
     ],
-    "com.geirsson:metaconfig-pprint_2.13": [
-      "metaconfig.pprint"
-    ],
+    "com.geirsson:metaconfig-pprint_2.13": ["metaconfig.pprint"],
     "com.geirsson:metaconfig-typesafe-config_2.13": [
       "metaconfig",
       "metaconfig.typesafeconfig"
     ],
-    "com.github.scopt:scopt_2.13": [
-      "scopt"
-    ],
+    "com.github.scopt:scopt_2.13": ["scopt"],
     "com.google.auto.value:auto-value-annotations": [
       "com.google.auto.value",
       "com.google.auto.value.extension.memoized",
@@ -622,22 +602,11 @@
       "com.google.common.testing",
       "com.google.common.util.concurrent.testing"
     ],
-    "com.google.j2objc:j2objc-annotations": [
-      "com.google.j2objc.annotations"
-    ],
-    "com.google.truth:truth": [
-      "com.google.common.truth"
-    ],
-    "com.googlecode.java-diff-utils:diffutils": [
-      "difflib",
-      "difflib.myers"
-    ],
-    "com.lihaoyi:fansi_2.13": [
-      "fansi"
-    ],
-    "com.lihaoyi:sourcecode_2.13": [
-      "sourcecode"
-    ],
+    "com.google.j2objc:j2objc-annotations": ["com.google.j2objc.annotations"],
+    "com.google.truth:truth": ["com.google.common.truth"],
+    "com.googlecode.java-diff-utils:diffutils": ["difflib", "difflib.myers"],
+    "com.lihaoyi:fansi_2.13": ["fansi"],
+    "com.lihaoyi:sourcecode_2.13": ["sourcecode"],
     "com.martiansoftware:nailgun-server": [
       "com.martiansoftware.nailgun",
       "com.martiansoftware.nailgun.builtins"
@@ -800,18 +769,14 @@
       "net.bytebuddy.agent",
       "net.bytebuddy.agent.utility.nullability"
     ],
-    "net.bytebuddy:byte-buddy:jar:sources": [
-      "net.bytebuddy.build"
-    ],
+    "net.bytebuddy:byte-buddy:jar:sources": ["net.bytebuddy.build"],
     "net.java.dev.jna:jna": [
       "com.sun.jna",
       "com.sun.jna.internal",
       "com.sun.jna.ptr",
       "com.sun.jna.win32"
     ],
-    "org.apiguardian:apiguardian-api": [
-      "org.apiguardian.api"
-    ],
+    "org.apiguardian:apiguardian-api": ["org.apiguardian.api"],
     "org.checkerframework:checker-qual": [
       "org.checkerframework.checker.builder.qual",
       "org.checkerframework.checker.calledmethods.qual",
@@ -996,13 +961,8 @@
       "org.objenesis.instantiator.util",
       "org.objenesis.strategy"
     ],
-    "org.opentest4j:opentest4j": [
-      "org.opentest4j"
-    ],
-    "org.ow2.asm:asm": [
-      "org.objectweb.asm",
-      "org.objectweb.asm.signature"
-    ],
+    "org.opentest4j:opentest4j": ["org.opentest4j"],
+    "org.ow2.asm:asm": ["org.objectweb.asm", "org.objectweb.asm.signature"],
     "org.scala-lang.modules:scala-collection-compat_2.13": [
       "scala.collection.compat",
       "scala.collection.compat.immutable",
@@ -1167,12 +1127,8 @@
       "scala.meta.quasiquotes",
       "scala.meta.transversers"
     ],
-    "org.scalameta:scalafmt-cli_2.13": [
-      "org.scalafmt.cli"
-    ],
-    "org.scalameta:scalafmt-config_2.13": [
-      "org.scalafmt.config"
-    ],
+    "org.scalameta:scalafmt-cli_2.13": ["org.scalafmt.cli"],
+    "org.scalameta:scalafmt-config_2.13": ["org.scalafmt.config"],
     "org.scalameta:scalafmt-core_2.13": [
       "org.scalafmt",
       "org.scalafmt.config",
@@ -1185,9 +1141,7 @@
       "org.scalafmt.dynamic.exceptions",
       "org.scalafmt.dynamic.utils"
     ],
-    "org.scalameta:scalafmt-interfaces": [
-      "org.scalafmt.interfaces"
-    ],
+    "org.scalameta:scalafmt-interfaces": ["org.scalafmt.interfaces"],
     "org.scalameta:scalafmt-sysops_2.13": [
       "org.scalafmt",
       "org.scalafmt.sysops"
@@ -1212,9 +1166,7 @@
       "scala.meta.metacp",
       "scala.meta.metap"
     ],
-    "org.scalameta:svm-subs": [
-      "scala.meta.internal.svm_subs"
-    ],
+    "org.scalameta:svm-subs": ["scala.meta.internal.svm_subs"],
     "org.scalameta:trees_2.13": [
       "scala.meta",
       "scala.meta.dialects",
@@ -1235,9 +1187,7 @@
       "scala.meta.tokens",
       "scala.meta.trees"
     ],
-    "org.typelevel:paiges-core_2.13": [
-      "org.typelevel.paiges"
-    ]
+    "org.typelevel:paiges-core_2.13": ["org.typelevel.paiges"]
   },
   "repositories": {
     "https://maven.google.com/": [
@@ -1520,8 +1470,6 @@
       ]
     }
   },
-  "skipped": [
-    "com.google.guava:listenablefuture:jar:sources"
-  ],
+  "skipped": ["com.google.guava:listenablefuture:jar:sources"],
   "version": "2"
 }
