@@ -72,7 +72,7 @@ use_repo(dotnet, "dotnet_toolchains")
 register_toolchains("@dotnet_toolchains//:all")
 
 # src/examples/bazel-test-project-csharp
-bazel_test_project_csharp_example_deps = use_extension("//src/examples/bazel-test-project-csharp:example_deps.bzl", "bazel-test-project-csharp-example_deps")
+bazel_test_project_csharp_example_deps = use_extension("//src/examples/bazel-test-project-csharp:example_deps.bzl", "bazel_test_project_csharp_example_deps")
 use_repo(bazel_test_project_csharp_example_deps, "paket.bazel_test_project_csharp_example_deps")
 
 # ----------------------------------------
