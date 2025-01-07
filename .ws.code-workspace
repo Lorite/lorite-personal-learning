@@ -94,7 +94,7 @@
         "files.trimFinalNewlines": true,
 
         // C++ settings
-        "clangd.path": "/workspaces/lorite-personal-learning/external/toolchains_llvm~~llvm~llvm_toolchain_llvm/bin/clangd",
+        "clangd.path": "/workspaces/lorite-personal-learning/external/toolchains_llvm++llvm+llvm_toolchain_llvm/bin/clangd",
         "clangd.arguments": [
             "--compile-commands-dir=${workspaceFolder}/",
             "--query-driver=**"
@@ -117,5 +117,9 @@
         "lldb.dereferencePointers": true,
         "lldb.showDisassembly": "auto",
         "bazel.buildifierExecutable": "@buildifier_prebuilt//:buildifier",
+        "clang-tidy.executable": "/workspaces/lorite-personal-learning/external/toolchains_llvm++llvm+llvm_toolchain_llvm/bin/clang-tidy",
+        "clang-tidy.compilerArgs": [
+            "--compile-commands-dir=${workspaceFolder}/"
+        ],
     },
 }

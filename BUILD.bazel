@@ -1,7 +1,8 @@
 load("@aspect_rules_js//js:defs.bzl", "js_library")
+load("@aspect_rules_ts//ts:defs.bzl", "ts_config")
+load("@hedron_compile_commands//:refresh_compile_commands.bzl", "refresh_compile_commands")  # C++
 load("@npm//:defs.bzl", "npm_link_all_packages")
 load("@rules_python//python:pip.bzl", "compile_pip_requirements")
-load("@aspect_rules_ts//ts:defs.bzl", "ts_config")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -77,4 +78,11 @@ ts_config(
 alias(
     name = "format",
     actual = "//tools/format",
+)
+
+refresh_compile_commands(
+    name = "refresh_cpp_compile_commands",
+    targets = {
+        "//...": "",
+    },
 )

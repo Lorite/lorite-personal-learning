@@ -43,6 +43,7 @@
         // "timonwong.shellcheck",
         // "dtangren.vs-codeowners",
         "llvm-vs-code-extensions.vscode-clangd",
+        "CS128.cs128-clang-tidy",
         // "docsmsft.docs-markdown",
         // "humao.rest-client",
         // "trond-snekvik.simple-rst",
