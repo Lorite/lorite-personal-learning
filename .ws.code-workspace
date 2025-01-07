@@ -1,130 +1,127 @@
 {
-    "folders": [
-        {
-            "path": "."
-        }
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "editor.tabCompletion": "on",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "git.autofetch": true,
+    "git.autofetchPeriod": 60,
+    "githubIssues.queries": [
+      {
+        "label": "My Issues",
+        "query": "default"
+      },
+      {
+        "label": "Created Issues",
+        "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+      },
+      {
+        "label": "Recent Issues",
+        "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+      },
+      {
+        "label": "Closed Issues",
+        "query": "state:closed repo:${owner}/${repository} sort:updated-desc"
+      }
     ],
-    "settings": {
-        "C_Cpp.intelliSenseEngine": "disabled",
-        "editor.tabCompletion": "on",
-        "terminal.integrated.defaultProfile.linux": "zsh",
-        "terminal.integrated.fontFamily": "MesloLGS NF",
-        "git.autofetch": true,
-        "git.autofetchPeriod": 60,
-        "githubIssues.queries": [
-            {
-                "label": "My Issues",
-                "query": "default"
-            },
-            {
-                "label": "Created Issues",
-                "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
-            },
-            {
-                "label": "Recent Issues",
-                "query": "state:open repo:${owner}/${repository} sort:updated-desc"
-            },
-            {
-                "label": "Closed Issues",
-                "query": "state:closed repo:${owner}/${repository} sort:updated-desc"
-            }
-        ],
-        "githubIssues.issueBranchTitle": "${user}/issue${issueNumber}/${sanitizedIssueTitle}",
-        "githubPullRequests.notifications": "pullRequests",
-        "githubPullRequests.defaultMergeMethod": "squash",
-        "githubPullRequests.showPullRequestNumberInTree": true,
-        "bazel.buildifierFixOnFormat": true,
-        "bazel.enableCodeLens": true,
-        "bazel.commandLine.queryExpression": "src/...:*",
-        "search.exclude": {
-            "external/**": true
-        },
-
-        // Editor settings
-        "editor.formatOnSave": false,
-        "[python]": {
-            "editor.formatOnSave": true,
-            "editor.insertSpaces": true,
-            "editor.tabSize": 4
-        },
-        "[cpp]": {
-            "editor.formatOnSave": true,
-            "editor.insertSpaces": false,
-            "editor.trimAutoWhitespace": false
-        },
-        "[c]": {
-            "editor.formatOnSave": true,
-            "editor.insertSpaces": false,
-            "editor.trimAutoWhitespace": false
-        },
-        "[rust]": {
-            "editor.formatOnSave": true,
-            "editor.insertSpaces": true,
-            "editor.trimAutoWhitespace": true,
-        },
-        "[restructuredtext]": {
-            "editor.wordWrap": "wordWrapColumn",
-            "editor.rulers": [80, 120],
-            "editor.renderWhitespace": "all",
-            "editor.tabSize": 4,
-            "editor.insertSpaces": true,
-            "editor.formatOnSave": true,
-            "editor.trimAutoWhitespace": true
-        },
-        "[starlark]": {
-            "editor.formatOnSave": true,
-        },
-
-        // Files settings
-        "files.trimTrailingWhitespace": false,
-        "files.exclude": {
-        },
-        "files.watcherExclude": {
-            "/workspaces/lorite-personal-learning/.cache/**": true,
-            "/workspaces/lorite-personal-learning/.ccache/**": true,
-            "/workspaces/lorite-personal-learning/.git/objects/**": true,
-            "/workspaces/lorite-personal-learning/.git/subtree-cache/**": true,
-            "/workspaces/lorite-personal-learning/bazel-bin/**": true,
-            "/workspaces/lorite-personal-learning/bazel-lorite-personal-learning/**": true,
-            "/workspaces/lorite-personal-learning/bazel-out/**": true,
-            "/workspaces/lorite-personal-learning/bazel-testlogs/**": true,
-            "/workspaces/lorite-personal-learning/external/**": true,
-        },
-        "files.insertFinalNewline": true,
-        "files.trimFinalNewlines": true,
-
-        // C++ settings
-        "clangd.path": "/workspaces/lorite-personal-learning/external/toolchains_llvm++llvm+llvm_toolchain_llvm/bin/clangd",
-        "clangd.arguments": [
-            "--compile-commands-dir=${workspaceFolder}/",
-            "--query-driver=**"
-        ],
-        "cSpell.customDictionaries": {
-            "business_dictionary": {
-                "name": "business_dictionary",
-                "path": "${workspaceRoot}/.vscode/cSpell/business_dictionary.txt",
-                "description": "Business related dictionary.",
-                "addWords": true
-            },
-            "technical_dictionary": {
-                "name": "technical_dictionary",
-                "path": "${workspaceRoot}/.vscode/cSpell/technical_dictionary.txt",
-                "description": "Technical related dictionary.",
-                "addWords": true
-            },
-        },
-        "lldb.displayFormat": "auto",
-        "lldb.dereferencePointers": true,
-        "lldb.showDisassembly": "auto",
-        "bazel.buildifierExecutable": "@buildifier_prebuilt//:buildifier",
-        "clang-tidy.executable": "/workspaces/lorite-personal-learning/external/toolchains_llvm++llvm+llvm_toolchain_llvm/bin/clang-tidy",
-        "clang-tidy.compilerArgs": [
-            "--compile-commands-dir=${workspaceFolder}/"
-        ],
-        "vale.enableSpellcheck": true,
-        "vale.valeCLI.path": "/workspaces/lorite-personal-learning/external/vale_Linux_64-bit/vale",
-        "vale.valeCLI.syncOnStartup": true,
-        "prettier.prettierPath": "/workspaces/lorite-personal-learning/bazel-bin/tools/format/prettier_/prettier.runfiles/_main/node_modules/.aspect_rules_js/prettier-plugin-sql@0.14.0_prettier_2.8.7/node_modules/prettier",
-        "prettier.resolveGlobalModules": false,
+    "githubIssues.issueBranchTitle": "${user}/issue${issueNumber}/${sanitizedIssueTitle}",
+    "githubPullRequests.notifications": "pullRequests",
+    "githubPullRequests.defaultMergeMethod": "squash",
+    "githubPullRequests.showPullRequestNumberInTree": true,
+    "bazel.buildifierFixOnFormat": true,
+    "bazel.enableCodeLens": true,
+    "bazel.commandLine.queryExpression": "src/...:*",
+    "search.exclude": {
+      "external/**": true
     },
+    "[python]": {
+      "editor.formatOnSave": true,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 4
+    },
+    "[cpp]": {
+      "editor.formatOnSave": true,
+      "editor.insertSpaces": false,
+      "editor.trimAutoWhitespace": false
+    },
+    "[c]": {
+      "editor.formatOnSave": true,
+      "editor.insertSpaces": false,
+      "editor.trimAutoWhitespace": false
+    },
+    "[rust]": {
+      "editor.formatOnSave": true,
+      "editor.insertSpaces": true,
+      "editor.trimAutoWhitespace": true
+    },
+    "[restructuredtext]": {
+      "editor.wordWrap": "wordWrapColumn",
+      "editor.rulers": [80, 120],
+      "editor.renderWhitespace": "all",
+      "editor.tabSize": 4,
+      "editor.insertSpaces": true,
+      "editor.formatOnSave": true,
+      "editor.trimAutoWhitespace": true
+    },
+    "[starlark]": {
+      "editor.formatOnSave": true
+    },
+
+    // Files settings
+    "files.trimTrailingWhitespace": false,
+    "files.exclude": {},
+    "files.watcherExclude": {
+      "/workspaces/lorite-personal-learning/.cache/**": true,
+      "/workspaces/lorite-personal-learning/.ccache/**": true,
+      "/workspaces/lorite-personal-learning/.git/objects/**": true,
+      "/workspaces/lorite-personal-learning/.git/subtree-cache/**": true,
+      "/workspaces/lorite-personal-learning/bazel-bin/**": true,
+      "/workspaces/lorite-personal-learning/bazel-lorite-personal-learning/**": true,
+      "/workspaces/lorite-personal-learning/bazel-out/**": true,
+      "/workspaces/lorite-personal-learning/bazel-testlogs/**": true,
+      "/workspaces/lorite-personal-learning/external/**": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+
+    // C++ settings
+    "clangd.path": "/workspaces/lorite-personal-learning/external/toolchains_llvm++llvm+llvm_toolchain_llvm/bin/clangd",
+    "clangd.arguments": [
+      "--compile-commands-dir=${workspaceFolder}/",
+      "--query-driver=**"
+    ],
+    "cSpell.customDictionaries": {
+      "business_dictionary": {
+        "name": "business_dictionary",
+        "path": "${workspaceRoot}/.vscode/cSpell/business_dictionary.txt",
+        "description": "Business related dictionary.",
+        "addWords": true
+      },
+      "technical_dictionary": {
+        "name": "technical_dictionary",
+        "path": "${workspaceRoot}/.vscode/cSpell/technical_dictionary.txt",
+        "description": "Technical related dictionary.",
+        "addWords": true
+      }
+    },
+    "lldb.displayFormat": "auto",
+    "lldb.dereferencePointers": true,
+    "lldb.showDisassembly": "auto",
+    "bazel.buildifierExecutable": "@buildifier_prebuilt//:buildifier",
+    "clang-tidy.executable": "/workspaces/lorite-personal-learning/external/toolchains_llvm++llvm+llvm_toolchain_llvm/bin/clang-tidy",
+    "clang-tidy.compilerArgs": ["--compile-commands-dir=${workspaceFolder}/"],
+    "vale.enableSpellcheck": true,
+    "vale.valeCLI.path": "/workspaces/lorite-personal-learning/external/vale_Linux_64-bit/vale",
+    "vale.valeCLI.syncOnStartup": true,
+    "prettier.prettierPath": "/workspaces/lorite-personal-learning/bazel-bin/tools/format/prettier_/prettier.runfiles/_main/node_modules/.aspect_rules_js/prettier@2.8.7/node_modules/prettier",
+    "prettier.resolveGlobalModules": false,
+    "editor.formatOnSave": true, // Enable auto-formatting on save for all file types
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "modificationsIfAvailable"
+  }
 }
