@@ -55,7 +55,7 @@ Note that, each node has only two children here (except the bottom row). As an e
 
 # Notes about the solution
 
-The code is built using [bazel](https://bazel.build/) and [clang](https://clang.llvm.org/). The code is tested using [Google Test](https://github.com/google/googletest). The code is linted using [clang-tidy](https://clang.llvm.org/extra/clang-tidy/). The code is debugged using [VS Code](https://code.visualstudio.com/docs/editor/debugging) and [lldb](https://lldb.llvm.org/). The code is formatted using [clang-format](https://clang.llvm.org/docs/ClangFormat.html) and it follows the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html). The code is documented using [Doxygen](https://www.doxygen.nl/). The code is logged using the [C++ implementation of Google logging module](https://github.com/google/glog).
+The code is built using [bazel](https://bazel.build/) and [clang](https://clang.llvm.org/). The code is tested using [Google Test](https://github.com/google/googletest). The code is linted using [clang-tidy](https://clang.llvm.org/extra/clang-tidy/). The code is debugged using [VS Code](https://code.visualstudio.com/docs/editor/debugging) and [LLDB](https://lldb.llvm.org/). The code is formatted using [clang-format](https://clang.llvm.org/docs/ClangFormat.html) and it follows the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html). The code is documented using [Doxygen](https://www.doxygen.nl/). The code is logged using the [C++ implementation of Google logging module](https://github.com/google/glog).
 
 ## File structure
 

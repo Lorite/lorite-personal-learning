@@ -121,5 +121,10 @@
         "clang-tidy.compilerArgs": [
             "--compile-commands-dir=${workspaceFolder}/"
         ],
+        "vale.enableSpellcheck": true,
+        "vale.valeCLI.path": "/workspaces/lorite-personal-learning/external/vale_Linux_64-bit/vale",
+        "vale.valeCLI.syncOnStartup": true,
+        "prettier.prettierPath": "/workspaces/lorite-personal-learning/bazel-bin/tools/format/prettier_/prettier.runfiles/_main/node_modules/.aspect_rules_js/prettier-plugin-sql@0.14.0_prettier_2.8.7/node_modules/prettier",
+        "prettier.resolveGlobalModules": false,
     },
 }

@@ -172,6 +172,7 @@ Some of the tools and languages included in the dev container are:
 - [pip](https://pypi.org/project/pip/) for installing Python packages.
 - [Go](https://golang.org/)
 - [JAVA](https://www.java.com/)
+- [Markdown](https://www.markdownguide.org/) for writing documentation. [Vale](https://vale.sh/) is used for linting and style checking.
 - [Aspect Docs - Run linters and formatters under Bazel](https://docs.aspect.build/rulesets/aspect_rules_lint/). Run `tools/lint/scripts/aspect_lint.sh //path/to:target` to run linters under Bazel. These linters and formatters are also run in the CI/CD pipeline. Run `bazel run //:format` to format all the code in the repository. These steps will also be triggered by the GitHub actions when a PR is opened.
 
 ### Code
@@ -256,6 +257,8 @@ As stated earlier, you can check the [.devcontainer/devcontainer.json](.devconta
 
 - [vadimcn.vscode-lldb](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb): LLDB Debugger support for Visual Studio Code mainly for C++ and Rust. It is also usable with most compiled languages whose compiler generates compatible debugging information.
 
+- [chrischinchilla.vale-vscode](https://marketplace.visualstudio.com/items?itemName=chrischinchilla.vale-vscode): The Vale extension for VS Code provides customizable spelling, style, and grammar checking for a variety of markup formats (Markdown, AsciiDoc, reStructuredText, HTML, and DITA). It is also used it for vocabulary and style checking in the code.
+
 - TODO: add missing extensions from the [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -325,6 +328,11 @@ This section contains the resources for DevOps, CI/CD, and programming languages
 ### LaTeX
 
 - [Bazel rules for LaTeX](https://github.com/ProdriveTechnologies/bazel-latex)
+
+### Markdown
+
+- [Markdown guide](https://www.markdownguide.org/basic-syntax/)
+- [Vale - Markdown linter](https://vale.sh/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
