@@ -1,6 +1,7 @@
 common --incompatible_allow_tags_propagation
 common --enable_bzlmod
 common --incompatible_disallow_empty_glob=false # Introduced in Bazel 8.0.0 https://github.com/bazelbuild/bazel/issues/8195
+common --enable_workspace=true # Introduced in Bazel 8.0.0 https://github.com/bazelbuild/rules_webtesting/issues/477. aspect-build/rules_lint depends on it. 
 
 build --@aspect_rules_lint//lint:fail_on_violation # fail if linting fails
 build --keep_going # continue building after a failure. It goes well with linting errors and CI

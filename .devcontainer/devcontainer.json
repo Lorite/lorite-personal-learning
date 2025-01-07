@@ -7,7 +7,7 @@
       "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting"
     },
     "ghcr.io/balazs23/devcontainers-features/bazel:1": {
-        "bazelisk": "v1.25.0"
+      "bazelisk": "v1.25.0"
     },
     "ghcr.io/devcontainers/features/docker-in-docker:2": {
       "version": "latest"
