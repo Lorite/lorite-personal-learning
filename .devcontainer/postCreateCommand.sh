@@ -12,6 +12,9 @@ cd $HOME && curl -fsSLO https://raw.githubusercontent.com/romkatv/dotfiles-publi
 # bazel-toolchain (llvm) for clangd (C/C++ language server) dependencies
 sudo apt-get update >/dev/null && sudo apt-get -qq -y install libtinfo5 >/dev/null
 
+# run bazel lint
+.devcontainer/lorite-scripts/enable_bazel_lint.sh
+
 # Source custom environment
 if [ -f .devcontainer/lorite-scripts/custom_env.sh ]; then
 	. .devcontainer/lorite-scripts/custom_env.sh

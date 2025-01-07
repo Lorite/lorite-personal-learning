@@ -1,0 +1,29 @@
+[Aa]utofetch
+[Bb]azel
+[Bb]azel[ -]?build
+[Bb]azel[ -]?rc
+Buildifier
+[Cc]langd
+[Cc]odespaces?
+[Dd]evcontainers?
+[Dd]evs?
+[Dd]oxygen
+[Gg]tests?
+[Gg]log
+Hedron
+LLDB
+[Ll]eet[Cc]ode
+Meslo
+[Mm]ono[ -]?repos?
+[Pp]owerlevel
+[Ss]onarlint
+[Ss]onarsource
+[Ss]tack[ -]?exchange
+[Ss]tack[ -]?overflow
+[Rr]epos?
+Starlark
+[Ss]ubrepos?
+toolchains?
+vsnotes
+[Ww]error
+zsh
