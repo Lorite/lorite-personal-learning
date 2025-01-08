@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  test:
+  build_test_and_format:
     # virtual environments: https://github.com/actions/virtual-environments
     runs-on: ubuntu-22.04
     steps:
@@ -35,9 +35,28 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, which is the CWD for
       # the rest of the steps
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.CODE_FORMATTER_BOT_CONTENTS_TOKEN }}
       # build
       - name: Build the code
         run: bazel build //...
       # test
       - name: Test the code
-        run: bazel test //...
+        run: bazel test //... -- -//tools/... # Exclude tools from testing
+      # format
+      - name: Test if the files are correctly formatted
+        id: testFormat
+        if: github.actor != 'code-formatter-bot[bot]'
+        run: bazel test //tools/format/...
+      - name: Apply formatting if the test fails
+        id: applyFormat
+        if: always() && github.actor != 'code-formatter-bot[bot]' && steps.testFormat.outcome == 'failure'
+        run: bazel run //tools/format:format
+      - name: Commit the formatting changes
+        if: always() && github.actor != 'code-formatter-bot[bot]' && steps.testFormat.outcome == 'failure' && steps.applyFormat.outcome == 'success'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Apply formatting from rules_lint"
+          commit_user_name: code-formatter-bot[bot]
+          commit_user_email: code-formatter-bot@users.noreply.github.com
+          commit_author: code-formatter-bot[bot] <format-bot@users.noreply.github.com>
