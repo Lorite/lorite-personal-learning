@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  test:
+  build_test_and_format:
     # virtual environments: https://github.com/actions/virtual-environments
     runs-on: ubuntu-22.04
     steps:
@@ -40,4 +40,15 @@ jobs:
         run: bazel build //...
       # test
       - name: Test the code
-        run: bazel test //...
+        run: bazel test //... -- -//tools/... # Exclude tools from testing
+      # format
+      - name: Test if the files are correctly formatted
+        run: bazel test //tools/format/...
+      - name: Apply formatting if the test fails
+        if: "${{ failure() }}"
+        run: bazel run //tools/format:format
+      - name: Commit the formatting changes
+        if: "${{ failure() }}"
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Apply formatting from rules_lint"
