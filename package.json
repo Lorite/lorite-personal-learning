@@ -3,7 +3,7 @@
     "dayjs": "^1.11.11",
     "micromatch": "^4.0.8",
     "moment": "^2.29.4"
-},
+  },
   "devDependencies": {
     "@eslint/js": "^9",
     "@types/node": "^18",
