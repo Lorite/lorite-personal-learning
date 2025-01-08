@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/adambard/learnxinyminutes-docs
+	branch = master
+	commit = a556cdedced00e1e4c9c94c7013196f6063b381d
+	parent = 6cc6513f06f4778da214de871f31a649273b1401
+	method = merge
+	cmdver = 0.4.7
