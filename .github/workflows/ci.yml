@@ -58,5 +58,5 @@ jobs:
         with:
           commit_message: "Apply formatting from rules_lint"
           commit_user_name: code-formatter-bot[bot]
-          commit_user_email: code-formatter-bot@users.noreply.github.com
-          commit_author: code-formatter-bot[bot] <format-bot@users.noreply.github.com>
+          commit_user_email: code-formatter-bot[bot]@users.noreply.github.com
+          commit_author: code-formatter-bot[bot] <code-formatter-bot[bot]@users.noreply.github.com>
