@@ -241,7 +241,7 @@ The folder [subrepos](src/subrepos) is then used to store these repositories. Th
 
 ### Continuous Integration/Continuous Deployment
 
-GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) service provided by GitHub. In this repository, it is used for running bazel build and bazel test on all the targets under [src/](/src). The actions are defined in the [.github/workflows](.github/workflows) folder. Bazel's cache is used to speed up the builds.
+GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) service provided by GitHub. In this repository, it is used for running bazel build and bazel test on all the targets under [src/](/src). The files are also formatted automatically in a separate commit. The actions are triggered when a PR is opened and when the PR is merged. The actions are defined in the [.github/workflows](.github/workflows) folder. Bazel's cache is used to speed up the builds.
 
 ### VS Code extensions
 
