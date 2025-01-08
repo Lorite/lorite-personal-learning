@@ -339,8 +339,9 @@ _NCrunch*
 
 /src/courses-licensed/
 
-# cSpell dictionaries
-!/.vscode/cSpell/
+# Vale dictionaries
+!/.vale_styles/
+/.vale_styles/config/vocabularies/Personal/
 
 # VS Code launch and tasks
 !/.vscode/launch.json
