@@ -1,0 +1,29 @@
+// Hey Friendly Face reading this :)
+// This is the configuration file for Renovate, a GitHub App that can automate dependency updates.
+
+// If you're here, you're probably looking to:
+// (1) Make updates for a dependency fully automated. Whitelist it at <TAG0>
+// (2) Add CI. Remove "requiredStatusChecks", below.
+// (3) Customize Renovate behavior further.
+  // For docs, see: https://docs.renovatebot.com/configuration-options/
+  // To debug, it can be helpful to looks at Renovate's runs/logs: https://developer.mend.io/[platform]/hedronvision/bazel-cc-filesystem-backport
+  // This file is .json5, so we can have helpful comments, like this one :) [Normal JSON, Renovate's default, has no comments.]
+// (4) Learn about what's going on here and what Renovate can do. Read on :)
+// If you need more help, contact @cpsauer.
+
+{
+  "assignees": ["Lorite"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "enabled": true,
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 1,
+  "dependencyDashboard": true,
+  "dependencyDashboardHeader": "Organization members: Check Renovate logs here: https://developer.mend.io/github/Lorite/lorite-personal-learning",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "src/subrepos/**",
+    "tools/git/git-subrepo/**"
+  ]
+}
