@@ -45,13 +45,15 @@ jobs:
         run: bazel test //... -- -//tools/... # Exclude tools from testing
       # format
       - name: Test if the files are correctly formatted
+        id: testFormat
         if: github.actor != 'code-formatter-bot[bot]'
         run: bazel test //tools/format/...
       - name: Apply formatting if the test fails
-        if: github.actor != 'code-formatter-bot[bot]' && "${{ failure() }}"
+        id: applyFormat
+        if: always() && github.actor != 'code-formatter-bot[bot]' && steps.testFormat.outcome == 'failure'
         run: bazel run //tools/format:format
       - name: Commit the formatting changes
-        if: github.actor != 'code-formatter-bot[bot]' && "${{ failure() }}"
+        if: always() && github.actor != 'code-formatter-bot[bot]' && steps.testFormat.outcome == 'failure' && steps.applyFormat.outcome == 'success'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Apply formatting from rules_lint"
