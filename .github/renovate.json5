@@ -19,6 +19,7 @@
   "labels": ["type:dependencies"],
   "prConcurrentLimit": 0,
   "prHourlyLimit": 1,
+  "rangeStrategy": "pin",
   "dependencyDashboard": true,
   "dependencyDashboardHeader": "Organization members: Check Renovate logs here: https://developer.mend.io/github/Lorite/lorite-personal-learning",
   "ignorePaths": [
