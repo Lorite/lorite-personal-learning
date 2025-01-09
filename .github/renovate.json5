@@ -22,6 +22,17 @@
   "rangeStrategy": "pin",
   "dependencyDashboard": true,
   "dependencyDashboardHeader": "Organization members: Check Renovate logs here: https://developer.mend.io/github/Lorite/lorite-personal-learning",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    }
+  ],
+  "platformAutomerge": true,
   "ignorePaths": [
     "**/node_modules/**",
     "**/bower_components/**",
