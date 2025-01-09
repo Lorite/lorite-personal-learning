@@ -131,7 +131,7 @@ bazel_dep(name = "toolchains_llvm", version = "1.0.0")  # LLVM
 # Otherwise, omit this block.
 git_override(
     module_name = "toolchains_llvm",
-    commit = "d834d83736769a6bf44fe9f017e742cc900b5443",
+    commit = "fb003f868fccc587812316d2cfa26ae63e1d0831",
     remote = "https://github.com/bazel-contrib/toolchains_llvm",
 )
 
