@@ -15,6 +15,10 @@ sudo apt-get update >/dev/null && sudo apt-get -qq -y install libtinfo5 >/dev/nu
 # run bazel lint
 .devcontainer/lorite-scripts/enable_bazel_lint.sh
 
+# custom aliases
+alias clean_squash_merged_local_git_branches='git checkout -q main && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse "$branch^{tree}") -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
+alias clean_squash_merged_local_git_branches_dry_run='git checkout -q main && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse "$branch^{tree}") -p $mergeBase -m _)) == "-"* ]] && echo "$branch is merged into main and can be deleted"; done'
+
 # Source custom environment
 if [ -f .devcontainer/lorite-scripts/custom_env.sh ]; then
 	. .devcontainer/lorite-scripts/custom_env.sh
