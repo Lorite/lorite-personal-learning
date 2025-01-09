@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   dayjs:
-    specifier: 1.11.11
-    version: 1.11.11
+    specifier: 1.11.13
+    version: 1.11.13
   micromatch:
     specifier: 4.0.8
     version: 4.0.8
@@ -524,8 +524,8 @@ packages:
     hasBin: true
     dev: true
 
-  /dayjs@1.11.11:
-    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
+  /dayjs@1.11.13:
+    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
     dev: false
 
   /debug@4.3.5:
