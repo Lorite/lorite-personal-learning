@@ -54,7 +54,7 @@ jobs:
         run: bazel run //tools/format:format
       - name: Test if the files are correctly formatted after applying the formatting
         id: testFormatAfterApply
-        if: steps.testFormat.outcome == 'failure' && steps.applyFormat.outcome == 'success'
+        if: always() && steps.testFormat.outcome == 'failure' && steps.applyFormat.outcome == 'success'
         run: bazel test //tools/format/...
       - name: Commit the formatting changes
         if: always() && steps.testFormat.outcome == 'failure' && steps.applyFormat.outcome == 'success' && steps.testFormatAfterApply.outcome == 'success'
