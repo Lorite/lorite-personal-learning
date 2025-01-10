@@ -30,7 +30,7 @@ bazel_dep(name = "buildifier_prebuilt", version = "8.0.0")
 
 # TypeScript
 
-bazel_dep(name = "aspect_rules_ts", version = "3.3.2")
+bazel_dep(name = "aspect_rules_ts", version = "3.4.0")
 
 rules_ts_ext = use_extension("@aspect_rules_ts//ts:extensions.bzl", "ext")
 rules_ts_ext.deps()
