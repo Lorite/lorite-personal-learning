@@ -24,7 +24,7 @@ module(
 bazel_dep(name = "aspect_bazel_lib", version = "2.10.0")  # Bazel library for common tasks required for linting and formatting
 bazel_dep(name = "aspect_rules_lint", version = "1.0.8")  # linting and formatting
 bazel_dep(name = "bazel_skylib", version = "1.7.1")  # Bazel Skylib required for linting and formatting
-bazel_dep(name = "buildifier_prebuilt", version = "6.4.0")
+bazel_dep(name = "buildifier_prebuilt", version = "8.0.0")
 
 # ----------------------------------------
 
