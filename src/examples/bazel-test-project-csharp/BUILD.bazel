@@ -1,11 +1,11 @@
-package(default_visibility = ["//visibility:private"])
-
 load(
     "@rules_dotnet//dotnet:defs.bzl",
     "csharp_binary",
     "csharp_library",
     "csharp_nunit_test",
 )
+
+package(default_visibility = ["//visibility:private"])
 
 # bazel run //examples:hello
 csharp_binary(

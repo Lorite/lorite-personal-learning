@@ -1,5 +1,5 @@
-load("@rules_python//python/pip_install:requirements.bzl", "compile_pip_requirements")
 load("@pip_bazel_test_deps//:requirements.bzl", "requirement")
+load("@rules_python//python/pip_install:requirements.bzl", "compile_pip_requirements")
 
 package(default_visibility = ["//visibility:private"])
 
