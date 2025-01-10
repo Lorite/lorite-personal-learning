@@ -106,6 +106,7 @@ format_test(
     # java.lang.NoClassDefFoundError: com/sun/source/tree/Tree
     # java = ":java-format",
     javascript = ":prettier",
+    jsonnet = "@aspect_rules_lint//format:jsonnetfmt",
     # FIXME: something is not hermetic about this binary, on CI we see
     # java.lang.ClassNotFoundException: javax.swing.text.html.HTMLEditorKit$ParserCallback
     # kotlin = ":ktfmt",
@@ -119,4 +120,5 @@ format_test(
     # FIXME: not hermetic: error while loading shared libraries: libFoundation.so
     # swift = ":swiftformat",
     workspace = "//:.shellcheckrc",  # A file in the workspace root, where the no_sandbox mode will run the formatter
+    yaml = "@aspect_rules_lint//format:yamlfmt",
 )
