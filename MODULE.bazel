@@ -167,7 +167,6 @@ maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
         "org.junit.jupiter:junit-jupiter-engine:5.10.3",
-        "com.google.guava:guava:33.4.0-jre",
         "org.scalameta:scalafmt-cli_2.13:3.7.14",
     ],
     fetch_sources = True,
