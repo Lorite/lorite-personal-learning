@@ -56,8 +56,8 @@ jobs:
         id: testFormatAfterApply
         if: always() && steps.testFormat.outcome == 'failure' && steps.applyFormat.outcome == 'success'
         run: bazel test //tools/format/...
-      - name: Commit the formatting changes
-        if: always() && steps.testFormat.outcome == 'failure' && steps.applyFormat.outcome == 'success' && steps.testFormatAfterApply.outcome == 'success'
+      - name: Commit the formatting changes # always try to commit the formatting changes because bazel build can also modify
+        if: always()
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Apply formatting from rules_lint"
