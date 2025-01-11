@@ -4885,7 +4885,7 @@
         "usagesDigest": "3gTu8LN8LRcENWpEAo8UHDoTOQiQ7AuyqcdAA1yzvdU=",
         "recordedFileInputs": {
           "@@//requirements.txt": "a954fabf6d5eb921e16a8fd897a22d5125e26b420cf158052d105041ea36b447",
-          "@@//src/examples/bazel-test-project-python-flask/requirements.txt": "6fb7070ae20e708c2c78f0873fe99b0df848410ba38503cdd297889e137f29e4",
+          "@@//src/examples/bazel-test-project-python-flask/requirements.txt": "79a868376776bd6a7c0fbcd4d7b46e8367d2c65363bc55f7a10cc88a7ef34a90",
           "@@//src/other/python/scripts/requirements.txt": "0b73a7634aa01e0672de4656da2267e844c1d2def4b603282ecd850ecbeed361",
           "@@//src/subrepos/ultimate-python/requirements.txt": "f4bdbf10d2a2cca8f895cb522ae9eacc9b86003fdc8bda3fddeb5afb19f31416",
           "@@bazel_latex+//requirements_lock.txt": "35f3ac77005a6a002266d918bf83a2a4a4cf2aaef91fa7aeb11502fe9dfb7666",
@@ -4952,7 +4952,7 @@
               "dep_template": "@pip_bazel_test_deps//{name}:{target}",
               "python_interpreter_target": "@@rules_python++python+python_3_11_host//:python",
               "repo": "pip_bazel_test_deps_311",
-              "requirement": "flask==2.2.5     --hash=sha256:58107ed83443e86067e41eff4631b058178191a355886f8e479e347fa1285fdf     --hash=sha256:edee9b0a7ff26621bd5a8c10ff484ae28737a2410d99b0bb9a6850c7fb977aa0"
+              "requirement": "Flask==3.1.0     --hash=sha256:5f873c5184c897c8d9d1b05df1e3d01b14910ce69607a117bd3277098a5836ac     --hash=sha256:d667207822eb83f1c4b50949b1623c8fc8d51f2341d65f72e1a1815397551136"
             }
           },
           "pip_bazel_test_deps_311_itsdangerous": {
