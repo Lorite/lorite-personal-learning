@@ -10,9 +10,9 @@ click==8.1.8 \
     # via
     #   -r src/examples/bazel-test-project-python-flask/requirements.in
     #   flask
-flask==2.2.5 \
-    --hash=sha256:58107ed83443e86067e41eff4631b058178191a355886f8e479e347fa1285fdf \
-    --hash=sha256:edee9b0a7ff26621bd5a8c10ff484ae28737a2410d99b0bb9a6850c7fb977aa0
+Flask==3.1.0 \
+    --hash=sha256:5f873c5184c897c8d9d1b05df1e3d01b14910ce69607a117bd3277098a5836ac \
+    --hash=sha256:d667207822eb83f1c4b50949b1623c8fc8d51f2341d65f72e1a1815397551136
     # via -r src/examples/bazel-test-project-python-flask/requirements.in
 itsdangerous==2.0.1 \
     --hash=sha256:5174094b9637652bdb841a3029700391451bd092ba3db90600dea710ba28e97c \
