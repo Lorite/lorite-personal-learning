@@ -35,19 +35,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, which is the CWD for
       # the rest of the steps
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.CODE_FORMATTER_BOT_CONTENTS_TOKEN }} # This allows the pipeline to run again when bots push changes
-      # build
-      - name: Build the code
-        run: bazel build //...
-      # test
-      - name: Test the code
-        run: bazel test //... -- -//tools/... # Exclude tools from testing
+        # If I need to run the pipeline again after a step pushes a new commit, uncomment the following lines
+        # with:
+        #   token: ${{ secrets.CODE_FORMATTER_BOT_CONTENTS_TOKEN }}
       # format
       - name: Test if the files are correctly formatted
         id: testFormat
         if: github.actor != 'code-formatter-bot[bot]'
         run: bazel test //tools/format/...
+        continue-on-error: true
       - name: Apply formatting if the test fails
         id: applyFormat
         if: always() && steps.testFormat.outcome == 'failure'
@@ -56,6 +52,12 @@ jobs:
         id: testFormatAfterApply
         if: always() && steps.testFormat.outcome == 'failure' && steps.applyFormat.outcome == 'success'
         run: bazel test //tools/format/...
+      # build
+      - name: Build the code
+        run: bazel build //...
+      # test
+      - name: Test the code
+        run: bazel test //... -- -//tools/... # Exclude tools from testing
       - name: Commit the formatting changes # always try to commit the formatting changes because bazel build can also modify
         if: always()
         uses: stefanzweifel/git-auto-commit-action@v5
