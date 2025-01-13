@@ -30,5 +30,5 @@ export default tseslint.config(
       "@typescript-eslint/no-redundant-type-constituents": "error",
       "sort-imports": "warn",
     },
-  }
+  },
 );
