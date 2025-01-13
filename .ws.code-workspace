@@ -122,6 +122,7 @@
     "prettier.resolveGlobalModules": false,
     "editor.formatOnSave": true, // Enable auto-formatting on save for all file types
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSaveMode": "modificationsIfAvailable"
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
   }
 }
