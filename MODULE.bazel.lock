@@ -8892,7 +8892,7 @@
     "@@toolchains_llvm+//toolchain/extensions:llvm.bzl%llvm": {
       "general": {
         "bzlTransitiveDigest": "2eLMaPh4QKrn3wPljYBu5jSkkp9DfCf4yGKTR9lBN3c=",
-        "usagesDigest": "yvXAjqhmsIKRdatWect8Vjtd0IDNYhE4nEvhNAq69us=",
+        "usagesDigest": "BPKj/NHttnm1EpCo+aueisHJVujwLsxNC4aluoQxpiY=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -8907,7 +8907,7 @@
               "exec_os": "",
               "libclang_rt": {},
               "llvm_mirror": "",
-              "llvm_version": "17.0.6",
+              "llvm_version": "18.1.8",
               "llvm_versions": {},
               "netrc": "",
               "sha256": {},
@@ -8935,7 +8935,7 @@
               "link_flags": {},
               "link_libs": {},
               "llvm_versions": {
-                "": "17.0.6"
+                "": "18.1.8"
               },
               "opt_compile_flags": {},
               "opt_link_flags": {},
