@@ -7,5 +7,6 @@ class TestSum(unittest.TestCase):
         calculator = Calculator()
         self.assertEqual(calculator.add(1, 2), 3)
 
-    if __name__ == "__main__":
-        unittest.main()
+
+if __name__ == "__main__":
+    unittest.main()
