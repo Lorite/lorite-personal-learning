@@ -79,9 +79,15 @@ use_repo(bazel_test_project_csharp_example_deps, "paket.bazel_test_project_cshar
 
 # Python
 
-bazel_dep(name = "rules_python", version = "1.0.0")
+bazel_dep(name = "rules_python", version = "1.1.0-rc1")
 
-python_version = "3.11"
+python_version = "3.13"
+
+python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+python.toolchain(
+    is_default = True,
+    python_version = python_version,
+)
 
 pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
 
