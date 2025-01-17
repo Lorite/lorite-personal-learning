@@ -9,7 +9,7 @@ on:
 jobs:
   build_test_and_format:
     # virtual environments: https://github.com/actions/virtual-environments
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Remove unnecessary files
         run: |
