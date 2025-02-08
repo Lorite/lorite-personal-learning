@@ -35,6 +35,7 @@
         "usernamehw.errorlens", // show errors inline
         "chrischinchilla.vale-vscode", // linting for writing
         "esbenp.prettier-vscode", // formatting for some languages
+        "hediet.debug-visualizer", // visualize data structures while debugging
         // "ms-vscode.cpptools",
         // "twxs.cmake",
         // "DotJoshJohnson.xml",
