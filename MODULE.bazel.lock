@@ -4567,7 +4567,7 @@
     },
     "@@rules_go+//go:extensions.bzl%go_sdk": {
       "os:linux,arch:amd64": {
-        "bzlTransitiveDigest": "dO8hGGpTWc27rkWJb+uMKqxLZQUvdp7kTxwhIbLYF8E=",
+        "bzlTransitiveDigest": "JEdkNyCnsDM3HSuXukQyBVQjF/C40X9NDw7fxgiI8qY=",
         "usagesDigest": "igIBXyqNg9Be63Cuu6kZxOeoDRDMqxSv8BcoWiqSh3w=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -4917,7 +4917,7 @@
     },
     "@@rules_python+//python/extensions:pip.bzl%pip": {
       "general": {
-        "bzlTransitiveDigest": "zpjNzuG+OyknZCywqTQ2p+Ai4A/nCo91rg3pHHmMRes=",
+        "bzlTransitiveDigest": "880hZJPVrcGcWBHaOqEAfNQSjgQ5d8dHHGbOunO2bQY=",
         "usagesDigest": "p33ePCYFZrh99/OvMYNWwDYU2BRsjd+gE/A7fW3J2Ho=",
         "recordedFileInputs": {
           "@@//requirements.txt": "5debd34802b989deb4942d38c60990a31c78a75be6be93ef3b367c345367a6fb",
