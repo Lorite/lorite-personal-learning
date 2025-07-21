@@ -248,7 +248,6 @@ GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) service
 As stated earlier, you can check the [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) file to see al the extensions installed on the dev container by default. You can also check the [workspace settings](.ws.code-workspace) file for configuration. Remember that the workspace file must be opened in VS Code. The extensions are:
 
 - [bazelbuild.vscode-bazel](https://marketplace.visualstudio.com/items?itemName=bazelbuild.vscode-bazel): Bazel support for VS Code. Features:
-
   - Syntax highlighting
   - Bazel Build Targets tree displays the build packages/targets in your workspace.
   - CodeLens links in BUILD files to directly launch a build or test by simply clicking on the targets
