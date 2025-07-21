@@ -32,8 +32,8 @@
     "https://bcr.bazel.build/modules/aspect_rules_lint/0.12.0/MODULE.bazel": "e767c5dbfeb254ec03275a7701b5cfde2c4d2873676804bc7cb27ddff3728fed",
     "https://bcr.bazel.build/modules/aspect_rules_lint/1.0.8/MODULE.bazel": "2e4da649658a42c33b9541b9d32c363abff910da1317a53a69d0d22a369fce69",
     "https://bcr.bazel.build/modules/aspect_rules_lint/1.0.8/source.json": "c4c16545e049f25101f293646f1acb4187a4f2e03aff5f735c2a896e7e96ab5a",
-    "https://bcr.bazel.build/modules/aspect_rules_ts/3.4.0/MODULE.bazel": "5b554d5de90d96ee14117527c0519037713dd33884f3212eae391beccb2e94ff",
-    "https://bcr.bazel.build/modules/aspect_rules_ts/3.4.0/source.json": "9ada3722b716853b6dccdb7b650d8e776a23bc8a190de0c59bd15f21afea6f8a",
+    "https://bcr.bazel.build/modules/aspect_rules_ts/3.6.3/MODULE.bazel": "d09db394970f076176ce7bab5b5fa7f0d560fd4f30b8432ea5e2c2570505b130",
+    "https://bcr.bazel.build/modules/aspect_rules_ts/3.6.3/source.json": "641e58c62e5090d52a0d3538451893acdb2d79a36e8b3d1d30a013c580bc2058",
     "https://bcr.bazel.build/modules/bazel_features/0.1.0/MODULE.bazel": "47011d645b0f949f42ee67f2e8775188a9cf4a0a1528aa2fa4952f2fd00906fd",
     "https://bcr.bazel.build/modules/bazel_features/1.1.0/MODULE.bazel": "cfd42ff3b815a5f39554d97182657f8c4b9719568eb7fded2b9135f084bf760b",
     "https://bcr.bazel.build/modules/bazel_features/1.1.1/MODULE.bazel": "27b8c79ef57efe08efccbd9dd6ef70d61b4798320b8d3c134fd571f78963dbcd",
@@ -61,7 +61,8 @@
     "https://bcr.bazel.build/modules/bazel_skylib/1.6.1/MODULE.bazel": "8fdee2dbaace6c252131c00e1de4b165dc65af02ea278476187765e1a617b917",
     "https://bcr.bazel.build/modules/bazel_skylib/1.7.0/MODULE.bazel": "0db596f4563de7938de764cc8deeabec291f55e8ec15299718b93c4423e9796d",
     "https://bcr.bazel.build/modules/bazel_skylib/1.7.1/MODULE.bazel": "3120d80c5861aa616222ec015332e5f8d3171e062e3e804a2a0253e1be26e59b",
-    "https://bcr.bazel.build/modules/bazel_skylib/1.7.1/source.json": "f121b43eeefc7c29efbd51b83d08631e2347297c95aac9764a701f2a6a2bb953",
+    "https://bcr.bazel.build/modules/bazel_skylib/1.8.1/MODULE.bazel": "88ade7293becda963e0e3ea33e7d54d3425127e0a326e0d17da085a5f1f03ff6",
+    "https://bcr.bazel.build/modules/bazel_skylib/1.8.1/source.json": "7ebaefba0b03efe59cac88ed5bbc67bcf59a3eff33af937345ede2a38b2d368a",
     "https://bcr.bazel.build/modules/buildifier_prebuilt/6.1.2/MODULE.bazel": "2ef4962c8b0b6d8d21928a89190755619254459bc67f870dc0ccb9ba9952d444",
     "https://bcr.bazel.build/modules/buildifier_prebuilt/8.0.0/MODULE.bazel": "ce80a1946ca406884aa20ad83fbbe74f9b13fb91ae6d8a8b8339e18e5eaebb2d",
     "https://bcr.bazel.build/modules/buildifier_prebuilt/8.0.0/source.json": "b83ab501d5efda1b2c9f68086bac6b2e38cb17359fb6eabbc23465f6a61a2389",
@@ -505,7 +506,7 @@
     },
     "@@rules_dotnet+//dotnet:paket.rules_dotnet_nuget_packages_extension.bzl%rules_dotnet_nuget_packages_extension": {
       "general": {
-        "bzlTransitiveDigest": "V+y7xJCUrLJXQu7IsuCe7vyEbh61NgDR+s6fTzOCumw=",
+        "bzlTransitiveDigest": "K+6Pk+PtDdeNoG724tT/mM0Vp3ya4265EzZsgUrbUQs=",
         "usagesDigest": "tIpx3jXAHZDAATD5ZszEQlLwQbrOrSt8OzVHE2M2+JY=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -621,7 +622,7 @@
     },
     "@@rules_dotnet+//dotnet/private/sdk/apphost_packs:dotnet.apphost_packs_extension.bzl%apphost_packs_extension": {
       "general": {
-        "bzlTransitiveDigest": "aPX13ANKEkVJiYdrvZVU230nyymLRpuKKaYMfAoeC7k=",
+        "bzlTransitiveDigest": "D33DbaGDJix/ru+ypG8cp7fJz6bXYXTMFLsn0EpAmuo=",
         "usagesDigest": "Uj0iAflR+SM2qnZ094iv7y/f8AcP6U90fs6TVlFCzuQ=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -1333,7 +1334,7 @@
     },
     "@@rules_dotnet+//dotnet/private/sdk/runtime_packs:dotnet.runtime_packs_extension.bzl%runtime_packs_extension": {
       "general": {
-        "bzlTransitiveDigest": "1WKnGATQpjYyoxrmToPHywBDGWKtdhO5gCEivWLYXo8=",
+        "bzlTransitiveDigest": "orcmej6dTgJfFMZ2EK+WIExoCzNlGKxT/w2Ysp7AXFU=",
         "usagesDigest": "9X9nOR7MxleLtNAG2O7dSieUYZ6eC+1/7HIbqzPntqE=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -2685,7 +2686,7 @@
     },
     "@@rules_dotnet+//dotnet/private/sdk/targeting_packs:dotnet.targeting_packs_extension.bzl%targeting_packs_extension": {
       "general": {
-        "bzlTransitiveDigest": "VqcDLgo7wIeLQLxuSwH3IPjHEd7RsPPa8jupt2YFelM=",
+        "bzlTransitiveDigest": "EpWDePPsQpvDfkatrIi0nrcorOTfCtJhXandILgXzbc=",
         "usagesDigest": "zdCuVAq+fOMpKpheE0fxstVQBAZhjeaUR4HYAk5yJno=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -7986,7 +7987,7 @@
     },
     "@@rules_rust+//rust/private:internal_extensions.bzl%i": {
       "general": {
-        "bzlTransitiveDigest": "Qw8DfxMDTYzVgSc6rH4C25GK/Pd8TrP+7V9H+58SBxc=",
+        "bzlTransitiveDigest": "DPfxvX70w8ifC0qweS/4YigbXRsujE7gnUTNIlLkMaI=",
         "usagesDigest": "8daAc/SRar7Mu8+uVH3y5t7CY0RsiqVBIznBuEjXJ4w=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
