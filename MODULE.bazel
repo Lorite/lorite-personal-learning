@@ -200,7 +200,7 @@ rust.toolchain(
 
 # Protobuf
 
-bazel_dep(name = "rules_buf", version = "0.3.0")
+bazel_dep(name = "rules_buf", version = "0.4.0")
 
 buf = use_extension("@rules_buf//buf:extensions.bzl", "buf")
 
