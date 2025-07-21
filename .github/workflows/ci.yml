@@ -60,7 +60,7 @@ jobs:
         run: bazel test //... -- -//tools/... # Exclude tools from testing
       - name: Commit the formatting changes # always try to commit the formatting changes because bazel build can also modify
         if: always() && ${{ github.ref != 'refs/heads/master' }}
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "Apply formatting from rules_lint"
           commit_user_name: code-formatter-bot[bot]
