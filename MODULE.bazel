@@ -172,7 +172,7 @@ bazel_dep(name = "rules_jvm_external", version = "6.6")
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
-        "org.junit.jupiter:junit-jupiter-engine:5.11.4",
+        "org.junit.jupiter:junit-jupiter-engine:5.13.4",
         "org.scalameta:scalafmt-cli_2.13:3.8.4",
     ],
     fetch_sources = True,
