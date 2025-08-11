@@ -40,7 +40,7 @@ use_repo(rules_ts_ext, "npm_typescript")
 
 # JavaScript
 
-bazel_dep(name = "aspect_rules_js", version = "2.1.2")  # JavaScript rules required for linting and formatting
+bazel_dep(name = "aspect_rules_js", version = "2.4.2")  # JavaScript rules required for linting and formatting
 
 npm = use_extension("@aspect_rules_js//npm:extensions.bzl", "npm")
 npm.npm_translate_lock(
