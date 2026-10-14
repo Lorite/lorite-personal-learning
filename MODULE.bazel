@@ -28,6 +28,13 @@ bazel_dep(name = "buildifier_prebuilt", version = "10.1.0")
 
 # ----------------------------------------
 
+# Rule sets for the rules that Bazel 9 no longer ships natively (cc_*, sh_*). Every BUILD file loads its rules.
+
+bazel_dep(name = "rules_cc", version = "0.2.26")
+bazel_dep(name = "rules_shell", version = "0.8.0")
+
+# ----------------------------------------
+
 # TypeScript
 
 bazel_dep(name = "aspect_rules_ts", version = "3.10.1")
