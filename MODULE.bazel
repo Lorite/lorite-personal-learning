@@ -81,6 +81,11 @@ use_repo(bazel_test_project_csharp_example_deps, "paket.bazel_test_project_cshar
 
 bazel_dep(name = "rules_python", version = "2.4.2")
 
+# Our Python targets list their __init__.py files explicitly. Implicit creation is deprecated and becomes
+# opt-in in a future rules_python release (https://github.com/bazel-contrib/rules_python/issues/2945).
+rules_python_config = use_extension("@rules_python//python/extensions:config.bzl", "config")
+rules_python_config.explicit_init_py(default = True)
+
 python_version = "3.13"
 
 python = use_extension("@rules_python//python/extensions:python.bzl", "python")
