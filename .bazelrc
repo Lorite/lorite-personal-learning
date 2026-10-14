@@ -20,6 +20,11 @@ build --per_file_copt=-third_party/.*,-external/.*@-Werror # Enable -Werror for 
 build --per_file_copt=third_party/.*,external/.*@-Wno-error # NOTE: Explicitly disable -Werror because the `-external/.*` filter does not work.
 run --verbose_failures
 
+# Java - run Java targets on a hermetic JDK 21 that Bazel downloads, instead of the machine's local JDK.
+# CI runners ship Java 11, the dev container Java 23, and JUnit 6 needs at least Java 17.
+common --java_runtime_version=remotejdk_21
+common --tool_java_runtime_version=remotejdk_21
+
 startup --host_jvm_args=-DBAZEL_TRACK_SOURCE_DIRECTORIES=1
 
 test --build_tests_only

@@ -1,13 +1,13 @@
 package examples.bazel_test_project_java;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class TestHelloJava {
+class TestHelloJava {
 
   @Test
-  public void testCanGreet() throws Exception {
+  void testCanGreet() {
     HelloJava helloJava = new HelloJava("Hello, Java!");
     assertDoesNotThrow(
         () -> {
