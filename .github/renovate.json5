@@ -39,9 +39,16 @@
     },
     {
       // Platform majors are deliberate migrations, not routine updates: the Bazel major (9.x broke .bazelrc
-      // flags), the CI runner image and the Bazel Python toolchain version. Minor and patch updates still flow.
-      matchDepNames: ["bazel", "ubuntu", "python"],
+      // flags) and the CI runner image. Minor and patch updates still flow.
+      matchDepNames: ["bazel", "ubuntu"],
       matchUpdateTypes: ["major"],
+      enabled: false,
+    },
+    {
+      // The Python version is a deliberate migration too, but Renovate counts 3.13 -> 3.15 as a minor update,
+      // so a "major" rule never matched it, and the "pin" range strategy turned requires-python "==3.13.*" into
+      // a single patch release. Renovate leaves the Python version alone.
+      matchDepNames: ["python"],
       enabled: false,
     },
   ],
