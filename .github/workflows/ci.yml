@@ -29,7 +29,7 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}
       # Checks-out your repository under $GITHUB_WORKSPACE, which is the CWD for
       # the rest of the steps
-      - uses: actions/checkout@v4.4.0
+      - uses: actions/checkout@v7.0.1
         # If I need to run the pipeline again after a step pushes a new commit, uncomment the following lines
         # with:
         #   token: ${{ secrets.CODE_FORMATTER_BOT_CONTENTS_TOKEN }}
