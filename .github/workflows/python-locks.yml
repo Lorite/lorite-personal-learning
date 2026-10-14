@@ -22,7 +22,7 @@ jobs:
             ~/.cache/bazelisk
             ~/.cache/bazel
           key: ${{ runner.os }}-${{ env.cache-name }}
-      - uses: actions/checkout@v4.4.0
+      - uses: actions/checkout@v7.0.1
       - name: Upgrade every Python lock file
         run: |
           for target in $(bazel query 'attr(name, "^requirements[.]update$", //...)'); do
