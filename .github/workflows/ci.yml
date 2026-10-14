@@ -17,11 +17,6 @@ jobs:
           sudo rm -rf /opt/ghc
           sudo rm -rf "/usr/local/share/boost"
           sudo rm -rf "$AGENT_TOOLSDIRECTORY"
-      # Installs missing package for the default C++ clangd toolchain for Bazel
-      - uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: libtinfo5
-          version: 1.0
       # Caches and restores the bazelisk download directory, the bazel build directory.
       - name: Cache bazel
         uses: actions/cache@v4.2.3

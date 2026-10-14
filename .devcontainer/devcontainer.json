@@ -21,7 +21,12 @@
       "installGroovy": false
     },
     "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/va-h/devcontainers-features/uv:1": {} // uv, Python package and project manager, used by src/courses-free/probabilistic_robotics
+    "ghcr.io/va-h/devcontainers-features/uv:1": {}, // uv, Python package and project manager, used by src/courses-free/probabilistic_robotics
+    "ghcr.io/devcontainers/features/python:1": {
+      // The distribution's python3 only. Bazel's own helper scripts (rules_python console-script generator, bazel_latex latexrun, rules_lint format.bash) start with "#!/usr/bin/env python3" and fail with exit 127 without it. Project code uses the Bazel-managed interpreter or uv.
+      "version": "os-provided",
+      "installTools": false
+    }
   },
   "customizations": {
     "vscode": {
