@@ -29,7 +29,7 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}
       # Checks-out your repository under $GITHUB_WORKSPACE, which is the CWD for
       # the rest of the steps
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.4.0
         # If I need to run the pipeline again after a step pushes a new commit, uncomment the following lines
         # with:
         #   token: ${{ secrets.CODE_FORMATTER_BOT_CONTENTS_TOKEN }}
@@ -55,7 +55,7 @@ jobs:
         run: bazel test //... -- -//tools/... # Exclude tools from testing
       - name: Commit the formatting changes # always try to commit the formatting changes because bazel build can also modify
         if: always() && ${{ github.ref != 'refs/heads/master' }}
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v6.0.1
         with:
           commit_message: "Apply formatting from rules_lint"
           commit_user_name: code-formatter-bot[bot]
