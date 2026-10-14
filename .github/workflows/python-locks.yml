@@ -1,0 +1,47 @@
+name: Python lock files
+# Weekly maintenance of the pip-compile lock files (requirements.txt) that rules_python's compile_pip_requirements
+# generates. Renovate cannot do it (the lock header command is "bazel run ... :requirements.update"), so this job
+# upgrades every lock file and opens one pull request with auto-merge. CI then verifies it like any other pull request.
+on:
+  schedule:
+    - cron: "17 5 * * 1" # Mondays 05:17 UTC
+  workflow_dispatch:
+jobs:
+  upgrade_python_locks:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Cache bazel
+        uses: actions/cache@v4.2.3
+        env:
+          cache-name: bazel-cache
+        with:
+          path: |
+            ~/.cache/bazelisk
+            ~/.cache/bazel
+          key: ${{ runner.os }}-${{ env.cache-name }}
+      - uses: actions/checkout@v4
+      - name: Upgrade every Python lock file
+        run: |
+          for target in $(bazel query 'attr(name, "^requirements[.]update$", //...)'); do
+            bazel run "$target" -- --upgrade
+          done
+      - name: Verify the lock files and the tests that use them
+        run: bazel test //... -- -//tools/...
+      - name: Open the pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.CODE_FORMATTER_BOT_CONTENTS_TOKEN }} # a PAT, so CI runs on the pull request (GITHUB_TOKEN would not trigger it)
+          branch: chore/python-lock-maintenance
+          commit-message: "chore(deps): upgrade the Python lock files"
+          title: "chore(deps): upgrade the Python lock files"
+          body: "Weekly pip-compile --upgrade of every requirements.txt through the Bazel update targets, verified by the full test suite in this workflow. CI verifies it again on the pull request."
+          delete-branch: true
+      - name: Enable auto-merge
+        if: steps.cpr.outputs.pull-request-number != ''
+        run: gh pr merge --auto --squash "${{ steps.cpr.outputs.pull-request-number }}"
+        env:
+          GH_TOKEN: ${{ secrets.CODE_FORMATTER_BOT_CONTENTS_TOKEN }}
