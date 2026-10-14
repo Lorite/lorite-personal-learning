@@ -26,8 +26,10 @@ if [[ ! -d "${RUNFILES_DIR:-/dev/null}" && ! -f "${RUNFILES_MANIFEST_FILE:-/dev/
 	fi
 fi
 if [[ -f "${RUNFILES_DIR:-/dev/null}/bazel_tools/tools/bash/runfiles/runfiles.bash" ]]; then
+	# shellcheck source=/dev/null # resolved through the Bazel runfiles at run time
 	source "${RUNFILES_DIR}/bazel_tools/tools/bash/runfiles/runfiles.bash"
 elif [[ -f "${RUNFILES_MANIFEST_FILE:-/dev/null}" ]]; then
+	# shellcheck source=/dev/null # resolved through the Bazel runfiles at run time
 	source "$(grep -m1 "^bazel_tools/tools/bash/runfiles/runfiles.bash " \
 		"$RUNFILES_MANIFEST_FILE" | cut -d ' ' -f 2-)"
 else
@@ -36,6 +38,7 @@ else
 fi
 # --- end runfiles.bash initialization ---
 
-source "$(rlocation io_bazel/examples/shell/lib.sh)"
+# shellcheck source=/dev/null # resolved through the Bazel runfiles at run time
+source "$(rlocation _main/src/examples/bazel-test-project-shell/lib.sh)"
 
 showfile

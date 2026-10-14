@@ -1,8 +1,9 @@
+import os
+from io import BytesIO
+
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image
-from io import BytesIO
-import os
 
 
 class MiroTemplate:
@@ -47,9 +48,9 @@ def get_miro_templates(url: str) -> list[MiroTemplate]:
 
 
 def save_miro_templates(templates: list[MiroTemplate], file_path: str):
-    images_path = file_path.replace(".txt", "") + "/images"
+    images_path = os.path.join(os.path.dirname(file_path), "images")
+    os.makedirs(images_path, exist_ok=True)
     with open(file_path, "w") as file:
-        os.makedirs(images_path)
         for template in templates:
             # save title and description to a file
             file.write(f"## {template.name}\n")
@@ -59,15 +60,17 @@ def save_miro_templates(templates: list[MiroTemplate], file_path: str):
             # save image to folder
             response = requests.get(template.image)
             img = Image.open(BytesIO(response.content))
-            image = img.save(f"{images_path}/{template.name}.png")
+            img.save(f"{images_path}/{template.name}.png")
 
 
 def main():
     miro_templates = get_miro_templates("https://miro.com/templates/agile/")
     for miro_template in miro_templates:
         print(miro_template)
+    # "bazel run" starts in the runfiles tree, so write next to where the user called it from.
+    output_dir = os.environ.get("BUILD_WORKING_DIRECTORY", ".")
     save_miro_templates(
-        miro_templates, file_path.replace(".txt", "") + "/miro_templates.txt"
+        miro_templates, os.path.join(output_dir, "miro_templates", "miro_templates.txt")
     )
 
 

@@ -1,0 +1,3 @@
+# Ruff uses its default rule set. src/subrepos holds verbatim copies of upstream repositories (git subrepo),
+# which follow their own lint rules, so we do not lint them here.
+extend-exclude = ["src/subrepos"]

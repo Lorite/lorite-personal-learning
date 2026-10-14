@@ -67,6 +67,8 @@ jobs:
       # test
       - name: Test the code
         run: bazel test //... -- -//tools/... # Exclude tools from testing
+      - name: Run the linters # every lint aspect, fails on any finding (fail_on_violation in .bazelrc)
+        run: tools/lint/scripts/aspect_lint.sh //...
       - name: Commit the formatting and lock file changes # always try, because bazel build can also modify files
         if: always() && github.event_name == 'pull_request' # main only accepts pull requests (ruleset), so there is nothing to push on a main build
         uses: stefanzweifel/git-auto-commit-action@v7.2.0
