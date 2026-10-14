@@ -25,13 +25,18 @@ py_console_script_binary(
     pkg = "@pip//flake8:pkg",
 )
 
-eslint_bin.eslint_binary(name = "eslint")
+# ESLint 10 no longer depends on chalk, but the rules_lint stylish formatter still loads it from ESLint's
+# location, so chalk is a root dev dependency and part of the binary's runfiles.
+eslint_bin.eslint_binary(
+    name = "eslint",
+    data = ["//:node_modules/chalk"],
+)
 
 stylelint_bin.stylelint_binary(name = "stylelint")
 
 java_binary(
     name = "pmd",
-    main_class = "net.sourceforge.pmd.PMD",
+    main_class = "net.sourceforge.pmd.cli.PmdCli",  # PMD 7 command line (rules_lint 2 calls "pmd check")
     runtime_deps = ["@net_sourceforge_pmd"],
 )
 

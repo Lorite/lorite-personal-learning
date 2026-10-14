@@ -81,7 +81,7 @@ vale = lint_vale_aspect(
 )
 
 ktlint = lint_ktlint_aspect(
-    binary = "@@com_github_pinterest_ktlint//file",
+    binary = Label("@com_github_pinterest_ktlint//file"),  # Label() resolves the MODULE.bazel repository name from this module
     editorconfig = "@@//:.editorconfig",
     baseline_file = "@@//:ktlint-baseline.xml",
 )
