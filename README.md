@@ -199,6 +199,10 @@ The open source courses can be found in the [courses-free](src/courses-free) fol
   [![Bazel][Bazel-build]][Bazel-url]
   [![GitHub-actions][GitHub-actions]][GitHub-actions-url]
 
+- **Probabilistic Robotics, hands-on**: Companion notebooks for the book Probabilistic Robotics (Thrun, Burgard, Fox). Run the filters, SLAM and mapping algorithms of PythonRobotics and the rlabbe notebooks first, then read the chapter with the questions the code produced. Plain Python with uv, no ROS. [src/courses-free/probabilistic_robotics](src/courses-free/probabilistic_robotics)
+
+  [![Python][Python]][Python-url]
+
 There is also a [courses-licensed](src/courses-licensed) folder with licensed courses but the code is not included.
 
 #### Examples

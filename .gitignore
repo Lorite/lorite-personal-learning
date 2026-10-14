@@ -346,3 +346,7 @@ _NCrunch*
 # VS Code launch and tasks
 !/.vscode/launch.json
 !/.vscode/tasks.json
+
+# Probabilistic Robotics course: read-only external clones and the uv environment
+src/courses-free/probabilistic_robotics/_external/
+src/courses-free/probabilistic_robotics/.venv/
