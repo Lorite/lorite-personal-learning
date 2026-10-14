@@ -32,9 +32,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, which is the CWD for
       # the rest of the steps
       - uses: actions/checkout@v7.0.1
-        # If I need to run the pipeline again after a step pushes a new commit, uncomment the following lines
-        # with:
-        #   token: ${{ secrets.CODE_FORMATTER_BOT_CONTENTS_TOKEN }}
+        # The auto-commit step pushes with this token. A push with the default GITHUB_TOKEN starts no normal CI
+        # run (GitHub holds it as "action_required"), so the required check never ran on the bot's commit and
+        # the pull request stayed blocked (Renovate's #252 on 2026-10-14). The PAT push starts CI again.
+        with:
+          token: ${{ secrets.CODE_FORMATTER_BOT_CONTENTS_TOKEN }}
       # format
       - name: Test if the files are correctly formatted
         id: testFormat
