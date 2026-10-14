@@ -14,7 +14,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Cache bazel
-        uses: actions/cache@v4.2.3
+        uses: actions/cache@v6.1.0
         env:
           cache-name: bazel-cache
         with:
