@@ -33,6 +33,13 @@
     }
   ],
   "platformAutomerge": true,
+  // The CI formatter bot commits on Renovate branches (formatting, regenerated Python lock files). Without this,
+  // Renovate treats every such branch as edited by a human and stops updating it (9 pull requests were stuck that way).
+  "gitIgnoredAuthors": ["code-formatter-bot[bot]@users.noreply.github.com"],
+  // The requirements.txt files are pip-compile outputs that Bazel regenerates (bazel run <pkg>:requirements.update -- --upgrade)
+  // and verifies (<pkg>:requirements_test). A single-line edit by Renovate never matches a fresh compile, so every pip pull
+  // request failed CI. The weekly python-locks workflow regenerates them instead.
+  "pip_requirements": { "enabled": false },
   "ignorePaths": [
     "**/node_modules/**",
     "**/bower_components/**",

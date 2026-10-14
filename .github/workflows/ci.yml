@@ -47,17 +47,29 @@ jobs:
         id: testFormatAfterApply
         if: always() && steps.testFormat.outcome == 'failure' && steps.applyFormat.outcome == 'success'
         run: bazel test //tools/format/...
+      # Python lock files (pip-compile outputs of rules_python's compile_pip_requirements)
+      - name: Test if the Python lock files are up to date
+        id: testLocks
+        run: bazel test $(bazel query 'attr(name, "^requirements_test$", //...)' | tr '\n' ' ')
+        continue-on-error: true
+      - name: Recompile the Python lock files if the test fails
+        id: updateLocks
+        if: always() && steps.testLocks.outcome == 'failure'
+        run: |
+          for target in $(bazel query 'attr(name, "^requirements[.]update$", //...)'); do
+            bazel run "$target"
+          done
       # build
       - name: Build the code
         run: bazel build //...
       # test
       - name: Test the code
         run: bazel test //... -- -//tools/... # Exclude tools from testing
-      - name: Commit the formatting changes # always try to commit the formatting changes because bazel build can also modify
-        if: always() && ${{ github.ref != 'refs/heads/master' }}
+      - name: Commit the formatting and lock file changes # always try, because bazel build can also modify files
+        if: always() && github.event_name == 'pull_request' # main only accepts pull requests (ruleset), so there is nothing to push on a main build
         uses: stefanzweifel/git-auto-commit-action@v6
         with:
-          commit_message: "Apply formatting from rules_lint"
+          commit_message: "Apply formatting and regenerated lock files from CI"
           commit_user_name: code-formatter-bot[bot]
           commit_user_email: code-formatter-bot[bot]@users.noreply.github.com
           commit_author: code-formatter-bot[bot] <code-formatter-bot[bot]@users.noreply.github.com>
