@@ -21,8 +21,8 @@ module(
 
 # Linting and Formatting
 
-bazel_dep(name = "aspect_bazel_lib", version = "2.20.0")  # Bazel library for common tasks required for linting and formatting
-bazel_dep(name = "aspect_rules_lint", version = "1.0.8")  # linting and formatting
+bazel_dep(name = "aspect_bazel_lib", version = "2.22.5")  # Bazel library for common tasks required for linting and formatting
+bazel_dep(name = "aspect_rules_lint", version = "2.9.1")  # linting and formatting
 bazel_dep(name = "bazel_skylib", version = "1.8.1")  # Bazel Skylib required for linting and formatting
 bazel_dep(name = "buildifier_prebuilt", version = "8.0.0")
 
@@ -276,8 +276,27 @@ http_jar(
     url = "https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.17.0/checkstyle-10.17.0-all.jar",
 )
 
-# fetch_vale = use_repo_rule("@aspect_rules_lint//lint:vale.bzl", "fetch_vale")
-# fetch_vale()
+# vale (prose linter) and its styles: rules_lint 2 fetches them through its "tools" module extension
+# (rules_lint 1 created the vale_* repositories implicitly). Styles must match the Packages line of .vale.ini.
+lint_tools = use_extension("@aspect_rules_lint//lint:extensions.bzl", "tools")
+lint_tools.vale()
+lint_tools.vale_styles(styles = [
+    "Google",
+    "proselint",
+    "write-good",
+])
+use_repo(
+    lint_tools,
+    "vale_Google",
+    "vale_Linux_64-bit",
+    "vale_Linux_arm64",
+    "vale_Windows_64-bit",
+    "vale_macOS_64-bit",
+    "vale_macOS_arm64",
+    "vale_proselint",
+    "vale_write-good",
+)
+
 http_file(
     name = "com_github_pinterest_ktlint",
     executable = True,

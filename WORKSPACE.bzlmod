@@ -1,8 +1,0 @@
-# Support repos that aren't on bazel central registry
-# Needed until Bazel 7 allows MODULE.bazel to directly call repository rules
-# This is comming from aspect-build/rules_lint
-
-# Linting and formatting
-
-load("@aspect_rules_lint//lint:vale.bzl", "fetch_vale")
-fetch_vale()
