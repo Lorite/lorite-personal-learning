@@ -164,6 +164,7 @@ Some of the tools and languages included in the dev container are:
   - **Open source**: Bazel is open source and maintained by a growing community of contributors.
 - [LLDB](https://lldb.llvm.org/) for debugging. This extension is used along with VS Code [launch profiles](.vscode/launch.json) and [tasks](.vscode/tasks.json) that are already set up in this repo. You can try pressing <kbd>F5</kbd> on any editor-opened code file. You may need to modify the location of the output file in the [launch profiles](.vscode/launch.json) manually for now.
 - [zsh + powerlevel10k + plugins](https://www.zsh.org/) for a better terminal experience.
+- [uv](https://docs.astral.sh/uv/) for the plain Python courses outside Bazel, such as [Probabilistic Robotics, hands-on](src/courses-free/probabilistic_robotics), with Jupyter on the forwarded port 8888.
 - [Many VS Code extensions](https://code.visualstudio.com/docs/editor/extension-gallery). See [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) for the full list. You can also check the section [VS Code extensions](#vs-code-extensions) for more information.
 - [LaTeX](https://www.latex-project.org/) for writing documents.
 - [C++](https://www.cplusplus.com/) with [LLVM](https://llvm.org/) tools: [clangd](https://clangd.llvm.org/) with clang-format and clang-tidy when saving files.

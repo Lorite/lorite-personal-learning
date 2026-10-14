@@ -9,6 +9,8 @@ Companion notebooks for the book *Probabilistic Robotics* (Sebastian Thrun, Wolf
 uv run jupyter lab  # opens the notebooks, Python 3.13 environment managed by uv
 ```
 
+Inside the repository's dev container, uv comes from the `uv` dev container feature and port 8888 is forwarded, so the same two commands work there (open the notebooks in VS Code with the Jupyter extension, or in the browser through the forwarded port). When you switch between the host and the container, run `uv sync` again, because the `.venv` folder is bound to the path it was created at.
+
 The external repositories are read-only references. They are not vendored because of their size and their different licenses, see `setup.sh` for the exact commits and the license of each.
 
 - [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) (Atsushi Sakai, MIT): one readable script per algorithm, localization, mapping and SLAM, with the book as its reference.
