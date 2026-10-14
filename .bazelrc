@@ -4,7 +4,6 @@ common --incompatible_disallow_empty_glob=false # Introduced in Bazel 8.0.0 http
 
 build --@aspect_rules_lint//lint:fail_on_violation # fail if linting fails
 build --keep_going # continue building after a failure. It goes well with linting errors and CI
-build --experimental_remote_merkle_tree_cache
 build --experimental_reuse_sandbox_directories
 build --heap_dump_on_oom 
 build --modify_execution_info=PackageTar=+no-remote
