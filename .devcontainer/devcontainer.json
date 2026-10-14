@@ -1,6 +1,6 @@
 {
   "name": "Lorite Container",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu", // Any generic, debian-based image.
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04", // Any generic, debian-based image. Pinned to the LTS: the floating "ubuntu" tag moved to 26.04 (resolute) in 2026-10, where the docker-in-docker feature cannot install moby.
   "features": {
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
       "plugins": "git zsh-autosuggestions zsh-syntax-highlighting",
@@ -20,13 +20,21 @@
       "installAnt": false,
       "installGroovy": false
     },
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/va-h/devcontainers-features/uv:1": {}, // uv, Python package and project manager, used by src/courses-free/probabilistic_robotics
+    "ghcr.io/devcontainers/features/python:1": {
+      // The distribution's python3 only. Bazel's own helper scripts (rules_python console-script generator, bazel_latex latexrun, rules_lint format.bash) start with "#!/usr/bin/env python3" and fail with exit 127 without it. Project code uses the Bazel-managed interpreter or uv.
+      "version": "os-provided",
+      "installTools": false
+    }
   },
   "customizations": {
     "vscode": {
       // TODO: check which vscode extensions we should include in the container
       "extensions": [
         "github.vscode-github-actions",
+        "ms-python.python", // Python language support, used by the Jupyter notebooks of the Probabilistic Robotics course
+        "ms-toolsai.jupyter", // run .ipynb notebooks inside VS Code
         // "ms-azuretools.vscode-docker", // installed by feature ghcr.io/devcontainers/features/docker-in-docker:2
         "eamodio.gitlens",
         // "ms-python.python",  # installed by feature ghcr.io/devcontainers/features/python:1
@@ -94,7 +102,7 @@
     }
   },
 
-  "forwardPorts": [],
+  "forwardPorts": [8888], // JupyterLab of src/courses-free/probabilistic_robotics (uv run jupyter lab)
   "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
   "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
   "remoteUser": "vscode",
