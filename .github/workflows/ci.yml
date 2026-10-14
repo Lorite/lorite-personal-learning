@@ -10,6 +10,8 @@ jobs:
   build_test_and_format:
     # virtual environments: https://github.com/actions/virtual-environments
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write # the auto-commit step pushes formatting and regenerated lock files to the pull request branch
     steps:
       - name: Remove unnecessary files
         run: |
@@ -29,7 +31,7 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}
       # Checks-out your repository under $GITHUB_WORKSPACE, which is the CWD for
       # the rest of the steps
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.4.0
         # If I need to run the pipeline again after a step pushes a new commit, uncomment the following lines
         # with:
         #   token: ${{ secrets.CODE_FORMATTER_BOT_CONTENTS_TOKEN }}
@@ -67,7 +69,7 @@ jobs:
         run: bazel test //... -- -//tools/... # Exclude tools from testing
       - name: Commit the formatting and lock file changes # always try, because bazel build can also modify files
         if: always() && github.event_name == 'pull_request' # main only accepts pull requests (ruleset), so there is nothing to push on a main build
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v6.0.1
         with:
           commit_message: "Apply formatting and regenerated lock files from CI"
           commit_user_name: code-formatter-bot[bot]
