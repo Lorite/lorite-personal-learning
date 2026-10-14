@@ -26,14 +26,15 @@ C++ is a general-purpose programming language created by Bjarne Stroustrup as an
 - precise memory control down to individual bits.
 
 C++ is standardized by the International Organization for Standardization (ISO). The latest version of the standard is C++23. This is a summary of the changes:
-| Standard | Year | info |
-| ------------- | ------------- | ------------- |
-| C++98 | 1998 | the original standard |
-| C++11 | 2011 | almost a new language |
-| C++14 | 2014 | some improvements |
-| C++17 | 2017 | new features & library extensions |
-| C++20 | 2020 | game-changing new features & libraries |
-| C++23 | 2023 | new features & library extensions |
+
+| Standard | Year | info                                   |
+| -------- | ---- | -------------------------------------- |
+| C++98    | 1998 | the original standard                  |
+| C++11    | 2011 | almost a new language                  |
+| C++14    | 2014 | some improvements                      |
+| C++17    | 2017 | new features & library extensions      |
+| C++20    | 2020 | game-changing new features & libraries |
+| C++23    | 2023 | new features & library extensions      |
 
 ## C++ when to use and when not to use
 
