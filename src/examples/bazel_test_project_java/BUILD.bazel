@@ -10,14 +10,26 @@ java_binary(
     deps = [":helloJava"],
 )
 
+# JUnit 6 (Jupiter) test. Bazel's built-in test runner only knows JUnit 4, so the JUnit Platform console
+# launcher runs the test instead. Its exit code tells Bazel whether the test passed.
 java_test(
     name = "testHelloJava",
-    srcs = glob(["src/test/java/TestHelloJava.java"]),
-    test_class = "examples.bazel_test_project_java.TestHelloJava",
+    size = "small",
+    srcs = ["src/test/java/TestHelloJava.java"],
+    args = [
+        "execute",
+        "--select-class=examples.bazel_test_project_java.TestHelloJava",
+        "--fail-if-no-tests",
+        "--disable-banner",
+    ],
+    main_class = "org.junit.platform.console.ConsoleLauncher",
+    use_testrunner = False,
+    runtime_deps = [
+        "@maven//:org_junit_jupiter_junit_jupiter_engine",
+        "@maven//:org_junit_platform_junit_platform_console_standalone",
+    ],
     deps = [
         ":helloJava",
-        "@maven//:com_google_guava_guava",
         "@maven//:org_junit_jupiter_junit_jupiter_api",
-        "@maven//:org_junit_jupiter_junit_jupiter_engine",
     ],
 )
