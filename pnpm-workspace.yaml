@@ -1,0 +1,3 @@
+# pnpm settings (pnpm 10 reads them here). rules_js 3 refuses a lockfile without an explicit allowBuilds list: packages that may run
+# lifecycle scripts (install, postinstall) must be named here. None of the dev tooling in package.json needs one, so the list is empty.
+allowBuilds: {}
