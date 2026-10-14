@@ -30,6 +30,19 @@
     {
       "matchDepTypes": ["devDependencies"],
       "automerge": true
+    },
+    {
+      // One pull request for all Bazel module updates: every MODULE.bazel change rewrites MODULE.bazel.lock,
+      // so separate PRs conflict with each other after the first merge (24 stale PRs on 2026-10-14).
+      "matchManagers": ["bazel-module"],
+      "groupName": "bazel modules"
+    },
+    {
+      // Platform majors are deliberate migrations, not routine updates: the Bazel major (9.x broke .bazelrc
+      // flags), the CI runner image and the Bazel Python toolchain version. Minor and patch updates still flow.
+      "matchDepNames": ["bazel", "ubuntu", "python"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
     }
   ],
   "platformAutomerge": true,
