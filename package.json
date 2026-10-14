@@ -1,18 +1,18 @@
 {
   "dependencies": {
-    "dayjs": "1.11.13",
+    "dayjs": "1.11.23",
     "micromatch": "4.0.8",
     "moment": "2.31.0"
   },
   "devDependencies": {
     "@eslint/js": "9.18.0",
-    "@types/node": "22.10.5",
+    "@types/node": "22.20.5",
     "eslint": "9.18.0",
     "prettier": "3.4.2",
-    "prettier-plugin-sql": "0.18.1",
+    "prettier-plugin-sql": "0.20.0",
     "stylelint": "16.13.2",
     "stylelint-config-standard": "37.0.0",
-    "typescript": "5.7.3",
+    "typescript": "7.0.2",
     "typescript-eslint": "8.20.0"
   }
 }
