@@ -10,6 +10,6 @@ TEST(TypesOperationsTest, TimeInMicrosecondsToSecondsAndNanoseconds) {
                                                 // because they are doubles
 
   // Assert
-  EXPECT_EQ(time_in_seconds, 123);
-  EXPECT_EQ(time_in_nanoseconds, 456789000);
+  EXPECT_EQ(time_in_seconds, 123U);
+  EXPECT_EQ(time_in_nanoseconds, 456789000U);
 }

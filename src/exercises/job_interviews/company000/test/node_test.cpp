@@ -18,7 +18,7 @@ class NodeTestFixture : public ::testing::Test {
 TEST_F(NodeTestFixture, NodeCanBeCreatedWithAValue) {
   ASSERT_NE(node.get(), nullptr);
   ASSERT_EQ(node->get_value(), 33);
-  ASSERT_EQ(node->get_children().size(), 0);
+  ASSERT_EQ(node->get_children().size(), 0U);
 }
 
 TEST_F(NodeTestFixture, NodeCanBePrinted) {
@@ -36,7 +36,7 @@ TEST_F(NodeTestFixture, NodeCanBeAddedChildren) {
   node->add_child(child1);
   node->add_child(child2);
   ASSERT_EQ(node->get_value(), 33);
-  ASSERT_EQ(node->get_children().size(), 2);
+  ASSERT_EQ(node->get_children().size(), 2U);
   ASSERT_EQ(node->get_children().at(0)->get_value(), 44);
   ASSERT_EQ(node->get_children().at(1)->get_value(), 55);
 }

@@ -51,7 +51,7 @@ cc_test(
     deps = [
         ":hello-lib",
         "@glog",
-        "@googletest//:gtest_main",
+        "@googletest//:gtest",  # the test defines its own main(),
     ],
 )
 
