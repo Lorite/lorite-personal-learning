@@ -5,51 +5,51 @@
 // (1) Make updates for a dependency fully automated. Whitelist it at <TAG0>
 // (2) Add CI. Remove "requiredStatusChecks", below.
 // (3) Customize Renovate behavior further.
-  // For docs, see: https://docs.renovatebot.com/configuration-options/
-  // To debug, it can be helpful to looks at Renovate's runs/logs: https://developer.mend.io/[platform]/hedronvision/bazel-cc-filesystem-backport
-  // This file is .json5, so we can have helpful comments, like this one :) [Normal JSON, Renovate's default, has no comments.]
+// For docs, see: https://docs.renovatebot.com/configuration-options/
+// To debug, it can be helpful to looks at Renovate's runs/logs: https://developer.mend.io/[platform]/hedronvision/bazel-cc-filesystem-backport
+// This file is .json5, so we can have helpful comments, like this one :) [Normal JSON, Renovate's default, has no comments.]
 // (4) Learn about what's going on here and what Renovate can do. Read on :)
 // If you need more help, contact @cpsauer.
 
 {
-  "assignees": ["Lorite"],
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "enabled": true,
-  "labels": ["type:dependencies"],
-  "prConcurrentLimit": 0,
-  "prHourlyLimit": 1,
-  "rangeStrategy": "pin",
-  "dependencyDashboard": true,
-  "dependencyDashboardHeader": "Organization members: Check Renovate logs here: https://developer.mend.io/github/Lorite/lorite-personal-learning",
-  "packageRules": [
+  assignees: ["Lorite"],
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["config:recommended"],
+  enabled: true,
+  labels: ["type:dependencies"],
+  prConcurrentLimit: 0,
+  prHourlyLimit: 1,
+  rangeStrategy: "pin",
+  dependencyDashboard: true,
+  dependencyDashboardHeader: "Organization members: Check Renovate logs here: https://developer.mend.io/github/Lorite/lorite-personal-learning",
+  packageRules: [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      matchUpdateTypes: ["minor", "patch", "pin", "digest"],
+      automerge: true,
     },
     {
-      "matchDepTypes": ["devDependencies"],
-      "automerge": true
+      matchDepTypes: ["devDependencies"],
+      automerge: true,
     },
     {
       // One pull request for all Bazel module updates: every MODULE.bazel change rewrites MODULE.bazel.lock,
       // so separate PRs conflict with each other after the first merge (24 stale PRs on 2026-10-14).
-      "matchManagers": ["bazel-module"],
-      "groupName": "bazel modules"
+      matchManagers: ["bazel-module"],
+      groupName: "bazel modules",
     },
     {
       // Platform majors are deliberate migrations, not routine updates: the Bazel major (9.x broke .bazelrc
       // flags), the CI runner image and the Bazel Python toolchain version. Minor and patch updates still flow.
-      "matchDepNames": ["bazel", "ubuntu", "python"],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
-    }
+      matchDepNames: ["bazel", "ubuntu", "python"],
+      matchUpdateTypes: ["major"],
+      enabled: false,
+    },
   ],
-  "platformAutomerge": true,
-  "ignorePaths": [
+  platformAutomerge: true,
+  ignorePaths: [
     "**/node_modules/**",
     "**/bower_components/**",
     "src/subrepos/**",
-    "tools/git/git-subrepo/**"
-  ]
+    "tools/git/git-subrepo/**",
+  ],
 }

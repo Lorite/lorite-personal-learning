@@ -1,8 +1,8 @@
 {
   "folders": [
     {
-      "path": "."
-    }
+      "path": ".",
+    },
   ],
   "settings": {
     "C_Cpp.intelliSenseEngine": "disabled",
@@ -14,20 +14,20 @@
     "githubIssues.queries": [
       {
         "label": "My Issues",
-        "query": "default"
+        "query": "default",
       },
       {
         "label": "Created Issues",
-        "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc",
       },
       {
         "label": "Recent Issues",
-        "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        "query": "state:open repo:${owner}/${repository} sort:updated-desc",
       },
       {
         "label": "Closed Issues",
-        "query": "state:closed repo:${owner}/${repository} sort:updated-desc"
-      }
+        "query": "state:closed repo:${owner}/${repository} sort:updated-desc",
+      },
     ],
     "githubIssues.issueBranchTitle": "${user}/issue${issueNumber}/${sanitizedIssueTitle}",
     "githubPullRequests.notifications": "pullRequests",
@@ -37,27 +37,27 @@
     "bazel.enableCodeLens": true,
     "bazel.commandLine.queryExpression": "src/...:*",
     "search.exclude": {
-      "external/**": true
+      "external/**": true,
     },
     "[python]": {
       "editor.formatOnSave": true,
       "editor.insertSpaces": true,
-      "editor.tabSize": 4
+      "editor.tabSize": 4,
     },
     "[cpp]": {
       "editor.formatOnSave": true,
       "editor.insertSpaces": false,
-      "editor.trimAutoWhitespace": false
+      "editor.trimAutoWhitespace": false,
     },
     "[c]": {
       "editor.formatOnSave": true,
       "editor.insertSpaces": false,
-      "editor.trimAutoWhitespace": false
+      "editor.trimAutoWhitespace": false,
     },
     "[rust]": {
       "editor.formatOnSave": true,
       "editor.insertSpaces": true,
-      "editor.trimAutoWhitespace": true
+      "editor.trimAutoWhitespace": true,
     },
     "[restructuredtext]": {
       "editor.wordWrap": "wordWrapColumn",
@@ -66,10 +66,10 @@
       "editor.tabSize": 4,
       "editor.insertSpaces": true,
       "editor.formatOnSave": true,
-      "editor.trimAutoWhitespace": true
+      "editor.trimAutoWhitespace": true,
     },
     "[starlark]": {
-      "editor.formatOnSave": true
+      "editor.formatOnSave": true,
     },
 
     // Files settings
@@ -84,7 +84,7 @@
       "/workspaces/lorite-personal-learning/bazel-lorite-personal-learning/**": true,
       "/workspaces/lorite-personal-learning/bazel-out/**": true,
       "/workspaces/lorite-personal-learning/bazel-testlogs/**": true,
-      "/workspaces/lorite-personal-learning/external/**": true
+      "/workspaces/lorite-personal-learning/external/**": true,
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -93,21 +93,21 @@
     "clangd.path": "/workspaces/lorite-personal-learning/external/toolchains_llvm++llvm+llvm_toolchain_llvm/bin/clangd",
     "clangd.arguments": [
       "--compile-commands-dir=${workspaceFolder}/",
-      "--query-driver=**"
+      "--query-driver=**",
     ],
     "cSpell.customDictionaries": {
       "business_dictionary": {
         "name": "business_dictionary",
         "path": "${workspaceRoot}/.vscode/cSpell/business_dictionary.txt",
         "description": "Business related dictionary.",
-        "addWords": true
+        "addWords": true,
       },
       "technical_dictionary": {
         "name": "technical_dictionary",
         "path": "${workspaceRoot}/.vscode/cSpell/technical_dictionary.txt",
         "description": "Technical related dictionary.",
-        "addWords": true
-      }
+        "addWords": true,
+      },
     },
     "lldb.displayFormat": "auto",
     "lldb.dereferencePointers": true,
@@ -124,5 +124,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSaveMode": "modificationsIfAvailable",
     "github.copilot.chat.codeGeneration.useInstructionFiles": true,
-  }
+  },
 }
