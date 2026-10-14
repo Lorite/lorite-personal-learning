@@ -2,7 +2,7 @@
 name = "probabilistic-robotics-course"
 version = "0.1.0"
 description = "Hands-on notebooks for the book Probabilistic Robotics (Thrun, Burgard, Fox), built on PythonRobotics and the rlabbe Kalman and Bayesian Filters notebooks."
-requires-python = "==3.13.16"
+requires-python = "==3.13.*"
 dependencies = [
     "numpy",
     "scipy",
