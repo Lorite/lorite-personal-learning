@@ -1,0 +1,8 @@
+# Generated lock files: excluded from the rules_lint formatter (it honors linguist-generated) and collapsed in GitHub diffs.
+# yamlfmt used to rewrite pnpm-lock.yaml on every Renovate npm pull request, which made the CI bot commit on Renovate's branch.
+pnpm-lock.yaml linguist-generated=true
+MODULE.bazel.lock linguist-generated=true
+maven_install.json linguist-generated=true
+**/uv.lock linguist-generated=true
+**/requirements.txt linguist-generated=true
+.devcontainer/devcontainer-lock.json linguist-generated=true

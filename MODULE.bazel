@@ -30,7 +30,7 @@ bazel_dep(name = "buildifier_prebuilt", version = "8.0.0")
 
 # TypeScript
 
-bazel_dep(name = "aspect_rules_ts", version = "3.6.3")
+bazel_dep(name = "aspect_rules_ts", version = "3.10.1")
 
 rules_ts_ext = use_extension("@aspect_rules_ts//ts:extensions.bzl", "ext")
 rules_ts_ext.deps()
@@ -40,7 +40,7 @@ use_repo(rules_ts_ext, "npm_typescript")
 
 # JavaScript
 
-bazel_dep(name = "aspect_rules_js", version = "2.1.2")  # JavaScript rules required for linting and formatting
+bazel_dep(name = "aspect_rules_js", version = "3.5.1")  # JavaScript rules required for linting and formatting
 
 npm = use_extension("@aspect_rules_js//npm:extensions.bzl", "npm")
 npm.npm_translate_lock(
