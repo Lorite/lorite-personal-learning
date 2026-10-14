@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "dayjs": "1.11.13",
+    "dayjs": "1.11.23",
     "micromatch": "4.0.8",
     "moment": "2.31.0"
   },
