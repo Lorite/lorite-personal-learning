@@ -9,11 +9,17 @@
     "org.junit.jupiter:junit-jupiter-api": -1418253236,
     "org.junit.jupiter:junit-jupiter-engine": 549538408,
     "org.junit.platform:junit-platform-console-standalone": 1016184859,
-    "org.scalameta:scalafmt-cli_2.13": 39523671,
+    "org.scalameta:scalafmt-cli_2.13": 1603259922,
     "repositories": 1670674627
   },
   "__RESOLVED_ARTIFACTS_HASH": {
-    "com.github.scopt:scopt_2.13": -1791766764,
+    "com.facebook:nailgun-server": -1312000310,
+    "com.facebook:nailgun-server:jar:sources": -2003553139,
+    "com.github.luben:zstd-jni": 2029230241,
+    "com.github.luben:zstd-jni:jar:sources": 506237302,
+    "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13": 2039593629,
+    "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13:jar:sources": 817514510,
+    "com.github.scopt:scopt_2.13": -16667230,
     "com.github.scopt:scopt_2.13:jar:sources": 776003799,
     "com.google.code.findbugs:jsr305": 870839855,
     "com.google.code.findbugs:jsr305:jar:sources": -935881202,
@@ -28,26 +34,72 @@
     "com.google.guava:listenablefuture": 1079558157,
     "com.google.j2objc:j2objc-annotations": 248818742,
     "com.google.j2objc:j2objc-annotations:jar:sources": -378364028,
-    "com.lihaoyi:fansi_2.13": -1754008317,
-    "com.lihaoyi:fansi_2.13:jar:sources": -621041313,
-    "com.lihaoyi:sourcecode_2.13": 2142439176,
-    "com.lihaoyi:sourcecode_2.13:jar:sources": -1520172695,
-    "com.martiansoftware:nailgun-server": -699458598,
-    "com.martiansoftware:nailgun-server:jar:sources": 553027398,
-    "com.typesafe:config": 1422037420,
-    "com.typesafe:config:jar:sources": 1794326800,
-    "io.get-coursier:interface": -1268716922,
-    "io.get-coursier:interface:jar:sources": -1458148282,
-    "io.github.java-diff-utils:java-diff-utils": -1540151507,
-    "io.github.java-diff-utils:java-diff-utils:jar:sources": -1119262000,
-    "net.java.dev.jna:jna": -1045971559,
-    "net.java.dev.jna:jna:jar:sources": -1282084416,
+    "com.lihaoyi:fansi_2.13": 748609782,
+    "com.lihaoyi:fansi_2.13:jar:sources": 1921478146,
+    "com.lihaoyi:sourcecode_2.13": 580055874,
+    "com.lihaoyi:sourcecode_2.13:jar:sources": -1560134776,
+    "com.typesafe:config": 163723576,
+    "com.typesafe:config:jar:sources": 279947534,
+    "commons-codec:commons-codec": -1161719307,
+    "commons-codec:commons-codec:jar:sources": 963281664,
+    "commons-io:commons-io": -807333807,
+    "commons-io:commons-io:jar:sources": -1339271077,
+    "io.airlift:aircompressor": -1885663498,
+    "io.airlift:aircompressor:jar:sources": -345987553,
+    "io.get-coursier.jniutils:windows-jni-utils": 1318278775,
+    "io.get-coursier.jniutils:windows-jni-utils:jar:sources": 1088483761,
+    "io.get-coursier:cache-util": 1284926051,
+    "io.get-coursier:cache-util:jar:sources": 71890041,
+    "io.get-coursier:coursier-cache_2.13": -1791667629,
+    "io.get-coursier:coursier-cache_2.13:jar:sources": -1908395263,
+    "io.get-coursier:coursier-core_2.13": -500119902,
+    "io.get-coursier:coursier-core_2.13:jar:sources": -839766404,
+    "io.get-coursier:coursier-proxy-setup": -370932681,
+    "io.get-coursier:coursier-proxy-setup:jar:sources": 1123331780,
+    "io.get-coursier:coursier-util_2.13": -733006883,
+    "io.get-coursier:coursier-util_2.13:jar:sources": -2116800322,
+    "io.get-coursier:coursier_2.13": 872090350,
+    "io.get-coursier:coursier_2.13:jar:sources": -961888884,
+    "io.get-coursier:dependency_2.13": -584969539,
+    "io.get-coursier:dependency_2.13:jar:sources": 2055486099,
+    "io.github.alexarchambault.windows-ansi:windows-ansi": -2079514788,
+    "io.github.alexarchambault.windows-ansi:windows-ansi:jar:sources": -1639952770,
+    "io.github.alexarchambault:concurrent-reference-hash-map": 2031242477,
+    "io.github.alexarchambault:concurrent-reference-hash-map:jar:sources": 971475690,
+    "io.github.alexarchambault:is-terminal": 1134031283,
+    "io.github.alexarchambault:is-terminal:jar:sources": 307823396,
+    "io.github.java-diff-utils:java-diff-utils": -1180802694,
+    "io.github.java-diff-utils:java-diff-utils:jar:sources": 1551226070,
+    "javax.inject:javax.inject": 698155243,
+    "javax.inject:javax.inject:jar:sources": 1222576539,
+    "net.java.dev.jna:jna": -152040143,
+    "net.java.dev.jna:jna-platform": 1944437013,
+    "net.java.dev.jna:jna-platform:jar:sources": 1233764873,
+    "net.java.dev.jna:jna:jar:sources": -700479688,
+    "org.apache.commons:commons-compress": 1858477011,
+    "org.apache.commons:commons-compress:jar:sources": 577133147,
+    "org.apache.commons:commons-lang3": 2013343748,
+    "org.apache.commons:commons-lang3:jar:sources": -1567774740,
+    "org.apache.xbean:xbean-reflect": -780502532,
+    "org.apache.xbean:xbean-reflect:jar:sources": 1604927661,
     "org.apiguardian:apiguardian-api": 1279798469,
     "org.apiguardian:apiguardian-api:jar:sources": 729595858,
     "org.checkerframework:checker-qual": -1533199059,
     "org.checkerframework:checker-qual:jar:sources": -1750922234,
-    "org.jline:jline": -442125428,
-    "org.jline:jline:jar:sources": -1265249528,
+    "org.codehaus.plexus:plexus-archiver": 2116302065,
+    "org.codehaus.plexus:plexus-archiver:jar:sources": 484853353,
+    "org.codehaus.plexus:plexus-classworlds": 830297444,
+    "org.codehaus.plexus:plexus-classworlds:jar:sources": -2122083127,
+    "org.codehaus.plexus:plexus-container-default": 1887839532,
+    "org.codehaus.plexus:plexus-container-default:jar:sources": 937201697,
+    "org.codehaus.plexus:plexus-io": 27033365,
+    "org.codehaus.plexus:plexus-io:jar:sources": -1034887868,
+    "org.codehaus.plexus:plexus-utils": 2145765362,
+    "org.codehaus.plexus:plexus-utils:jar:sources": -1912456960,
+    "org.fusesource.jansi:jansi": -914454556,
+    "org.fusesource.jansi:jansi:jar:sources": 905396970,
+    "org.jline:jline:jar:jdk8": 243539796,
+    "org.jline:jline:jar:sources": 1893339060,
     "org.jspecify:jspecify": 117231129,
     "org.jspecify:jspecify:jar:sources": -2134060298,
     "org.junit.jupiter:junit-jupiter-api": -1170819288,
@@ -62,59 +114,94 @@
     "org.junit.platform:junit-platform-engine:jar:sources": -1306626146,
     "org.opentest4j:opentest4j": -1711174392,
     "org.opentest4j:opentest4j:jar:sources": -1740624156,
-    "org.scala-lang.modules:scala-collection-compat_2.13": 1027998947,
-    "org.scala-lang.modules:scala-collection-compat_2.13:jar:sources": 171557917,
-    "org.scala-lang.modules:scala-parallel-collections_2.13": 1435266284,
-    "org.scala-lang.modules:scala-parallel-collections_2.13:jar:sources": 834505259,
-    "org.scala-lang:scala-compiler": -1388587677,
-    "org.scala-lang:scala-compiler:jar:sources": 1738995640,
-    "org.scala-lang:scala-library": -1079389784,
-    "org.scala-lang:scala-library:jar:sources": 9987806,
-    "org.scala-lang:scala-reflect": 1954333033,
-    "org.scala-lang:scala-reflect:jar:sources": 872007774,
-    "org.scalameta:common_2.13": 191869814,
-    "org.scalameta:common_2.13:jar:sources": 282926848,
-    "org.scalameta:mdoc-parser_2.13": -1049918802,
-    "org.scalameta:mdoc-parser_2.13:jar:sources": 2039709724,
-    "org.scalameta:metaconfig-core_2.13": 1303753353,
-    "org.scalameta:metaconfig-core_2.13:jar:sources": 993834110,
-    "org.scalameta:metaconfig-pprint_2.13": -1296005980,
-    "org.scalameta:metaconfig-pprint_2.13:jar:sources": 644774767,
-    "org.scalameta:metaconfig-typesafe-config_2.13": -968013550,
-    "org.scalameta:metaconfig-typesafe-config_2.13:jar:sources": 1428225324,
-    "org.scalameta:munit-diff_2.13": 678570106,
-    "org.scalameta:munit-diff_2.13:jar:sources": 1730215991,
-    "org.scalameta:parsers_2.13": 1204353700,
-    "org.scalameta:parsers_2.13:jar:sources": -2049569526,
-    "org.scalameta:scalafmt-cli_2.13": -940920233,
-    "org.scalameta:scalafmt-cli_2.13:jar:sources": -703842537,
-    "org.scalameta:scalafmt-config_2.13": -208422176,
-    "org.scalameta:scalafmt-config_2.13:jar:sources": 832178547,
-    "org.scalameta:scalafmt-core_2.13": -1820327325,
-    "org.scalameta:scalafmt-core_2.13:jar:sources": -1845871434,
-    "org.scalameta:scalafmt-dynamic_2.13": 2092862935,
-    "org.scalameta:scalafmt-dynamic_2.13:jar:sources": -444251074,
-    "org.scalameta:scalafmt-interfaces": -1499684997,
-    "org.scalameta:scalafmt-interfaces:jar:sources": 1589123293,
-    "org.scalameta:scalafmt-macros_2.13": 455623249,
-    "org.scalameta:scalafmt-macros_2.13:jar:sources": 1740019998,
-    "org.scalameta:scalafmt-sysops_2.13": 591766932,
-    "org.scalameta:scalafmt-sysops_2.13:jar:sources": 1087704604,
-    "org.scalameta:scalameta_2.13": 1274958947,
-    "org.scalameta:scalameta_2.13:jar:sources": -1770724781,
-    "org.scalameta:svm-subs": 444416668,
+    "org.scala-lang.modules:scala-collection-compat_2.13": -264820511,
+    "org.scala-lang.modules:scala-collection-compat_2.13:jar:sources": 1657198502,
+    "org.scala-lang.modules:scala-xml_2.13": -1107890387,
+    "org.scala-lang.modules:scala-xml_2.13:jar:sources": 1596852452,
+    "org.scala-lang:scala-compiler": -337822946,
+    "org.scala-lang:scala-compiler:jar:sources": -610468665,
+    "org.scala-lang:scala-library": -997461185,
+    "org.scala-lang:scala-library:jar:sources": -118739197,
+    "org.scala-lang:scala-reflect": 1817805303,
+    "org.scala-lang:scala-reflect:jar:sources": 681418431,
+    "org.scalameta:common2_2.13": 1897012824,
+    "org.scalameta:common2_2.13:jar:sources": 1958160067,
+    "org.scalameta:common_2.13": 1519841368,
+    "org.scalameta:common_2.13:jar:sources": -1550123795,
+    "org.scalameta:io_2.13": -1402939662,
+    "org.scalameta:io_2.13:jar:sources": -1831131369,
+    "org.scalameta:mdoc-parser_2.13": -896331051,
+    "org.scalameta:mdoc-parser_2.13:jar:sources": -1741146781,
+    "org.scalameta:metaconfig-core_2.13": -15020568,
+    "org.scalameta:metaconfig-core_2.13:jar:sources": 2015045108,
+    "org.scalameta:metaconfig-pprint_2.13": 83779520,
+    "org.scalameta:metaconfig-pprint_2.13:jar:sources": 259910502,
+    "org.scalameta:metaconfig-typesafe-config_2.13": -535425226,
+    "org.scalameta:metaconfig-typesafe-config_2.13:jar:sources": 2022805347,
+    "org.scalameta:munit-diff_2.13": 247472186,
+    "org.scalameta:munit-diff_2.13:jar:sources": 1861489210,
+    "org.scalameta:parsers_2.13": -1253238147,
+    "org.scalameta:parsers_2.13:jar:sources": 1386085104,
+    "org.scalameta:scalafmt-cli_2.13": 1289183627,
+    "org.scalameta:scalafmt-cli_2.13:jar:sources": -1200547525,
+    "org.scalameta:scalafmt-config_2.13": -411634270,
+    "org.scalameta:scalafmt-config_2.13:jar:sources": 1997418173,
+    "org.scalameta:scalafmt-core_2.13": 1631692576,
+    "org.scalameta:scalafmt-core_2.13:jar:sources": 1729580315,
+    "org.scalameta:scalafmt-dynamic-core_2.13": 608682495,
+    "org.scalameta:scalafmt-dynamic-core_2.13:jar:sources": 632274045,
+    "org.scalameta:scalafmt-dynamic_2.13": -214528326,
+    "org.scalameta:scalafmt-dynamic_2.13:jar:sources": -436058581,
+    "org.scalameta:scalafmt-interfaces": -1431770998,
+    "org.scalameta:scalafmt-interfaces:jar:sources": 1117585490,
+    "org.scalameta:scalafmt-macros_2.13": 638267485,
+    "org.scalameta:scalafmt-macros_2.13:jar:sources": 1495029724,
+    "org.scalameta:scalafmt-sysops_2.13": -1761638653,
+    "org.scalameta:scalafmt-sysops_2.13:jar:sources": 1826856752,
+    "org.scalameta:scalameta_2.13": 1234954640,
+    "org.scalameta:scalameta_2.13:jar:sources": 989955979,
+    "org.scalameta:svm-subs": -1468552934,
     "org.scalameta:svm-subs:jar:sources": 1983978324,
-    "org.scalameta:trees_2.13": 1609836015,
-    "org.scalameta:trees_2.13:jar:sources": -512355930,
+    "org.scalameta:trees2_2.13": 7552062,
+    "org.scalameta:trees2_2.13:jar:sources": -1440108645,
+    "org.scalameta:trees_2.13": -2143103595,
+    "org.scalameta:trees_2.13:jar:sources": 1531167163,
     "org.slf4j:slf4j-api": -844459515,
     "org.slf4j:slf4j-api:jar:sources": -952877876,
-    "org.typelevel:paiges-core_2.13": 884465285,
-    "org.typelevel:paiges-core_2.13:jar:sources": 1442042292
+    "org.tukaani:xz": -944403113,
+    "org.tukaani:xz:jar:sources": 1683784661,
+    "org.typelevel:paiges-core_2.13": 1039494161,
+    "org.typelevel:paiges-core_2.13:jar:sources": 1442042292,
+    "org.virtuslab.scala-cli:config_2.13": -513887167,
+    "org.virtuslab.scala-cli:config_2.13:jar:sources": -667493961,
+    "org.virtuslab.scala-cli:specification-level_2.13": 1030873550,
+    "org.virtuslab.scala-cli:specification-level_2.13:jar:sources": -1622332524
   },
   "conflict_resolution": {
     "com.google.errorprone:error_prone_annotations:2.5.1": "com.google.errorprone:error_prone_annotations:2.18.0"
   },
   "artifacts": {
+    "com.facebook:nailgun-server": {
+      "shasums": {
+        "jar": "c852b33463ce343d22f45686dad8e2a29f61a105bdfd95c87f22b0520a482f21",
+        "sources": "348fa215b33e2edfd7d0094f6f7bd4e9021a2d7086394a3400785b8ae9560d84"
+      },
+      "version": "1.0.1"
+    },
+    "com.github.luben:zstd-jni": {
+      "shasums": {
+        "jar": "f72ede1b39258faf81277dc58de30c71cbae4253732558d2ce10b53d8b5763d5",
+        "sources": "7136c42f56d17c8b2c7be16fe7744c2c36b85c0c274750efe5050e283d9bd31f"
+      },
+      "version": "1.5.6-3"
+    },
+    "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13": {
+      "shasums": {
+        "jar": "86d9f5335dc6418a3b5ac28d2cfb6ed939236541566738df3bc0da2420d0f100",
+        "sources": "e99cb5eac8fce727e68ad7ebebbf2fb247af6ebf8fb7b0d530943fea06776e35"
+      },
+      "version": "2.13.5.2"
+    },
     "com.github.scopt:scopt_2.13": {
       "shasums": {
         "jar": "2e5037bda974630b046794274e344273919abf4727acfcd86352617dce68f82b",
@@ -172,52 +259,171 @@
     },
     "com.lihaoyi:fansi_2.13": {
       "shasums": {
-        "jar": "fcae26580f7d6e72adbd6e5c504bb1715fbe3f5fb814d70e84bc5427a835e42c",
-        "sources": "90a5529c2000d0bbeaca1fa67d8139631a104ad770ea000e6e6e44b86b4f9697"
+        "jar": "e50796c69261fac857469122ab75f5aab4aeef855ca414f184cb132b318c2d9d",
+        "sources": "b28dc640b3b412023f605d29320adc89f50b0511d7e1376f9bbf9b1032a1de5d"
       },
-      "version": "0.5.0"
+      "version": "0.5.1"
     },
     "com.lihaoyi:sourcecode_2.13": {
       "shasums": {
-        "jar": "fbace2b994a7184f6b38ee98630be61f21948008a4a56cd83c7f86c1c1de743d",
-        "sources": "3cfacbe17cc04f57d7c397dce829f3b0e3faf282b421444aa7492099ad49cc2d"
+        "jar": "bd4e99aef8267a410b6ed716c487cf5256f801425f158a8c9cbd056eb032d80d",
+        "sources": "854238ec90912d0621ec068cddd8854a81f67242785b5e6fbe42f87c255641e9"
       },
-      "version": "0.4.2"
-    },
-    "com.martiansoftware:nailgun-server": {
-      "shasums": {
-        "jar": "4518faa6bf4bd26fccdc4d85e1625dc679381a08d56872d8ad12151dda9cef25",
-        "sources": "a1d68ac9361f358170e730a9e109c22ed9dc13eaa614c56515e6384da2cac621"
-      },
-      "version": "0.9.1"
+      "version": "0.4.4"
     },
     "com.typesafe:config": {
       "shasums": {
-        "jar": "8ada4c185ce72416712d63e0b5afdc5f009c0cdf405e5f26efecdf156aa5dfb6",
-        "sources": "d3330505601cc47d97d03349d93dff32c85ec3881b5b168a8881c6af8ceb852a"
+        "jar": "47d13e3196c84f2a8ccd014ae563738c3da5b7406b38e03505ec0601a2f4fc37",
+        "sources": "e7e7853b6db6056eb6affc33579502d81f266dfe4f0fdc9f62a1a3fca5f4423c"
       },
-      "version": "1.4.3"
+      "version": "1.4.9"
     },
-    "io.get-coursier:interface": {
+    "commons-codec:commons-codec": {
       "shasums": {
-        "jar": "1de707e8f081b48e6fc1c8b028933acae439a11bb2782bdf0be07de8d9d67d10",
-        "sources": "63ee3e9a1c0a33f4286b5cbfecd453f4c0bfdac55c055e044b8c3b0d87bdf16c"
+        "jar": "f700de80ac270d0344fdea7468201d8b9c805e5c648331c3619f2ee067ccfc59",
+        "sources": "9869277d653510f670039b77945befe71c1ca34ef2e281855bd86e6605aab4a6"
       },
-      "version": "1.0.26"
+      "version": "1.17.0"
+    },
+    "commons-io:commons-io": {
+      "shasums": {
+        "jar": "f41f7baacd716896447ace9758621f62c1c6b0a91d89acee488da26fc477c84f",
+        "sources": "fcfe84e39fb44e38a0ea0ab0815b53adea6fff89c7b72535bc42495f400cb9a1"
+      },
+      "version": "2.16.1"
+    },
+    "io.airlift:aircompressor": {
+      "shasums": {
+        "jar": "fdbef3137a28f63bb0cb93487803080ede746a4ec3d421e36c6f0c305c35e5e4",
+        "sources": "7f5952d138e9cff1445a961b90228680b5714145038648e02e4433490e5f078d"
+      },
+      "version": "0.27"
+    },
+    "io.get-coursier.jniutils:windows-jni-utils": {
+      "shasums": {
+        "jar": "ab68efcf162355e20007b238d8108b7ffec0c06b467ee44cbb44ec3f8ac3a7e6",
+        "sources": "d533760cef440eb3a8a47cfe6815e1f9a161cb1f01a5a61dbf8b2a30489c8583"
+      },
+      "version": "0.3.3"
+    },
+    "io.get-coursier:cache-util": {
+      "shasums": {
+        "jar": "447741afb13b90e7f650ed89f230bf0e9d76874f80ef516e2aa3963ba56edf84",
+        "sources": "46f152a3ecd09199a541e5e9a6a67dbd3080dc20e69ce7ce11bfa5ac477efcae"
+      },
+      "version": "2.1.24"
+    },
+    "io.get-coursier:coursier-cache_2.13": {
+      "shasums": {
+        "jar": "cd7f125c3e27cd7527d865ddc467a32dbe5a9a4b4bd2ee666f2a2c13032a1c93",
+        "sources": "5c3d96d6b8045d5a04156906e50bfd6c18974d4917412c28afae7a1bb8e5f3d9"
+      },
+      "version": "2.1.24"
+    },
+    "io.get-coursier:coursier-core_2.13": {
+      "shasums": {
+        "jar": "f845ff8f582d8f4c8110676078e60e7737b5cca240b7d7e835fb52a16ffa4194",
+        "sources": "8097276cb9f0cf4b0a08efd32faa69205eecba57ec1f60d33fcc12a797d730de"
+      },
+      "version": "2.1.24"
+    },
+    "io.get-coursier:coursier-proxy-setup": {
+      "shasums": {
+        "jar": "bd7dfa4325fec5e2e4cb671bb42953e970a2f9141526d93aaea678a07da3ce5b",
+        "sources": "a5b50ccd284c23708c9fd788d1b611f68697e098d0b26b8f4ae85482492801da"
+      },
+      "version": "2.1.24"
+    },
+    "io.get-coursier:coursier-util_2.13": {
+      "shasums": {
+        "jar": "5735dad5ec821e7ffba283eda5c2cf26ddea1de4c91f2e6210d8cf3a6cab5a6e",
+        "sources": "182ce5d0705e4e92705a54eb24bf8c431bd00844e718182529889cc64847495c"
+      },
+      "version": "2.1.24"
+    },
+    "io.get-coursier:coursier_2.13": {
+      "shasums": {
+        "jar": "59266d5d8a6d0005796fafa21060d9de4c38153d2abfb8c1fb689c0b3c14485d",
+        "sources": "4569e88bfdf0391cab44850790c9ae0b50be49dffe72d4cb19cb87260ac34c83"
+      },
+      "version": "2.1.24"
+    },
+    "io.get-coursier:dependency_2.13": {
+      "shasums": {
+        "jar": "cd54da81c7f4e75112b0a29ab566a31628cfe7336ee129f7b9f3f8adf68a141a",
+        "sources": "fc49db6b151ebfd1093926cd4d865a9044a8b968e3d72ab4ecc625e0d99ae2f4"
+      },
+      "version": "0.3.2"
+    },
+    "io.github.alexarchambault.windows-ansi:windows-ansi": {
+      "shasums": {
+        "jar": "077dbdbb977c94fc8b1fb82113cfb0aa5304d4e307c4e0688f69a9895f0da482",
+        "sources": "121fa106cb26f398d36baf6d56cb145adc2052923bf73aec7a36c1035278194f"
+      },
+      "version": "0.0.6"
+    },
+    "io.github.alexarchambault:concurrent-reference-hash-map": {
+      "shasums": {
+        "jar": "552707982209afb9feffdccb2e73cc4681a1353e34a47df1bf643d1d2e0a2f61",
+        "sources": "931213419ba6c90769c7ba73f85973ec79ef55bb6a99ba3093e87a427ac0d2ac"
+      },
+      "version": "1.1.0"
+    },
+    "io.github.alexarchambault:is-terminal": {
+      "shasums": {
+        "jar": "73735b053b01ff47b53d28ab2d9b23fd86447f6fb6463dd462258067ad6ad3fa",
+        "sources": "a2d6525537b7dc6552c541f4c0ba485b05079d01db85d59ddd1b69a40f159ce4"
+      },
+      "version": "0.1.1"
     },
     "io.github.java-diff-utils:java-diff-utils": {
       "shasums": {
-        "jar": "9990a2039778f6b4cc94790141c2868864eacee0620c6c459451121a901cd5b5",
-        "sources": "fa24217b6eaa115a05d4a8f0003fe913c62716ca2184d2e4f17de4a7d42a8822"
+        "jar": "620403030d676a4a27f780a3acec7438dee1b1651a1c804fa6bb11bb07399a6f",
+        "sources": "1307a36819f8dac34187402947e2a9e850b9e7ce95dd5044524e4860c3378ab0"
       },
-      "version": "4.12"
+      "version": "4.16"
+    },
+    "javax.inject:javax.inject": {
+      "shasums": {
+        "jar": "91c77044a50c481636c32d916fd89c9118a72195390452c81065080f957de7ff",
+        "sources": "c4b87ee2911c139c3daf498a781967f1eb2e75bc1a8529a2e7b328a15d0e433e"
+      },
+      "version": "1"
     },
     "net.java.dev.jna:jna": {
       "shasums": {
-        "jar": "34ed1e1f27fa896bca50dbc4e99cf3732967cec387a7a0d5e3486c09673fe8c6",
-        "sources": "ebd774c761215676cda059fd68240628ef99f4aafa6d355ae00d184855aef134"
+        "jar": "0c8eb7acf67261656d79005191debaba3b6bf5dd60a43735a245429381dbecff",
+        "sources": "17e227d23ecbeadcf315784115a557dd45380696e2e54cf28299f24147786db3"
       },
-      "version": "5.14.0"
+      "version": "4.5.2"
+    },
+    "net.java.dev.jna:jna-platform": {
+      "shasums": {
+        "jar": "f1d00c167d8921c6e23c626ef9f1c3ae0be473c95c68ffa012bc7ae55a87e2d6",
+        "sources": "2cad94f5e549e826ba29a158b4e232ddba89a321216af677763eb34403b3795d"
+      },
+      "version": "4.5.2"
+    },
+    "org.apache.commons:commons-compress": {
+      "shasums": {
+        "jar": "9168a03141d8fc7eda21a2360d83cc0412bcbb1d6204d992bd48c2573cb3c6b8",
+        "sources": "89f2ac13872e1ac0024dc77573a0da8e8e0da2dda58973f19244f6e60f08d138"
+      },
+      "version": "1.26.2"
+    },
+    "org.apache.commons:commons-lang3": {
+      "shasums": {
+        "jar": "7b96bf3ee68949abb5bc465559ac270e0551596fa34523fddf890ec418dde13c",
+        "sources": "ab3b86afb898f1026dbe43aaf71e9c1d719ec52d6e41887b362d86777c299b6f"
+      },
+      "version": "3.14.0"
+    },
+    "org.apache.xbean:xbean-reflect": {
+      "shasums": {
+        "jar": "104e5e9bb5a669f86722f32281960700f7ec8e3209ef51b23eb9b6d23d1629cb",
+        "sources": "ed59780db1ee258d806c6da541d74ef23fb9b05a5c96cc7f28e6fb203d2d4f9e"
+      },
+      "version": "3.7"
     },
     "org.apiguardian:apiguardian-api": {
       "shasums": {
@@ -233,12 +439,54 @@
       },
       "version": "3.33.0"
     },
+    "org.codehaus.plexus:plexus-archiver": {
+      "shasums": {
+        "jar": "4c07814ff4a39199999ae82bba1e38aa4f25637467fcac6a66ed63a76535799a",
+        "sources": "8559ed68292e11228d36155c0932ae3f54d743f7a19ad5ce51e253a52d6499c8"
+      },
+      "version": "4.10.0"
+    },
+    "org.codehaus.plexus:plexus-classworlds": {
+      "shasums": {
+        "jar": "52f77c5ec49f787c9c417ebed5d6efd9922f44a202f217376e4f94c0d74f3549",
+        "sources": "a9dc469d6d1ad442d6661e677614bd102b5fcf30a27d55533ef05af7807cab89"
+      },
+      "version": "2.6.0"
+    },
+    "org.codehaus.plexus:plexus-container-default": {
+      "shasums": {
+        "jar": "8b65840e41ca669a1a69ec1daedb3426304e560b24172cc93bb02e8c199e1ce7",
+        "sources": "9356606244fb5e6e19f5db845d8c09bd62dd74ac8444251740968b6241dfae8f"
+      },
+      "version": "2.1.1"
+    },
+    "org.codehaus.plexus:plexus-io": {
+      "shasums": {
+        "jar": "965ed28912cf1ae4c628112c4009e0c19819bc44ed5db8af54ee5eda21036a3e",
+        "sources": "c2505097b5f1493a65b83252176008c887fafa502198de04293dc9276c50efaa"
+      },
+      "version": "3.5.0"
+    },
+    "org.codehaus.plexus:plexus-utils": {
+      "shasums": {
+        "jar": "96b9cc44439191d2d0635974e2d44e768736b4fb2abcb65f94cd95e41912fa8b",
+        "sources": "afe1a6b22d68b06ecd0cfcd1b2f881762c1fa4912ace3f1b002a38ee62765331"
+      },
+      "version": "4.0.1"
+    },
+    "org.fusesource.jansi:jansi": {
+      "shasums": {
+        "jar": "2e5e775a9dc58ffa6bbd6aa6f099d62f8b62dcdeb4c3c3bbbe5cf2301bc2dcc1",
+        "sources": "f707511567a13ebf8c51164133770eb5a8e023e1d391bfbc6e7a0591c71729b8"
+      },
+      "version": "2.4.1"
+    },
     "org.jline:jline": {
       "shasums": {
-        "jar": "f23116c349314658cdebaa6caf6d0067733cc9e5b852cad2a29e643d32bd52bd",
-        "sources": "f64a28d3e00bc975c7711d6b8b1682a6ed0fc3e8eb9bdbf8f599590e8ac38208"
+        "jdk8": "ed2680487642df95379f220c09c0f77e25095713387e2bc00c2d6581bb79c804",
+        "sources": "659359eb04af6c42f4b9afe61abbe22a8e1945ad8f8fd0d9ce50504ae01a2c5d"
       },
-      "version": "3.26.3"
+      "version": "3.29.0"
     },
     "org.jspecify:jspecify": {
       "shasums": {
@@ -291,143 +539,164 @@
     },
     "org.scala-lang.modules:scala-collection-compat_2.13": {
       "shasums": {
-        "jar": "befff482233cd7f9a7ca1e1f5a36ede421c018e6ce82358978c475d45532755f",
-        "sources": "1a60fde64d08f19fe2ce38d99accf6cfefa4eeac3c194fa36ef5f6b89b5f7564"
+        "jar": "95986ac32df70c9ebdd96edfb276cdc038deedbe600177a45f6584022f34a13f",
+        "sources": "56672b16b5573d4c91e66ae6682ab3ef6d0ff4335ebffc4fdfe408bb4117b409"
       },
-      "version": "2.12.0"
+      "version": "2.14.0"
     },
-    "org.scala-lang.modules:scala-parallel-collections_2.13": {
+    "org.scala-lang.modules:scala-xml_2.13": {
       "shasums": {
-        "jar": "717eee20ce47367a7ad6481ad29084ce6868e42a78babe965d2ec965334749b1",
-        "sources": "3a4c79836784b4a5d9fe00997fa1d53016db2c0fcfc576f53633bc6facea4258"
+        "jar": "4b4d6698c74bff84a105102bbf58390980dc7bb8c40bdea4bc727040b3f966bd",
+        "sources": "8701800048e4b4ca7367f30b8e0b55dccd5181c7dd49657a75671ca798f8007f"
       },
-      "version": "1.1.0"
+      "version": "2.3.0"
     },
     "org.scala-lang:scala-compiler": {
       "shasums": {
-        "jar": "4c200cd193c082bec14a2a2dffe6a1ba5f8130b1b27c79ee54c936dfcafc8ed9",
-        "sources": "118383733de3aa7152dc80617c26dca74d1be2f2fc85b400073d1e2de947673e"
+        "jar": "2f15891fcae7aad30a3892194fb2abb6224cf7ce5d2bd90fba7f1c48682fca21",
+        "sources": "08d9984b0e8c553bdfd7b5fa6aa8c1d2f2f1cd6904399b9a0ab8eba345ded335"
       },
-      "version": "2.13.15"
+      "version": "2.13.18"
     },
     "org.scala-lang:scala-library": {
       "shasums": {
-        "jar": "1ebb2b6f9e4eb4022497c19b1e1e825019c08514f962aaac197145f88ed730f1",
-        "sources": "c02edc324e7db59c52115214a6ef36e2d78d0a50dff635eda4dcee5502b1dea5"
+        "jar": "4e85d96ff7bc7dc627985523c3541b9917aaa08e956391380c42db21a2c4e5a0",
+        "sources": "bac5952705c53dce8a1a0ade4b6ca40900ac3421cd84dd6458ac683d768c3d18"
       },
-      "version": "2.13.16"
+      "version": "2.13.18"
     },
     "org.scala-lang:scala-reflect": {
       "shasums": {
-        "jar": "fb49ccd9cac7464486ab993cda20a3c1569d8ef26f052e897577ad2a4970fb1d",
-        "sources": "11c15fbf9ee203e262049fdd54d8b8472e1601970fba655678c237629815117e"
+        "jar": "6935ff1982b2ac93d695f15aa66921be2f602921277afe002f018fd8c7d6e29b",
+        "sources": "22c70ff11e4e38b9cc1bc3eb0131f3d4c3e46869f468c91829b97dc125d31fa1"
       },
-      "version": "2.13.16"
+      "version": "2.13.18"
+    },
+    "org.scalameta:common2_2.13": {
+      "shasums": {
+        "jar": "d16050f3557e472ac3489501edd4d941d975bc0a6f72a54363b6598e29a972d0",
+        "sources": "01043338253610afc08b2aafa5a20652b6f768ed6021b046e0bbf8847c760384"
+      },
+      "version": "4.17.3"
     },
     "org.scalameta:common_2.13": {
       "shasums": {
-        "jar": "61c0d3a3dc15b74e24047e7a7f688594a099c9ce7ed56838ac8d736a156f0155",
-        "sources": "8653c4c5483d60e52a420db5b5ab58effc9336101d65e1b68e8f7fd217185156"
+        "jar": "e15f1eca7e1d855daf0fd62874b944272b84d2bbee96f3adfaef0cdd34ec91e4",
+        "sources": "777f1cebf8218fd28b1e53d4da3a1ed7d2b3a4c258fbcc2e4603d2fdf8078ee5"
       },
-      "version": "4.12.4.1"
+      "version": "4.17.3"
+    },
+    "org.scalameta:io_2.13": {
+      "shasums": {
+        "jar": "c9aa7493cf90a1acafcc96dad84670409aeb3b5e280a38ce40332eb6a21cf49f",
+        "sources": "0d143fe582df6a28a792923992a0e406562b0f6a17f84c30cd39ce15365a1626"
+      },
+      "version": "4.17.3"
     },
     "org.scalameta:mdoc-parser_2.13": {
       "shasums": {
-        "jar": "f12618065d4eedba3819b4593e5d0b5c43f69a9662959daee76a8dcf33560836",
-        "sources": "4ec2c5a855f456f56e5fe4a5ba66010be85518ae8594f1002c89ac5775d10614"
+        "jar": "4ce63efb015b6ea92bd0bcf107c8153b3e2857495821a9a59dc41424b4015831",
+        "sources": "fb298ce15054abdab6cfb481da912cc6fb7e1128c43f351e7f4699d13a52ab6a"
       },
-      "version": "2.6.2"
+      "version": "2.9.1"
     },
     "org.scalameta:metaconfig-core_2.13": {
       "shasums": {
-        "jar": "bb93a43e780ecc30fa97ee07b8969391d2bf7da7882df2f9abf9f328cba8616a",
-        "sources": "e1a41c96448330303c932a20f1b090892b0e5de2bb18c3c7c57e816227fba280"
+        "jar": "9493d98e6a9b8b43bdbd7a00e06fa1dcf295180e0bf0d94d705f18801c75ec80",
+        "sources": "68c4da2d36ba012eaae3c9d2fe215134304f6cacac24996cb4b33e0fc313e049"
       },
-      "version": "0.14.0"
+      "version": "0.18.7"
     },
     "org.scalameta:metaconfig-pprint_2.13": {
       "shasums": {
-        "jar": "f23dea7d0fd98d585fef21130f9b424a9f75b6c386c88a665dc09ab8b2e09e61",
-        "sources": "772ccc3678cd4a529091cc2341cb42ec56293ad73e68e826735bc0fa4db1d14b"
+        "jar": "9f727dfdf0883c4066509e82f9ab58142ce0fb25371599d4a1b15e35d52467af",
+        "sources": "0d9504863f97096cdc95b2b8c1bf0452f9c98ad6d61b893d1d17f6722b6bb252"
       },
-      "version": "0.14.0"
+      "version": "0.18.7"
     },
     "org.scalameta:metaconfig-typesafe-config_2.13": {
       "shasums": {
-        "jar": "f33109d2ec39a762ea8d66b502dc9ef8959d41935c8d8cb4dba1fa4614993383",
-        "sources": "cd534dfc6769e4ebbb41f4c4c85a2590260bb06cc1ff4bf3cf8a747b0d886c24"
+        "jar": "85085a7a082eead66bf0dccd08d402e5a4bad1f3fc73673284fac8e8f9e6c4ec",
+        "sources": "39cfd8d237d46a0631dc3c3504d610bf9de0b20f530bc19bab6aedbaf1db5546"
       },
-      "version": "0.14.0"
+      "version": "0.18.7"
     },
     "org.scalameta:munit-diff_2.13": {
       "shasums": {
-        "jar": "b1806111c93c2b556bd37c08b8df303370752569c15131b6af8efabd6e363a07",
-        "sources": "fcbd55e2c34197a4e9703bc1d500d66fb78b8abe9f12bc5dd847cddbd950e326"
+        "jar": "79d52c3007ae90ee2c6e156e3b2a5c0cfeb5a0dd67e570a36cb9a9e84f6e1521",
+        "sources": "9b0f53ab8d7defae3a0a6489341ab606606c62472d028f8d79e678ca603f54e5"
       },
-      "version": "1.0.3"
+      "version": "1.3.4"
     },
     "org.scalameta:parsers_2.13": {
       "shasums": {
-        "jar": "d04d3534c9fd056e65ec8e346f246bee475f5b88b46be716f133cb709627e4ff",
-        "sources": "4a4f6f522705c1ae8dae9cb50ab63324e4892ca0810718ac10bfcbd6299e3635"
+        "jar": "21931f60d741a95f6fc364f5514672b587b24a2316df0a80fc67059a9989828d",
+        "sources": "f3fb2931d54a419e70f3f677dcc66591a86a3d45782a2f059205a383cc13901b"
       },
-      "version": "4.12.4.1"
+      "version": "4.17.3"
     },
     "org.scalameta:scalafmt-cli_2.13": {
       "shasums": {
-        "jar": "25b086ceec830f346b6929f1d26d11bd459c0cf8c32783504a277efb4ca9a0e5",
-        "sources": "12360366382d97d42ba1a1a64c3b84334a65e6ece7f312f754024bec7628a115"
+        "jar": "86ab6706dcefa4e0efd8bd9fe6ab5d3223dfa3efcf2cd74cd0fddc2dc09864ee",
+        "sources": "f9fedb93834072fbe47e1749c3665e2446dfaaa3500d32799ef459ad9340230d"
       },
-      "version": "3.8.4"
+      "version": "3.11.5"
     },
     "org.scalameta:scalafmt-config_2.13": {
       "shasums": {
-        "jar": "0f359e8f4b0384a6b822e07406f3861b9be7e6b271fb876610fc1e09b186fdff",
-        "sources": "a0b4c79421e9c9bef8e743182818209649c75a0cdb9f23161eb005241369a500"
+        "jar": "0e000fe9c11c991f9a012331b829a7295b10995c1f5421701755e1cce6373149",
+        "sources": "34a7be010d9207dfe8295b5ad3df24c3fecfc1143c9c0c4495d0b06d0dbb14a5"
       },
-      "version": "3.8.4"
+      "version": "3.11.5"
     },
     "org.scalameta:scalafmt-core_2.13": {
       "shasums": {
-        "jar": "981963a6349c5fbf35675216049df3f3a82ef8bec4a611a0df99604d69ca7a5b",
-        "sources": "36ab1a95e4c8b58318209f858c59f316f17cba9d0bc4db219b7bfa4634e4804d"
+        "jar": "301fffd68a5723390d62ce62b075ed2e9c84003a0994634951638c4df6eb77f8",
+        "sources": "6ce9c5a9002751f8444b86407157d373f311ba85c49c189420956653213c9883"
       },
-      "version": "3.8.4"
+      "version": "3.11.5"
+    },
+    "org.scalameta:scalafmt-dynamic-core_2.13": {
+      "shasums": {
+        "jar": "f55a6614c5815f4435451eaf24b0b0a771fc26a2b3603cc8f4428ccfc6ae96c0",
+        "sources": "5b510395a6f8b1ae13e2b8ee94a577a0a10543403f6fa02a1e3dd00a6e1e4b4a"
+      },
+      "version": "3.11.5"
     },
     "org.scalameta:scalafmt-dynamic_2.13": {
       "shasums": {
-        "jar": "df7f3447d5cc5fce1736810f56f4d7a1c31f937aed6c9a1762cf6cdfadf5c184",
-        "sources": "8dd5eefe2e71c1aff5705e7002ab15f9381ab50072b38bc8fd678494d83546ea"
+        "jar": "fcaaf533c46fd0c297e33a4363587202e973d27f37dc37538e17195d964d0f3a",
+        "sources": "28874a6dde4e6961312ab28cfa8e694d5dd4ccec46cb67d3e68736b7c973745a"
       },
-      "version": "3.8.4"
+      "version": "3.11.5"
     },
     "org.scalameta:scalafmt-interfaces": {
       "shasums": {
-        "jar": "9aee22cadfcc9f3f8cf6aaee82f5b5ce82808c8102bf2d4eba160e42a65a63f2",
-        "sources": "21c9177d6ca8dbfea24a1090e471f148d699d2549a5535a039e5f3dbe8d66ecd"
+        "jar": "eb8c7d5fd1728b1ea1905817d18d6e5859e5614ee4bf417b20c8f60c439f6f4c",
+        "sources": "09459729da710ff4d8fa01004269fead80069996d6e6d8335fac959c9238a7f5"
       },
-      "version": "3.8.4"
+      "version": "3.11.5"
     },
     "org.scalameta:scalafmt-macros_2.13": {
       "shasums": {
-        "jar": "5701d899844477e1f9b652d47148966bf23884670d7b0939365eb32084accf13",
-        "sources": "1ac23084e7849559c8e4b61376723ffa87b8491853232d2de7a202354ee15290"
+        "jar": "7edb248e9d74ad95ce8cabf9fd903dc20419f405a3e86eedbeefdf02e291cbe5",
+        "sources": "3cc0e5269395c4d64cf434f8aef53bb5d99bed22f07e8449803f8a5eef668cbb"
       },
-      "version": "3.8.4"
+      "version": "3.11.5"
     },
     "org.scalameta:scalafmt-sysops_2.13": {
       "shasums": {
-        "jar": "1c30bf0937c624c2ea86027724800251d5e31e8937acd5fd56a1723288a7a48b",
-        "sources": "348ba6c09adc53f566d93e673ee55ac4982c472100c4a0eaf0f80c891a85bd7d"
+        "jar": "314582e8086be283b9df1c22b41269cf22eb6fed5af37be0a6049ba5ee08594e",
+        "sources": "962809f7e05ecec397a9aba1c2daeea285be3cdc0d20f4f5071aca0906e034f3"
       },
-      "version": "3.8.4"
+      "version": "3.11.5"
     },
     "org.scalameta:scalameta_2.13": {
       "shasums": {
-        "jar": "41f7dd6abd27fa6d0590f9ccd8c5f18683d94cc1d1eff4eaf28fce1c6f086d96",
-        "sources": "6db70c5c1c63155a20da206be7150a90c65ef735400bceefbb0bebd88dbf7b32"
+        "jar": "5d7b942d074c764f10da068903f7a8667838d68c6e7a737ad0d0061cada0d182",
+        "sources": "46a2546b098b4a8753ea51a4d6826591db85682f6bb95299b8b8cda8a48008e5"
       },
-      "version": "4.12.4.1"
+      "version": "4.17.3"
     },
     "org.scalameta:svm-subs": {
       "shasums": {
@@ -436,12 +705,19 @@
       },
       "version": "101.0.0"
     },
+    "org.scalameta:trees2_2.13": {
+      "shasums": {
+        "jar": "3f3729adf6faa48802f8b7c77ac67a6077cb99073596dc3eaf48d6ca9371fe55",
+        "sources": "543275aeacd6438552fa307db5d54c85ea8bed5103989aea075d3eedefb3fdc4"
+      },
+      "version": "4.17.3"
+    },
     "org.scalameta:trees_2.13": {
       "shasums": {
-        "jar": "a217f0e5d3317f636798ade3a7458584fc997a630afee9e41538254a124af5be",
-        "sources": "eaa7276560dcfa38201273bd2e89f30d013a6794a0b43fb69fb5a7a7c5720b42"
+        "jar": "38047a5a7b0f66faad77e18177a6152413de848b23353b615b1cecab2c0212f3",
+        "sources": "0bba36ee4e66488c4aa3b6a19a66483c3c8ac75479e49e13fa1b584968af9463"
       },
-      "version": "4.12.4.1"
+      "version": "4.17.3"
     },
     "org.slf4j:slf4j-api": {
       "shasums": {
@@ -450,15 +726,43 @@
       },
       "version": "1.7.36"
     },
+    "org.tukaani:xz": {
+      "shasums": {
+        "jar": "211b306cfc44f8f96df3a0a3ddaf75ba8c5289eed77d60d72f889bb855f535e5",
+        "sources": "5befa47f06b90e752f035191dde7f2deb59f36000f1ca6cc77d2362a82b6f462"
+      },
+      "version": "1.9"
+    },
     "org.typelevel:paiges-core_2.13": {
       "shasums": {
         "jar": "ffbd59d3648e71c5b8f4474a54121fb3512707e7901245831669aa9e85f3bbf0",
         "sources": "6eb5088d030c407040531668fe32ff87d0ec3313751228fdb261da8554c12784"
       },
       "version": "0.4.4"
+    },
+    "org.virtuslab.scala-cli:config_2.13": {
+      "shasums": {
+        "jar": "482ed69e838834aa90741e68871ca2687279b7315cc0436fbd18d9ad342e7b22",
+        "sources": "0c530a72896b0e4a44371e5f570639bf8c2c6c6b61f93ce3011bb3b7adf247c8"
+      },
+      "version": "1.1.3"
+    },
+    "org.virtuslab.scala-cli:specification-level_2.13": {
+      "shasums": {
+        "jar": "2532f59b1e1fdbc00eb2a1ee0cdc5ce16d829e2fc48aef082384f4916ced2cbd",
+        "sources": "bb2a25742817e552d171fddeedf192145b523df3b69186f7e8cc25707bffda0f"
+      },
+      "version": "1.1.3"
     }
   },
   "dependencies": {
+    "com.facebook:nailgun-server": [
+      "net.java.dev.jna:jna",
+      "net.java.dev.jna:jna-platform"
+    ],
+    "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13": [
+      "org.scala-lang:scala-library"
+    ],
     "com.github.scopt:scopt_2.13": [
       "org.scala-lang:scala-library"
     ],
@@ -477,8 +781,69 @@
     "com.lihaoyi:sourcecode_2.13": [
       "org.scala-lang:scala-library"
     ],
-    "io.get-coursier:interface": [
-      "org.slf4j:slf4j-api"
+    "io.get-coursier:coursier-cache_2.13": [
+      "io.get-coursier.jniutils:windows-jni-utils",
+      "io.get-coursier:cache-util",
+      "io.get-coursier:coursier-util_2.13",
+      "io.github.alexarchambault.windows-ansi:windows-ansi",
+      "io.github.alexarchambault:is-terminal",
+      "org.codehaus.plexus:plexus-archiver",
+      "org.codehaus.plexus:plexus-container-default",
+      "org.scala-lang:scala-library",
+      "org.virtuslab.scala-cli:config_2.13"
+    ],
+    "io.get-coursier:coursier-core_2.13": [
+      "io.get-coursier:coursier-util_2.13",
+      "io.github.alexarchambault:concurrent-reference-hash-map",
+      "org.scala-lang.modules:scala-xml_2.13",
+      "org.scala-lang:scala-library"
+    ],
+    "io.get-coursier:coursier-util_2.13": [
+      "org.scala-lang.modules:scala-collection-compat_2.13",
+      "org.scala-lang:scala-library"
+    ],
+    "io.get-coursier:coursier_2.13": [
+      "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13",
+      "io.get-coursier:coursier-cache_2.13",
+      "io.get-coursier:coursier-core_2.13",
+      "io.get-coursier:coursier-proxy-setup",
+      "io.get-coursier:dependency_2.13",
+      "org.scala-lang:scala-library"
+    ],
+    "io.get-coursier:dependency_2.13": [
+      "org.scala-lang:scala-library"
+    ],
+    "io.github.alexarchambault.windows-ansi:windows-ansi": [
+      "org.fusesource.jansi:jansi"
+    ],
+    "net.java.dev.jna:jna-platform": [
+      "net.java.dev.jna:jna"
+    ],
+    "org.apache.commons:commons-compress": [
+      "commons-codec:commons-codec",
+      "commons-io:commons-io",
+      "org.apache.commons:commons-lang3"
+    ],
+    "org.codehaus.plexus:plexus-archiver": [
+      "com.github.luben:zstd-jni",
+      "commons-io:commons-io",
+      "io.airlift:aircompressor",
+      "javax.inject:javax.inject",
+      "org.apache.commons:commons-compress",
+      "org.codehaus.plexus:plexus-io",
+      "org.codehaus.plexus:plexus-utils",
+      "org.slf4j:slf4j-api",
+      "org.tukaani:xz"
+    ],
+    "org.codehaus.plexus:plexus-container-default": [
+      "org.apache.xbean:xbean-reflect",
+      "org.codehaus.plexus:plexus-classworlds",
+      "org.codehaus.plexus:plexus-utils"
+    ],
+    "org.codehaus.plexus:plexus-io": [
+      "commons-io:commons-io",
+      "javax.inject:javax.inject",
+      "org.codehaus.plexus:plexus-utils"
     ],
     "org.junit.jupiter:junit-jupiter-api": [
       "org.apiguardian:apiguardian-api",
@@ -505,21 +870,27 @@
     "org.scala-lang.modules:scala-collection-compat_2.13": [
       "org.scala-lang:scala-library"
     ],
-    "org.scala-lang.modules:scala-parallel-collections_2.13": [
+    "org.scala-lang.modules:scala-xml_2.13": [
       "org.scala-lang:scala-library"
     ],
     "org.scala-lang:scala-compiler": [
       "io.github.java-diff-utils:java-diff-utils",
-      "net.java.dev.jna:jna",
-      "org.jline:jline",
+      "org.jline:jline:jar:jdk8",
       "org.scala-lang:scala-library",
       "org.scala-lang:scala-reflect"
     ],
     "org.scala-lang:scala-reflect": [
       "org.scala-lang:scala-library"
     ],
+    "org.scalameta:common2_2.13": [
+      "org.scala-lang:scala-library"
+    ],
     "org.scalameta:common_2.13": [
       "com.lihaoyi:sourcecode_2.13",
+      "org.scala-lang:scala-library",
+      "org.scalameta:common2_2.13"
+    ],
+    "org.scalameta:io_2.13": [
       "org.scala-lang:scala-library"
     ],
     "org.scalameta:mdoc-parser_2.13": [
@@ -551,12 +922,13 @@
       "org.scalameta:trees_2.13"
     ],
     "org.scalameta:scalafmt-cli_2.13": [
+      "com.facebook:nailgun-server",
       "com.github.scopt:scopt_2.13",
-      "com.martiansoftware:nailgun-server",
       "org.scala-lang:scala-library",
       "org.scalameta:munit-diff_2.13",
       "org.scalameta:scalafmt-core_2.13",
       "org.scalameta:scalafmt-dynamic_2.13",
+      "org.scalameta:scalafmt-interfaces",
       "org.scalameta:svm-subs"
     ],
     "org.scalameta:scalafmt-config_2.13": [
@@ -569,14 +941,19 @@
       "org.scalameta:mdoc-parser_2.13",
       "org.scalameta:scalafmt-config_2.13",
       "org.scalameta:scalafmt-macros_2.13",
-      "org.scalameta:scalafmt-sysops_2.13"
+      "org.scalameta:scalafmt-sysops_2.13",
+      "org.scalameta:scalameta_2.13"
     ],
-    "org.scalameta:scalafmt-dynamic_2.13": [
+    "org.scalameta:scalafmt-dynamic-core_2.13": [
       "com.typesafe:config",
-      "io.get-coursier:interface",
       "org.scala-lang:scala-library",
       "org.scalameta:scalafmt-interfaces",
       "org.scalameta:scalafmt-sysops_2.13"
+    ],
+    "org.scalameta:scalafmt-dynamic_2.13": [
+      "io.get-coursier:coursier_2.13",
+      "org.scala-lang:scala-library",
+      "org.scalameta:scalafmt-dynamic-core_2.13"
     ],
     "org.scalameta:scalafmt-macros_2.13": [
       "org.scala-lang:scala-library",
@@ -584,7 +961,6 @@
       "org.scalameta:scalameta_2.13"
     ],
     "org.scalameta:scalafmt-sysops_2.13": [
-      "org.scala-lang.modules:scala-parallel-collections_2.13",
       "org.scala-lang:scala-library"
     ],
     "org.scalameta:scalameta_2.13": [
@@ -594,15 +970,41 @@
     "org.scalameta:svm-subs": [
       "org.scala-lang:scala-library"
     ],
+    "org.scalameta:trees2_2.13": [
+      "org.scala-lang:scala-library",
+      "org.scalameta:common2_2.13",
+      "org.scalameta:io_2.13"
+    ],
     "org.scalameta:trees_2.13": [
       "org.scala-lang:scala-library",
-      "org.scalameta:common_2.13"
+      "org.scalameta:common_2.13",
+      "org.scalameta:io_2.13",
+      "org.scalameta:trees2_2.13"
     ],
     "org.typelevel:paiges-core_2.13": [
+      "org.scala-lang:scala-library"
+    ],
+    "org.virtuslab.scala-cli:config_2.13": [
+      "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13",
+      "org.scala-lang:scala-library",
+      "org.virtuslab.scala-cli:specification-level_2.13"
+    ],
+    "org.virtuslab.scala-cli:specification-level_2.13": [
       "org.scala-lang:scala-library"
     ]
   },
   "packages": {
+    "com.facebook:nailgun-server": [
+      "com.facebook.nailgun",
+      "com.facebook.nailgun.builtins"
+    ],
+    "com.github.luben:zstd-jni": [
+      "com.github.luben.zstd",
+      "com.github.luben.zstd.util"
+    ],
+    "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13": [
+      "com.github.plokhotnyuk.jsoniter_scala.core"
+    ],
     "com.github.scopt:scopt_2.13": [
       "scopt"
     ],
@@ -658,127 +1060,124 @@
     "com.lihaoyi:sourcecode_2.13": [
       "sourcecode"
     ],
-    "com.martiansoftware:nailgun-server": [
-      "com.martiansoftware.nailgun",
-      "com.martiansoftware.nailgun.builtins"
-    ],
     "com.typesafe:config": [
       "com.typesafe.config",
       "com.typesafe.config.impl",
       "com.typesafe.config.parser"
     ],
-    "io.get-coursier:interface": [
-      "coursierapi",
-      "coursierapi.error",
-      "coursierapi.internal.jniutils",
-      "coursierapi.shaded.commonscompress",
-      "coursierapi.shaded.commonscompress.archivers",
-      "coursierapi.shaded.commonscompress.archivers.tar",
-      "coursierapi.shaded.commonscompress.archivers.zip",
-      "coursierapi.shaded.commonscompress.compressors",
-      "coursierapi.shaded.commonscompress.compressors.bzip2",
-      "coursierapi.shaded.commonscompress.compressors.deflate64",
-      "coursierapi.shaded.commonscompress.compressors.lzw",
-      "coursierapi.shaded.commonscompress.compressors.xz",
-      "coursierapi.shaded.commonscompress.compressors.zstandard",
-      "coursierapi.shaded.commonscompress.utils",
-      "coursierapi.shaded.commonsio",
-      "coursierapi.shaded.commonsio.build",
-      "coursierapi.shaded.commonsio.file",
-      "coursierapi.shaded.commonsio.file.attribute",
-      "coursierapi.shaded.commonsio.filefilter",
-      "coursierapi.shaded.commonsio.function",
-      "coursierapi.shaded.commonsio.input",
-      "coursierapi.shaded.commonsio.output",
-      "coursierapi.shaded.concurrentrefhashmap",
-      "coursierapi.shaded.coursier",
-      "coursierapi.shaded.coursier.cache",
-      "coursierapi.shaded.coursier.cache.internal",
-      "coursierapi.shaded.coursier.cache.loggers",
-      "coursierapi.shaded.coursier.cache.shaded.dirs",
-      "coursierapi.shaded.coursier.complete",
-      "coursierapi.shaded.coursier.core",
-      "coursierapi.shaded.coursier.core.compatibility",
-      "coursierapi.shaded.coursier.core.shaded.fastparse",
-      "coursierapi.shaded.coursier.core.shaded.fastparse.internal",
-      "coursierapi.shaded.coursier.core.shaded.sourcecode",
-      "coursierapi.shaded.coursier.credentials",
-      "coursierapi.shaded.coursier.error",
-      "coursierapi.shaded.coursier.error.conflict",
-      "coursierapi.shaded.coursier.graph",
-      "coursierapi.shaded.coursier.internal",
-      "coursierapi.shaded.coursier.internal.api",
-      "coursierapi.shaded.coursier.ivy",
-      "coursierapi.shaded.coursier.jniutils",
-      "coursierapi.shaded.coursier.jvm",
-      "coursierapi.shaded.coursier.jvm.util",
-      "coursierapi.shaded.coursier.maven",
-      "coursierapi.shaded.coursier.params",
-      "coursierapi.shaded.coursier.params.rule",
-      "coursierapi.shaded.coursier.parse",
-      "coursierapi.shaded.coursier.paths",
-      "coursierapi.shaded.coursier.util",
-      "coursierapi.shaded.coursier.util.shaded.org.jsoup",
-      "coursierapi.shaded.coursier.util.shaded.org.jsoup.helper",
-      "coursierapi.shaded.coursier.util.shaded.org.jsoup.internal",
-      "coursierapi.shaded.coursier.util.shaded.org.jsoup.nodes",
-      "coursierapi.shaded.coursier.util.shaded.org.jsoup.parser",
-      "coursierapi.shaded.coursier.util.shaded.org.jsoup.select",
-      "coursierapi.shaded.dependency",
-      "coursierapi.shaded.dependency.parser",
-      "coursierapi.shaded.jsoniter",
-      "coursierapi.shaded.org.fusesource.hawtjni.runtime",
-      "coursierapi.shaded.org.fusesource.jansi.internal",
-      "coursierapi.shaded.plexus.archiver",
-      "coursierapi.shaded.plexus.archiver.tar",
-      "coursierapi.shaded.plexus.archiver.util",
-      "coursierapi.shaded.plexus.archiver.zip",
-      "coursierapi.shaded.plexus.components.io.attributes",
-      "coursierapi.shaded.plexus.components.io.filemappers",
-      "coursierapi.shaded.plexus.components.io.fileselectors",
-      "coursierapi.shaded.plexus.components.io.resources",
-      "coursierapi.shaded.plexus.util",
-      "coursierapi.shaded.plexus.util.cli",
-      "coursierapi.shaded.scala",
-      "coursierapi.shaded.scala.cli.commands",
-      "coursierapi.shaded.scala.cli.config",
-      "coursierapi.shaded.scala.collection",
-      "coursierapi.shaded.scala.collection.concurrent",
-      "coursierapi.shaded.scala.collection.convert",
-      "coursierapi.shaded.scala.collection.generic",
-      "coursierapi.shaded.scala.collection.immutable",
-      "coursierapi.shaded.scala.collection.mutable",
-      "coursierapi.shaded.scala.concurrent",
-      "coursierapi.shaded.scala.concurrent.duration",
-      "coursierapi.shaded.scala.concurrent.impl",
-      "coursierapi.shaded.scala.math",
-      "coursierapi.shaded.scala.ref",
-      "coursierapi.shaded.scala.reflect",
-      "coursierapi.shaded.scala.runtime",
-      "coursierapi.shaded.scala.sys",
-      "coursierapi.shaded.scala.sys.process",
-      "coursierapi.shaded.scala.util",
-      "coursierapi.shaded.scala.util.control",
-      "coursierapi.shaded.scala.util.hashing",
-      "coursierapi.shaded.scala.util.matching",
-      "coursierapi.shaded.scala.xml",
-      "coursierapi.shaded.scala.xml.dtd",
-      "coursierapi.shaded.scala.xml.dtd.impl",
-      "coursierapi.shaded.scala.xml.factory",
-      "coursierapi.shaded.scala.xml.parsing",
-      "coursierapi.shaded.snappy",
-      "coursierapi.shaded.windowsansi",
-      "coursierapi.shaded.xz",
-      "coursierapi.shaded.xz.check",
-      "coursierapi.shaded.xz.common",
-      "coursierapi.shaded.xz.delta",
-      "coursierapi.shaded.xz.index",
-      "coursierapi.shaded.xz.lz",
-      "coursierapi.shaded.xz.lzma",
-      "coursierapi.shaded.xz.rangecoder",
-      "coursierapi.shaded.xz.simple",
-      "coursierapi.shaded.zstd",
-      "coursierapi.shaded.zstd.util"
+    "commons-codec:commons-codec": [
+      "org.apache.commons.codec",
+      "org.apache.commons.codec.binary",
+      "org.apache.commons.codec.cli",
+      "org.apache.commons.codec.digest",
+      "org.apache.commons.codec.language",
+      "org.apache.commons.codec.language.bm",
+      "org.apache.commons.codec.net"
+    ],
+    "commons-io:commons-io": [
+      "org.apache.commons.io",
+      "org.apache.commons.io.build",
+      "org.apache.commons.io.channels",
+      "org.apache.commons.io.charset",
+      "org.apache.commons.io.comparator",
+      "org.apache.commons.io.file",
+      "org.apache.commons.io.file.attribute",
+      "org.apache.commons.io.file.spi",
+      "org.apache.commons.io.filefilter",
+      "org.apache.commons.io.function",
+      "org.apache.commons.io.input",
+      "org.apache.commons.io.input.buffer",
+      "org.apache.commons.io.monitor",
+      "org.apache.commons.io.output",
+      "org.apache.commons.io.serialization"
+    ],
+    "io.airlift:aircompressor": [
+      "io.airlift.compress",
+      "io.airlift.compress.bzip2",
+      "io.airlift.compress.deflate",
+      "io.airlift.compress.gzip",
+      "io.airlift.compress.hadoop",
+      "io.airlift.compress.lz4",
+      "io.airlift.compress.lzo",
+      "io.airlift.compress.snappy",
+      "io.airlift.compress.zstd"
+    ],
+    "io.get-coursier.jniutils:windows-jni-utils": [
+      "coursier.jniutils"
+    ],
+    "io.get-coursier:cache-util": [
+      "coursier.cache.internal"
+    ],
+    "io.get-coursier:coursier-cache_2.13": [
+      "coursier.cache",
+      "coursier.cache.internal",
+      "coursier.cache.loggers",
+      "coursier.cache.shaded.dirs",
+      "coursier.cache.shaded.dirs.impl",
+      "coursier.cache.shaded.dirs.jni",
+      "coursier.parse",
+      "coursier.paths",
+      "coursier.util"
+    ],
+    "io.get-coursier:coursier-core_2.13": [
+      "coursier.core",
+      "coursier.core.compatibility",
+      "coursier.core.shaded.fastparse",
+      "coursier.core.shaded.fastparse.internal",
+      "coursier.core.shaded.geny",
+      "coursier.core.shaded.sourcecode",
+      "coursier.graph",
+      "coursier.ivy",
+      "coursier.maven",
+      "coursier.util"
+    ],
+    "io.get-coursier:coursier-proxy-setup": [
+      "coursier.proxy"
+    ],
+    "io.get-coursier:coursier-util_2.13": [
+      "coursier.core",
+      "coursier.credentials",
+      "coursier.parse",
+      "coursier.util",
+      "coursier.util.shaded.org.jsoup",
+      "coursier.util.shaded.org.jsoup.helper",
+      "coursier.util.shaded.org.jsoup.internal",
+      "coursier.util.shaded.org.jsoup.nodes",
+      "coursier.util.shaded.org.jsoup.parser",
+      "coursier.util.shaded.org.jsoup.safety",
+      "coursier.util.shaded.org.jsoup.select"
+    ],
+    "io.get-coursier:coursier_2.13": [
+      "coursier",
+      "coursier.complete",
+      "coursier.error",
+      "coursier.error.conflict",
+      "coursier.internal",
+      "coursier.internal.shaded.fastparse",
+      "coursier.internal.shaded.fastparse.internal",
+      "coursier.internal.shaded.geny",
+      "coursier.internal.shaded.sourcecode",
+      "coursier.params",
+      "coursier.params.rule",
+      "coursier.parse",
+      "coursier.util"
+    ],
+    "io.get-coursier:dependency_2.13": [
+      "dependency",
+      "dependency.literal",
+      "dependency.parser"
+    ],
+    "io.github.alexarchambault.windows-ansi:windows-ansi": [
+      "io.github.alexarchambault.windowsansi"
+    ],
+    "io.github.alexarchambault:concurrent-reference-hash-map": [
+      "concurrentrefhashmap"
+    ],
+    "io.github.alexarchambault:is-terminal": [
+      "io.github.alexarchambault.isterminal"
+    ],
+    "io.github.alexarchambault:is-terminal:jar:sources": [
+      "io.github.alexarchambault.isterminal"
     ],
     "io.github.java-diff-utils:java-diff-utils": [
       "com.github.difflib",
@@ -786,13 +1185,91 @@
       "com.github.difflib.algorithm.myers",
       "com.github.difflib.patch",
       "com.github.difflib.text",
+      "com.github.difflib.text.deltamerge",
       "com.github.difflib.unifieddiff"
+    ],
+    "javax.inject:javax.inject": [
+      "javax.inject"
     ],
     "net.java.dev.jna:jna": [
       "com.sun.jna",
-      "com.sun.jna.internal",
       "com.sun.jna.ptr",
       "com.sun.jna.win32"
+    ],
+    "net.java.dev.jna:jna-platform": [
+      "com.sun.jna.platform",
+      "com.sun.jna.platform.dnd",
+      "com.sun.jna.platform.mac",
+      "com.sun.jna.platform.unix",
+      "com.sun.jna.platform.unix.solaris",
+      "com.sun.jna.platform.win32",
+      "com.sun.jna.platform.win32.COM",
+      "com.sun.jna.platform.win32.COM.tlb",
+      "com.sun.jna.platform.win32.COM.tlb.imp",
+      "com.sun.jna.platform.win32.COM.util",
+      "com.sun.jna.platform.win32.COM.util.annotation",
+      "com.sun.jna.platform.wince"
+    ],
+    "org.apache.commons:commons-compress": [
+      "org.apache.commons.compress",
+      "org.apache.commons.compress.archivers",
+      "org.apache.commons.compress.archivers.ar",
+      "org.apache.commons.compress.archivers.arj",
+      "org.apache.commons.compress.archivers.cpio",
+      "org.apache.commons.compress.archivers.dump",
+      "org.apache.commons.compress.archivers.examples",
+      "org.apache.commons.compress.archivers.jar",
+      "org.apache.commons.compress.archivers.sevenz",
+      "org.apache.commons.compress.archivers.tar",
+      "org.apache.commons.compress.archivers.zip",
+      "org.apache.commons.compress.changes",
+      "org.apache.commons.compress.compressors",
+      "org.apache.commons.compress.compressors.brotli",
+      "org.apache.commons.compress.compressors.bzip2",
+      "org.apache.commons.compress.compressors.deflate",
+      "org.apache.commons.compress.compressors.deflate64",
+      "org.apache.commons.compress.compressors.gzip",
+      "org.apache.commons.compress.compressors.lz4",
+      "org.apache.commons.compress.compressors.lz77support",
+      "org.apache.commons.compress.compressors.lzma",
+      "org.apache.commons.compress.compressors.lzw",
+      "org.apache.commons.compress.compressors.pack200",
+      "org.apache.commons.compress.compressors.snappy",
+      "org.apache.commons.compress.compressors.xz",
+      "org.apache.commons.compress.compressors.z",
+      "org.apache.commons.compress.compressors.zstandard",
+      "org.apache.commons.compress.harmony.archive.internal.nls",
+      "org.apache.commons.compress.harmony.pack200",
+      "org.apache.commons.compress.harmony.unpack200",
+      "org.apache.commons.compress.harmony.unpack200.bytecode",
+      "org.apache.commons.compress.harmony.unpack200.bytecode.forms",
+      "org.apache.commons.compress.java.util.jar",
+      "org.apache.commons.compress.parallel",
+      "org.apache.commons.compress.utils"
+    ],
+    "org.apache.commons:commons-lang3": [
+      "org.apache.commons.lang3",
+      "org.apache.commons.lang3.arch",
+      "org.apache.commons.lang3.builder",
+      "org.apache.commons.lang3.compare",
+      "org.apache.commons.lang3.concurrent",
+      "org.apache.commons.lang3.concurrent.locks",
+      "org.apache.commons.lang3.event",
+      "org.apache.commons.lang3.exception",
+      "org.apache.commons.lang3.function",
+      "org.apache.commons.lang3.math",
+      "org.apache.commons.lang3.mutable",
+      "org.apache.commons.lang3.reflect",
+      "org.apache.commons.lang3.stream",
+      "org.apache.commons.lang3.text",
+      "org.apache.commons.lang3.text.translate",
+      "org.apache.commons.lang3.time",
+      "org.apache.commons.lang3.tuple",
+      "org.apache.commons.lang3.util"
+    ],
+    "org.apache.xbean:xbean-reflect": [
+      "org.apache.xbean.propertyeditor",
+      "org.apache.xbean.recipe"
     ],
     "org.apiguardian:apiguardian-api": [
       "org.apiguardian.api"
@@ -829,7 +1306,97 @@
       "org.checkerframework.dataflow.qual",
       "org.checkerframework.framework.qual"
     ],
-    "org.jline:jline": [
+    "org.codehaus.plexus:plexus-archiver": [
+      "org.codehaus.plexus.archiver",
+      "org.codehaus.plexus.archiver.bzip2",
+      "org.codehaus.plexus.archiver.car",
+      "org.codehaus.plexus.archiver.diags",
+      "org.codehaus.plexus.archiver.dir",
+      "org.codehaus.plexus.archiver.ear",
+      "org.codehaus.plexus.archiver.esb",
+      "org.codehaus.plexus.archiver.exceptions",
+      "org.codehaus.plexus.archiver.filters",
+      "org.codehaus.plexus.archiver.gzip",
+      "org.codehaus.plexus.archiver.jar",
+      "org.codehaus.plexus.archiver.manager",
+      "org.codehaus.plexus.archiver.nar",
+      "org.codehaus.plexus.archiver.par",
+      "org.codehaus.plexus.archiver.rar",
+      "org.codehaus.plexus.archiver.resources",
+      "org.codehaus.plexus.archiver.sar",
+      "org.codehaus.plexus.archiver.snappy",
+      "org.codehaus.plexus.archiver.swc",
+      "org.codehaus.plexus.archiver.tar",
+      "org.codehaus.plexus.archiver.util",
+      "org.codehaus.plexus.archiver.war",
+      "org.codehaus.plexus.archiver.xz",
+      "org.codehaus.plexus.archiver.zip",
+      "org.codehaus.plexus.archiver.zstd",
+      "org.codehaus.plexus.components.io.resources"
+    ],
+    "org.codehaus.plexus:plexus-classworlds": [
+      "org.codehaus.classworlds",
+      "org.codehaus.plexus.classworlds",
+      "org.codehaus.plexus.classworlds.launcher",
+      "org.codehaus.plexus.classworlds.realm",
+      "org.codehaus.plexus.classworlds.strategy"
+    ],
+    "org.codehaus.plexus:plexus-container-default": [
+      "org.codehaus.plexus",
+      "org.codehaus.plexus.component",
+      "org.codehaus.plexus.component.builder",
+      "org.codehaus.plexus.component.collections",
+      "org.codehaus.plexus.component.composition",
+      "org.codehaus.plexus.component.configurator",
+      "org.codehaus.plexus.component.configurator.converters",
+      "org.codehaus.plexus.component.configurator.converters.basic",
+      "org.codehaus.plexus.component.configurator.converters.composite",
+      "org.codehaus.plexus.component.configurator.converters.lookup",
+      "org.codehaus.plexus.component.configurator.converters.special",
+      "org.codehaus.plexus.component.configurator.expression",
+      "org.codehaus.plexus.component.discovery",
+      "org.codehaus.plexus.component.factory",
+      "org.codehaus.plexus.component.factory.java",
+      "org.codehaus.plexus.component.manager",
+      "org.codehaus.plexus.component.repository",
+      "org.codehaus.plexus.component.repository.exception",
+      "org.codehaus.plexus.component.repository.io",
+      "org.codehaus.plexus.configuration",
+      "org.codehaus.plexus.configuration.io",
+      "org.codehaus.plexus.configuration.source",
+      "org.codehaus.plexus.configuration.xml",
+      "org.codehaus.plexus.container.initialization",
+      "org.codehaus.plexus.context",
+      "org.codehaus.plexus.lifecycle",
+      "org.codehaus.plexus.lifecycle.phase",
+      "org.codehaus.plexus.logging",
+      "org.codehaus.plexus.logging.console",
+      "org.codehaus.plexus.personality.plexus.lifecycle.phase"
+    ],
+    "org.codehaus.plexus:plexus-io": [
+      "org.codehaus.plexus.components.io.attributes",
+      "org.codehaus.plexus.components.io.attributes.proxy",
+      "org.codehaus.plexus.components.io.filemappers",
+      "org.codehaus.plexus.components.io.fileselectors",
+      "org.codehaus.plexus.components.io.functions",
+      "org.codehaus.plexus.components.io.resources",
+      "org.codehaus.plexus.components.io.resources.proxy"
+    ],
+    "org.codehaus.plexus:plexus-utils": [
+      "org.codehaus.plexus.util",
+      "org.codehaus.plexus.util.cli",
+      "org.codehaus.plexus.util.cli.shell",
+      "org.codehaus.plexus.util.dag",
+      "org.codehaus.plexus.util.introspection",
+      "org.codehaus.plexus.util.io",
+      "org.codehaus.plexus.util.reflection"
+    ],
+    "org.fusesource.jansi:jansi": [
+      "org.fusesource.jansi",
+      "org.fusesource.jansi.internal",
+      "org.fusesource.jansi.io"
+    ],
+    "org.jline:jline:jar:jdk8": [
       "org.jline.builtins",
       "org.jline.builtins.ssh",
       "org.jline.builtins.telnet",
@@ -847,7 +1414,6 @@
       "org.jline.terminal",
       "org.jline.terminal.impl",
       "org.jline.terminal.impl.exec",
-      "org.jline.terminal.impl.ffm",
       "org.jline.terminal.impl.jansi",
       "org.jline.terminal.impl.jansi.freebsd",
       "org.jline.terminal.impl.jansi.linux",
@@ -1034,14 +1600,15 @@
       "scala.util.control.compat",
       "scala.util.matching.compat"
     ],
-    "org.scala-lang.modules:scala-parallel-collections_2.13": [
-      "scala.collection",
-      "scala.collection.generic",
-      "scala.collection.immutable",
-      "scala.collection.mutable",
-      "scala.collection.parallel",
-      "scala.collection.parallel.immutable",
-      "scala.collection.parallel.mutable"
+    "org.scala-lang.modules:scala-xml_2.13": [
+      "scala.xml",
+      "scala.xml.dtd",
+      "scala.xml.dtd.impl",
+      "scala.xml.factory",
+      "scala.xml.include",
+      "scala.xml.include.sax",
+      "scala.xml.parsing",
+      "scala.xml.transform"
     ],
     "org.scala-lang:scala-compiler": [
       "com.github.difflib",
@@ -1049,6 +1616,7 @@
       "com.github.difflib.algorithm.myers",
       "com.github.difflib.patch",
       "com.github.difflib.text",
+      "com.github.difflib.text.deltamerge",
       "com.github.difflib.unifieddiff",
       "scala.reflect.macros.compiler",
       "scala.reflect.macros.contexts",
@@ -1157,16 +1725,16 @@
       "scala.reflect.macros.whitebox",
       "scala.reflect.runtime"
     ],
-    "org.scalameta:common_2.13": [
+    "org.scalameta:common2_2.13": [
       "org.scalameta",
       "org.scalameta.adt",
-      "org.scalameta.collections",
       "org.scalameta.data",
       "org.scalameta.explore",
       "org.scalameta.internal",
       "org.scalameta.invariants",
       "org.scalameta.overload",
       "org.scalameta.tests",
+      "scala.meta",
       "scala.meta.classifiers",
       "scala.meta.common",
       "scala.meta.internal",
@@ -1178,13 +1746,21 @@
       "scala.meta.internal.trees",
       "scala.meta.prettyprinters"
     ],
+    "org.scalameta:common_2.13": [
+      "buildinfo",
+      "org.scalameta",
+      "org.scalameta.collections"
+    ],
+    "org.scalameta:io_2.13": [
+      "scala.meta.internal.io",
+      "scala.meta.io"
+    ],
     "org.scalameta:mdoc-parser_2.13": [
       "mdoc.parser"
     ],
     "org.scalameta:metaconfig-core_2.13": [
       "metaconfig",
       "metaconfig.annotation",
-      "metaconfig.cli",
       "metaconfig.error",
       "metaconfig.generic",
       "metaconfig.internal"
@@ -1220,10 +1796,13 @@
       "org.scalafmt.rewrite",
       "org.scalafmt.util"
     ],
-    "org.scalameta:scalafmt-dynamic_2.13": [
+    "org.scalameta:scalafmt-dynamic-core_2.13": [
       "org.scalafmt.dynamic",
       "org.scalafmt.dynamic.exceptions",
       "org.scalafmt.dynamic.utils"
+    ],
+    "org.scalameta:scalafmt-dynamic_2.13": [
+      "org.scalafmt.dynamic.coursier"
     ],
     "org.scalameta:scalafmt-interfaces": [
       "org.scalafmt.interfaces"
@@ -1245,27 +1824,28 @@
     "org.scalameta:svm-subs": [
       "scala.meta.internal.svm_subs"
     ],
-    "org.scalameta:trees_2.13": [
+    "org.scalameta:trees2_2.13": [
       "scala.meta",
-      "scala.meta.contrib",
       "scala.meta.dialects",
       "scala.meta.inputs",
-      "scala.meta.internal",
       "scala.meta.internal.dialects",
       "scala.meta.internal.inputs",
-      "scala.meta.internal.io",
-      "scala.meta.internal.parsers",
       "scala.meta.internal.prettyprinters",
       "scala.meta.internal.tokenizers",
       "scala.meta.internal.tokens",
       "scala.meta.internal.trees",
-      "scala.meta.io",
-      "scala.meta.shaded.internal.fastparse",
-      "scala.meta.shaded.internal.fastparse.internal",
-      "scala.meta.shaded.internal.geny",
       "scala.meta.tokenizers",
       "scala.meta.tokens",
       "scala.meta.trees"
+    ],
+    "org.scalameta:trees_2.13": [
+      "scala.meta.internal",
+      "scala.meta.internal.parsers",
+      "scala.meta.internal.tokenizers",
+      "scala.meta.internal.trees",
+      "scala.meta.shaded.internal.fastparse",
+      "scala.meta.shaded.internal.fastparse.internal",
+      "scala.meta.shaded.internal.geny"
     ],
     "org.slf4j:slf4j-api": [
       "org.slf4j",
@@ -1273,12 +1853,36 @@
       "org.slf4j.helpers",
       "org.slf4j.spi"
     ],
+    "org.tukaani:xz": [
+      "org.tukaani.xz",
+      "org.tukaani.xz.check",
+      "org.tukaani.xz.common",
+      "org.tukaani.xz.delta",
+      "org.tukaani.xz.index",
+      "org.tukaani.xz.lz",
+      "org.tukaani.xz.lzma",
+      "org.tukaani.xz.rangecoder",
+      "org.tukaani.xz.simple"
+    ],
     "org.typelevel:paiges-core_2.13": [
       "org.typelevel.paiges"
+    ],
+    "org.virtuslab.scala-cli:config_2.13": [
+      "scala.cli.config",
+      "scala.cli.config.internal"
+    ],
+    "org.virtuslab.scala-cli:specification-level_2.13": [
+      "scala.cli.commands"
     ]
   },
   "repositories": {
     "https://maven.google.com/": [
+      "com.facebook:nailgun-server",
+      "com.facebook:nailgun-server:jar:sources",
+      "com.github.luben:zstd-jni",
+      "com.github.luben:zstd-jni:jar:sources",
+      "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13",
+      "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13:jar:sources",
       "com.github.scopt:scopt_2.13",
       "com.github.scopt:scopt_2.13:jar:sources",
       "com.google.code.findbugs:jsr305",
@@ -1298,21 +1902,67 @@
       "com.lihaoyi:fansi_2.13:jar:sources",
       "com.lihaoyi:sourcecode_2.13",
       "com.lihaoyi:sourcecode_2.13:jar:sources",
-      "com.martiansoftware:nailgun-server",
-      "com.martiansoftware:nailgun-server:jar:sources",
       "com.typesafe:config",
       "com.typesafe:config:jar:sources",
-      "io.get-coursier:interface",
-      "io.get-coursier:interface:jar:sources",
+      "commons-codec:commons-codec",
+      "commons-codec:commons-codec:jar:sources",
+      "commons-io:commons-io",
+      "commons-io:commons-io:jar:sources",
+      "io.airlift:aircompressor",
+      "io.airlift:aircompressor:jar:sources",
+      "io.get-coursier.jniutils:windows-jni-utils",
+      "io.get-coursier.jniutils:windows-jni-utils:jar:sources",
+      "io.get-coursier:cache-util",
+      "io.get-coursier:cache-util:jar:sources",
+      "io.get-coursier:coursier-cache_2.13",
+      "io.get-coursier:coursier-cache_2.13:jar:sources",
+      "io.get-coursier:coursier-core_2.13",
+      "io.get-coursier:coursier-core_2.13:jar:sources",
+      "io.get-coursier:coursier-proxy-setup",
+      "io.get-coursier:coursier-proxy-setup:jar:sources",
+      "io.get-coursier:coursier-util_2.13",
+      "io.get-coursier:coursier-util_2.13:jar:sources",
+      "io.get-coursier:coursier_2.13",
+      "io.get-coursier:coursier_2.13:jar:sources",
+      "io.get-coursier:dependency_2.13",
+      "io.get-coursier:dependency_2.13:jar:sources",
+      "io.github.alexarchambault.windows-ansi:windows-ansi",
+      "io.github.alexarchambault.windows-ansi:windows-ansi:jar:sources",
+      "io.github.alexarchambault:concurrent-reference-hash-map",
+      "io.github.alexarchambault:concurrent-reference-hash-map:jar:sources",
+      "io.github.alexarchambault:is-terminal",
+      "io.github.alexarchambault:is-terminal:jar:sources",
       "io.github.java-diff-utils:java-diff-utils",
       "io.github.java-diff-utils:java-diff-utils:jar:sources",
+      "javax.inject:javax.inject",
+      "javax.inject:javax.inject:jar:sources",
       "net.java.dev.jna:jna",
+      "net.java.dev.jna:jna-platform",
+      "net.java.dev.jna:jna-platform:jar:sources",
       "net.java.dev.jna:jna:jar:sources",
+      "org.apache.commons:commons-compress",
+      "org.apache.commons:commons-compress:jar:sources",
+      "org.apache.commons:commons-lang3",
+      "org.apache.commons:commons-lang3:jar:sources",
+      "org.apache.xbean:xbean-reflect",
+      "org.apache.xbean:xbean-reflect:jar:sources",
       "org.apiguardian:apiguardian-api",
       "org.apiguardian:apiguardian-api:jar:sources",
       "org.checkerframework:checker-qual",
       "org.checkerframework:checker-qual:jar:sources",
-      "org.jline:jline",
+      "org.codehaus.plexus:plexus-archiver",
+      "org.codehaus.plexus:plexus-archiver:jar:sources",
+      "org.codehaus.plexus:plexus-classworlds",
+      "org.codehaus.plexus:plexus-classworlds:jar:sources",
+      "org.codehaus.plexus:plexus-container-default",
+      "org.codehaus.plexus:plexus-container-default:jar:sources",
+      "org.codehaus.plexus:plexus-io",
+      "org.codehaus.plexus:plexus-io:jar:sources",
+      "org.codehaus.plexus:plexus-utils",
+      "org.codehaus.plexus:plexus-utils:jar:sources",
+      "org.fusesource.jansi:jansi",
+      "org.fusesource.jansi:jansi:jar:sources",
+      "org.jline:jline:jar:jdk8",
       "org.jline:jline:jar:sources",
       "org.jspecify:jspecify",
       "org.jspecify:jspecify:jar:sources",
@@ -1330,16 +1980,20 @@
       "org.opentest4j:opentest4j:jar:sources",
       "org.scala-lang.modules:scala-collection-compat_2.13",
       "org.scala-lang.modules:scala-collection-compat_2.13:jar:sources",
-      "org.scala-lang.modules:scala-parallel-collections_2.13",
-      "org.scala-lang.modules:scala-parallel-collections_2.13:jar:sources",
+      "org.scala-lang.modules:scala-xml_2.13",
+      "org.scala-lang.modules:scala-xml_2.13:jar:sources",
       "org.scala-lang:scala-compiler",
       "org.scala-lang:scala-compiler:jar:sources",
       "org.scala-lang:scala-library",
       "org.scala-lang:scala-library:jar:sources",
       "org.scala-lang:scala-reflect",
       "org.scala-lang:scala-reflect:jar:sources",
+      "org.scalameta:common2_2.13",
+      "org.scalameta:common2_2.13:jar:sources",
       "org.scalameta:common_2.13",
       "org.scalameta:common_2.13:jar:sources",
+      "org.scalameta:io_2.13",
+      "org.scalameta:io_2.13:jar:sources",
       "org.scalameta:mdoc-parser_2.13",
       "org.scalameta:mdoc-parser_2.13:jar:sources",
       "org.scalameta:metaconfig-core_2.13",
@@ -1358,6 +2012,8 @@
       "org.scalameta:scalafmt-config_2.13:jar:sources",
       "org.scalameta:scalafmt-core_2.13",
       "org.scalameta:scalafmt-core_2.13:jar:sources",
+      "org.scalameta:scalafmt-dynamic-core_2.13",
+      "org.scalameta:scalafmt-dynamic-core_2.13:jar:sources",
       "org.scalameta:scalafmt-dynamic_2.13",
       "org.scalameta:scalafmt-dynamic_2.13:jar:sources",
       "org.scalameta:scalafmt-interfaces",
@@ -1370,14 +2026,28 @@
       "org.scalameta:scalameta_2.13:jar:sources",
       "org.scalameta:svm-subs",
       "org.scalameta:svm-subs:jar:sources",
+      "org.scalameta:trees2_2.13",
+      "org.scalameta:trees2_2.13:jar:sources",
       "org.scalameta:trees_2.13",
       "org.scalameta:trees_2.13:jar:sources",
       "org.slf4j:slf4j-api",
       "org.slf4j:slf4j-api:jar:sources",
+      "org.tukaani:xz",
+      "org.tukaani:xz:jar:sources",
       "org.typelevel:paiges-core_2.13",
-      "org.typelevel:paiges-core_2.13:jar:sources"
+      "org.typelevel:paiges-core_2.13:jar:sources",
+      "org.virtuslab.scala-cli:config_2.13",
+      "org.virtuslab.scala-cli:config_2.13:jar:sources",
+      "org.virtuslab.scala-cli:specification-level_2.13",
+      "org.virtuslab.scala-cli:specification-level_2.13:jar:sources"
     ],
     "https://repo1.maven.org/maven2/": [
+      "com.facebook:nailgun-server",
+      "com.facebook:nailgun-server:jar:sources",
+      "com.github.luben:zstd-jni",
+      "com.github.luben:zstd-jni:jar:sources",
+      "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13",
+      "com.github.plokhotnyuk.jsoniter-scala:jsoniter-scala-core_2.13:jar:sources",
       "com.github.scopt:scopt_2.13",
       "com.github.scopt:scopt_2.13:jar:sources",
       "com.google.code.findbugs:jsr305",
@@ -1397,21 +2067,67 @@
       "com.lihaoyi:fansi_2.13:jar:sources",
       "com.lihaoyi:sourcecode_2.13",
       "com.lihaoyi:sourcecode_2.13:jar:sources",
-      "com.martiansoftware:nailgun-server",
-      "com.martiansoftware:nailgun-server:jar:sources",
       "com.typesafe:config",
       "com.typesafe:config:jar:sources",
-      "io.get-coursier:interface",
-      "io.get-coursier:interface:jar:sources",
+      "commons-codec:commons-codec",
+      "commons-codec:commons-codec:jar:sources",
+      "commons-io:commons-io",
+      "commons-io:commons-io:jar:sources",
+      "io.airlift:aircompressor",
+      "io.airlift:aircompressor:jar:sources",
+      "io.get-coursier.jniutils:windows-jni-utils",
+      "io.get-coursier.jniutils:windows-jni-utils:jar:sources",
+      "io.get-coursier:cache-util",
+      "io.get-coursier:cache-util:jar:sources",
+      "io.get-coursier:coursier-cache_2.13",
+      "io.get-coursier:coursier-cache_2.13:jar:sources",
+      "io.get-coursier:coursier-core_2.13",
+      "io.get-coursier:coursier-core_2.13:jar:sources",
+      "io.get-coursier:coursier-proxy-setup",
+      "io.get-coursier:coursier-proxy-setup:jar:sources",
+      "io.get-coursier:coursier-util_2.13",
+      "io.get-coursier:coursier-util_2.13:jar:sources",
+      "io.get-coursier:coursier_2.13",
+      "io.get-coursier:coursier_2.13:jar:sources",
+      "io.get-coursier:dependency_2.13",
+      "io.get-coursier:dependency_2.13:jar:sources",
+      "io.github.alexarchambault.windows-ansi:windows-ansi",
+      "io.github.alexarchambault.windows-ansi:windows-ansi:jar:sources",
+      "io.github.alexarchambault:concurrent-reference-hash-map",
+      "io.github.alexarchambault:concurrent-reference-hash-map:jar:sources",
+      "io.github.alexarchambault:is-terminal",
+      "io.github.alexarchambault:is-terminal:jar:sources",
       "io.github.java-diff-utils:java-diff-utils",
       "io.github.java-diff-utils:java-diff-utils:jar:sources",
+      "javax.inject:javax.inject",
+      "javax.inject:javax.inject:jar:sources",
       "net.java.dev.jna:jna",
+      "net.java.dev.jna:jna-platform",
+      "net.java.dev.jna:jna-platform:jar:sources",
       "net.java.dev.jna:jna:jar:sources",
+      "org.apache.commons:commons-compress",
+      "org.apache.commons:commons-compress:jar:sources",
+      "org.apache.commons:commons-lang3",
+      "org.apache.commons:commons-lang3:jar:sources",
+      "org.apache.xbean:xbean-reflect",
+      "org.apache.xbean:xbean-reflect:jar:sources",
       "org.apiguardian:apiguardian-api",
       "org.apiguardian:apiguardian-api:jar:sources",
       "org.checkerframework:checker-qual",
       "org.checkerframework:checker-qual:jar:sources",
-      "org.jline:jline",
+      "org.codehaus.plexus:plexus-archiver",
+      "org.codehaus.plexus:plexus-archiver:jar:sources",
+      "org.codehaus.plexus:plexus-classworlds",
+      "org.codehaus.plexus:plexus-classworlds:jar:sources",
+      "org.codehaus.plexus:plexus-container-default",
+      "org.codehaus.plexus:plexus-container-default:jar:sources",
+      "org.codehaus.plexus:plexus-io",
+      "org.codehaus.plexus:plexus-io:jar:sources",
+      "org.codehaus.plexus:plexus-utils",
+      "org.codehaus.plexus:plexus-utils:jar:sources",
+      "org.fusesource.jansi:jansi",
+      "org.fusesource.jansi:jansi:jar:sources",
+      "org.jline:jline:jar:jdk8",
       "org.jline:jline:jar:sources",
       "org.jspecify:jspecify",
       "org.jspecify:jspecify:jar:sources",
@@ -1429,16 +2145,20 @@
       "org.opentest4j:opentest4j:jar:sources",
       "org.scala-lang.modules:scala-collection-compat_2.13",
       "org.scala-lang.modules:scala-collection-compat_2.13:jar:sources",
-      "org.scala-lang.modules:scala-parallel-collections_2.13",
-      "org.scala-lang.modules:scala-parallel-collections_2.13:jar:sources",
+      "org.scala-lang.modules:scala-xml_2.13",
+      "org.scala-lang.modules:scala-xml_2.13:jar:sources",
       "org.scala-lang:scala-compiler",
       "org.scala-lang:scala-compiler:jar:sources",
       "org.scala-lang:scala-library",
       "org.scala-lang:scala-library:jar:sources",
       "org.scala-lang:scala-reflect",
       "org.scala-lang:scala-reflect:jar:sources",
+      "org.scalameta:common2_2.13",
+      "org.scalameta:common2_2.13:jar:sources",
       "org.scalameta:common_2.13",
       "org.scalameta:common_2.13:jar:sources",
+      "org.scalameta:io_2.13",
+      "org.scalameta:io_2.13:jar:sources",
       "org.scalameta:mdoc-parser_2.13",
       "org.scalameta:mdoc-parser_2.13:jar:sources",
       "org.scalameta:metaconfig-core_2.13",
@@ -1457,6 +2177,8 @@
       "org.scalameta:scalafmt-config_2.13:jar:sources",
       "org.scalameta:scalafmt-core_2.13",
       "org.scalameta:scalafmt-core_2.13:jar:sources",
+      "org.scalameta:scalafmt-dynamic-core_2.13",
+      "org.scalameta:scalafmt-dynamic-core_2.13:jar:sources",
       "org.scalameta:scalafmt-dynamic_2.13",
       "org.scalameta:scalafmt-dynamic_2.13:jar:sources",
       "org.scalameta:scalafmt-interfaces",
@@ -1469,21 +2191,34 @@
       "org.scalameta:scalameta_2.13:jar:sources",
       "org.scalameta:svm-subs",
       "org.scalameta:svm-subs:jar:sources",
+      "org.scalameta:trees2_2.13",
+      "org.scalameta:trees2_2.13:jar:sources",
       "org.scalameta:trees_2.13",
       "org.scalameta:trees_2.13:jar:sources",
       "org.slf4j:slf4j-api",
       "org.slf4j:slf4j-api:jar:sources",
+      "org.tukaani:xz",
+      "org.tukaani:xz:jar:sources",
       "org.typelevel:paiges-core_2.13",
-      "org.typelevel:paiges-core_2.13:jar:sources"
+      "org.typelevel:paiges-core_2.13:jar:sources",
+      "org.virtuslab.scala-cli:config_2.13",
+      "org.virtuslab.scala-cli:config_2.13:jar:sources",
+      "org.virtuslab.scala-cli:specification-level_2.13",
+      "org.virtuslab.scala-cli:specification-level_2.13:jar:sources"
     ]
   },
   "services": {
-    "io.get-coursier:interface": {
-      "coursierapi.shaded.coursier.jniutils.NativeApi": [
-        "coursierapi.internal.jniutils.ApiInternalNativeApi"
+    "io.get-coursier.jniutils:windows-jni-utils": {
+      "coursier.jniutils.NativeApi": [
+        "coursier.jniutils.DefaultNativeApi"
       ]
     },
-    "org.jline:jline": {
+    "io.get-coursier.jniutils:windows-jni-utils:jar:sources": {
+      "coursier.jniutils.NativeApi": [
+        "coursier.jniutils.DefaultNativeApi"
+      ]
+    },
+    "org.jline:jline:jar:jdk8": {
       "org/": [],
       "org/jline/": [],
       "org/jline/terminal/": [],
@@ -1606,14 +2341,39 @@
         "scala.tools.nsc.interpreter.shell.Scripted$Factory"
       ]
     },
-    "org.scalameta:scalafmt-dynamic_2.13": {
+    "org.scala-lang:scala-compiler:jar:sources": {
+      "javax.script.ScriptEngineFactory": [
+        "scala.tools.nsc.interpreter.shell.Scripted$Factory"
+      ]
+    },
+    "org.scalameta:scalafmt-dynamic-core_2.13": {
       "org.scalafmt.interfaces.Scalafmt": [
         "org.scalafmt.dynamic.ScalafmtDynamic"
       ]
     },
-    "org.scalameta:scalafmt-dynamic_2.13:jar:sources": {
+    "org.scalameta:scalafmt-dynamic-core_2.13:jar:sources": {
       "org.scalafmt.interfaces.Scalafmt": [
         "org.scalafmt.dynamic.ScalafmtDynamic"
+      ]
+    },
+    "org.scalameta:scalafmt-dynamic_2.13": {
+      "org.scalafmt.interfaces.RepositoryPackageDownloaderFactory": [
+        "org.scalafmt.dynamic.coursier.CoursierDependencyDownloaderFactory"
+      ]
+    },
+    "org.scalameta:scalafmt-dynamic_2.13:jar:sources": {
+      "org.scalafmt.interfaces.RepositoryPackageDownloaderFactory": [
+        "org.scalafmt.dynamic.coursier.CoursierDependencyDownloaderFactory"
+      ]
+    },
+    "org.scalameta:trees_2.13": {
+      "scala.meta.tokenizers.Tokenize": [
+        "scala.meta.internal.tokenizers.ScalametaTokenizer$AsTokenize$"
+      ]
+    },
+    "org.scalameta:trees_2.13:jar:sources": {
+      "scala.meta.tokenizers.Tokenize": [
+        "scala.meta.internal.tokenizers.ScalametaTokenizer$AsTokenize$"
       ]
     }
   },

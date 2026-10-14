@@ -41,7 +41,7 @@ cc_test(
     srcs = ["test/node_test.cpp"],
     deps = [
         ":node_lib",
-        "@googletest//:gtest_main",
+        "@googletest//:gtest",  # the test defines its own main(),
     ],
 )
 
@@ -51,7 +51,7 @@ cc_test(
     srcs = ["test/path_test.cpp"],
     deps = [
         ":path_lib",
-        "@googletest//:gtest_main",
+        "@googletest//:gtest",  # the test defines its own main(),
     ],
 )
 
@@ -62,7 +62,7 @@ cc_test(
     data = ["data/simple_graph.txt"],
     deps = [
         ":triangle_directed_graph_lib",
-        "@googletest//:gtest_main",
+        "@googletest//:gtest",  # the test defines its own main(),
     ],
 )
 

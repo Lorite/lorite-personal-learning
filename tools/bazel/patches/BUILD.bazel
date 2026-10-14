@@ -1,0 +1,2 @@
+# Patches for Bazel modules that are not yet compatible with the Bazel version of this repository.
+exports_files(glob(["*.patch"]))
