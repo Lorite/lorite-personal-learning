@@ -73,7 +73,7 @@ jobs:
         run: tools/lint/scripts/aspect_lint.sh //...
       - name: Commit the formatting and lock file changes # always try, because bazel build can also modify files
         if: always() && github.event_name == 'pull_request' # main only accepts pull requests (ruleset), so there is nothing to push on a main build
-        uses: stefanzweifel/git-auto-commit-action@v7.2.0
+        uses: stefanzweifel/git-auto-commit-action@v7.2.1
         with:
           commit_message: "Apply formatting and regenerated lock files from CI"
           commit_user_name: code-formatter-bot[bot]
