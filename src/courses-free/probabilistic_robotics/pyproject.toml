@@ -12,6 +12,8 @@ dependencies = [
     "nbconvert",
     "ipykernel",
     "ipywidgets",
+    "mcap",
+    "mcap-ros2-support",
 ]
 
 [tool.uv]
