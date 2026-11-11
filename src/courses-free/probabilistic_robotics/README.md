@@ -1,6 +1,6 @@
 # Probabilistic Robotics, hands-on
 
-Companion notebooks for the book _Probabilistic Robotics_ (Sebastian Thrun, Wolfram Burgard, Dieter Fox, MIT Press 2005), made for a weekly reading group. The idea is simple: run the algorithm first, then read the chapter with the questions the code produced. Nothing here is a new implementation. The notebooks import the functions of well-known open source repositories, write their own loop around them so the equations stay visible, and add one modification exercise per chapter.
+Companion notebooks for the book _Probabilistic Robotics_ (Sebastian Thrun, Wolfram Burgard, Dieter Fox, MIT Press 2005), made for a weekly reading group. The idea is simple: run the algorithm first, then read the chapter with the questions the code produced. Each notebook adds one modification exercise per chapter. Where a well-known open source repository already implements the chapter's algorithms, the notebook imports its functions and writes its own loop around them so the equations stay visible (chapter 3 uses PythonRobotics). Where none does, the notebook implements the book's algorithm tables directly, line by line, with the table and line numbers as comments (chapter 5: Tables 5.1 to 5.6, the motion models, and the live demos in `demos/`).
 
 ## Setup
 
@@ -43,7 +43,7 @@ Chapters 12 (sparse extended information filter) and 14 to 17 (Markov decision p
 
 Every chapter notebook follows the same four parts, so the habit stays the same:
 
-1. **Run** the external example through your own loop, with the book's table and line numbers as comments.
+1. **Run** the external example through your own loop, or the book's own algorithm tables when no external example exists, with the book's table and line numbers as comments.
 2. **Make it yours**: one modification with a plot that answers a question (for chapter 3, a measurement noise that grows with range against a constant one, judged by the innovation statistics).
 3. **Questions for the reading group**, produced by the run.
 4. **Now read**: the book sections tied to the cells above.
