@@ -349,3 +349,6 @@ _NCrunch*
 # Probabilistic Robotics course: read-only external clones and the uv environment
 src/courses-free/probabilistic_robotics/_external/
 src/courses-free/probabilistic_robotics/.venv/
+
+# Robotics Toolbox course: the uv environment
+src/courses-free/corke_robotics_toolbox/.venv/
