@@ -15,8 +15,8 @@ No external clones are needed. The toolbox ships its robot models (Panda, UR5, P
 
 ## Notebooks
 
-| Notebook                                                                   | Run                                                                                                                                                                     | Read in the book                                                                       |
-| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Notebook                                                                 | Run                                                                                                                                                            | Read in the book                                                                        |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | [`notebooks/01_arm_kinematics.ipynb`](notebooks/01_arm_kinematics.ipynb) | `SE3` poses, forward and inverse kinematics of the Panda, the Jacobian and manipulability, a resolved-rate controller as your own loop, null-space self-motion | "Representing Position and Orientation", "Robot Arm Kinematics", "Manipulator Velocity" |
 
 Ideas for the next notebooks: dynamics and computed-torque control ("Dynamics and Control"), and a mobile manipulator (the toolbox's `Frankie` model, a Panda on a mobile base) as a small version of Spot with its arm, where the base and arm together are redundant for the gripper task.
