@@ -414,7 +414,7 @@
   "moduleExtensions": {
     "@@aspect_rules_lint+//lint:extensions.bzl%tools": {
       "general": {
-        "bzlTransitiveDigest": "Zs3YVXDOfiWbkwXYbRwROdgltZqI4L69B5OYDoeSW5U=",
+        "bzlTransitiveDigest": "7w+H2eyKFS/h0Lw7i0M0JAN5ZsGpjYeiccwa/Rs00ow=",
         "usagesDigest": "KS4/kXzKKeT9H7SBjobzP4J77KSXxdevoF1IRZP77hQ=",
         "recordedInputs": [
           "REPO_MAPPING:aspect_rules_lint+,aspect_rules_lint aspect_rules_lint+",
@@ -660,7 +660,7 @@
     },
     "@@rules_multitool+//multitool:extension.bzl%multitool": {
       "general": {
-        "bzlTransitiveDigest": "tk5FazsYGLghtEXMLWecFfePUNVIynHMyTW2xquPHFk=",
+        "bzlTransitiveDigest": "EwnPEJpg0IFFd2USmPd3IFOcpAfuEBKDQT0Uocv9iiI=",
         "usagesDigest": "SrPW/7S5cPCFU/aBTjncJPBVfspfbKrn+DTtv5DBo1Q=",
         "recordedInputs": [
           "REPO_MAPPING:bazel_features+,bazel_features_globals bazel_features++version_extension+bazel_features_globals",
