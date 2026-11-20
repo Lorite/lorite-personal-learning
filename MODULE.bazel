@@ -24,18 +24,18 @@ module(
 bazel_dep(name = "aspect_bazel_lib", version = "2.22.5")  # Bazel library for common tasks required for linting and formatting
 bazel_dep(name = "aspect_rules_lint", version = "2.9.1")  # linting and formatting
 bazel_dep(name = "bazel_skylib", version = "1.9.2")  # Bazel Skylib required for linting and formatting
-bazel_dep(name = "buildifier_prebuilt", version = "10.1.0")
+bazel_dep(name = "buildifier_prebuilt", version = "10.2.0")
 
 # ----------------------------------------
 
 # Rule sets for the rules that Bazel 9 no longer ships natively (cc_*, sh_*). Every BUILD file loads its rules.
 
-bazel_dep(name = "rules_cc", version = "0.2.26")
-bazel_dep(name = "rules_shell", version = "0.8.0")
+bazel_dep(name = "rules_cc", version = "0.2.28")
+bazel_dep(name = "rules_shell", version = "0.10.0")
 
 # Not used directly: raises the transitive rules_foreign_cc 0.12.0, which fails to load on Bazel 9
 # (removed rule() argument incompatible_use_toolchain_transition).
-bazel_dep(name = "rules_foreign_cc", version = "0.16.0")
+bazel_dep(name = "rules_foreign_cc", version = "0.17.0")
 
 # ----------------------------------------
 
@@ -51,7 +51,7 @@ use_repo(rules_ts_ext, "npm_typescript")
 
 # JavaScript
 
-bazel_dep(name = "aspect_rules_js", version = "3.5.1")  # JavaScript rules required for linting and formatting
+bazel_dep(name = "aspect_rules_js", version = "3.6.1")  # JavaScript rules required for linting and formatting
 
 npm = use_extension("@aspect_rules_js//npm:extensions.bzl", "npm")
 npm.npm_translate_lock(
@@ -90,7 +90,7 @@ use_repo(bazel_test_project_csharp_example_deps, "paket.bazel_test_project_cshar
 
 # Python
 
-bazel_dep(name = "rules_python", version = "2.4.2")
+bazel_dep(name = "rules_python", version = "2.5.1")
 
 # Our Python targets list their __init__.py files explicitly. Implicit creation is deprecated and becomes
 # opt-in in a future rules_python release (https://github.com/bazel-contrib/rules_python/issues/2945).
@@ -144,16 +144,16 @@ use_repo(pip, "pip_other_python_scripts_deps")
 # C++ - Cpp
 
 bazel_dep(name = "googletest", version = "1.18.0.bcr.1")  # testing
-bazel_dep(name = "google_benchmark", version = "1.9.5")  # benchmark
-bazel_dep(name = "gflags", version = "2.3.1")  # command line flags
-bazel_dep(name = "glog", version = "0.7.1.bcr.1")  # logging
+bazel_dep(name = "google_benchmark", version = "1.10.0")  # benchmark
+bazel_dep(name = "gflags", version = "2.3.1.bcr.1")  # command line flags
+bazel_dep(name = "glog", version = "0.7.1.bcr.2")  # logging
 bazel_dep(name = "toolchains_llvm", version = "1.4.0")  # LLVM
 
 # To directly use a commit from GitHub, replace commit with the commit you want.
 # Otherwise, omit this block.
 git_override(
     module_name = "toolchains_llvm",
-    commit = "adf59ed65ed9e7a38f0a3b6f6e3b83f101406f46",
+    commit = "746325b31be2c7958b33b3d42cfcecf89c0cde49",
     remote = "https://github.com/bazel-contrib/toolchains_llvm",
 )
 
@@ -210,7 +210,7 @@ use_repo(maven, "maven")
 
 # Rust
 
-bazel_dep(name = "rules_rust", version = "0.74.0")
+bazel_dep(name = "rules_rust", version = "0.75.0")
 
 rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
 rust.toolchain(
@@ -222,7 +222,7 @@ rust.toolchain(
 
 # Protobuf
 
-bazel_dep(name = "rules_buf", version = "0.5.4")
+bazel_dep(name = "rules_buf", version = "0.6.1")
 
 buf = use_extension("@rules_buf//buf:extensions.bzl", "buf")
 
